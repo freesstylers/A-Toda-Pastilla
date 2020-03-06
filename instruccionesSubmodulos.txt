@@ -7,3 +7,8 @@ Comandos utiles:
 git status			Ver los cambios nuevos
 git diff			Comprobar las diferencias entre nuestro submodulo y el proyecto de github
 git submodule update		Deshace los cambios realizados
+
+$ cd path/to/submodule
+$ git add <stuff>
+$ git commit -m "comment"       Subir cambios al submódulo
+$ git push
