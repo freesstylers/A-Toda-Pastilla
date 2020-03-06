@@ -1,3 +1,0 @@
-﻿c:\software\programacion\MSVStudio2019\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(444,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
-  ATodaPastilla.cpp
-  ATodaPastilla.vcxproj -> U:\hlocal\ia\The-End-Of-Spherion\ATodaPastilla\bin\ATodaPastilla_d.exe
