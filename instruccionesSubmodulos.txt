@@ -8,7 +8,14 @@ git status			Ver los cambios nuevos
 git diff			Comprobar las diferencias entre nuestro submodulo y el proyecto de github
 git submodule update		Deshace los cambios realizados
 
-$ cd path/to/submodule
-$ git add <stuff>
-$ git commit -m "comment"       Subir cambios al submódulo
-$ git push
+CAMBIOS PARA EL MOTOR DENTRO DEL JUEGO (SE ACTUALIZA EL REPO DEL MOTOR)
+-motor primero
+	cd path/to/submodule
+	git add <stuff>
+	git commit -m "comment"
+	git push
+-juego segundo
+	cd /main/project
+	git add path/to/submodule
+	git commit -m "updated my submodule"
+	git push
