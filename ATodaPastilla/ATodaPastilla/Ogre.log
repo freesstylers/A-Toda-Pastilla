@@ -1,24 +1,24 @@
-14:46:30: Creating resource group General
-14:46:30: Creating resource group OgreInternal
-14:46:30: Creating resource group OgreAutodetect
-14:46:30: SceneManagerFactory for type 'DefaultSceneManager' registered.
-14:46:30: Registering ResourceManager for type Material
-14:46:30: Registering ResourceManager for type Mesh
-14:46:30: Registering ResourceManager for type Skeleton
-14:46:30: MovableObjectFactory for type 'ParticleSystem' registered.
-14:46:30: ArchiveFactory for archive type FileSystem registered.
-14:46:30: ArchiveFactory for archive type Zip registered.
-14:46:30: ArchiveFactory for archive type EmbeddedZip registered.
-14:46:30: DDS codec registering
-14:46:30: ETC codec registering
-14:46:30: Registering ResourceManager for type HighLevelGpuProgram
-14:46:30: Registering ResourceManager for type Compositor
-14:46:30: MovableObjectFactory for type 'Entity' registered.
-14:46:30: MovableObjectFactory for type 'Light' registered.
-14:46:30: MovableObjectFactory for type 'BillboardSet' registered.
-14:46:30: MovableObjectFactory for type 'ManualObject' registered.
-14:46:30: MovableObjectFactory for type 'BillboardChain' registered.
-14:46:30: MovableObjectFactory for type 'RibbonTrail' registered.
-14:46:30: automatic plugin loading disabled: Cannot open file: plugins_d.cfg
-14:46:30: *-*-* OGRE Initialising
-14:46:30: *-*-* Version 1.12.4 (Rhagorthua)
+15:56:06: Creating resource group General
+15:56:06: Creating resource group OgreInternal
+15:56:06: Creating resource group OgreAutodetect
+15:56:06: SceneManagerFactory for type 'DefaultSceneManager' registered.
+15:56:06: Registering ResourceManager for type Material
+15:56:06: Registering ResourceManager for type Mesh
+15:56:06: Registering ResourceManager for type Skeleton
+15:56:06: MovableObjectFactory for type 'ParticleSystem' registered.
+15:56:06: ArchiveFactory for archive type FileSystem registered.
+15:56:06: ArchiveFactory for archive type Zip registered.
+15:56:06: ArchiveFactory for archive type EmbeddedZip registered.
+15:56:06: DDS codec registering
+15:56:06: ETC codec registering
+15:56:06: Registering ResourceManager for type HighLevelGpuProgram
+15:56:06: Registering ResourceManager for type Compositor
+15:56:06: MovableObjectFactory for type 'Entity' registered.
+15:56:06: MovableObjectFactory for type 'Light' registered.
+15:56:06: MovableObjectFactory for type 'BillboardSet' registered.
+15:56:06: MovableObjectFactory for type 'ManualObject' registered.
+15:56:06: MovableObjectFactory for type 'BillboardChain' registered.
+15:56:06: MovableObjectFactory for type 'RibbonTrail' registered.
+15:56:06: automatic plugin loading disabled: Cannot open file: plugins_d.cfg
+15:56:06: *-*-* OGRE Initialising
+15:56:06: *-*-* Version 1.12.4 (Rhagorthua)

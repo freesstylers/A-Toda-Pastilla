@@ -1,0 +1,1386 @@
+15/04/2020 15:58:26 (Std) 	+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+15/04/2020 15:58:26 (Std) 	+                     Crazy Eddie's GUI System - Event log                    +
+15/04/2020 15:58:26 (Std) 	+                          (http://www.cegui.org.uk/)                         +
+15/04/2020 15:58:26 (Std) 	+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+15/04/2020 15:58:26 (Std) 	CEGUI::Logger singleton created. (000001F8E6EA0F60)
+15/04/2020 15:58:26 (Std) 	
+15/04/2020 15:58:26 (Std) 	********************************************************************************
+15/04/2020 15:58:26 (Std) 	* Important:                                                                   *
+15/04/2020 15:58:26 (Std) 	*     To get support at the CEGUI forums, you must post _at least_ the section *
+15/04/2020 15:58:26 (Std) 	*     of this log file indicated below.  Failure to do this will result in no  *
+15/04/2020 15:58:26 (Std) 	*     support being given; please do not waste our time.                       *
+15/04/2020 15:58:26 (Std) 	********************************************************************************
+15/04/2020 15:58:26 (Std) 	********************************************************************************
+15/04/2020 15:58:26 (Std) 	* -------- START OF ESSENTIAL SECTION TO BE POSTED ON THE FORUM       -------- *
+15/04/2020 15:58:26 (Std) 	********************************************************************************
+15/04/2020 15:58:26 (Std) 	---- Version: 0.8.7 (Build: Apr  8 2020 Debug Microsoft Windows MSVC++ Unknown MSVC++ version 64 bit) ----
+15/04/2020 15:58:26 (Std) 	---- Renderer module is: CEGUI::OgreRenderer - Official OGRE based 2nd generation renderer module. ----
+15/04/2020 15:58:26 (Std) 	---- XML Parser module is: CEGUI::ExpatParser - Official expat based parser module for CEGUI ----
+15/04/2020 15:58:26 (Std) 	---- Image Codec module is: OgreImageCodec - Integrated ImageCodec using the Ogre engine. ----
+15/04/2020 15:58:26 (Std) 	---- Scripting module is: None ----
+15/04/2020 15:58:26 (Std) 	********************************************************************************
+15/04/2020 15:58:26 (Std) 	* -------- END OF ESSENTIAL SECTION TO BE POSTED ON THE FORUM         -------- *
+15/04/2020 15:58:26 (Std) 	********************************************************************************
+15/04/2020 15:58:26 (Std) 	
+15/04/2020 15:58:26 (Std) 	---- Begining CEGUI System initialisation ----
+15/04/2020 15:58:26 (Std) 	[CEGUI::ImageManager] Singleton created (000001F8E6F4B930)
+15/04/2020 15:58:26 (Std) 	[CEGUI::ImageManager] Registered Image type: BasicImage
+15/04/2020 15:58:26 (Std) 	CEGUI::FontManager singleton created. (000001F8E22DBB20)
+15/04/2020 15:58:26 (Std) 	CEGUI::WindowFactoryManager singleton created
+15/04/2020 15:58:26 (Std) 	CEGUI::WindowManager singleton created (000001F8E70A95C0)
+15/04/2020 15:58:26 (Std) 	CEGUI::SchemeManager singleton created. (000001F8E22DD060)
+15/04/2020 15:58:26 (Std) 	CEGUI::GlobalEventSet singleton created. (000001F8E6F89060)
+15/04/2020 15:58:26 (Std) 	CEGUI::AnimationManager singleton created (000001F8E70AA280)
+15/04/2020 15:58:26 (Std) 	CEGUI::WidgetLookManager singleton created. (000001F8E70CE510)
+15/04/2020 15:58:26 (Std) 	CEGUI::WindowRendererManager singleton created (000001F8E70CE930)
+15/04/2020 15:58:26 (Std) 	CEGUI::RenderEffectManager singleton created (000001F8E70C3120)
+15/04/2020 15:58:26 (Std) 	Created WindowFactory for 'DefaultWindow' windows.
+15/04/2020 15:58:26 (Std) 	WindowFactory for 'DefaultWindow' windows added. (000001F8E22E2590)
+15/04/2020 15:58:26 (Std) 	Created WindowFactory for 'DragContainer' windows.
+15/04/2020 15:58:26 (Std) 	WindowFactory for 'DragContainer' windows added. (000001F8E22E2990)
+15/04/2020 15:58:26 (Std) 	Created WindowFactory for 'ScrolledContainer' windows.
+15/04/2020 15:58:26 (Std) 	WindowFactory for 'ScrolledContainer' windows added. (000001F8E22E1F90)
+15/04/2020 15:58:26 (Std) 	Created WindowFactory for 'ClippedContainer' windows.
+15/04/2020 15:58:26 (Std) 	WindowFactory for 'ClippedContainer' windows added. (000001F8E22E5790)
+15/04/2020 15:58:26 (Std) 	Created WindowFactory for 'CEGUI/PushButton' windows.
+15/04/2020 15:58:26 (Std) 	WindowFactory for 'CEGUI/PushButton' windows added. (000001F8E22E4290)
+15/04/2020 15:58:26 (Std) 	Created WindowFactory for 'CEGUI/RadioButton' windows.
+15/04/2020 15:58:26 (Std) 	WindowFactory for 'CEGUI/RadioButton' windows added. (000001F8E22E5290)
+15/04/2020 15:58:26 (Std) 	Created WindowFactory for 'CEGUI/Combobox' windows.
+15/04/2020 15:58:26 (Std) 	WindowFactory for 'CEGUI/Combobox' windows added. (000001F8E22E4490)
+15/04/2020 15:58:26 (Std) 	Created WindowFactory for 'CEGUI/ComboDropList' windows.
+15/04/2020 15:58:26 (Std) 	WindowFactory for 'CEGUI/ComboDropList' windows added. (000001F8E22E1D90)
+15/04/2020 15:58:26 (Std) 	Created WindowFactory for 'CEGUI/Editbox' windows.
+15/04/2020 15:58:26 (Std) 	WindowFactory for 'CEGUI/Editbox' windows added. (000001F8E22E2E90)
+15/04/2020 15:58:26 (Std) 	Created WindowFactory for 'CEGUI/FrameWindow' windows.
+15/04/2020 15:58:26 (Std) 	WindowFactory for 'CEGUI/FrameWindow' windows added. (000001F8E22E4E90)
+15/04/2020 15:58:26 (Std) 	Created WindowFactory for 'CEGUI/ItemEntry' windows.
+15/04/2020 15:58:26 (Std) 	WindowFactory for 'CEGUI/ItemEntry' windows added. (000001F8E22E1B90)
+15/04/2020 15:58:26 (Std) 	Created WindowFactory for 'CEGUI/Listbox' windows.
+15/04/2020 15:58:26 (Std) 	WindowFactory for 'CEGUI/Listbox' windows added. (000001F8E22E2090)
+15/04/2020 15:58:26 (Std) 	Created WindowFactory for 'CEGUI/ListHeader' windows.
+15/04/2020 15:58:26 (Std) 	WindowFactory for 'CEGUI/ListHeader' windows added. (000001F8E22E2190)
+15/04/2020 15:58:26 (Std) 	Created WindowFactory for 'CEGUI/ListHeaderSegment' windows.
+15/04/2020 15:58:26 (Std) 	WindowFactory for 'CEGUI/ListHeaderSegment' windows added. (000001F8E22E3990)
+15/04/2020 15:58:26 (Std) 	Created WindowFactory for 'CEGUI/Menubar' windows.
+15/04/2020 15:58:26 (Std) 	WindowFactory for 'CEGUI/Menubar' windows added. (000001F8E22E3790)
+15/04/2020 15:58:26 (Std) 	Created WindowFactory for 'CEGUI/PopupMenu' windows.
+15/04/2020 15:58:26 (Std) 	WindowFactory for 'CEGUI/PopupMenu' windows added. (000001F8E22E4790)
+15/04/2020 15:58:26 (Std) 	Created WindowFactory for 'CEGUI/MenuItem' windows.
+15/04/2020 15:58:26 (Std) 	WindowFactory for 'CEGUI/MenuItem' windows added. (000001F8E22E3490)
+15/04/2020 15:58:26 (Std) 	Created WindowFactory for 'CEGUI/MultiColumnList' windows.
+15/04/2020 15:58:26 (Std) 	WindowFactory for 'CEGUI/MultiColumnList' windows added. (000001F8E22E3E90)
+15/04/2020 15:58:26 (Std) 	Created WindowFactory for 'CEGUI/MultiLineEditbox' windows.
+15/04/2020 15:58:26 (Std) 	WindowFactory for 'CEGUI/MultiLineEditbox' windows added. (000001F8E22E1A90)
+15/04/2020 15:58:26 (Std) 	Created WindowFactory for 'CEGUI/ProgressBar' windows.
+15/04/2020 15:58:26 (Std) 	WindowFactory for 'CEGUI/ProgressBar' windows added. (000001F8E22E4C90)
+15/04/2020 15:58:26 (Std) 	Created WindowFactory for 'CEGUI/ScrollablePane' windows.
+15/04/2020 15:58:26 (Std) 	WindowFactory for 'CEGUI/ScrollablePane' windows added. (000001F8E22E2A90)
+15/04/2020 15:58:26 (Std) 	Created WindowFactory for 'CEGUI/Scrollbar' windows.
+15/04/2020 15:58:26 (Std) 	WindowFactory for 'CEGUI/Scrollbar' windows added. (000001F8E22E4D90)
+15/04/2020 15:58:26 (Std) 	Created WindowFactory for 'CEGUI/Slider' windows.
+15/04/2020 15:58:26 (Std) 	WindowFactory for 'CEGUI/Slider' windows added. (000001F8E22E4F90)
+15/04/2020 15:58:26 (Std) 	Created WindowFactory for 'CEGUI/Spinner' windows.
+15/04/2020 15:58:26 (Std) 	WindowFactory for 'CEGUI/Spinner' windows added. (000001F8E22E5390)
+15/04/2020 15:58:26 (Std) 	Created WindowFactory for 'CEGUI/TabButton' windows.
+15/04/2020 15:58:26 (Std) 	WindowFactory for 'CEGUI/TabButton' windows added. (000001F8E22E5490)
+15/04/2020 15:58:26 (Std) 	Created WindowFactory for 'CEGUI/TabControl' windows.
+15/04/2020 15:58:26 (Std) 	WindowFactory for 'CEGUI/TabControl' windows added. (000001F8E22E5690)
+15/04/2020 15:58:26 (Std) 	Created WindowFactory for 'CEGUI/Thumb' windows.
+15/04/2020 15:58:26 (Std) 	WindowFactory for 'CEGUI/Thumb' windows added. (000001F8E22E2C90)
+15/04/2020 15:58:26 (Std) 	Created WindowFactory for 'CEGUI/Titlebar' windows.
+15/04/2020 15:58:26 (Std) 	WindowFactory for 'CEGUI/Titlebar' windows added. (000001F8E22E2F90)
+15/04/2020 15:58:26 (Std) 	Created WindowFactory for 'CEGUI/ToggleButton' windows.
+15/04/2020 15:58:26 (Std) 	WindowFactory for 'CEGUI/ToggleButton' windows added. (000001F8E22E3090)
+15/04/2020 15:58:26 (Std) 	Created WindowFactory for 'CEGUI/Tooltip' windows.
+15/04/2020 15:58:26 (Std) 	WindowFactory for 'CEGUI/Tooltip' windows added. (000001F8E22E3290)
+15/04/2020 15:58:26 (Std) 	Created WindowFactory for 'CEGUI/ItemListbox' windows.
+15/04/2020 15:58:26 (Std) 	WindowFactory for 'CEGUI/ItemListbox' windows added. (000001F8E7140CB0)
+15/04/2020 15:58:26 (Std) 	Created WindowFactory for 'CEGUI/GroupBox' windows.
+15/04/2020 15:58:26 (Std) 	WindowFactory for 'CEGUI/GroupBox' windows added. (000001F8E713EBB0)
+15/04/2020 15:58:26 (Std) 	Created WindowFactory for 'CEGUI/Tree' windows.
+15/04/2020 15:58:26 (Std) 	WindowFactory for 'CEGUI/Tree' windows added. (000001F8E713F0B0)
+15/04/2020 15:58:26 (Std) 	Created WindowFactory for 'LayoutCell' windows.
+15/04/2020 15:58:26 (Std) 	WindowFactory for 'LayoutCell' windows added. (000001F8E713ECB0)
+15/04/2020 15:58:26 (Std) 	Created WindowFactory for 'HorizontalLayoutContainer' windows.
+15/04/2020 15:58:26 (Std) 	WindowFactory for 'HorizontalLayoutContainer' windows added. (000001F8E713EDB0)
+15/04/2020 15:58:26 (Std) 	Created WindowFactory for 'VerticalLayoutContainer' windows.
+15/04/2020 15:58:26 (Std) 	WindowFactory for 'VerticalLayoutContainer' windows added. (000001F8E71400B0)
+15/04/2020 15:58:26 (Std) 	Created WindowFactory for 'GridLayoutContainer' windows.
+15/04/2020 15:58:26 (Std) 	WindowFactory for 'GridLayoutContainer' windows added. (000001F8E713E4B0)
+15/04/2020 15:58:26 (Std) 	CEGUI::System singleton created. (000001F8DF238B90)
+15/04/2020 15:58:26 (Std) 	---- CEGUI System initialisation completed ----
+15/04/2020 15:58:26 (Std) 	
+15/04/2020 15:58:26 (Std) 	Started creation of Scheme from XML specification:
+15/04/2020 15:58:26 (Std) 	---- CEGUI GUIScheme name: VanillaSkin
+15/04/2020 15:58:26 (Std) 	[ImageManager] Started creation of Imageset from XML specification:
+15/04/2020 15:58:26 (Std) 	[ImageManager] ---- CEGUI Imageset name: Vanilla-Images
+15/04/2020 15:58:26 (Std) 	[ImageManager] ---- Source texture file: vanilla.png
+15/04/2020 15:58:26 (Std) 	[ImageManager] ---- Source texture resource group: (Default)
+15/04/2020 15:58:26 (Std) 	[OgreRenderer] Created texture: Vanilla-Images
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/GenericBrush' (000001F8E6EB0330) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/FrameTopLeft' (000001F8E6EB0720) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/FrameTopRight' (000001F8E6EB11A0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/FrameBottomLeft' (000001F8E6EB09C0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/FrameBottomRight' (000001F8E6EB1440) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/FrameLeft' (000001F8E6EB0DB0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/FrameRight' (000001F8E6EB0090) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/FrameTop' (000001F8E6EB0F00) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/FrameBottom' (000001F8E6EB0B10) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/ScrollUpArrow' (000001F8E6EB1050) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/ScrollDownArrow' (000001F8E6EAF760) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/VertScrollContainer' (000001F8E6EAF8B0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/ScrollLeftArrow' (000001F8E6E2B600) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/ScrollRightArrow' (000001F8E6E2B9F0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/HorzScrollContainer' (000001F8E6F54220) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/ScrollbarThumb' (000001F8E6F54B50) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/ShadowBrush' (000001F8E6E2BDE0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/MouseArrow' (000001F8E715A4F0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/CheckboxNormal' (000001F8E715A790) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/CheckboxHover' (000001F8E7158960) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/CheckboxMark' (000001F8E7159BC0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/RadioButtonNormal' (000001F8E7158EA0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/RadioButtonHover' (000001F8E7158AB0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/RadioButtonMark' (000001F8E7158C00) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/SliderScrollUpArrow' (000001F8E715A250) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/SliderScrollDownArrow' (000001F8E715A3A0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/SliderScrollLeftArrow' (000001F8E715A640) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/SliderScrollRightArrow' (000001F8E7159680) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/VerticalImageSliderThumb' (000001F8E715A100) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/HorizontalImageSliderThumb' (000001F8E7159E60) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/VerticalImageSliderContainer' (000001F8E7159FB0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/HorizontalImageSliderContainer' (000001F8E7158D50) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/DefaultScrollImage' (000001F8E71597D0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/VerticalImageSliderTopEnd' (000001F8E7159D10) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/VerticalImageSliderBottomEnd' (000001F8E7159A70) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/HorizontalImageSliderLeftEnd' (000001F8E7158FF0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/HorizontalImageSliderRightEnd' (000001F8E7159140) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/ColourPickerCursor' (000001F8E71593E0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/TooltipBottomEdge' (000001F8E7159920) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/TooltipBottomLeft' (000001F8E7159290) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/TooltipTopEdge' (000001F8E7159530) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/TooltipTopRight' (000001F8E726D8D0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/TooltipRightEdge' (000001F8E726DF60) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/TooltipTopLeft' (000001F8E726D4E0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/TooltipLeftEdge' (000001F8E726D240) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/TooltipMiddle' (000001F8E726E5F0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/TooltipBottomRight' (000001F8E726E0B0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/DropDownButtonNormal' (000001F8E726CE50) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/DropDownButtonHover' (000001F8E726CFA0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'Vanilla-Images/DropDownButtonPushed' (000001F8E726C7C0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	===== Falagard 'root' element: look and feel parsing begins =====
+15/04/2020 15:58:26 (Std) 	===== Look and feel parsing completed =====
+15/04/2020 15:58:26 (Std) 	No window renderer factories specified for module 'CEGUICoreWindowRendererSet' - adding all available factories...
+15/04/2020 15:58:26 (Std) 	Created WindowRendererFactory for 'Core/Button' WindowRenderers.
+15/04/2020 15:58:26 (Std) 	WindowRendererFactory 'Core/Button' added. (000001F8E7334A70)
+15/04/2020 15:58:26 (Std) 	Created WindowRendererFactory for 'Core/Default' WindowRenderers.
+15/04/2020 15:58:26 (Std) 	WindowRendererFactory 'Core/Default' added. (000001F8E7335170)
+15/04/2020 15:58:26 (Std) 	Created WindowRendererFactory for 'Core/Editbox' WindowRenderers.
+15/04/2020 15:58:26 (Std) 	WindowRendererFactory 'Core/Editbox' added. (000001F8E7334170)
+15/04/2020 15:58:26 (Std) 	Created WindowRendererFactory for 'Core/FrameWindow' WindowRenderers.
+15/04/2020 15:58:26 (Std) 	WindowRendererFactory 'Core/FrameWindow' added. (000001F8E7334570)
+15/04/2020 15:58:26 (Std) 	Created WindowRendererFactory for 'Core/ItemEntry' WindowRenderers.
+15/04/2020 15:58:26 (Std) 	WindowRendererFactory 'Core/ItemEntry' added. (000001F8E7335570)
+15/04/2020 15:58:26 (Std) 	Created WindowRendererFactory for 'Core/ListHeader' WindowRenderers.
+15/04/2020 15:58:26 (Std) 	WindowRendererFactory 'Core/ListHeader' added. (000001F8E7334B70)
+15/04/2020 15:58:26 (Std) 	Created WindowRendererFactory for 'Core/ListHeaderSegment' WindowRenderers.
+15/04/2020 15:58:26 (Std) 	WindowRendererFactory 'Core/ListHeaderSegment' added. (000001F8E7334270)
+15/04/2020 15:58:26 (Std) 	Created WindowRendererFactory for 'Core/Listbox' WindowRenderers.
+15/04/2020 15:58:26 (Std) 	WindowRendererFactory 'Core/Listbox' added. (000001F8E7334370)
+15/04/2020 15:58:26 (Std) 	Created WindowRendererFactory for 'Core/Menubar' WindowRenderers.
+15/04/2020 15:58:26 (Std) 	WindowRendererFactory 'Core/Menubar' added. (000001F8E7335670)
+15/04/2020 15:58:26 (Std) 	Created WindowRendererFactory for 'Core/MenuItem' WindowRenderers.
+15/04/2020 15:58:26 (Std) 	WindowRendererFactory 'Core/MenuItem' added. (000001F8E7335C70)
+15/04/2020 15:58:26 (Std) 	Created WindowRendererFactory for 'Core/MultiColumnList' WindowRenderers.
+15/04/2020 15:58:26 (Std) 	WindowRendererFactory 'Core/MultiColumnList' added. (000001F8E7335870)
+15/04/2020 15:58:26 (Std) 	Created WindowRendererFactory for 'Core/MultiLineEditbox' WindowRenderers.
+15/04/2020 15:58:26 (Std) 	WindowRendererFactory 'Core/MultiLineEditbox' added. (000001F8E7334C70)
+15/04/2020 15:58:26 (Std) 	Created WindowRendererFactory for 'Core/PopupMenu' WindowRenderers.
+15/04/2020 15:58:26 (Std) 	WindowRendererFactory 'Core/PopupMenu' added. (000001F8E7334770)
+15/04/2020 15:58:26 (Std) 	Created WindowRendererFactory for 'Core/ProgressBar' WindowRenderers.
+15/04/2020 15:58:26 (Std) 	WindowRendererFactory 'Core/ProgressBar' added. (000001F8E7334D70)
+15/04/2020 15:58:26 (Std) 	Created WindowRendererFactory for 'Core/ScrollablePane' WindowRenderers.
+15/04/2020 15:58:26 (Std) 	WindowRendererFactory 'Core/ScrollablePane' added. (000001F8E7335070)
+15/04/2020 15:58:26 (Std) 	Created WindowRendererFactory for 'Core/Scrollbar' WindowRenderers.
+15/04/2020 15:58:26 (Std) 	WindowRendererFactory 'Core/Scrollbar' added. (000001F8E7334E70)
+15/04/2020 15:58:26 (Std) 	Created WindowRendererFactory for 'Core/Slider' WindowRenderers.
+15/04/2020 15:58:26 (Std) 	WindowRendererFactory 'Core/Slider' added. (000001F8E7335D70)
+15/04/2020 15:58:26 (Std) 	Created WindowRendererFactory for 'Core/Static' WindowRenderers.
+15/04/2020 15:58:26 (Std) 	WindowRendererFactory 'Core/Static' added. (000001F8E7333F70)
+15/04/2020 15:58:26 (Std) 	Created WindowRendererFactory for 'Core/StaticImage' WindowRenderers.
+15/04/2020 15:58:26 (Std) 	WindowRendererFactory 'Core/StaticImage' added. (000001F8E7334F70)
+15/04/2020 15:58:26 (Std) 	Created WindowRendererFactory for 'Core/StaticText' WindowRenderers.
+15/04/2020 15:58:26 (Std) 	WindowRendererFactory 'Core/StaticText' added. (000001F8E7335A70)
+15/04/2020 15:58:26 (Std) 	Created WindowRendererFactory for 'Core/TabButton' WindowRenderers.
+15/04/2020 15:58:26 (Std) 	WindowRendererFactory 'Core/TabButton' added. (000001F8E7334070)
+15/04/2020 15:58:26 (Std) 	Created WindowRendererFactory for 'Core/TabControl' WindowRenderers.
+15/04/2020 15:58:26 (Std) 	WindowRendererFactory 'Core/TabControl' added. (000001F8E7334470)
+15/04/2020 15:58:26 (Std) 	Created WindowRendererFactory for 'Core/Titlebar' WindowRenderers.
+15/04/2020 15:58:26 (Std) 	WindowRendererFactory 'Core/Titlebar' added. (000001F8E7335270)
+15/04/2020 15:58:26 (Std) 	Created WindowRendererFactory for 'Core/ToggleButton' WindowRenderers.
+15/04/2020 15:58:26 (Std) 	WindowRendererFactory 'Core/ToggleButton' added. (000001F8E7335470)
+15/04/2020 15:58:26 (Std) 	Created WindowRendererFactory for 'Core/Tooltip' WindowRenderers.
+15/04/2020 15:58:26 (Std) 	WindowRendererFactory 'Core/Tooltip' added. (000001F8E7335B70)
+15/04/2020 15:58:26 (Std) 	Created WindowRendererFactory for 'Core/ItemListbox' WindowRenderers.
+15/04/2020 15:58:26 (Std) 	WindowRendererFactory 'Core/ItemListbox' added. (000001F8E7334670)
+15/04/2020 15:58:26 (Std) 	Created WindowRendererFactory for 'Core/Tree' WindowRenderers.
+15/04/2020 15:58:26 (Std) 	WindowRendererFactory 'Core/Tree' added. (000001F8E7334870)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'Vanilla/Label' using base type 'DefaultWindow', window renderer 'Core/Default' Look'N'Feel 'Vanilla/Label' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'Vanilla/Titlebar' using base type 'CEGUI/Titlebar', window renderer 'Core/Titlebar' Look'N'Feel 'Vanilla/Titlebar' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'Vanilla/Button' using base type 'CEGUI/PushButton', window renderer 'Core/Button' Look'N'Feel 'Vanilla/Button' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'Vanilla/FrameWindow' using base type 'CEGUI/FrameWindow', window renderer 'Core/FrameWindow' Look'N'Feel 'Vanilla/FrameWindow' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'Vanilla/Editbox' using base type 'CEGUI/Editbox', window renderer 'Core/Editbox' Look'N'Feel 'Vanilla/Editbox' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'Vanilla/VerticalScrollbarThumb' using base type 'CEGUI/Thumb', window renderer 'Core/Button' Look'N'Feel 'Vanilla/VerticalScrollbarThumb' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'Vanilla/VerticalScrollbar' using base type 'CEGUI/Scrollbar', window renderer 'Core/Scrollbar' Look'N'Feel 'Vanilla/VerticalScrollbar' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'Vanilla/HorizontalScrollbarThumb' using base type 'CEGUI/Thumb', window renderer 'Core/Button' Look'N'Feel 'Vanilla/HorizontalScrollbarThumb' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'Vanilla/HorizontalScrollbar' using base type 'CEGUI/Scrollbar', window renderer 'Core/Scrollbar' Look'N'Feel 'Vanilla/HorizontalScrollbar' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'Vanilla/StaticImage' using base type 'DefaultWindow', window renderer 'Core/StaticImage' Look'N'Feel 'Vanilla/StaticImage' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'Vanilla/StaticText' using base type 'DefaultWindow', window renderer 'Core/StaticText' Look'N'Feel 'Vanilla/StaticText' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'Vanilla/Listbox' using base type 'CEGUI/Listbox', window renderer 'Core/Listbox' Look'N'Feel 'Vanilla/Listbox' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'Vanilla/MultiLineEditbox' using base type 'CEGUI/MultiLineEditbox', window renderer 'Core/MultiLineEditbox' Look'N'Feel 'Vanilla/MultiLineEditbox' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'Vanilla/ComboDropList' using base type 'CEGUI/ComboDropList', window renderer 'Core/Listbox' Look'N'Feel 'Vanilla/ComboDropList' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'Vanilla/Combobox' using base type 'CEGUI/Combobox', window renderer 'Core/Default' Look'N'Feel 'Vanilla/Combobox' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'Vanilla/ProgressBar' using base type 'CEGUI/ProgressBar', window renderer 'Core/ProgressBar' Look'N'Feel 'Vanilla/ProgressBar' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'Vanilla/Checkbox' using base type 'CEGUI/ToggleButton', window renderer 'Core/ToggleButton' Look'N'Feel 'Vanilla/Checkbox' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'Vanilla/RadioButton' using base type 'CEGUI/RadioButton', window renderer 'Core/ToggleButton' Look'N'Feel 'Vanilla/RadioButton' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'Vanilla/Tooltip' using base type 'CEGUI/Tooltip', window renderer 'Core/Tooltip' Look'N'Feel 'Vanilla/Tooltip' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Started creation of Scheme from XML specification:
+15/04/2020 15:58:26 (Std) 	---- CEGUI GUIScheme name: TaharezLook
+15/04/2020 15:58:26 (Std) 	[ImageManager] Started creation of Imageset from XML specification:
+15/04/2020 15:58:26 (Std) 	[ImageManager] ---- CEGUI Imageset name: TaharezLook
+15/04/2020 15:58:26 (Std) 	[ImageManager] ---- Source texture file: TaharezLook.png
+15/04/2020 15:58:26 (Std) 	[ImageManager] ---- Source texture resource group: (Default)
+15/04/2020 15:58:26 (Std) 	[OgreRenderer] Created texture: TaharezLook
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ClientBrush' (000001F8E732BCD0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/GenericBrush' (000001F8E732D5C0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/WindowLeftEdge' (000001F8E732E820) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/WindowRightEdge' (000001F8E732B250) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/WindowTopEdge' (000001F8E732C4B0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/WindowBottomEdge' (000001F8E732E190) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/WindowTopLeft' (000001F8E732ED60) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/WindowTopRight' (000001F8E732B100) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/WindowBottomLeft' (000001F8E732DEF0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/WindowBottomRight' (000001F8E732E040) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ButtonLeftNormal' (000001F8E732C210) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ButtonMiddleNormal' (000001F8E732B640) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ButtonRightNormal' (000001F8E732E2E0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ButtonLeftPushed' (000001F8E732C600) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ButtonMiddlePushed' (000001F8E732E580) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ButtonRightPushed' (000001F8E732DB00) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ButtonLeftHighlight' (000001F8E732E6D0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ButtonMiddleHighlight' (000001F8E732B8E0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ButtonRightHighlight' (000001F8E732D080) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/CheckboxNormal' (000001F8E732C8A0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/CheckboxHover' (000001F8E732BE20) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/CheckboxMark' (000001F8E732E430) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/RadioButtonNormal' (000001F8E732D1D0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/RadioButtonHover' (000001F8E732BF70) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/RadioButtonMark' (000001F8E732C0C0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TitlebarLeft' (000001F8E732CB40) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TitlebarMiddle' (000001F8E732B3A0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TitlebarRight' (000001F8E732BA30) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/NewTitlebarLeft' (000001F8E732D320) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/NewTitlebarMiddle' (000001F8E732EEB0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/NewTitlebarRight' (000001F8E732E970) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/SysAreaMiddle' (000001F8E732B4F0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/SysAreaRight' (000001F8E732EAC0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/StaticLeft' (000001F8E732C360) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/StaticRight' (000001F8E732EC10) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/StaticTop' (000001F8E732CF30) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/StaticBottom' (000001F8E732D470) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/StaticTopLeft' (000001F8E732D710) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/StaticTopRight' (000001F8E732D860) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/StaticBottomLeft' (000001F8E732D9B0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/StaticBottomRight' (000001F8E732B790) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/StaticBackdrop' (000001F8E732C750) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ProgressBarLeft' (000001F8E732C9F0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ProgressBarMiddle' (000001F8E732CC90) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ProgressBarRight' (000001F8E72F50B0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ProgressBarDimSegment' (000001F8E72F4780) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ProgressBarLitSegment' (000001F8E72F5890) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/EditBoxLeft' (000001F8E72F5B30) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/EditBoxMiddle' (000001F8E72F59E0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/EditBoxRight' (000001F8E72F5C80) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/EditBoxCaret' (000001F8E72F4A20) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/SpinnerUpNormal' (000001F8E72F4CC0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/SpinnerDownNormal' (000001F8E72F3FA0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/SpinnerUpHover' (000001F8E72F40F0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/SpinnerDownHover' (000001F8E72F4240) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TextSelectionBrush' (000001F8E72F4390) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/VertScrollTop' (000001F8E6F53CE0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/VertScrollMiddle' (000001F8E71B3880) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/VertScrollBottom' (000001F8E71B52C0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/VertScrollBarSegment' (000001F8E71B5410) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/VertScrollThumbNormal' (000001F8E71B4300) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/VertScrollThumbHover' (000001F8E71B3C70) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/VertScrollUpNormal' (000001F8E71B3DC0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/VertScrollDownNormal' (000001F8E71B41B0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/VertScrollUpHover' (000001F8E71B4D80) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/VertScrollDownHover' (000001F8E71B4C30) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MiniVertScrollBarSegment' (000001F8E71B4ED0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MiniVertScrollThumbNormal' (000001F8E71B5020) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MiniVertScrollThumbTopNormal' (000001F8E71B5170) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MiniVertScrollThumbMiddleNormal' (000001F8E71B4AE0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MiniVertScrollThumbBottomNormal' (000001F8E71B3F10) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MiniVertScrollThumbTopHover' (000001F8E71B5560) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MiniVertScrollThumbMiddleHover' (000001F8E71B45A0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MiniVertScrollThumbBottomHover' (000001F8E71B56B0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MiniVertScrollThumbHover' (000001F8E71B39D0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MiniVertScrollUpNormal' (000001F8E71B3B20) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MiniVertScrollDownNormal' (000001F8E71B4060) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MiniVertScrollUpHover' (000001F8E71B4450) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MiniVertScrollDownHover' (000001F8E71B46F0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/VertSliderBody' (000001F8E71B4990) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/VertSliderThumbNormal' (000001F8E71B4840) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/VertSliderThumbHover' (000001F8E71BB8B0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MiniHorzScrollBarSegment' (000001F8E71BC090) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MiniHorzScrollThumbNormal' (000001F8E71BBF40) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MiniHorzScrollThumbLeftNormal' (000001F8E71BCC60) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MiniHorzScrollThumbMiddleNormal' (000001F8E71BC5D0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MiniHorzScrollThumbRightNormal' (000001F8E71BBCA0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MiniHorzScrollThumbHover' (000001F8E71BC1E0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MiniHorzScrollThumbLeftHover' (000001F8E71BBA00) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MiniHorzScrollThumbMiddleHover' (000001F8E71BC330) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MiniHorzScrollThumbRightHover' (000001F8E71BCB10) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MiniHorzScrollLeftNormal' (000001F8E71BC480) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MiniHorzScrollRightNormal' (000001F8E71BBDF0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MiniHorzScrollLeftHover' (000001F8E71BD440) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MiniHorzScrollRightHover' (000001F8E71BD050) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ListboxLeft' (000001F8E71BC720) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ListboxRight' (000001F8E71BBB50) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ListboxTop' (000001F8E71BD6E0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ListboxBottom' (000001F8E71BC9C0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ListboxTopLeft' (000001F8E71BCF00) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ListboxTopRight' (000001F8E71BC870) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ListboxBottomLeft' (000001F8E71BCDB0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ListboxBottomRight' (000001F8E71BD1A0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ListboxBackdrop' (000001F8E71BD2F0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ListboxSelectionBrush' (000001F8E71BD590) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ComboboxEditLeft' (000001F8E737A560) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ComboboxEditMiddle' (000001F8E7378B20) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ComboboxListButtonNormal' (000001F8E7379060) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ComboboxListButtonHover' (000001F8E737B910) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ComboboxListLeft' (000001F8E737B670) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ComboboxListRight' (000001F8E737A170) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ComboboxListTop' (000001F8E737B520) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ComboboxListBottom' (000001F8E7379C30) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ComboboxListTopLeft' (000001F8E7378880) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ComboboxListTopRight' (000001F8E7378F10) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ComboboxListBottomLeft' (000001F8E7378340) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ComboboxListBottomRight' (000001F8E7379450) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ComboboxListBackdrop' (000001F8E73791B0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ComboboxSelectionBrush' (000001F8E7378490) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ComboboxDividerLeft' (000001F8E73789D0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ComboboxDividerMiddle' (000001F8E737A410) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/ComboboxDividerRight' (000001F8E737BD00) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/HeaderBarBackdropNormal' (000001F8E737B7C0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/HeaderBarBackdropHover' (000001F8E737BE50) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/HeaderBarSplitterNormal' (000001F8E737BBB0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/HeaderBarSplitterHover' (000001F8E7379300) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/HeaderBarSortUp' (000001F8E737AFE0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/HeaderBarSortDown' (000001F8E7378DC0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MultiListLeft' (000001F8E737A2C0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MultiListRight' (000001F8E73795A0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MultiListTop' (000001F8E737AD40) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MultiListBottom' (000001F8E73796F0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MultiListTopLeft' (000001F8E737A6B0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MultiListTopRight' (000001F8E7378C70) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MultiListBottomLeft' (000001F8E737B3D0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MultiListBottomRight' (000001F8E7379840) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MultiListBackdrop' (000001F8E737B130) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MultiListSelectionBrush' (000001F8E7379990) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/AltProgressLeft' (000001F8E7379AE0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/AltProgressMiddle' (000001F8E737A800) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/AltProgressRight' (000001F8E737A950) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/AltProgressQuarter' (000001F8E737AAA0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/AltProgressHalf' (000001F8E737BA60) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/AltProgressLight1' (000001F8E73780A0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/AltProgressLight2' (000001F8E7379D80) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/AltProgressLight3' (000001F8E73785E0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/AltProgressLight4' (000001F8E7379ED0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/AltProgressLight5' (000001F8E737B280) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/AltProgressLight6' (000001F8E737AE90) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/AltProgressLight7' (000001F8E73781F0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/AltProgressLight8' (000001F8E7378730) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/AltProgressLight9' (000001F8E737A020) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/AltProgressLight10' (000001F8E737ABF0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/CloseButtonNormal' (000001F8E737E600) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/CloseButtonHover' (000001F8E737E0C0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/CloseButtonPressed' (000001F8E737EF30) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/NewCloseButtonNormal' (000001F8E737FDA0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/NewCloseButtonHover' (000001F8E737FEF0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/NewCloseButtonPressed' (000001F8E737E750) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MultiLineEditboxLeft' (000001F8E737F5C0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MultiLineEditboxRight' (000001F8E737EC90) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MultiLineEditboxTop' (000001F8E737EB40) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MultiLineEditboxBottom' (000001F8E737E210) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MultiLineEditboxTopLeft' (000001F8E737F710) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MultiLineEditboxTopRight' (000001F8E737F080) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MultiLineEditboxBottomLeft' (000001F8E737E360) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MultiLineEditboxBottomRight' (000001F8E737F9B0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MultiLineEditboxBackdrop' (000001F8E737F1D0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MultiLineEditboxSelectionBrush' (000001F8E737E8A0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MouseTarget' (000001F8E737F320) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MouseArrow' (000001F8E737F470) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MouseMoveCursor' (000001F8E737FB00) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MouseNoSoCursor' (000001F8E737FC50) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MouseEsWeCursor' (000001F8E737E4B0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MouseNeSwCursor' (000001F8E737E9F0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MouseNwSeCursor' (000001F8E737EDE0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MouseTextBar' (000001F8E737F860) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TabHorizontalFiller' (000001F8E7382620) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TabContentPaneUpperLeft' (000001F8E73830A0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TabContentPaneUpper' (000001F8E7382770) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TabContentPaneUpperRight' (000001F8E7383490) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TabContentPaneLeft' (000001F8E7383340) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TabContentPaneRight' (000001F8E73831F0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TabContentPaneLower' (000001F8E7383C70) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TabContentPaneLowerLeft' (000001F8E73835E0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TabContentPaneLowerRight' (000001F8E7382CB0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TabContentPaneMiddle' (000001F8E7383DC0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TabButtonScrollLeftNormal' (000001F8E7383F10) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TabButtonScrollRightNormal' (000001F8E7383880) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TabButtonScrollLeftHover' (000001F8E7383730) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TabButtonScrollRightHover' (000001F8E7382E00) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TabButtonLeftNormal' (000001F8E73828C0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TabButtonRightNormal' (000001F8E73820E0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TabButtonUpperNormal' (000001F8E7382230) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TabButtonLowerNormal' (000001F8E7382380) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TabButtonUpperLeftNormal' (000001F8E73824D0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TabButtonUpperLeft2Normal' (000001F8E7382A10) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TabButtonUpperRightNormal' (000001F8E7382B60) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TabButtonLowerLeftNormal' (000001F8E7382F50) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TabButtonLowerRightNormal' (000001F8E73839D0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TabButtonLowerRight2Normal' (000001F8E7383B20) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TabButtonMiddleNormal' (000001F8E73938B0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TabButtonLeftSelected' (000001F8E7393610) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TabButtonRightSelected' (000001F8E7392A40) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TabButtonUpperSelected' (000001F8E7391690) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TabButtonLowerSelected' (000001F8E7393CA0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TabButtonUpperLeftSelected' (000001F8E7393220) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TabButtonUpperRightSelected' (000001F8E7392260) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TabButtonLowerLeftSelected' (000001F8E7391E70) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TabButtonLowerRightSelected' (000001F8E7393A00) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TabButtonMiddleSelected' (000001F8E7393F40) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TooltipTopLeft' (000001F8E73917E0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TooltipTopRight' (000001F8E7391930) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TooltipBottomLeft' (000001F8E7392F80) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TooltipBottomRight' (000001F8E7393760) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TooltipLeftEdge' (000001F8E7392CE0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TooltipRightEdge' (000001F8E7391BD0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TooltipTopEdge' (000001F8E73927A0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TooltipBottomEdge' (000001F8E73923B0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TooltipMiddle' (000001F8E7392E30) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MenuTopLeft' (000001F8E73930D0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MenuTopRight' (000001F8E7391D20) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MenuBottomLeft' (000001F8E7391FC0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MenuBottomRight' (000001F8E7392500) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MenuLeft' (000001F8E73928F0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MenuRight' (000001F8E7393B50) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MenuTop' (000001F8E7392650) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MenuBottom' (000001F8E7393DF0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/MenuMiddle' (000001F8E7393370) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/PopupMenuFrameTopLeft' (000001F8E7392B90) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/PopupMenuFrameTopRight' (000001F8E73934C0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/PopupMenuFrameBottomLeft' (000001F8E7391A80) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/PopupMenuFrameBottomRight' (000001F8E7391540) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/PopupMenuFrameLeft' (000001F8E7390D60) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/PopupMenuFrameRight' (000001F8E738EDE0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/PopupMenuFrameTop' (000001F8E73902E0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/PopupMenuFrameBottom' (000001F8E738E9F0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/PopupMenuMiddle' (000001F8E738E0C0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/PopupMenuArrowRight' (000001F8E738D250) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/PopupMenuArrowLeft' (000001F8E738E4B0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TreeListClosed' (000001F8E738EB40) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/TreeListOpened' (000001F8E73912A0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'TaharezLook/UpArrow' (000001F8E738C7D0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	===== Falagard 'root' element: look and feel parsing begins =====
+15/04/2020 15:58:26 (Std) 	===== Look and feel parsing completed =====
+15/04/2020 15:58:26 (Std) 	No window renderer factories specified for module 'CEGUICoreWindowRendererSet' - adding all available factories...
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/Label' using base type 'DefaultWindow', window renderer 'Core/Default' Look'N'Feel 'TaharezLook/Label' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/Button' using base type 'CEGUI/PushButton', window renderer 'Core/Button' Look'N'Feel 'TaharezLook/Button' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/Checkbox' using base type 'CEGUI/ToggleButton', window renderer 'Core/ToggleButton' Look'N'Feel 'TaharezLook/Checkbox' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/ImageButton' using base type 'CEGUI/PushButton', window renderer 'Core/Button' Look'N'Feel 'TaharezLook/ImageButton' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/RadioButton' using base type 'CEGUI/RadioButton', window renderer 'Core/ToggleButton' Look'N'Feel 'TaharezLook/RadioButton' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/FrameWindow' using base type 'CEGUI/FrameWindow', window renderer 'Core/FrameWindow' Look'N'Feel 'TaharezLook/FrameWindow' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/Titlebar' using base type 'CEGUI/Titlebar', window renderer 'Core/Titlebar' Look'N'Feel 'TaharezLook/Titlebar' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/Editbox' using base type 'CEGUI/Editbox', window renderer 'Core/Editbox' Look'N'Feel 'TaharezLook/Editbox' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/MultiLineEditbox' using base type 'CEGUI/MultiLineEditbox', window renderer 'Core/MultiLineEditbox' Look'N'Feel 'TaharezLook/MultiLineEditbox' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/Menubar' using base type 'CEGUI/Menubar', window renderer 'Core/Menubar' Look'N'Feel 'TaharezLook/Menubar' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/PopupMenu' using base type 'CEGUI/PopupMenu', window renderer 'Core/PopupMenu' Look'N'Feel 'TaharezLook/PopupMenu' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/MenuItem' using base type 'CEGUI/MenuItem', window renderer 'Core/MenuItem' Look'N'Feel 'TaharezLook/MenuItem' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/AlternateProgressBar' using base type 'CEGUI/ProgressBar', window renderer 'Core/ProgressBar' Look'N'Feel 'TaharezLook/AltProgressBar' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/ProgressBar' using base type 'CEGUI/ProgressBar', window renderer 'Core/ProgressBar' Look'N'Feel 'TaharezLook/ProgressBar' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/VUMeter' using base type 'CEGUI/ProgressBar', window renderer 'Core/ProgressBar' Look'N'Feel 'TaharezLook/VUMeter' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/VerticalScrollbar' using base type 'CEGUI/Scrollbar', window renderer 'Core/Scrollbar' Look'N'Feel 'TaharezLook/VerticalScrollbar' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/HorizontalScrollbar' using base type 'CEGUI/Scrollbar', window renderer 'Core/Scrollbar' Look'N'Feel 'TaharezLook/HorizontalScrollbar' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/VerticalScrollbarThumb' using base type 'CEGUI/Thumb', window renderer 'Core/Button' Look'N'Feel 'TaharezLook/VerticalScrollbarThumb' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/HorizontalScrollbarThumb' using base type 'CEGUI/Thumb', window renderer 'Core/Button' Look'N'Feel 'TaharezLook/HorizontalScrollbarThumb' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/LargeVerticalScrollbar' using base type 'CEGUI/Scrollbar', window renderer 'Core/Scrollbar' Look'N'Feel 'TaharezLook/LargeVerticalScrollbar' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/LargeVerticalScrollbarThumb' using base type 'CEGUI/Thumb', window renderer 'Core/Button' Look'N'Feel 'TaharezLook/LargeVerticalScrollbarThumb' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/TabButton' using base type 'CEGUI/TabButton', window renderer 'Core/TabButton' Look'N'Feel 'TaharezLook/TabButton' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/TabControl' using base type 'CEGUI/TabControl', window renderer 'Core/TabControl' Look'N'Feel 'TaharezLook/TabControl' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/TabContentPane' using base type 'DefaultWindow', window renderer 'Core/Default' Look'N'Feel 'TaharezLook/TabContentPane' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/TabButtonPane' using base type 'DefaultWindow', window renderer 'Core/Default' Look'N'Feel 'TaharezLook/TabButtonPane' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/ComboDropList' using base type 'CEGUI/ComboDropList', window renderer 'Core/Listbox' Look'N'Feel 'TaharezLook/ComboDropList' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/ComboEditbox' using base type 'CEGUI/Editbox', window renderer 'Core/Editbox' Look'N'Feel 'TaharezLook/ComboEditbox' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/Combobox' using base type 'CEGUI/Combobox', window renderer 'Core/Default' Look'N'Feel 'TaharezLook/Combobox' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/Listbox' using base type 'CEGUI/Listbox', window renderer 'Core/Listbox' Look'N'Feel 'TaharezLook/Listbox' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/ListHeader' using base type 'CEGUI/ListHeader', window renderer 'Core/ListHeader' Look'N'Feel 'TaharezLook/ListHeader' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/ListHeaderSegment' using base type 'CEGUI/ListHeaderSegment', window renderer 'Core/ListHeaderSegment' Look'N'Feel 'TaharezLook/ListHeaderSegment' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/MultiColumnList' using base type 'CEGUI/MultiColumnList', window renderer 'Core/MultiColumnList' Look'N'Feel 'TaharezLook/MultiColumnList' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/Slider' using base type 'CEGUI/Slider', window renderer 'Core/Slider' Look'N'Feel 'TaharezLook/Slider' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/SliderThumb' using base type 'CEGUI/Thumb', window renderer 'Core/Button' Look'N'Feel 'TaharezLook/SliderThumb' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/ScrollablePane' using base type 'CEGUI/ScrollablePane', window renderer 'Core/ScrollablePane' Look'N'Feel 'TaharezLook/ScrollablePane' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/Spinner' using base type 'CEGUI/Spinner', window renderer 'Core/Default' Look'N'Feel 'TaharezLook/Spinner' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/Tooltip' using base type 'CEGUI/Tooltip', window renderer 'Core/Tooltip' Look'N'Feel 'TaharezLook/Tooltip' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/StaticImage' using base type 'DefaultWindow', window renderer 'Core/StaticImage' Look'N'Feel 'TaharezLook/StaticImage' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/StaticText' using base type 'DefaultWindow', window renderer 'Core/StaticText' Look'N'Feel 'TaharezLook/StaticText' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/ItemListbox' using base type 'CEGUI/ItemListbox', window renderer 'Core/ItemListbox' Look'N'Feel 'TaharezLook/ItemListbox' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/ListboxItem' using base type 'CEGUI/ItemEntry', window renderer 'Core/ItemEntry' Look'N'Feel 'TaharezLook/ListboxItem' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/GroupBox' using base type 'DefaultWindow', window renderer 'Core/Default' Look'N'Feel 'TaharezLook/GroupBox' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'TaharezLook/Tree' using base type 'CEGUI/Tree', window renderer 'Core/Tree' Look'N'Feel 'TaharezLook/Tree' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Started creation of Scheme from XML specification:
+15/04/2020 15:58:26 (Std) 	---- CEGUI GUIScheme name: AlfiskoSkin
+15/04/2020 15:58:26 (Std) 	[ImageManager] Started creation of Imageset from XML specification:
+15/04/2020 15:58:26 (Std) 	[ImageManager] ---- CEGUI Imageset name: AlfiskoSkin
+15/04/2020 15:58:26 (Std) 	[ImageManager] ---- Source texture file: AlfiskoSkin.png
+15/04/2020 15:58:26 (Std) 	[ImageManager] ---- Source texture resource group: (Default)
+15/04/2020 15:58:26 (Std) 	[OgreRenderer] Created texture: AlfiskoSkin
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/WindowB' (000001F8E9D78EE0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/WindowL' (000001F8E9D796C0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/WindowR' (000001F8E9D79810) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/WindowT' (000001F8E9D78C40) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/EditboxB' (000001F8E9D79FF0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/EditboxL' (000001F8E9D7A290) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/EditboxR' (000001F8E9D75BB0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/EditboxT' (000001F8E9D77350) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/WindowBL' (000001F8E9D76F60) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/WindowBR' (000001F8E9D76E10) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/WindowTL' (000001F8E9D77200) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/WindowTR' (000001F8E9D76630) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/EditboxBL' (000001F8E9D72F10) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/EditboxBR' (000001F8E9D736F0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/EditboxTL' (000001F8E9D73840) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/EditboxTR' (000001F8E9D735A0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/MouseMove' (000001F8E9D76CC0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/MouseNeSw' (000001F8E9D729D0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/NewImage1' (000001F8E9D72C70) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/MouseArrow' (000001F8E9D770B0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/WindowFill' (000001F8E9D72DC0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/EditboxFill' (000001F8E9D77C80) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/WindowClipB' (000001F8E9D74FE0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/WindowClipL' (000001F8E9D774A0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/WindowClipR' (000001F8E9D775F0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/WindowClipT' (000001F8E9D73ED0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ButtonHoverB' (000001F8E9D77740) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ButtonHoverL' (000001F8E9D76780) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ButtonHoverR' (000001F8E9D73990) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ButtonHoverT' (000001F8E9D73060) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/GenericBrush' (000001F8E9D731B0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/MouseTextBar' (000001F8E9D73450) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ButtonHoverBL' (000001F8E9D76B70) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ButtonHoverBR' (000001F8E9D74020) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ButtonHoverTL' (000001F8E9D75130) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ButtonHoverTR' (000001F8E9D74560) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ButtonNormalB' (000001F8E9D74800) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ButtonNormalL' (000001F8E9D77890) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ButtonNormalR' (000001F8E9D74170) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ButtonNormalT' (000001F8E9D74410) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ButtonPushedB' (000001F8E9D75670) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ButtonPushedL' (000001F8E9D75E50) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ButtonPushedR' (000001F8E9D73AE0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ButtonPushedT' (000001F8E9D779E0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/CheckboxHover' (000001F8E9D77B30) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ProgressFullB' (000001F8E9D76240) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ProgressFullL' (000001F8E9D73C30) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ProgressFullR' (000001F8E9D73D80) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ProgressFullT' (000001F8E9D72B20) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ScrollUpHover' (000001F8E9D74AA0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ButtonNormalBL' (000001F8E9D742C0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ButtonNormalBR' (000001F8E9D746B0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ButtonNormalTL' (000001F8E9D74E90) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ButtonNormalTR' (000001F8E9D74950) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ButtonPushedBL' (000001F8E9D768D0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ButtonPushedBR' (000001F8E9D753D0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ButtonPushedTL' (000001F8E9D74BF0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ButtonPushedTR' (000001F8E9D74D40) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/CheckboxNormal' (000001F8E9D75520) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/HorzScrollbarB' (000001F8E9D757C0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/HorzScrollbarT' (000001F8E9D75910) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ProgressEmptyB' (000001F8E9D75A60) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ProgressEmptyL' (000001F8E9D75D00) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ProgressEmptyR' (000001F8E9D75FA0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ProgressEmptyT' (000001F8E9D760F0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ProgressFullBL' (000001F8E9D76390) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ProgressFullBR' (000001F8E9D764E0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ProgressFullTL' (000001F8E73FF670) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ProgressFullTR' (000001F8E7400240) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ProgressShadow' (000001F8E7400B70) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ScrollUpNormal' (000001F8E73FC730) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ScrollUpPushed' (000001F8E74036C0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/TitlebarDummy1' (000001F8E7403AB0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/VertScrollbarL' (000001F8E7403C00) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/VertScrollbarR' (000001F8E7403D50) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/CheckboxChecked' (000001F8E738D8E0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/HorzThumbHoverB' (000001F8E7391000) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/HorzThumbHoverT' (000001F8E7390970) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ProgressEmptyBL' (000001F8E7391150) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ProgressEmptyBR' (000001F8E738C3E0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ProgressEmptyTL' (000001F8E738CBC0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ProgressEmptyTR' (000001F8E73E8CC0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ScrollDownHover' (000001F8E73EAAF0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ScrollLeftHover' (000001F8E73EAC40) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/TitlebarActiveB' (000001F8E73E8630) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/TitlebarActiveL' (000001F8E73E9B30) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/TitlebarActiveR' (000001F8E73EA070) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/TitlebarActiveT' (000001F8E73EA9A0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/VertThumbHoverL' (000001F8E73E8F60) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/VertThumbHoverR' (000001F8E73E94A0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ButtonHoverFill1' (000001F8E73EA1C0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ButtonHoverFill2' (000001F8E73E90B0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/HorzSliderTrackL' (000001F8E73E9200) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/HorzSliderTrackR' (000001F8E73E9350) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/HorzThumbHoverBL' (000001F8E73E8780) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/HorzThumbHoverBR' (000001F8E73EAD90) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/HorzThumbHoverTL' (000001F8E73EA310) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/HorzThumbHoverTR' (000001F8E73E95F0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/HorzThumbNormalB' (000001F8E73E8E10) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/HorzThumbNormalT' (000001F8E73E84E0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/HorzThumbPushedB' (000001F8E73EAEE0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/HorzThumbPushedT' (000001F8E73E88D0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/HorzThumbShadowL' (000001F8E73E9740) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/HorzThumbShadowR' (000001F8E73EA460) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ProgressFullFill' (000001F8E73E9890) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/RadioButtonHover' (000001F8E73EA700) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ScrollDownNormal' (000001F8E73E9DD0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ScrollDownPushed' (000001F8E73E8A20) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ScrollLeftNormal' (000001F8E73E99E0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ScrollLeftPushed' (000001F8E73E9C80) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ScrollRightHover' (000001F8E73E9F20) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/TitlebarActiveBL' (000001F8E73EA5B0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/TitlebarActiveBR' (000001F8E73E8B70) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/TitlebarActiveTL' (000001F8E73EA850) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/TitlebarActiveTR' (000001F8E73E40A0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/VertSliderTrackB' (000001F8E73E4490) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/VertSliderTrackT' (000001F8E73E3F50) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/VertThumbHoverBL' (000001F8E73E3380) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/VertThumbHoverBR' (000001F8E73E6950) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/VertThumbHoverTL' (000001F8E73E5C30) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/VertThumbHoverTR' (000001F8E73E7520) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/VertThumbNormalL' (000001F8E73E6800) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/VertThumbNormalR' (000001F8E73E4340) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/VertThumbPushedL' (000001F8E73E51B0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/VertThumbPushedR' (000001F8E73E6FE0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/VertThumbShadowB' (000001F8E73E6560) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/VertThumbShadowT' (000001F8E73E6D40) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ButtonNormalFill1' (000001F8E73E6AA0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ButtonNormalFill2' (000001F8E73E8390) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ButtonPushedFill1' (000001F8E73E56F0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ButtonPushedFill2' (000001F8E73E3CB0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/CloseButtonNormal' (000001F8E73E6BF0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/CloseButtonPushed' (000001F8E73E6170) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/HorzSliderShadowL' (000001F8E73E5300) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/HorzSliderShadowR' (000001F8E73E5060) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/HorzThumbNormalBL' (000001F8E73E66B0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/HorzThumbNormalBR' (000001F8E73E3770) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/HorzThumbNormalTL' (000001F8E73E38C0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/HorzThumbNormalTR' (000001F8E73E41F0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/HorzThumbPushedBL' (000001F8E73E45E0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/HorzThumbPushedBR' (000001F8E73E4730) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/HorzThumbPushedTL' (000001F8E73E5450) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/HorzThumbPushedTR' (000001F8E73E7130) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ProgressEmptyFill' (000001F8E73E4880) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/RadioButtonNormal' (000001F8E73E55A0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ScrollRightNormal' (000001F8E73E6E90) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/ScrollRightPushed' (000001F8E73E7BB0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/TitlebarInactiveB' (000001F8E73E49D0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/TitlebarInactiveL' (000001F8E73E7280) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/TitlebarInactiveR' (000001F8E73E34D0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/TitlebarInactiveT' (000001F8E73E4B20) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/VertSliderShadowB' (000001F8E73E4C70) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/VertSliderShadowT' (000001F8E73E3E00) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/VertThumbNormalBL' (000001F8E73E7A60) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/VertThumbNormalBR' (000001F8E73E62C0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/VertThumbNormalTL' (000001F8E73E3620) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/VertThumbNormalTR' (000001F8E73E3230) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/VertThumbPushedBL' (000001F8E73E4DC0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/VertThumbPushedBR' (000001F8E73E73D0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/VertThumbPushedTL' (000001F8E73E5840) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/VertThumbPushedTR' (000001F8E73E7670) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/HorzScrollbarFill1' (000001F8E73E77C0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/HorzScrollbarFill2' (000001F8E73E3A10) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/RadioButtonChecked' (000001F8E73E7910) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/TitlebarInactiveBL' (000001F8E73E3B60) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/TitlebarInactiveBR' (000001F8E73E30E0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/TitlebarInactiveTL' (000001F8E73E4F10) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/TitlebarInactiveTR' (000001F8E73E7D00) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/VertScrollbarFill1' (000001F8E73E5990) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/VertScrollbarFill2' (000001F8E73E7E50) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/HorzSliderTrackFill' (000001F8E73E7FA0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/TitlebarActiveFill1' (000001F8E73E5AE0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/TitlebarActiveFill2' (000001F8E73E5D80) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/VertSliderTrackFill' (000001F8E73E5ED0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/HorzSliderThumbHover' (000001F8E73E6020) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/VertSliderThumbHover' (000001F8E73E80F0) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/HorzSliderThumbNormal' (000001F8E73E8240) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/HorzSliderThumbPushed' (000001F8E73E6410) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/TitlebarInactiveFill1' (000001F8E9DA5E70) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/TitlebarInactiveFill2' (000001F8E9DA6E30) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/VertSliderThumbNormal' (000001F8E9DA5A80) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	[ImageManager] Created image: 'AlfiskoSkin/VertSliderThumbPushed' (000001F8E9DA6F80) of type: BasicImage
+15/04/2020 15:58:26 (Std) 	---- Returning existing instance of Font named 'DejaVuSans-12'.
+15/04/2020 15:58:26 (Std) 	===== Falagard 'root' element: look and feel parsing begins =====
+15/04/2020 15:58:26 (Std) 	===== Look and feel parsing completed =====
+15/04/2020 15:58:26 (Std) 	No window renderer factories specified for module 'CEGUICoreWindowRendererSet' - adding all available factories...
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'AlfiskoSkin/Label' using base type 'DefaultWindow', window renderer 'Core/Default' Look'N'Feel 'AlfiskoSkin/Label' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'AlfiskoSkin/Button' using base type 'CEGUI/PushButton', window renderer 'Core/Button' Look'N'Feel 'AlfiskoSkin/Button' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'AlfiskoSkin/ImageButton' using base type 'CEGUI/PushButton', window renderer 'Core/Button' Look'N'Feel 'AlfiskoSkin/ImageButton' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'AlfiskoSkin/RadioButton' using base type 'CEGUI/RadioButton', window renderer 'Core/ToggleButton' Look'N'Feel 'AlfiskoSkin/RadioButton' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'AlfiskoSkin/Checkbox' using base type 'CEGUI/ToggleButton', window renderer 'Core/ToggleButton' Look'N'Feel 'AlfiskoSkin/Checkbox' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'AlfiskoSkin/Titlebar' using base type 'CEGUI/Titlebar', window renderer 'Core/Titlebar' Look'N'Feel 'AlfiskoSkin/Titlebar' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'AlfiskoSkin/FrameWindow' using base type 'CEGUI/FrameWindow', window renderer 'Core/FrameWindow' Look'N'Feel 'AlfiskoSkin/FrameWindow' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'AlfiskoSkin/Editbox' using base type 'CEGUI/Editbox', window renderer 'Core/Editbox' Look'N'Feel 'AlfiskoSkin/Editbox' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'AlfiskoSkin/VerticalScrollbarThumb' using base type 'CEGUI/Thumb', window renderer 'Core/Button' Look'N'Feel 'AlfiskoSkin/VerticalScrollbarThumb' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'AlfiskoSkin/VerticalScrollbar' using base type 'CEGUI/Scrollbar', window renderer 'Core/Scrollbar' Look'N'Feel 'AlfiskoSkin/VerticalScrollbar' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'AlfiskoSkin/HorizontalScrollbarThumb' using base type 'CEGUI/Thumb', window renderer 'Core/Button' Look'N'Feel 'AlfiskoSkin/HorizontalScrollbarThumb' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'AlfiskoSkin/HorizontalScrollbar' using base type 'CEGUI/Scrollbar', window renderer 'Core/Scrollbar' Look'N'Feel 'AlfiskoSkin/HorizontalScrollbar' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'AlfiskoSkin/MultiLineEditbox' using base type 'CEGUI/MultiLineEditbox', window renderer 'Core/MultiLineEditbox' Look'N'Feel 'AlfiskoSkin/MultiLineEditbox' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'AlfiskoSkin/ProgressBar' using base type 'CEGUI/ProgressBar', window renderer 'Core/ProgressBar' Look'N'Feel 'AlfiskoSkin/ProgressBar' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'AlfiskoSkin/HorizontalSliderThumb' using base type 'CEGUI/Thumb', window renderer 'Core/Button' Look'N'Feel 'AlfiskoSkin/HorizontalSliderThumb' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'AlfiskoSkin/HorizontalSlider' using base type 'CEGUI/Slider', window renderer 'Core/Slider' Look'N'Feel 'AlfiskoSkin/HorizontalSlider' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'AlfiskoSkin/VerticalSliderThumb' using base type 'CEGUI/Thumb', window renderer 'Core/Button' Look'N'Feel 'AlfiskoSkin/VerticalSliderThumb' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'AlfiskoSkin/VerticalSlider' using base type 'CEGUI/Slider', window renderer 'Core/Slider' Look'N'Feel 'AlfiskoSkin/VerticalSlider' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'AlfiskoSkin/MenuItem' using base type 'CEGUI/MenuItem', window renderer 'Core/MenuItem' Look'N'Feel 'AlfiskoSkin/MenuItem' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Started creation of Scheme from XML specification:
+15/04/2020 15:58:26 (Std) 	---- CEGUI GUIScheme name: Generic
+15/04/2020 15:58:26 (Std) 	===== Falagard 'root' element: look and feel parsing begins =====
+15/04/2020 15:58:26 (Std) 	===== Look and feel parsing completed =====
+15/04/2020 15:58:26 (Std) 	No window renderer factories specified for module 'CEGUICoreWindowRendererSet' - adding all available factories...
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'Generic/Label' using base type 'DefaultWindow', window renderer 'Core/Default' Look'N'Feel 'Generic/Label' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'Generic/LabelWithOutline' using base type 'DefaultWindow', window renderer 'Core/Default' Look'N'Feel 'Generic/LabelWithOutline' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'Generic/Image' using base type 'DefaultWindow', window renderer 'Core/Default' Look'N'Feel 'Generic/Image' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	Creating falagard mapping for type 'Generic/ImageButton' using base type 'CEGUI/PushButton', window renderer 'Core/Button' Look'N'Feel 'Generic/ImageButton' and RenderEffect ''. (00000050F2CF9A60)
+15/04/2020 15:58:26 (Std) 	[OgreRenderer] Created texture: Batang_auto_glyph_images_32
+15/04/2020 15:58:28 (Std) 	---- Begining CEGUI System destruction ----
+15/04/2020 15:58:28 (Std) 	WindowFactory for 'CEGUI/Tree' windows removed. (000001F8E713F0B0)
+15/04/2020 15:58:28 (Std) 	Deleted WindowFactory for 'CEGUI/Tree' windows.
+15/04/2020 15:58:28 (Std) 	WindowFactory for 'LayoutCell' windows removed. (000001F8E713ECB0)
+15/04/2020 15:58:28 (Std) 	Deleted WindowFactory for 'LayoutCell' windows.
+15/04/2020 15:58:28 (Std) 	WindowFactory for 'CEGUI/Thumb' windows removed. (000001F8E22E2C90)
+15/04/2020 15:58:28 (Std) 	Deleted WindowFactory for 'CEGUI/Thumb' windows.
+15/04/2020 15:58:28 (Std) 	WindowFactory for 'CEGUI/Slider' windows removed. (000001F8E22E4F90)
+15/04/2020 15:58:28 (Std) 	Deleted WindowFactory for 'CEGUI/Slider' windows.
+15/04/2020 15:58:28 (Std) 	WindowFactory for 'CEGUI/Editbox' windows removed. (000001F8E22E2E90)
+15/04/2020 15:58:28 (Std) 	Deleted WindowFactory for 'CEGUI/Editbox' windows.
+15/04/2020 15:58:28 (Std) 	WindowFactory for 'CEGUI/Listbox' windows removed. (000001F8E22E2090)
+15/04/2020 15:58:28 (Std) 	Deleted WindowFactory for 'CEGUI/Listbox' windows.
+15/04/2020 15:58:28 (Std) 	WindowFactory for 'CEGUI/Menubar' windows removed. (000001F8E22E3790)
+15/04/2020 15:58:28 (Std) 	Deleted WindowFactory for 'CEGUI/Menubar' windows.
+15/04/2020 15:58:28 (Std) 	WindowFactory for 'CEGUI/Spinner' windows removed. (000001F8E22E5390)
+15/04/2020 15:58:28 (Std) 	Deleted WindowFactory for 'CEGUI/Spinner' windows.
+15/04/2020 15:58:28 (Std) 	WindowFactory for 'CEGUI/Tooltip' windows removed. (000001F8E22E3290)
+15/04/2020 15:58:28 (Std) 	Deleted WindowFactory for 'CEGUI/Tooltip' windows.
+15/04/2020 15:58:28 (Std) 	WindowFactory for 'DefaultWindow' windows removed. (000001F8E22E2590)
+15/04/2020 15:58:28 (Std) 	Deleted WindowFactory for 'DefaultWindow' windows.
+15/04/2020 15:58:28 (Std) 	WindowFactory for 'DragContainer' windows removed. (000001F8E22E2990)
+15/04/2020 15:58:28 (Std) 	Deleted WindowFactory for 'DragContainer' windows.
+15/04/2020 15:58:28 (Std) 	WindowFactory for 'CEGUI/Combobox' windows removed. (000001F8E22E4490)
+15/04/2020 15:58:28 (Std) 	Deleted WindowFactory for 'CEGUI/Combobox' windows.
+15/04/2020 15:58:28 (Std) 	WindowFactory for 'CEGUI/GroupBox' windows removed. (000001F8E713EBB0)
+15/04/2020 15:58:28 (Std) 	Deleted WindowFactory for 'CEGUI/GroupBox' windows.
+15/04/2020 15:58:28 (Std) 	WindowFactory for 'CEGUI/MenuItem' windows removed. (000001F8E22E3490)
+15/04/2020 15:58:28 (Std) 	Deleted WindowFactory for 'CEGUI/MenuItem' windows.
+15/04/2020 15:58:28 (Std) 	WindowFactory for 'CEGUI/Titlebar' windows removed. (000001F8E22E2F90)
+15/04/2020 15:58:28 (Std) 	Deleted WindowFactory for 'CEGUI/Titlebar' windows.
+15/04/2020 15:58:28 (Std) 	WindowFactory for 'CEGUI/ItemEntry' windows removed. (000001F8E22E1B90)
+15/04/2020 15:58:28 (Std) 	Deleted WindowFactory for 'CEGUI/ItemEntry' windows.
+15/04/2020 15:58:28 (Std) 	WindowFactory for 'CEGUI/PopupMenu' windows removed. (000001F8E22E4790)
+15/04/2020 15:58:28 (Std) 	Deleted WindowFactory for 'CEGUI/PopupMenu' windows.
+15/04/2020 15:58:28 (Std) 	WindowFactory for 'CEGUI/Scrollbar' windows removed. (000001F8E22E4D90)
+15/04/2020 15:58:28 (Std) 	Deleted WindowFactory for 'CEGUI/Scrollbar' windows.
+15/04/2020 15:58:28 (Std) 	WindowFactory for 'CEGUI/TabButton' windows removed. (000001F8E22E5490)
+15/04/2020 15:58:28 (Std) 	Deleted WindowFactory for 'CEGUI/TabButton' windows.
+15/04/2020 15:58:28 (Std) 	WindowFactory for 'CEGUI/ListHeader' windows removed. (000001F8E22E2190)
+15/04/2020 15:58:28 (Std) 	Deleted WindowFactory for 'CEGUI/ListHeader' windows.
+15/04/2020 15:58:28 (Std) 	WindowFactory for 'CEGUI/PushButton' windows removed. (000001F8E22E4290)
+15/04/2020 15:58:28 (Std) 	Deleted WindowFactory for 'CEGUI/PushButton' windows.
+15/04/2020 15:58:28 (Std) 	WindowFactory for 'CEGUI/TabControl' windows removed. (000001F8E22E5690)
+15/04/2020 15:58:28 (Std) 	Deleted WindowFactory for 'CEGUI/TabControl' windows.
+15/04/2020 15:58:28 (Std) 	WindowFactory for 'ClippedContainer' windows removed. (000001F8E22E5790)
+15/04/2020 15:58:28 (Std) 	Deleted WindowFactory for 'ClippedContainer' windows.
+15/04/2020 15:58:28 (Std) 	WindowFactory for 'CEGUI/FrameWindow' windows removed. (000001F8E22E4E90)
+15/04/2020 15:58:28 (Std) 	Deleted WindowFactory for 'CEGUI/FrameWindow' windows.
+15/04/2020 15:58:28 (Std) 	WindowFactory for 'CEGUI/ItemListbox' windows removed. (000001F8E7140CB0)
+15/04/2020 15:58:28 (Std) 	Deleted WindowFactory for 'CEGUI/ItemListbox' windows.
+15/04/2020 15:58:28 (Std) 	WindowFactory for 'CEGUI/ProgressBar' windows removed. (000001F8E22E4C90)
+15/04/2020 15:58:28 (Std) 	Deleted WindowFactory for 'CEGUI/ProgressBar' windows.
+15/04/2020 15:58:28 (Std) 	WindowFactory for 'CEGUI/RadioButton' windows removed. (000001F8E22E5290)
+15/04/2020 15:58:28 (Std) 	Deleted WindowFactory for 'CEGUI/RadioButton' windows.
+15/04/2020 15:58:28 (Std) 	WindowFactory for 'ScrolledContainer' windows removed. (000001F8E22E1F90)
+15/04/2020 15:58:28 (Std) 	Deleted WindowFactory for 'ScrolledContainer' windows.
+15/04/2020 15:58:28 (Std) 	WindowFactory for 'CEGUI/ToggleButton' windows removed. (000001F8E22E3090)
+15/04/2020 15:58:28 (Std) 	Deleted WindowFactory for 'CEGUI/ToggleButton' windows.
+15/04/2020 15:58:28 (Std) 	WindowFactory for 'CEGUI/ComboDropList' windows removed. (000001F8E22E1D90)
+15/04/2020 15:58:28 (Std) 	Deleted WindowFactory for 'CEGUI/ComboDropList' windows.
+15/04/2020 15:58:28 (Std) 	WindowFactory for 'GridLayoutContainer' windows removed. (000001F8E713E4B0)
+15/04/2020 15:58:28 (Std) 	Deleted WindowFactory for 'GridLayoutContainer' windows.
+15/04/2020 15:58:28 (Std) 	WindowFactory for 'CEGUI/ScrollablePane' windows removed. (000001F8E22E2A90)
+15/04/2020 15:58:28 (Std) 	Deleted WindowFactory for 'CEGUI/ScrollablePane' windows.
+15/04/2020 15:58:28 (Std) 	WindowFactory for 'CEGUI/MultiColumnList' windows removed. (000001F8E22E3E90)
+15/04/2020 15:58:28 (Std) 	Deleted WindowFactory for 'CEGUI/MultiColumnList' windows.
+15/04/2020 15:58:28 (Std) 	WindowFactory for 'CEGUI/MultiLineEditbox' windows removed. (000001F8E22E1A90)
+15/04/2020 15:58:28 (Std) 	Deleted WindowFactory for 'CEGUI/MultiLineEditbox' windows.
+15/04/2020 15:58:28 (Std) 	WindowFactory for 'CEGUI/ListHeaderSegment' windows removed. (000001F8E22E3990)
+15/04/2020 15:58:28 (Std) 	Deleted WindowFactory for 'CEGUI/ListHeaderSegment' windows.
+15/04/2020 15:58:28 (Std) 	WindowFactory for 'VerticalLayoutContainer' windows removed. (000001F8E71400B0)
+15/04/2020 15:58:28 (Std) 	Deleted WindowFactory for 'VerticalLayoutContainer' windows.
+15/04/2020 15:58:28 (Std) 	WindowFactory for 'HorizontalLayoutContainer' windows removed. (000001F8E713EDB0)
+15/04/2020 15:58:28 (Std) 	Deleted WindowFactory for 'HorizontalLayoutContainer' windows.
+15/04/2020 15:58:28 (Std) 	---- Begining cleanup of GUI Scheme system ----
+15/04/2020 15:58:28 (Std) 	WindowRendererFactory for 'Core/Button' WindowRenderers removed. (000001F8E7334A70)
+15/04/2020 15:58:28 (Std) 	Deleted WindowRendererFactory for 'Core/Button' WindowRenderers.
+15/04/2020 15:58:28 (Std) 	WindowRendererFactory for 'Core/Default' WindowRenderers removed. (000001F8E7335170)
+15/04/2020 15:58:28 (Std) 	Deleted WindowRendererFactory for 'Core/Default' WindowRenderers.
+15/04/2020 15:58:28 (Std) 	WindowRendererFactory for 'Core/Editbox' WindowRenderers removed. (000001F8E7334170)
+15/04/2020 15:58:28 (Std) 	Deleted WindowRendererFactory for 'Core/Editbox' WindowRenderers.
+15/04/2020 15:58:28 (Std) 	WindowRendererFactory for 'Core/FrameWindow' WindowRenderers removed. (000001F8E7334570)
+15/04/2020 15:58:28 (Std) 	Deleted WindowRendererFactory for 'Core/FrameWindow' WindowRenderers.
+15/04/2020 15:58:28 (Std) 	WindowRendererFactory for 'Core/ItemEntry' WindowRenderers removed. (000001F8E7335570)
+15/04/2020 15:58:28 (Std) 	Deleted WindowRendererFactory for 'Core/ItemEntry' WindowRenderers.
+15/04/2020 15:58:28 (Std) 	WindowRendererFactory for 'Core/ListHeader' WindowRenderers removed. (000001F8E7334B70)
+15/04/2020 15:58:28 (Std) 	Deleted WindowRendererFactory for 'Core/ListHeader' WindowRenderers.
+15/04/2020 15:58:28 (Std) 	WindowRendererFactory for 'Core/ListHeaderSegment' WindowRenderers removed. (000001F8E7334270)
+15/04/2020 15:58:28 (Std) 	Deleted WindowRendererFactory for 'Core/ListHeaderSegment' WindowRenderers.
+15/04/2020 15:58:28 (Std) 	WindowRendererFactory for 'Core/Listbox' WindowRenderers removed. (000001F8E7334370)
+15/04/2020 15:58:28 (Std) 	Deleted WindowRendererFactory for 'Core/Listbox' WindowRenderers.
+15/04/2020 15:58:28 (Std) 	WindowRendererFactory for 'Core/Menubar' WindowRenderers removed. (000001F8E7335670)
+15/04/2020 15:58:28 (Std) 	Deleted WindowRendererFactory for 'Core/Menubar' WindowRenderers.
+15/04/2020 15:58:28 (Std) 	WindowRendererFactory for 'Core/MenuItem' WindowRenderers removed. (000001F8E7335C70)
+15/04/2020 15:58:28 (Std) 	Deleted WindowRendererFactory for 'Core/MenuItem' WindowRenderers.
+15/04/2020 15:58:28 (Std) 	WindowRendererFactory for 'Core/MultiColumnList' WindowRenderers removed. (000001F8E7335870)
+15/04/2020 15:58:28 (Std) 	Deleted WindowRendererFactory for 'Core/MultiColumnList' WindowRenderers.
+15/04/2020 15:58:28 (Std) 	WindowRendererFactory for 'Core/MultiLineEditbox' WindowRenderers removed. (000001F8E7334C70)
+15/04/2020 15:58:28 (Std) 	Deleted WindowRendererFactory for 'Core/MultiLineEditbox' WindowRenderers.
+15/04/2020 15:58:28 (Std) 	WindowRendererFactory for 'Core/PopupMenu' WindowRenderers removed. (000001F8E7334770)
+15/04/2020 15:58:28 (Std) 	Deleted WindowRendererFactory for 'Core/PopupMenu' WindowRenderers.
+15/04/2020 15:58:28 (Std) 	WindowRendererFactory for 'Core/ProgressBar' WindowRenderers removed. (000001F8E7334D70)
+15/04/2020 15:58:28 (Std) 	Deleted WindowRendererFactory for 'Core/ProgressBar' WindowRenderers.
+15/04/2020 15:58:28 (Std) 	WindowRendererFactory for 'Core/ScrollablePane' WindowRenderers removed. (000001F8E7335070)
+15/04/2020 15:58:28 (Std) 	Deleted WindowRendererFactory for 'Core/ScrollablePane' WindowRenderers.
+15/04/2020 15:58:28 (Std) 	WindowRendererFactory for 'Core/Scrollbar' WindowRenderers removed. (000001F8E7334E70)
+15/04/2020 15:58:28 (Std) 	Deleted WindowRendererFactory for 'Core/Scrollbar' WindowRenderers.
+15/04/2020 15:58:28 (Std) 	WindowRendererFactory for 'Core/Slider' WindowRenderers removed. (000001F8E7335D70)
+15/04/2020 15:58:28 (Std) 	Deleted WindowRendererFactory for 'Core/Slider' WindowRenderers.
+15/04/2020 15:58:28 (Std) 	WindowRendererFactory for 'Core/Static' WindowRenderers removed. (000001F8E7333F70)
+15/04/2020 15:58:28 (Std) 	Deleted WindowRendererFactory for 'Core/Static' WindowRenderers.
+15/04/2020 15:58:28 (Std) 	WindowRendererFactory for 'Core/StaticImage' WindowRenderers removed. (000001F8E7334F70)
+15/04/2020 15:58:28 (Std) 	Deleted WindowRendererFactory for 'Core/StaticImage' WindowRenderers.
+15/04/2020 15:58:28 (Std) 	WindowRendererFactory for 'Core/StaticText' WindowRenderers removed. (000001F8E7335A70)
+15/04/2020 15:58:28 (Std) 	Deleted WindowRendererFactory for 'Core/StaticText' WindowRenderers.
+15/04/2020 15:58:28 (Std) 	WindowRendererFactory for 'Core/TabButton' WindowRenderers removed. (000001F8E7334070)
+15/04/2020 15:58:28 (Std) 	Deleted WindowRendererFactory for 'Core/TabButton' WindowRenderers.
+15/04/2020 15:58:28 (Std) 	WindowRendererFactory for 'Core/TabControl' WindowRenderers removed. (000001F8E7334470)
+15/04/2020 15:58:28 (Std) 	Deleted WindowRendererFactory for 'Core/TabControl' WindowRenderers.
+15/04/2020 15:58:28 (Std) 	WindowRendererFactory for 'Core/Titlebar' WindowRenderers removed. (000001F8E7335270)
+15/04/2020 15:58:28 (Std) 	Deleted WindowRendererFactory for 'Core/Titlebar' WindowRenderers.
+15/04/2020 15:58:28 (Std) 	WindowRendererFactory for 'Core/ToggleButton' WindowRenderers removed. (000001F8E7335470)
+15/04/2020 15:58:28 (Std) 	Deleted WindowRendererFactory for 'Core/ToggleButton' WindowRenderers.
+15/04/2020 15:58:28 (Std) 	WindowRendererFactory for 'Core/Tooltip' WindowRenderers removed. (000001F8E7335B70)
+15/04/2020 15:58:28 (Std) 	Deleted WindowRendererFactory for 'Core/Tooltip' WindowRenderers.
+15/04/2020 15:58:28 (Std) 	WindowRendererFactory for 'Core/ItemListbox' WindowRenderers removed. (000001F8E7334670)
+15/04/2020 15:58:28 (Std) 	Deleted WindowRendererFactory for 'Core/ItemListbox' WindowRenderers.
+15/04/2020 15:58:28 (Std) 	WindowRendererFactory for 'Core/Tree' WindowRenderers removed. (000001F8E7334870)
+15/04/2020 15:58:28 (Std) 	Deleted WindowRendererFactory for 'Core/Tree' WindowRenderers.
+15/04/2020 15:58:28 (Std) 	CEGUI::SchemeManager singleton destroyed. (000001F8E22DD060)
+15/04/2020 15:58:28 (Std) 	CEGUI::WindowManager singleton destroyed (000001F8E70A95C0)
+15/04/2020 15:58:28 (Std) 	CEGUI::WindowFactoryManager singleton destroyed
+15/04/2020 15:58:28 (Std) 	CEGUI::WidgetLookManager singleton destroyed. (000001F8E70CE510)
+15/04/2020 15:58:28 (Std) 	CEGUI::WindowRendererManager singleton destroyed (000001F8E70CE930)
+15/04/2020 15:58:28 (Std) 	CEGUI::AnimationManager singleton destroyed (000001F8E70AA280)
+15/04/2020 15:58:28 (Std) 	CEGUI::RenderEffectManager singleton destroyed (000001F8E70C3120)
+15/04/2020 15:58:28 (Std) 	---- Begining cleanup of Font system ----
+15/04/2020 15:58:29 (Std) 	[OgreRenderer] Destroyed texture: Batang_auto_glyph_images_32
+15/04/2020 15:58:29 (Std) 	CEGUI::FontManager singleton destroyed. (000001F8E22DBB20)
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/WindowB
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/WindowL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/WindowR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/WindowT
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MenuTop
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/UpArrow
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/EditboxB
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/EditboxL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/EditboxR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/EditboxT
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/WindowBL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/WindowBR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/WindowTL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/WindowTR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MenuLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/EditboxBL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/EditboxBR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/EditboxTL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/EditboxTR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/MouseMove
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/MouseNeSw
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/NewImage1
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MenuRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/StaticTop
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/MouseArrow
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/WindowFill
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ListboxTop
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MenuBottom
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MenuMiddle
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MouseArrow
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/StaticLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/EditboxFill
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/WindowClipB
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/WindowClipL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/WindowClipR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/WindowClipT
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ClientBrush
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/EditBoxLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ListboxLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MenuTopLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MouseTarget
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/StaticRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/FrameTop
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ButtonHoverB
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ButtonHoverL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ButtonHoverR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ButtonHoverT
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/GenericBrush
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/MouseTextBar
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/CheckboxMark
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/EditBoxCaret
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/EditBoxRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/GenericBrush
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ListboxRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MenuTopRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MouseTextBar
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MultiListTop
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/StaticBottom
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/SysAreaRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TitlebarLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/FrameLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ButtonHoverBL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ButtonHoverBR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ButtonHoverTL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ButtonHoverTR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ButtonNormalB
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ButtonNormalL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ButtonNormalR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ButtonNormalT
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ButtonPushedB
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ButtonPushedL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ButtonPushedR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ButtonPushedT
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/CheckboxHover
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ProgressFullB
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ProgressFullL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ProgressFullR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ProgressFullT
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ScrollUpHover
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/CheckboxHover
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/EditBoxMiddle
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ListboxBottom
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MultiListLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/StaticTopLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/SysAreaMiddle
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TitlebarRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TooltipMiddle
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/VertScrollTop
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/WindowTopEdge
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/WindowTopLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/FrameRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/MouseArrow
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ButtonNormalBL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ButtonNormalBR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ButtonNormalTL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ButtonNormalTR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ButtonPushedBL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ButtonPushedBR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ButtonPushedTL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ButtonPushedTR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/CheckboxNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/HorzScrollbarB
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/HorzScrollbarT
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ProgressEmptyB
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ProgressEmptyL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ProgressEmptyR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ProgressEmptyT
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ProgressFullBL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ProgressFullBR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ProgressFullTL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ProgressFullTR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ProgressShadow
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ScrollUpNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ScrollUpPushed
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/TitlebarDummy1
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/VertScrollbarL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/VertScrollbarR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/CheckboxNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ListboxTopLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MenuBottomLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MultiListRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/SpinnerUpHover
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/StaticBackdrop
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/StaticTopRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TitlebarMiddle
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TooltipTopEdge
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TooltipTopLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TreeListClosed
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TreeListOpened
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/VertSliderBody
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/WindowLeftEdge
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/WindowTopRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/FrameBottom
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/ShadowBrush
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/CheckboxChecked
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/HorzThumbHoverB
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/HorzThumbHoverT
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ProgressEmptyBL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ProgressEmptyBR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ProgressEmptyTL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ProgressEmptyTR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ScrollDownHover
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ScrollLeftHover
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/TitlebarActiveB
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/TitlebarActiveL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/TitlebarActiveR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/TitlebarActiveT
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/VertThumbHoverL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/VertThumbHoverR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/AltProgressHalf
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/AltProgressLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ComboboxListTop
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/HeaderBarSortUp
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ListboxBackdrop
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ListboxTopRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MenuBottomRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MouseEsWeCursor
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MouseMoveCursor
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MouseNeSwCursor
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MouseNoSoCursor
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MouseNwSeCursor
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MultiListBottom
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/NewTitlebarLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/PopupMenuMiddle
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ProgressBarLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/RadioButtonMark
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/SpinnerUpNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TooltipLeftEdge
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TooltipTopRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/WindowRightEdge
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/CheckboxMark
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/FrameTopLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/GenericBrush
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ButtonHoverFill1
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ButtonHoverFill2
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/HorzSliderTrackL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/HorzSliderTrackR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/HorzThumbHoverBL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/HorzThumbHoverBR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/HorzThumbHoverTL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/HorzThumbHoverTR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/HorzThumbNormalB
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/HorzThumbNormalT
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/HorzThumbPushedB
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/HorzThumbPushedT
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/HorzThumbShadowL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/HorzThumbShadowR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ProgressFullFill
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/RadioButtonHover
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ScrollDownNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ScrollDownPushed
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ScrollLeftNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ScrollLeftPushed
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ScrollRightHover
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/TitlebarActiveBL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/TitlebarActiveBR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/TitlebarActiveTL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/TitlebarActiveTR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/VertSliderTrackB
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/VertSliderTrackT
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/VertThumbHoverBL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/VertThumbHoverBR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/VertThumbHoverTL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/VertThumbHoverTR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/VertThumbNormalL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/VertThumbNormalR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/VertThumbPushedL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/VertThumbPushedR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/VertThumbShadowB
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/VertThumbShadowT
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/AltProgressRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ButtonLeftNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ButtonLeftPushed
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/CloseButtonHover
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ComboboxEditLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ComboboxListLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MultiListTopLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/NewTitlebarRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ProgressBarRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/RadioButtonHover
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/SpinnerDownHover
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/StaticBottomLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TooltipRightEdge
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/VertScrollBottom
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/VertScrollMiddle
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/WindowBottomEdge
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/WindowBottomLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/CheckboxHover
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/FrameTopRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/ScrollUpArrow
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/TooltipMiddle
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ButtonNormalFill1
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ButtonNormalFill2
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ButtonPushedFill1
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ButtonPushedFill2
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/CloseButtonNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/CloseButtonPushed
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/HorzSliderShadowL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/HorzSliderShadowR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/HorzThumbNormalBL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/HorzThumbNormalBR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/HorzThumbNormalTL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/HorzThumbNormalTR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/HorzThumbPushedBL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/HorzThumbPushedBR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/HorzThumbPushedTL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/HorzThumbPushedTR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ProgressEmptyFill
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/RadioButtonNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ScrollRightNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/ScrollRightPushed
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/TitlebarInactiveB
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/TitlebarInactiveL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/TitlebarInactiveR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/TitlebarInactiveT
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/VertSliderShadowB
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/VertSliderShadowT
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/VertThumbNormalBL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/VertThumbNormalBR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/VertThumbNormalTL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/VertThumbNormalTR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/VertThumbPushedBL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/VertThumbPushedBR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/VertThumbPushedTL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/VertThumbPushedTR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/AltProgressLight1
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/AltProgressLight2
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/AltProgressLight3
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/AltProgressLight4
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/AltProgressLight5
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/AltProgressLight6
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/AltProgressLight7
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/AltProgressLight8
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/AltProgressLight9
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/AltProgressMiddle
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ButtonRightNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ButtonRightPushed
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/CloseButtonNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ComboboxListRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/HeaderBarSortDown
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ListboxBottomLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MultiListBackdrop
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MultiListTopRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/NewTitlebarMiddle
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/PopupMenuFrameTop
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ProgressBarMiddle
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/RadioButtonNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/SpinnerDownNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/StaticBottomRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TooltipBottomEdge
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TooltipBottomLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/VertScrollUpHover
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/WindowBottomRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/CheckboxNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/ScrollbarThumb
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/TooltipTopEdge
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/TooltipTopLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/HorzScrollbarFill1
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/HorzScrollbarFill2
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/RadioButtonChecked
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/TitlebarInactiveBL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/TitlebarInactiveBR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/TitlebarInactiveTL
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/TitlebarInactiveTR
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/VertScrollbarFill1
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/VertScrollbarFill2
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/AltProgressLight10
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/AltProgressQuarter
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ButtonMiddleNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ButtonMiddlePushed
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/CloseButtonPressed
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ComboboxEditMiddle
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ComboboxListBottom
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ListboxBottomRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/PopupMenuArrowLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/PopupMenuFrameLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TabContentPaneLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TextSelectionBrush
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TooltipBottomRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/VertScrollUpNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/FrameBottomLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/RadioButtonMark
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/ScrollDownArrow
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/ScrollLeftArrow
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/TooltipLeftEdge
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/TooltipTopRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/HorzSliderTrackFill
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/TitlebarActiveFill1
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/TitlebarActiveFill2
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/VertSliderTrackFill
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ButtonLeftHighlight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ComboboxDividerLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ComboboxListTopLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MultiLineEditboxTop
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MultiListBottomLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/NewCloseButtonHover
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/PopupMenuArrowRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/PopupMenuFrameRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TabButtonLeftNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TabContentPaneLower
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TabContentPaneRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TabContentPaneUpper
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TabHorizontalFiller
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/VertScrollDownHover
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/FrameBottomRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/RadioButtonHover
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/ScrollRightArrow
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/TooltipRightEdge
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/HorzSliderThumbHover
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/VertSliderThumbHover
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ButtonRightHighlight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ComboboxDividerRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ComboboxListBackdrop
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ComboboxListTopRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MultiLineEditboxLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MultiListBottomRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/NewCloseButtonNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/PopupMenuFrameBottom
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TabButtonLowerNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TabButtonRightNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TabButtonUpperNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TabContentPaneMiddle
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/VertScrollBarSegment
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/VertScrollDownNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/VertScrollThumbHover
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/VertSliderThumbHover
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/RadioButtonNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/TooltipBottomEdge
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/TooltipBottomLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/HorzSliderThumbNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/HorzSliderThumbPushed
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/TitlebarInactiveFill1
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/TitlebarInactiveFill2
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/VertSliderThumbNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: AlfiskoSkin/VertSliderThumbPushed
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ButtonMiddleHighlight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ComboboxDividerMiddle
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ListboxSelectionBrush
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MiniVertScrollUpHover
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MultiLineEditboxRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/NewCloseButtonPressed
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/PopupMenuFrameTopLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ProgressBarDimSegment
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ProgressBarLitSegment
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TabButtonLeftSelected
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TabButtonMiddleNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/VertScrollThumbNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/VertSliderThumbNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/ColourPickerCursor
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/DefaultScrollImage
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/TooltipBottomRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ComboboxListBottomLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ComboboxSelectionBrush
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/HeaderBarBackdropHover
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/HeaderBarSplitterHover
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MiniVertScrollUpNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MultiLineEditboxBottom
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/PopupMenuFrameTopRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TabButtonLowerSelected
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TabButtonRightSelected
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TabButtonUpperSelected
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/DropDownButtonHover
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/HorzScrollContainer
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/SliderScrollUpArrow
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/VertScrollContainer
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ComboboxListBottomRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ComboboxListButtonHover
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/HeaderBarBackdropNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/HeaderBarSplitterNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MiniHorzScrollLeftHover
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MiniVertScrollDownHover
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MultiLineEditboxTopLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MultiListSelectionBrush
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TabButtonMiddleSelected
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TabContentPaneLowerLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TabContentPaneUpperLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/DropDownButtonNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/DropDownButtonPushed
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/ComboboxListButtonNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MiniHorzScrollBarSegment
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MiniHorzScrollLeftNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MiniHorzScrollRightHover
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MiniHorzScrollThumbHover
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MiniVertScrollBarSegment
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MiniVertScrollDownNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MiniVertScrollThumbHover
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MultiLineEditboxBackdrop
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MultiLineEditboxTopRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/PopupMenuFrameBottomLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TabButtonLowerLeftNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TabButtonScrollLeftHover
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TabButtonUpperLeftNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TabContentPaneLowerRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TabContentPaneUpperRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/SliderScrollDownArrow
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/SliderScrollLeftArrow
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MiniHorzScrollRightNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MiniHorzScrollThumbNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MiniVertScrollThumbNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/PopupMenuFrameBottomRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TabButtonLowerRightNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TabButtonScrollLeftNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TabButtonScrollRightHover
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TabButtonUpperLeft2Normal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TabButtonUpperRightNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/SliderScrollRightArrow
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MultiLineEditboxBottomLeft
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TabButtonLowerLeftSelected
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TabButtonLowerRight2Normal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TabButtonScrollRightNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TabButtonUpperLeftSelected
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MiniVertScrollThumbTopHover
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MultiLineEditboxBottomRight
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TabButtonLowerRightSelected
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/TabButtonUpperRightSelected
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/VerticalImageSliderThumb
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MiniHorzScrollThumbLeftHover
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MiniVertScrollThumbTopNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/VerticalImageSliderTopEnd
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MiniHorzScrollThumbLeftNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MiniHorzScrollThumbRightHover
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/HorizontalImageSliderThumb
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MiniHorzScrollThumbMiddleHover
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MiniHorzScrollThumbRightNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MiniVertScrollThumbBottomHover
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MiniVertScrollThumbMiddleHover
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MultiLineEditboxSelectionBrush
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MiniHorzScrollThumbMiddleNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MiniVertScrollThumbBottomNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: TaharezLook/MiniVertScrollThumbMiddleNormal
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/HorizontalImageSliderLeftEnd
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/VerticalImageSliderBottomEnd
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/VerticalImageSliderContainer
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/HorizontalImageSliderRightEnd
+15/04/2020 15:58:29 (Std) 	[ImageManager] Deleted image: Vanilla-Images/HorizontalImageSliderContainer
+15/04/2020 15:58:29 (Std) 	[CEGUI::ImageManager] Unregistered Image type: BasicImage
+15/04/2020 15:58:29 (Std) 	[CEGUI::ImageManager] Singleton destroyed (000001F8E6F4B930)
+15/04/2020 15:58:29 (Std) 	CEGUI::GlobalEventSet singleton destroyed. (000001F8E6F89060)
+15/04/2020 15:58:29 (Std) 	CEGUI::System singleton destroyed. (000001F8DF238B90)
+15/04/2020 15:58:29 (Std) 	---- CEGUI System destruction completed ----
+15/04/2020 15:58:29 (Std) 	CEGUI::Logger singleton destroyed. (000001F8E6EA0F60)
