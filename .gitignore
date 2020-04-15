@@ -34,3 +34,4 @@
 *.vs
 # interm
 interm/
+dependencies/
