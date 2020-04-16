@@ -1,114 +1,205 @@
-16/04/2020 13:17:27 (Std) 	+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-16/04/2020 13:17:27 (Std) 	+                     Crazy Eddie's GUI System - Event log                    +
-16/04/2020 13:17:27 (Std) 	+                          (http://www.cegui.org.uk/)                         +
-16/04/2020 13:17:27 (Std) 	+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+16/04/2020 14:51:58 (Std) 	+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+16/04/2020 14:51:58 (Std) 	+                     Crazy Eddie's GUI System - Event log                    +
+16/04/2020 14:51:58 (Std) 	+                          (http://www.cegui.org.uk/)                         +
+16/04/2020 14:51:58 (Std) 	+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 
-16/04/2020 13:17:27 (Std) 	CEGUI::Logger singleton created. (000001B56F1BD170)
-16/04/2020 13:17:27 (Std) 	
-16/04/2020 13:17:27 (Std) 	********************************************************************************
-16/04/2020 13:17:27 (Std) 	* Important:                                                                   *
-16/04/2020 13:17:27 (Std) 	*     To get support at the CEGUI forums, you must post _at least_ the section *
-16/04/2020 13:17:27 (Std) 	*     of this log file indicated below.  Failure to do this will result in no  *
-16/04/2020 13:17:27 (Std) 	*     support being given; please do not waste our time.                       *
-16/04/2020 13:17:27 (Std) 	********************************************************************************
-16/04/2020 13:17:27 (Std) 	********************************************************************************
-16/04/2020 13:17:27 (Std) 	* -------- START OF ESSENTIAL SECTION TO BE POSTED ON THE FORUM       -------- *
-16/04/2020 13:17:27 (Std) 	********************************************************************************
-16/04/2020 13:17:27 (Std) 	---- Version: 0.8.7 (Build: Apr  8 2020 Debug Microsoft Windows MSVC++ Unknown MSVC++ version 64 bit) ----
-16/04/2020 13:17:27 (Std) 	---- Renderer module is: CEGUI::OgreRenderer - Official OGRE based 2nd generation renderer module. ----
-16/04/2020 13:17:27 (Std) 	---- XML Parser module is: CEGUI::ExpatParser - Official expat based parser module for CEGUI ----
-16/04/2020 13:17:27 (Std) 	---- Image Codec module is: OgreImageCodec - Integrated ImageCodec using the Ogre engine. ----
-16/04/2020 13:17:27 (Std) 	---- Scripting module is: None ----
-16/04/2020 13:17:27 (Std) 	********************************************************************************
-16/04/2020 13:17:27 (Std) 	* -------- END OF ESSENTIAL SECTION TO BE POSTED ON THE FORUM         -------- *
-16/04/2020 13:17:27 (Std) 	********************************************************************************
-16/04/2020 13:17:27 (Std) 	
-16/04/2020 13:17:27 (Std) 	---- Begining CEGUI System initialisation ----
-16/04/2020 13:17:27 (Std) 	[CEGUI::ImageManager] Singleton created (000001B56F463780)
-16/04/2020 13:17:27 (Std) 	[CEGUI::ImageManager] Registered Image type: BasicImage
-16/04/2020 13:17:27 (Std) 	CEGUI::FontManager singleton created. (000001B56A56FAA0)
-16/04/2020 13:17:27 (Std) 	CEGUI::WindowFactoryManager singleton created
-16/04/2020 13:17:27 (Std) 	CEGUI::WindowManager singleton created (000001B56F312860)
-16/04/2020 13:17:27 (Std) 	CEGUI::SchemeManager singleton created. (000001B56A56FBE0)
-16/04/2020 13:17:27 (Std) 	CEGUI::GlobalEventSet singleton created. (000001B56F359E60)
-16/04/2020 13:17:27 (Std) 	CEGUI::AnimationManager singleton created (000001B56F30F9E0)
-16/04/2020 13:17:27 (Std) 	CEGUI::WidgetLookManager singleton created. (000001B56F37CF80)
-16/04/2020 13:17:27 (Std) 	CEGUI::WindowRendererManager singleton created (000001B56F37CC20)
-16/04/2020 13:17:27 (Std) 	CEGUI::RenderEffectManager singleton created (000001B56F4A3C40)
-16/04/2020 13:17:27 (Std) 	Created WindowFactory for 'DefaultWindow' windows.
-16/04/2020 13:17:27 (Std) 	WindowFactory for 'DefaultWindow' windows added. (000001B56A35B720)
-16/04/2020 13:17:27 (Std) 	Created WindowFactory for 'DragContainer' windows.
-16/04/2020 13:17:27 (Std) 	WindowFactory for 'DragContainer' windows added. (000001B56F4AC270)
-16/04/2020 13:17:27 (Std) 	Created WindowFactory for 'ScrolledContainer' windows.
-16/04/2020 13:17:27 (Std) 	WindowFactory for 'ScrolledContainer' windows added. (000001B56F4AD770)
-16/04/2020 13:17:27 (Std) 	Created WindowFactory for 'ClippedContainer' windows.
-16/04/2020 13:17:27 (Std) 	WindowFactory for 'ClippedContainer' windows added. (000001B56F4AAB70)
-16/04/2020 13:17:27 (Std) 	Created WindowFactory for 'CEGUI/PushButton' windows.
-16/04/2020 13:17:27 (Std) 	WindowFactory for 'CEGUI/PushButton' windows added. (000001B56F4ACA70)
-16/04/2020 13:17:27 (Std) 	Created WindowFactory for 'CEGUI/RadioButton' windows.
-16/04/2020 13:17:27 (Std) 	WindowFactory for 'CEGUI/RadioButton' windows added. (000001B56F4AB270)
-16/04/2020 13:17:27 (Std) 	Created WindowFactory for 'CEGUI/Combobox' windows.
-16/04/2020 13:17:27 (Std) 	WindowFactory for 'CEGUI/Combobox' windows added. (000001B56F4AB970)
-16/04/2020 13:17:27 (Std) 	Created WindowFactory for 'CEGUI/ComboDropList' windows.
-16/04/2020 13:17:27 (Std) 	WindowFactory for 'CEGUI/ComboDropList' windows added. (000001B56F4AB170)
-16/04/2020 13:17:27 (Std) 	Created WindowFactory for 'CEGUI/Editbox' windows.
-16/04/2020 13:17:27 (Std) 	WindowFactory for 'CEGUI/Editbox' windows added. (000001B56F4A9F70)
-16/04/2020 13:17:27 (Std) 	Created WindowFactory for 'CEGUI/FrameWindow' windows.
-16/04/2020 13:17:27 (Std) 	WindowFactory for 'CEGUI/FrameWindow' windows added. (000001B56F4AAA70)
-16/04/2020 13:17:27 (Std) 	Created WindowFactory for 'CEGUI/ItemEntry' windows.
-16/04/2020 13:17:27 (Std) 	WindowFactory for 'CEGUI/ItemEntry' windows added. (000001B56F4ADA70)
-16/04/2020 13:17:27 (Std) 	Created WindowFactory for 'CEGUI/Listbox' windows.
-16/04/2020 13:17:27 (Std) 	WindowFactory for 'CEGUI/Listbox' windows added. (000001B56F4ACF70)
-16/04/2020 13:17:27 (Std) 	Created WindowFactory for 'CEGUI/ListHeader' windows.
-16/04/2020 13:17:27 (Std) 	WindowFactory for 'CEGUI/ListHeader' windows added. (000001B56F4AB870)
-16/04/2020 13:17:27 (Std) 	Created WindowFactory for 'CEGUI/ListHeaderSegment' windows.
-16/04/2020 13:17:27 (Std) 	WindowFactory for 'CEGUI/ListHeaderSegment' windows added. (000001B56F4AD470)
-16/04/2020 13:17:27 (Std) 	Created WindowFactory for 'CEGUI/Menubar' windows.
-16/04/2020 13:17:27 (Std) 	WindowFactory for 'CEGUI/Menubar' windows added. (000001B56F4AA970)
-16/04/2020 13:17:27 (Std) 	Created WindowFactory for 'CEGUI/PopupMenu' windows.
-16/04/2020 13:17:27 (Std) 	WindowFactory for 'CEGUI/PopupMenu' windows added. (000001B56F4ABC70)
-16/04/2020 13:17:27 (Std) 	Created WindowFactory for 'CEGUI/MenuItem' windows.
-16/04/2020 13:17:27 (Std) 	WindowFactory for 'CEGUI/MenuItem' windows added. (000001B56F4AC370)
-16/04/2020 13:17:27 (Std) 	Created WindowFactory for 'CEGUI/MultiColumnList' windows.
-16/04/2020 13:17:27 (Std) 	WindowFactory for 'CEGUI/MultiColumnList' windows added. (000001B56F4AB370)
-16/04/2020 13:17:27 (Std) 	Created WindowFactory for 'CEGUI/MultiLineEditbox' windows.
-16/04/2020 13:17:27 (Std) 	WindowFactory for 'CEGUI/MultiLineEditbox' windows added. (000001B56F4AD370)
-16/04/2020 13:17:27 (Std) 	Created WindowFactory for 'CEGUI/ProgressBar' windows.
-16/04/2020 13:17:27 (Std) 	WindowFactory for 'CEGUI/ProgressBar' windows added. (000001B56F4AD970)
-16/04/2020 13:17:27 (Std) 	Created WindowFactory for 'CEGUI/ScrollablePane' windows.
-16/04/2020 13:17:27 (Std) 	WindowFactory for 'CEGUI/ScrollablePane' windows added. (000001B56F4AA870)
-16/04/2020 13:17:27 (Std) 	Created WindowFactory for 'CEGUI/Scrollbar' windows.
-16/04/2020 13:17:27 (Std) 	WindowFactory for 'CEGUI/Scrollbar' windows added. (000001B56F4ADB70)
-16/04/2020 13:17:27 (Std) 	Created WindowFactory for 'CEGUI/Slider' windows.
-16/04/2020 13:17:27 (Std) 	WindowFactory for 'CEGUI/Slider' windows added. (000001B56F4AA070)
-16/04/2020 13:17:27 (Std) 	Created WindowFactory for 'CEGUI/Spinner' windows.
-16/04/2020 13:17:27 (Std) 	WindowFactory for 'CEGUI/Spinner' windows added. (000001B56F4AC570)
-16/04/2020 13:17:27 (Std) 	Created WindowFactory for 'CEGUI/TabButton' windows.
-16/04/2020 13:17:27 (Std) 	WindowFactory for 'CEGUI/TabButton' windows added. (000001B56F4ABA70)
-16/04/2020 13:17:27 (Std) 	Created WindowFactory for 'CEGUI/TabControl' windows.
-16/04/2020 13:17:27 (Std) 	WindowFactory for 'CEGUI/TabControl' windows added. (000001B56F4AD570)
-16/04/2020 13:17:27 (Std) 	Created WindowFactory for 'CEGUI/Thumb' windows.
-16/04/2020 13:17:27 (Std) 	WindowFactory for 'CEGUI/Thumb' windows added. (000001B56F4AD170)
-16/04/2020 13:17:27 (Std) 	Created WindowFactory for 'CEGUI/Titlebar' windows.
-16/04/2020 13:17:27 (Std) 	WindowFactory for 'CEGUI/Titlebar' windows added. (000001B56F4AA370)
-16/04/2020 13:17:27 (Std) 	Created WindowFactory for 'CEGUI/ToggleButton' windows.
-16/04/2020 13:17:27 (Std) 	WindowFactory for 'CEGUI/ToggleButton' windows added. (000001B56F4AB470)
-16/04/2020 13:17:27 (Std) 	Created WindowFactory for 'CEGUI/Tooltip' windows.
-16/04/2020 13:17:27 (Std) 	WindowFactory for 'CEGUI/Tooltip' windows added. (000001B56F4AAE70)
-16/04/2020 13:17:27 (Std) 	Created WindowFactory for 'CEGUI/ItemListbox' windows.
-16/04/2020 13:17:27 (Std) 	WindowFactory for 'CEGUI/ItemListbox' windows added. (000001B56F4AC970)
-16/04/2020 13:17:27 (Std) 	Created WindowFactory for 'CEGUI/GroupBox' windows.
-16/04/2020 13:17:27 (Std) 	WindowFactory for 'CEGUI/GroupBox' windows added. (000001B56F4AC870)
-16/04/2020 13:17:27 (Std) 	Created WindowFactory for 'CEGUI/Tree' windows.
-16/04/2020 13:17:27 (Std) 	WindowFactory for 'CEGUI/Tree' windows added. (000001B56F4ABF70)
-16/04/2020 13:17:27 (Std) 	Created WindowFactory for 'LayoutCell' windows.
-16/04/2020 13:17:27 (Std) 	WindowFactory for 'LayoutCell' windows added. (000001B56F4ACB70)
-16/04/2020 13:17:27 (Std) 	Created WindowFactory for 'HorizontalLayoutContainer' windows.
-16/04/2020 13:17:27 (Std) 	WindowFactory for 'HorizontalLayoutContainer' windows added. (000001B56F4AD670)
-16/04/2020 13:17:27 (Std) 	Created WindowFactory for 'VerticalLayoutContainer' windows.
-16/04/2020 13:17:27 (Std) 	WindowFactory for 'VerticalLayoutContainer' windows added. (000001B56F4ABD70)
-16/04/2020 13:17:27 (Std) 	Created WindowFactory for 'GridLayoutContainer' windows.
-16/04/2020 13:17:27 (Std) 	WindowFactory for 'GridLayoutContainer' windows added. (000001B56F4AC470)
-16/04/2020 13:17:27 (Std) 	CEGUI::System singleton created. (000001B5674F50F0)
-16/04/2020 13:17:27 (Std) 	---- CEGUI System initialisation completed ----
-16/04/2020 13:17:27 (Std) 	
+16/04/2020 14:51:58 (Std) 	CEGUI::Logger singleton created. (00000196C4E74B30)
+16/04/2020 14:51:58 (Std) 	
+16/04/2020 14:51:58 (Std) 	********************************************************************************
+16/04/2020 14:51:58 (Std) 	* Important:                                                                   *
+16/04/2020 14:51:58 (Std) 	*     To get support at the CEGUI forums, you must post _at least_ the section *
+16/04/2020 14:51:58 (Std) 	*     of this log file indicated below.  Failure to do this will result in no  *
+16/04/2020 14:51:58 (Std) 	*     support being given; please do not waste our time.                       *
+16/04/2020 14:51:58 (Std) 	********************************************************************************
+16/04/2020 14:51:58 (Std) 	********************************************************************************
+16/04/2020 14:51:58 (Std) 	* -------- START OF ESSENTIAL SECTION TO BE POSTED ON THE FORUM       -------- *
+16/04/2020 14:51:58 (Std) 	********************************************************************************
+16/04/2020 14:51:58 (Std) 	---- Version: 0.8.7 (Build: Apr  8 2020 Debug Microsoft Windows MSVC++ Unknown MSVC++ version 64 bit) ----
+16/04/2020 14:51:58 (Std) 	---- Renderer module is: CEGUI::OgreRenderer - Official OGRE based 2nd generation renderer module. ----
+16/04/2020 14:51:58 (Std) 	---- XML Parser module is: CEGUI::ExpatParser - Official expat based parser module for CEGUI ----
+16/04/2020 14:51:58 (Std) 	---- Image Codec module is: OgreImageCodec - Integrated ImageCodec using the Ogre engine. ----
+16/04/2020 14:51:58 (Std) 	---- Scripting module is: None ----
+16/04/2020 14:51:58 (Std) 	********************************************************************************
+16/04/2020 14:51:58 (Std) 	* -------- END OF ESSENTIAL SECTION TO BE POSTED ON THE FORUM         -------- *
+16/04/2020 14:51:58 (Std) 	********************************************************************************
+16/04/2020 14:51:58 (Std) 	
+16/04/2020 14:51:58 (Std) 	---- Begining CEGUI System initialisation ----
+16/04/2020 14:51:58 (Std) 	[CEGUI::ImageManager] Singleton created (00000196C4F55160)
+16/04/2020 14:51:58 (Std) 	[CEGUI::ImageManager] Registered Image type: BasicImage
+16/04/2020 14:51:58 (Std) 	CEGUI::FontManager singleton created. (00000196C029DC40)
+16/04/2020 14:51:58 (Std) 	CEGUI::WindowFactoryManager singleton created
+16/04/2020 14:51:58 (Std) 	CEGUI::WindowManager singleton created (00000196C5037420)
+16/04/2020 14:51:58 (Std) 	CEGUI::SchemeManager singleton created. (00000196C029D600)
+16/04/2020 14:51:58 (Std) 	CEGUI::GlobalEventSet singleton created. (00000196C4FEC970)
+16/04/2020 14:51:58 (Std) 	CEGUI::AnimationManager singleton created (00000196C5035860)
+16/04/2020 14:51:58 (Std) 	CEGUI::WidgetLookManager singleton created. (00000196C4F8A1F0)
+16/04/2020 14:51:58 (Std) 	CEGUI::WindowRendererManager singleton created (00000196C4F8A8B0)
+16/04/2020 14:51:58 (Std) 	CEGUI::RenderEffectManager singleton created (00000196C4FF01A0)
+16/04/2020 14:51:58 (Std) 	Created WindowFactory for 'DefaultWindow' windows.
+16/04/2020 14:51:58 (Std) 	WindowFactory for 'DefaultWindow' windows added. (00000196C042DF20)
+16/04/2020 14:51:58 (Std) 	Created WindowFactory for 'DragContainer' windows.
+16/04/2020 14:51:58 (Std) 	WindowFactory for 'DragContainer' windows added. (00000196C042D520)
+16/04/2020 14:51:58 (Std) 	Created WindowFactory for 'ScrolledContainer' windows.
+16/04/2020 14:51:58 (Std) 	WindowFactory for 'ScrolledContainer' windows added. (00000196C042B620)
+16/04/2020 14:51:58 (Std) 	Created WindowFactory for 'ClippedContainer' windows.
+16/04/2020 14:51:58 (Std) 	WindowFactory for 'ClippedContainer' windows added. (00000196C042D720)
+16/04/2020 14:51:58 (Std) 	Created WindowFactory for 'CEGUI/PushButton' windows.
+16/04/2020 14:51:58 (Std) 	WindowFactory for 'CEGUI/PushButton' windows added. (00000196C042BA20)
+16/04/2020 14:51:58 (Std) 	Created WindowFactory for 'CEGUI/RadioButton' windows.
+16/04/2020 14:51:58 (Std) 	WindowFactory for 'CEGUI/RadioButton' windows added. (00000196C042B720)
+16/04/2020 14:51:58 (Std) 	Created WindowFactory for 'CEGUI/Combobox' windows.
+16/04/2020 14:51:58 (Std) 	WindowFactory for 'CEGUI/Combobox' windows added. (00000196C042AD20)
+16/04/2020 14:51:58 (Std) 	Created WindowFactory for 'CEGUI/ComboDropList' windows.
+16/04/2020 14:51:58 (Std) 	WindowFactory for 'CEGUI/ComboDropList' windows added. (00000196C042AE20)
+16/04/2020 14:51:58 (Std) 	Created WindowFactory for 'CEGUI/Editbox' windows.
+16/04/2020 14:51:58 (Std) 	WindowFactory for 'CEGUI/Editbox' windows added. (00000196C042D820)
+16/04/2020 14:51:58 (Std) 	Created WindowFactory for 'CEGUI/FrameWindow' windows.
+16/04/2020 14:51:58 (Std) 	WindowFactory for 'CEGUI/FrameWindow' windows added. (00000196C042C320)
+16/04/2020 14:51:58 (Std) 	Created WindowFactory for 'CEGUI/ItemEntry' windows.
+16/04/2020 14:51:58 (Std) 	WindowFactory for 'CEGUI/ItemEntry' windows added. (00000196C042C920)
+16/04/2020 14:51:58 (Std) 	Created WindowFactory for 'CEGUI/Listbox' windows.
+16/04/2020 14:51:58 (Std) 	WindowFactory for 'CEGUI/Listbox' windows added. (00000196C042BD20)
+16/04/2020 14:51:58 (Std) 	Created WindowFactory for 'CEGUI/ListHeader' windows.
+16/04/2020 14:51:58 (Std) 	WindowFactory for 'CEGUI/ListHeader' windows added. (00000196C042D920)
+16/04/2020 14:51:58 (Std) 	Created WindowFactory for 'CEGUI/ListHeaderSegment' windows.
+16/04/2020 14:51:58 (Std) 	WindowFactory for 'CEGUI/ListHeaderSegment' windows added. (00000196C042C520)
+16/04/2020 14:51:58 (Std) 	Created WindowFactory for 'CEGUI/Menubar' windows.
+16/04/2020 14:51:58 (Std) 	WindowFactory for 'CEGUI/Menubar' windows added. (00000196C042DD20)
+16/04/2020 14:51:58 (Std) 	Created WindowFactory for 'CEGUI/PopupMenu' windows.
+16/04/2020 14:51:58 (Std) 	WindowFactory for 'CEGUI/PopupMenu' windows added. (00000196C042AF20)
+16/04/2020 14:51:58 (Std) 	Created WindowFactory for 'CEGUI/MenuItem' windows.
+16/04/2020 14:51:58 (Std) 	WindowFactory for 'CEGUI/MenuItem' windows added. (00000196C042B820)
+16/04/2020 14:51:58 (Std) 	Created WindowFactory for 'CEGUI/MultiColumnList' windows.
+16/04/2020 14:51:58 (Std) 	WindowFactory for 'CEGUI/MultiColumnList' windows added. (00000196C042DA20)
+16/04/2020 14:51:58 (Std) 	Created WindowFactory for 'CEGUI/MultiLineEditbox' windows.
+16/04/2020 14:51:58 (Std) 	WindowFactory for 'CEGUI/MultiLineEditbox' windows added. (00000196C042C620)
+16/04/2020 14:51:58 (Std) 	Created WindowFactory for 'CEGUI/ProgressBar' windows.
+16/04/2020 14:51:58 (Std) 	WindowFactory for 'CEGUI/ProgressBar' windows added. (00000196C042BB20)
+16/04/2020 14:51:58 (Std) 	Created WindowFactory for 'CEGUI/ScrollablePane' windows.
+16/04/2020 14:51:58 (Std) 	WindowFactory for 'CEGUI/ScrollablePane' windows added. (00000196C042DB20)
+16/04/2020 14:51:58 (Std) 	Created WindowFactory for 'CEGUI/Scrollbar' windows.
+16/04/2020 14:51:58 (Std) 	WindowFactory for 'CEGUI/Scrollbar' windows added. (00000196C042BC20)
+16/04/2020 14:51:58 (Std) 	Created WindowFactory for 'CEGUI/Slider' windows.
+16/04/2020 14:51:58 (Std) 	WindowFactory for 'CEGUI/Slider' windows added. (00000196C042A420)
+16/04/2020 14:51:58 (Std) 	Created WindowFactory for 'CEGUI/Spinner' windows.
+16/04/2020 14:51:58 (Std) 	WindowFactory for 'CEGUI/Spinner' windows added. (00000196C042BF20)
+16/04/2020 14:51:58 (Std) 	Created WindowFactory for 'CEGUI/TabButton' windows.
+16/04/2020 14:51:58 (Std) 	WindowFactory for 'CEGUI/TabButton' windows added. (00000196C042C020)
+16/04/2020 14:51:58 (Std) 	Created WindowFactory for 'CEGUI/TabControl' windows.
+16/04/2020 14:51:58 (Std) 	WindowFactory for 'CEGUI/TabControl' windows added. (00000196C042C120)
+16/04/2020 14:51:58 (Std) 	Created WindowFactory for 'CEGUI/Thumb' windows.
+16/04/2020 14:51:58 (Std) 	WindowFactory for 'CEGUI/Thumb' windows added. (00000196C042DC20)
+16/04/2020 14:51:58 (Std) 	Created WindowFactory for 'CEGUI/Titlebar' windows.
+16/04/2020 14:51:58 (Std) 	WindowFactory for 'CEGUI/Titlebar' windows added. (00000196C042C220)
+16/04/2020 14:51:58 (Std) 	Created WindowFactory for 'CEGUI/ToggleButton' windows.
+16/04/2020 14:51:58 (Std) 	WindowFactory for 'CEGUI/ToggleButton' windows added. (00000196C042CA20)
+16/04/2020 14:51:58 (Std) 	Created WindowFactory for 'CEGUI/Tooltip' windows.
+16/04/2020 14:51:58 (Std) 	WindowFactory for 'CEGUI/Tooltip' windows added. (00000196C042E020)
+16/04/2020 14:51:58 (Std) 	Created WindowFactory for 'CEGUI/ItemListbox' windows.
+16/04/2020 14:51:58 (Std) 	WindowFactory for 'CEGUI/ItemListbox' windows added. (00000196C042A720)
+16/04/2020 14:51:58 (Std) 	Created WindowFactory for 'CEGUI/GroupBox' windows.
+16/04/2020 14:51:58 (Std) 	WindowFactory for 'CEGUI/GroupBox' windows added. (00000196C042AB20)
+16/04/2020 14:51:58 (Std) 	Created WindowFactory for 'CEGUI/Tree' windows.
+16/04/2020 14:51:58 (Std) 	WindowFactory for 'CEGUI/Tree' windows added. (00000196C0585DE0)
+16/04/2020 14:51:58 (Std) 	Created WindowFactory for 'LayoutCell' windows.
+16/04/2020 14:51:58 (Std) 	WindowFactory for 'LayoutCell' windows added. (00000196C05856E0)
+16/04/2020 14:51:58 (Std) 	Created WindowFactory for 'HorizontalLayoutContainer' windows.
+16/04/2020 14:51:58 (Std) 	WindowFactory for 'HorizontalLayoutContainer' windows added. (00000196C05855E0)
+16/04/2020 14:51:58 (Std) 	Created WindowFactory for 'VerticalLayoutContainer' windows.
+16/04/2020 14:51:58 (Std) 	WindowFactory for 'VerticalLayoutContainer' windows added. (00000196C0585AE0)
+16/04/2020 14:51:58 (Std) 	Created WindowFactory for 'GridLayoutContainer' windows.
+16/04/2020 14:51:58 (Std) 	WindowFactory for 'GridLayoutContainer' windows added. (00000196C05868E0)
+16/04/2020 14:51:58 (Std) 	CEGUI::System singleton created. (00000196BD194290)
+16/04/2020 14:51:58 (Std) 	---- CEGUI System initialisation completed ----
+16/04/2020 14:51:58 (Std) 	
+16/04/2020 14:51:59 (Std) 	---- Begining CEGUI System destruction ----
+16/04/2020 14:51:59 (Std) 	WindowFactory for 'CEGUI/Tree' windows removed. (00000196C0585DE0)
+16/04/2020 14:51:59 (Std) 	Deleted WindowFactory for 'CEGUI/Tree' windows.
+16/04/2020 14:51:59 (Std) 	WindowFactory for 'LayoutCell' windows removed. (00000196C05856E0)
+16/04/2020 14:51:59 (Std) 	Deleted WindowFactory for 'LayoutCell' windows.
+16/04/2020 14:51:59 (Std) 	WindowFactory for 'CEGUI/Thumb' windows removed. (00000196C042DC20)
+16/04/2020 14:51:59 (Std) 	Deleted WindowFactory for 'CEGUI/Thumb' windows.
+16/04/2020 14:51:59 (Std) 	WindowFactory for 'CEGUI/Slider' windows removed. (00000196C042A420)
+16/04/2020 14:51:59 (Std) 	Deleted WindowFactory for 'CEGUI/Slider' windows.
+16/04/2020 14:51:59 (Std) 	WindowFactory for 'CEGUI/Editbox' windows removed. (00000196C042D820)
+16/04/2020 14:51:59 (Std) 	Deleted WindowFactory for 'CEGUI/Editbox' windows.
+16/04/2020 14:51:59 (Std) 	WindowFactory for 'CEGUI/Listbox' windows removed. (00000196C042BD20)
+16/04/2020 14:51:59 (Std) 	Deleted WindowFactory for 'CEGUI/Listbox' windows.
+16/04/2020 14:51:59 (Std) 	WindowFactory for 'CEGUI/Menubar' windows removed. (00000196C042DD20)
+16/04/2020 14:51:59 (Std) 	Deleted WindowFactory for 'CEGUI/Menubar' windows.
+16/04/2020 14:51:59 (Std) 	WindowFactory for 'CEGUI/Spinner' windows removed. (00000196C042BF20)
+16/04/2020 14:51:59 (Std) 	Deleted WindowFactory for 'CEGUI/Spinner' windows.
+16/04/2020 14:51:59 (Std) 	WindowFactory for 'CEGUI/Tooltip' windows removed. (00000196C042E020)
+16/04/2020 14:51:59 (Std) 	Deleted WindowFactory for 'CEGUI/Tooltip' windows.
+16/04/2020 14:51:59 (Std) 	WindowFactory for 'DefaultWindow' windows removed. (00000196C042DF20)
+16/04/2020 14:51:59 (Std) 	Deleted WindowFactory for 'DefaultWindow' windows.
+16/04/2020 14:51:59 (Std) 	WindowFactory for 'DragContainer' windows removed. (00000196C042D520)
+16/04/2020 14:51:59 (Std) 	Deleted WindowFactory for 'DragContainer' windows.
+16/04/2020 14:51:59 (Std) 	WindowFactory for 'CEGUI/Combobox' windows removed. (00000196C042AD20)
+16/04/2020 14:51:59 (Std) 	Deleted WindowFactory for 'CEGUI/Combobox' windows.
+16/04/2020 14:51:59 (Std) 	WindowFactory for 'CEGUI/GroupBox' windows removed. (00000196C042AB20)
+16/04/2020 14:51:59 (Std) 	Deleted WindowFactory for 'CEGUI/GroupBox' windows.
+16/04/2020 14:51:59 (Std) 	WindowFactory for 'CEGUI/MenuItem' windows removed. (00000196C042B820)
+16/04/2020 14:51:59 (Std) 	Deleted WindowFactory for 'CEGUI/MenuItem' windows.
+16/04/2020 14:51:59 (Std) 	WindowFactory for 'CEGUI/Titlebar' windows removed. (00000196C042C220)
+16/04/2020 14:51:59 (Std) 	Deleted WindowFactory for 'CEGUI/Titlebar' windows.
+16/04/2020 14:51:59 (Std) 	WindowFactory for 'CEGUI/ItemEntry' windows removed. (00000196C042C920)
+16/04/2020 14:51:59 (Std) 	Deleted WindowFactory for 'CEGUI/ItemEntry' windows.
+16/04/2020 14:51:59 (Std) 	WindowFactory for 'CEGUI/PopupMenu' windows removed. (00000196C042AF20)
+16/04/2020 14:51:59 (Std) 	Deleted WindowFactory for 'CEGUI/PopupMenu' windows.
+16/04/2020 14:51:59 (Std) 	WindowFactory for 'CEGUI/Scrollbar' windows removed. (00000196C042BC20)
+16/04/2020 14:51:59 (Std) 	Deleted WindowFactory for 'CEGUI/Scrollbar' windows.
+16/04/2020 14:51:59 (Std) 	WindowFactory for 'CEGUI/TabButton' windows removed. (00000196C042C020)
+16/04/2020 14:51:59 (Std) 	Deleted WindowFactory for 'CEGUI/TabButton' windows.
+16/04/2020 14:51:59 (Std) 	WindowFactory for 'CEGUI/ListHeader' windows removed. (00000196C042D920)
+16/04/2020 14:51:59 (Std) 	Deleted WindowFactory for 'CEGUI/ListHeader' windows.
+16/04/2020 14:51:59 (Std) 	WindowFactory for 'CEGUI/PushButton' windows removed. (00000196C042BA20)
+16/04/2020 14:51:59 (Std) 	Deleted WindowFactory for 'CEGUI/PushButton' windows.
+16/04/2020 14:51:59 (Std) 	WindowFactory for 'CEGUI/TabControl' windows removed. (00000196C042C120)
+16/04/2020 14:51:59 (Std) 	Deleted WindowFactory for 'CEGUI/TabControl' windows.
+16/04/2020 14:51:59 (Std) 	WindowFactory for 'ClippedContainer' windows removed. (00000196C042D720)
+16/04/2020 14:51:59 (Std) 	Deleted WindowFactory for 'ClippedContainer' windows.
+16/04/2020 14:51:59 (Std) 	WindowFactory for 'CEGUI/FrameWindow' windows removed. (00000196C042C320)
+16/04/2020 14:51:59 (Std) 	Deleted WindowFactory for 'CEGUI/FrameWindow' windows.
+16/04/2020 14:51:59 (Std) 	WindowFactory for 'CEGUI/ItemListbox' windows removed. (00000196C042A720)
+16/04/2020 14:51:59 (Std) 	Deleted WindowFactory for 'CEGUI/ItemListbox' windows.
+16/04/2020 14:51:59 (Std) 	WindowFactory for 'CEGUI/ProgressBar' windows removed. (00000196C042BB20)
+16/04/2020 14:51:59 (Std) 	Deleted WindowFactory for 'CEGUI/ProgressBar' windows.
+16/04/2020 14:51:59 (Std) 	WindowFactory for 'CEGUI/RadioButton' windows removed. (00000196C042B720)
+16/04/2020 14:51:59 (Std) 	Deleted WindowFactory for 'CEGUI/RadioButton' windows.
+16/04/2020 14:51:59 (Std) 	WindowFactory for 'ScrolledContainer' windows removed. (00000196C042B620)
+16/04/2020 14:51:59 (Std) 	Deleted WindowFactory for 'ScrolledContainer' windows.
+16/04/2020 14:51:59 (Std) 	WindowFactory for 'CEGUI/ToggleButton' windows removed. (00000196C042CA20)
+16/04/2020 14:51:59 (Std) 	Deleted WindowFactory for 'CEGUI/ToggleButton' windows.
+16/04/2020 14:51:59 (Std) 	WindowFactory for 'CEGUI/ComboDropList' windows removed. (00000196C042AE20)
+16/04/2020 14:51:59 (Std) 	Deleted WindowFactory for 'CEGUI/ComboDropList' windows.
+16/04/2020 14:51:59 (Std) 	WindowFactory for 'GridLayoutContainer' windows removed. (00000196C05868E0)
+16/04/2020 14:51:59 (Std) 	Deleted WindowFactory for 'GridLayoutContainer' windows.
+16/04/2020 14:51:59 (Std) 	WindowFactory for 'CEGUI/ScrollablePane' windows removed. (00000196C042DB20)
+16/04/2020 14:51:59 (Std) 	Deleted WindowFactory for 'CEGUI/ScrollablePane' windows.
+16/04/2020 14:51:59 (Std) 	WindowFactory for 'CEGUI/MultiColumnList' windows removed. (00000196C042DA20)
+16/04/2020 14:51:59 (Std) 	Deleted WindowFactory for 'CEGUI/MultiColumnList' windows.
+16/04/2020 14:51:59 (Std) 	WindowFactory for 'CEGUI/MultiLineEditbox' windows removed. (00000196C042C620)
+16/04/2020 14:51:59 (Std) 	Deleted WindowFactory for 'CEGUI/MultiLineEditbox' windows.
+16/04/2020 14:51:59 (Std) 	WindowFactory for 'CEGUI/ListHeaderSegment' windows removed. (00000196C042C520)
+16/04/2020 14:51:59 (Std) 	Deleted WindowFactory for 'CEGUI/ListHeaderSegment' windows.
+16/04/2020 14:51:59 (Std) 	WindowFactory for 'VerticalLayoutContainer' windows removed. (00000196C0585AE0)
+16/04/2020 14:51:59 (Std) 	Deleted WindowFactory for 'VerticalLayoutContainer' windows.
+16/04/2020 14:51:59 (Std) 	WindowFactory for 'HorizontalLayoutContainer' windows removed. (00000196C05855E0)
+16/04/2020 14:51:59 (Std) 	Deleted WindowFactory for 'HorizontalLayoutContainer' windows.
+16/04/2020 14:51:59 (Std) 	---- Begining cleanup of GUI Scheme system ----
+16/04/2020 14:51:59 (Std) 	CEGUI::SchemeManager singleton destroyed. (00000196C029D600)
+16/04/2020 14:51:59 (Std) 	CEGUI::WindowManager singleton destroyed (00000196C5037420)
+16/04/2020 14:51:59 (Std) 	CEGUI::WindowFactoryManager singleton destroyed
+16/04/2020 14:51:59 (Std) 	CEGUI::WidgetLookManager singleton destroyed. (00000196C4F8A1F0)
+16/04/2020 14:51:59 (Std) 	CEGUI::WindowRendererManager singleton destroyed (00000196C4F8A8B0)
+16/04/2020 14:51:59 (Std) 	CEGUI::AnimationManager singleton destroyed (00000196C5035860)
+16/04/2020 14:51:59 (Std) 	CEGUI::RenderEffectManager singleton destroyed (00000196C4FF01A0)
+16/04/2020 14:51:59 (Std) 	---- Begining cleanup of Font system ----
+16/04/2020 14:51:59 (Std) 	CEGUI::FontManager singleton destroyed. (00000196C029DC40)
+16/04/2020 14:51:59 (Std) 	[CEGUI::ImageManager] Unregistered Image type: BasicImage
+16/04/2020 14:51:59 (Std) 	[CEGUI::ImageManager] Singleton destroyed (00000196C4F55160)
+16/04/2020 14:51:59 (Std) 	CEGUI::GlobalEventSet singleton destroyed. (00000196C4FEC970)
+16/04/2020 14:51:59 (Std) 	CEGUI::System singleton destroyed. (00000196BD194290)
+16/04/2020 14:51:59 (Std) 	---- CEGUI System destruction completed ----
+16/04/2020 14:51:59 (Std) 	CEGUI::Logger singleton destroyed. (00000196C4E74B30)

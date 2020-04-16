@@ -122,6 +122,10 @@
       <Command>cd "$(SolutionDir)scripts"
 call preBuild.bat</Command>
     </PreBuildEvent>
+    <PreLinkEvent>
+      <Command>cd "$(SolutionDir)scripts"
+call preBuild.bat</Command>
+    </PreLinkEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
