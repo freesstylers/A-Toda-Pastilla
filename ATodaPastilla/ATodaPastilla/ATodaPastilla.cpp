@@ -4,8 +4,29 @@
 
 #include "windows.h"
 #include "MotorCasaPaco.h"
+#include "Entity/Factory.h"
+#include "Components/MovimientoMando.h"
+#include "Scene/JsonFactoryParser.h"
+
 
 MotorCasaPaco* motorCasaPaco;
+
+class MovimientoMandoFactory : public BaseFactory
+{
+public:
+	Component* createComponent(json& args) override
+	{
+		return new MovimientoMando(args);
+	};
+};
+
+void setupFactories()
+{
+	JsonFactoryParser* j = JsonFactoryParser::getInstance();
+
+	j->addFactory("MovimientoMando", new MovimientoMandoFactory());
+
+}
 
 #ifdef  _DEBUG
 int main(int argc, char* argv[])
@@ -27,6 +48,7 @@ WinMain(HINSTANCE hinstance, HINSTANCE prevInstance, LPSTR lpCmdLine, int nCmdSh
 	try
 	{
 		motorCasaPaco->init();
+		setupFactories();
 	}
 	catch (const std::exception& e)
 	{

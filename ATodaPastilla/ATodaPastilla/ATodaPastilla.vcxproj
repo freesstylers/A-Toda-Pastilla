@@ -81,6 +81,7 @@
     <OutDir>$(SolutionDir)bin</OutDir>
     <IntDir>$(SolutionDir)interm</IntDir>
     <TargetName>$(ProjectName)_d</TargetName>
+    <IncludePath>$(SolutionDir)src;$(SolutionDir)include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -171,12 +172,16 @@
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\Components\MovimientoMando.cpp" />
     <ClCompile Include="ATodaPastilla.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Untitled-Motor\MotorCasaPaco\projects\MotorCasaPaco\MotorCasaPaco.vcxproj">
       <Project>{c4a900cc-8fe8-470d-b4fa-9b9abf2fcb2b}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\Components\MovimientoMando.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
