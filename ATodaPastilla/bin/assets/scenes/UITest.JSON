@@ -26,30 +26,8 @@
 			]
 		},
 		{
-			"name" : "barrel",
-			"position" : [30, 40, 0],
-			"rotation" : [70, 0, 70],
-			"scale" : [10, 10, 10],
-			"components" : [
-				{
-					"type" : "Mesh",
-					"mesh" : "barrel.mesh",
-					"material" : "blank"
-				},
-				{
-					"type" : "RigidBody",
-					"shape" : "mesh",
-					"mass" : 100,
-					"disableDeactivation" : true
-				},
-				{
-					"type" : "MovimientoMando",
-					"xRIGHT" : 200,
-					"xLEFT" : -200,
-					"yUP" : 200,
-					"yDOWN" : -200
-				}
-			]
+			"name" : "nave",
+			"prefab" : "nave"
 		},
 		{
 			"name" : "floor",
@@ -62,7 +40,7 @@
 		},
 		{
 			"name" : "camera",
-			"position" : [0, 700, 400],
+			"position" : [0, 300, 1],
 			"rotation" : [0, 0, 0], 
 			"scale" : [1, 1, 1],
 			"components" : [

@@ -51,5 +51,34 @@
 				"lightDir"  : [1, -0.5, 0]
 			}
 		]
+	}, 
+
+	"nave" : 
+	{
+		"position" : [30, 40, 0],
+		"rotation" : [0, 180, 0],
+		"scale" : [10, 10, 10],
+		"components" : [
+			{
+				"type" : "Mesh",
+				"mesh" : "NaveWiterico.mesh",
+				"material" : "NaveWiterico"
+			},
+			{
+				"type" : "RigidBody",
+				"shape" : "mesh",
+				"mass" : 100,
+				"isKinematic": true,
+				"disableDeactivation" : true
+			},
+			{
+				"type" : "MovimientoMando",
+				"xRIGHT" : 200,
+				"xLEFT" : -200,
+				"yUP" : 100,
+				"yDOWN" : -200
+			}
+		]
+
 	}
 }
