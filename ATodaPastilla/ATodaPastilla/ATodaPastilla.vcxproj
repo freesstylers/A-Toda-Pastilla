@@ -172,6 +172,7 @@
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\Components\EntitySpawner.cpp" />
     <ClCompile Include="..\src\Components\MovimientoMando.cpp" />
     <ClCompile Include="ATodaPastilla.cpp" />
   </ItemGroup>
@@ -181,6 +182,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\include\Components\EntitySpawner.h" />
     <ClInclude Include="..\include\Components\MovimientoMando.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
