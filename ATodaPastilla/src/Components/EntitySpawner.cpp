@@ -32,6 +32,14 @@ void EntitySpawner::update()
 
 Entity* EntitySpawner::spawnEntity(std::string prefab)
 {
-	json prefabs=ResourceManager::getInstance()->getPrefabs();
+	Entity* instance = nullptr;
+	json prefabs = ResourceManager::getInstance()->getPrefabs();
+	std::string prfb = prefab;
+
+	if (prfb == "") prfb = defaultPrefab;
+
+	if (!prefabs[prfb].is_null()) {
+		instance = SceneManager::getInstance()->getCurrentScene()->createEntity(prefabs[prfb]);
+	}
 	return nullptr;
 }

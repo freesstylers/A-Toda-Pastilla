@@ -7,7 +7,7 @@ public:
 	~EntitySpawner() {};
 	void init(json& j) override;
 	void update() override;
-	Entity* spawnEntity(std::string prefab);
+	Entity* spawnEntity(std::string prefab = "");
 
 private:
 	std::string defaultPrefab;
