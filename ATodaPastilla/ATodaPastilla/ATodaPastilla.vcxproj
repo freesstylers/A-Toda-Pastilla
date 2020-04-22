@@ -172,8 +172,10 @@
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\Components\Danio.cpp" />
     <ClCompile Include="..\src\Components\EntitySpawner.cpp" />
     <ClCompile Include="..\src\Components\MovimientoMando.cpp" />
+    <ClCompile Include="..\src\Components\Vida.cpp" />
     <ClCompile Include="ATodaPastilla.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -182,8 +184,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\include\Components\Danio.h" />
     <ClInclude Include="..\include\Components\EntitySpawner.h" />
     <ClInclude Include="..\include\Components\MovimientoMando.h" />
+    <ClInclude Include="..\include\Components\Vida.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -15,8 +15,8 @@ public:
 private:
 	Vector3 insideBounds(Vector3 position);
 
-	float yUP_;
-	float yDOWN_;
+	float zUP_;
+	float zDOWN_;
 	float xLEFT_;
 	float xRIGHT_;
 };

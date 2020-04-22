@@ -1,9 +1,9 @@
 {
 	"marble" : 
 	{
-		"position" : [1, 20, 0],
+		"position" : [0, 20, 0],
 		"rotation" : [0, 0, 0],
-		"scale" : [0.7, 0.7, 0.7],
+		"scale" : [0.1, 0.1, 0.1],
 		"components" : [
 				{
 					"type" : "Mesh",
@@ -55,7 +55,7 @@
 
 	"nave" : 
 	{
-		"position" : [30, 40, 0],
+		"position" : [0, 10, 0],
 		"rotation" : [0, 180, 0],
 		"scale" : [10, 10, 10],
 		"components" : [
@@ -68,15 +68,45 @@
 				"type" : "RigidBody",
 				"shape" : "mesh",
 				"mass" : 100,
-				"isKinematic": true,
-				"disableDeactivation" : true
+				"isKinematic": true
 			},
 			{
 				"type" : "MovimientoMando",
 				"xRIGHT" : 200,
 				"xLEFT" : -200,
-				"yUP" : 100,
-				"yDOWN" : -200
+				"zUP" : -200,
+				"zDOWN" : 200
+			},
+			{
+				"type" : "Vida",
+				"vida" : 10
+			},
+			{
+				"type" : "Danio",
+				"danio" : 1
+			}
+		]
+
+	},
+	"nave1" : 
+	{
+		"position" : [0, 400, 0],
+		"rotation" : [0, 180, 0],
+		"scale" : [25, 25, 25],
+		"components" : [
+			{
+				"type" : "Mesh",
+				"mesh" : "NaveWiterico.mesh",
+				"material" : "NaveWiterico"
+			},
+			{
+				"type" : "RigidBody",
+				"shape" : "mesh",
+				"mass" : 100
+			},
+			{
+				"type" : "Vida",
+				"vida" : 1000
 			}
 		]
 

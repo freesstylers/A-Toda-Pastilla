@@ -10,6 +10,8 @@
 #include "Components/EntitySpawner.h"
 
 #include "Scene/JsonFactoryParser.h"
+#include "Components/Danio.h"
+#include "Components/Vida.h"
 
 
 MotorCasaPaco* motorCasaPaco;
@@ -23,12 +25,28 @@ public:
 	};
 };
 
-class EntitySpawnerFactory : public BaseFactory
+class EntitySpawnerFactory : public BaseFactory {
+public: 
+	Component* createComponent(json& args) override {
+		return new EntitySpawner(args);
+	}
+};
+
+class DanioFactory : public BaseFactory
 {
 public:
 	Component* createComponent(json& args) override
 	{
-		return new EntitySpawner(args);
+		return new Danio(args);
+	};
+};
+
+class VidaFactory : public BaseFactory
+{
+public:
+	Component* createComponent(json& args) override
+	{
+		return new Vida(args);
 	};
 };
 
@@ -38,6 +56,8 @@ void setupFactories()
 
 	j->addFactory("MovimientoMando", new MovimientoMandoFactory());
 	j->addFactory("EntitySpawner", new EntitySpawnerFactory());
+	j->addFactory("Danio", new DanioFactory());
+	j->addFactory("Vida", new VidaFactory());
 
 }
 
@@ -70,7 +90,7 @@ WinMain(HINSTANCE hinstance, HINSTANCE prevInstance, LPSTR lpCmdLine, int nCmdSh
 		return 0;
 	}
 
-	motorCasaPaco->changeScene("UITest");
+	motorCasaPaco->changeScene("ATodaPastilla");
 
 	motorCasaPaco->start();
 
