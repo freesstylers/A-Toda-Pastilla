@@ -10,9 +10,21 @@
       <Filter>Components</Filter>
     </ClCompile>
     <ClCompile Include="ATodaPastilla.cpp" />
+    <ClCompile Include="..\src\Components\Vida.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Components\Danio.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Components\MovimientoMando.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Components\Vida.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Components\Danio.h">
       <Filter>Components</Filter>
     </ClInclude>
   </ItemGroup>
