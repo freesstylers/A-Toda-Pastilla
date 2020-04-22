@@ -5,7 +5,10 @@
 #include "windows.h"
 #include "MotorCasaPaco.h"
 #include "Entity/Factory.h"
+
 #include "Components/MovimientoMando.h"
+#include "Components/EntitySpawner.h"
+
 #include "Scene/JsonFactoryParser.h"
 
 
@@ -20,11 +23,21 @@ public:
 	};
 };
 
+class EntitySpawnerFactory : public BaseFactory
+{
+public:
+	Component* createComponent(json& args) override
+	{
+		return new EntitySpawner(args);
+	};
+};
+
 void setupFactories()
 {
 	JsonFactoryParser* j = JsonFactoryParser::getInstance();
 
 	j->addFactory("MovimientoMando", new MovimientoMandoFactory());
+	j->addFactory("EntitySpawner", new EntitySpawnerFactory());
 
 }
 
