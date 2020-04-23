@@ -174,11 +174,14 @@
   <ItemGroup>
     <ClCompile Include="..\src\Components\ChangeSceneButtonComponent.cpp" />
     <ClCompile Include="..\src\Components\Danio.cpp" />
+    <ClCompile Include="..\src\Components\DisparoWiterico.cpp" />
     <ClCompile Include="..\src\Components\EntitySpawner.cpp" />
     <ClCompile Include="..\src\Components\ExitButtonComponent.cpp" />
     <ClCompile Include="..\src\Components\GiroContinuo.cpp" />
     <ClCompile Include="..\src\Components\MenuMuestraPersonajes.cpp" />
     <ClCompile Include="..\src\Components\MovimientoMando.cpp" />
+    <ClCompile Include="..\src\Components\ProjectileBehaviour.cpp" />
+    <ClCompile Include="..\src\Components\ProjectileSpawner.cpp" />
     <ClCompile Include="..\src\Components\Vida.cpp" />
     <ClCompile Include="ATodaPastilla.cpp" />
   </ItemGroup>
@@ -190,11 +193,14 @@
   <ItemGroup>
     <ClInclude Include="..\include\Components\ChangeSceneButtonComponent.h" />
     <ClInclude Include="..\include\Components\Danio.h" />
+    <ClInclude Include="..\include\Components\DisparoWiterico.h" />
     <ClInclude Include="..\include\Components\EntitySpawner.h" />
     <ClInclude Include="..\include\Components\ExitButtonComponent.h" />
     <ClInclude Include="..\include\Components\GiroContinuo.h" />
     <ClInclude Include="..\include\Components\MenuMuestraPersonaje.h" />
     <ClInclude Include="..\include\Components\MovimientoMando.h" />
+    <ClInclude Include="..\include\Components\ProjectileBehaviour.h" />
+    <ClInclude Include="..\include\Components\ProjectileSpawner.h" />
     <ClInclude Include="..\include\Components\Vida.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
