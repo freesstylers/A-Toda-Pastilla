@@ -1,205 +1,610 @@
-23/04/2020 17:55:27 (Std) 	+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-23/04/2020 17:55:27 (Std) 	+                     Crazy Eddie's GUI System - Event log                    +
-23/04/2020 17:55:27 (Std) 	+                          (http://www.cegui.org.uk/)                         +
-23/04/2020 17:55:27 (Std) 	+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+23/04/2020 18:24:49 (Std) 	+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+23/04/2020 18:24:49 (Std) 	+                     Crazy Eddie's GUI System - Event log                    +
+23/04/2020 18:24:49 (Std) 	+                          (http://www.cegui.org.uk/)                         +
+23/04/2020 18:24:49 (Std) 	+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 
-23/04/2020 17:55:27 (Std) 	CEGUI::Logger singleton created. (000001DEAD1F89A0)
-23/04/2020 17:55:27 (Std) 	
-23/04/2020 17:55:27 (Std) 	********************************************************************************
-23/04/2020 17:55:27 (Std) 	* Important:                                                                   *
-23/04/2020 17:55:27 (Std) 	*     To get support at the CEGUI forums, you must post _at least_ the section *
-23/04/2020 17:55:27 (Std) 	*     of this log file indicated below.  Failure to do this will result in no  *
-23/04/2020 17:55:27 (Std) 	*     support being given; please do not waste our time.                       *
-23/04/2020 17:55:27 (Std) 	********************************************************************************
-23/04/2020 17:55:27 (Std) 	********************************************************************************
-23/04/2020 17:55:27 (Std) 	* -------- START OF ESSENTIAL SECTION TO BE POSTED ON THE FORUM       -------- *
-23/04/2020 17:55:27 (Std) 	********************************************************************************
-23/04/2020 17:55:27 (Std) 	---- Version: 0.8.7 (Build: Apr 21 2020 Debug Microsoft Windows MSVC++ Unknown MSVC++ version 64 bit) ----
-23/04/2020 17:55:27 (Std) 	---- Renderer module is: CEGUI::OgreRenderer - Official OGRE based 2nd generation renderer module. ----
-23/04/2020 17:55:27 (Std) 	---- XML Parser module is: CEGUI::ExpatParser - Official expat based parser module for CEGUI ----
-23/04/2020 17:55:27 (Std) 	---- Image Codec module is: OgreImageCodec - Integrated ImageCodec using the Ogre engine. ----
-23/04/2020 17:55:27 (Std) 	---- Scripting module is: None ----
-23/04/2020 17:55:27 (Std) 	********************************************************************************
-23/04/2020 17:55:27 (Std) 	* -------- END OF ESSENTIAL SECTION TO BE POSTED ON THE FORUM         -------- *
-23/04/2020 17:55:27 (Std) 	********************************************************************************
-23/04/2020 17:55:27 (Std) 	
-23/04/2020 17:55:27 (Std) 	---- Begining CEGUI System initialisation ----
-23/04/2020 17:55:27 (Std) 	[CEGUI::ImageManager] Singleton created (000001DEAD3CCA50)
-23/04/2020 17:55:27 (Std) 	[CEGUI::ImageManager] Registered Image type: BasicImage
-23/04/2020 17:55:27 (Std) 	CEGUI::FontManager singleton created. (000001DEA6219270)
-23/04/2020 17:55:27 (Std) 	CEGUI::WindowFactoryManager singleton created
-23/04/2020 17:55:27 (Std) 	CEGUI::WindowManager singleton created (000001DEAD401510)
-23/04/2020 17:55:27 (Std) 	CEGUI::SchemeManager singleton created. (000001DEA621ADF0)
-23/04/2020 17:55:27 (Std) 	CEGUI::GlobalEventSet singleton created. (000001DEAD3F7880)
-23/04/2020 17:55:27 (Std) 	CEGUI::AnimationManager singleton created (000001DEAD3FF590)
-23/04/2020 17:55:27 (Std) 	CEGUI::WidgetLookManager singleton created. (000001DEAD40A1E0)
-23/04/2020 17:55:27 (Std) 	CEGUI::WindowRendererManager singleton created (000001DEAD40A360)
-23/04/2020 17:55:27 (Std) 	CEGUI::RenderEffectManager singleton created (000001DEAD41BC60)
-23/04/2020 17:55:27 (Std) 	Created WindowFactory for 'DefaultWindow' windows.
-23/04/2020 17:55:27 (Std) 	WindowFactory for 'DefaultWindow' windows added. (000001DEA33FB580)
-23/04/2020 17:55:27 (Std) 	Created WindowFactory for 'DragContainer' windows.
-23/04/2020 17:55:27 (Std) 	WindowFactory for 'DragContainer' windows added. (000001DEAD428880)
-23/04/2020 17:55:27 (Std) 	Created WindowFactory for 'ScrolledContainer' windows.
-23/04/2020 17:55:27 (Std) 	WindowFactory for 'ScrolledContainer' windows added. (000001DEAD427780)
-23/04/2020 17:55:27 (Std) 	Created WindowFactory for 'ClippedContainer' windows.
-23/04/2020 17:55:27 (Std) 	WindowFactory for 'ClippedContainer' windows added. (000001DEAD425180)
-23/04/2020 17:55:27 (Std) 	Created WindowFactory for 'CEGUI/PushButton' windows.
-23/04/2020 17:55:27 (Std) 	WindowFactory for 'CEGUI/PushButton' windows added. (000001DEAD425C80)
-23/04/2020 17:55:27 (Std) 	Created WindowFactory for 'CEGUI/RadioButton' windows.
-23/04/2020 17:55:27 (Std) 	WindowFactory for 'CEGUI/RadioButton' windows added. (000001DEAD425880)
-23/04/2020 17:55:27 (Std) 	Created WindowFactory for 'CEGUI/Combobox' windows.
-23/04/2020 17:55:27 (Std) 	WindowFactory for 'CEGUI/Combobox' windows added. (000001DEAD426980)
-23/04/2020 17:55:27 (Std) 	Created WindowFactory for 'CEGUI/ComboDropList' windows.
-23/04/2020 17:55:27 (Std) 	WindowFactory for 'CEGUI/ComboDropList' windows added. (000001DEAD427D80)
-23/04/2020 17:55:27 (Std) 	Created WindowFactory for 'CEGUI/Editbox' windows.
-23/04/2020 17:55:27 (Std) 	WindowFactory for 'CEGUI/Editbox' windows added. (000001DEAD425580)
-23/04/2020 17:55:27 (Std) 	Created WindowFactory for 'CEGUI/FrameWindow' windows.
-23/04/2020 17:55:27 (Std) 	WindowFactory for 'CEGUI/FrameWindow' windows added. (000001DEAD426780)
-23/04/2020 17:55:27 (Std) 	Created WindowFactory for 'CEGUI/ItemEntry' windows.
-23/04/2020 17:55:27 (Std) 	WindowFactory for 'CEGUI/ItemEntry' windows added. (000001DEAD427C80)
-23/04/2020 17:55:27 (Std) 	Created WindowFactory for 'CEGUI/Listbox' windows.
-23/04/2020 17:55:27 (Std) 	WindowFactory for 'CEGUI/Listbox' windows added. (000001DEAD426380)
-23/04/2020 17:55:27 (Std) 	Created WindowFactory for 'CEGUI/ListHeader' windows.
-23/04/2020 17:55:27 (Std) 	WindowFactory for 'CEGUI/ListHeader' windows added. (000001DEAD427E80)
-23/04/2020 17:55:27 (Std) 	Created WindowFactory for 'CEGUI/ListHeaderSegment' windows.
-23/04/2020 17:55:27 (Std) 	WindowFactory for 'CEGUI/ListHeaderSegment' windows added. (000001DEAD428480)
-23/04/2020 17:55:27 (Std) 	Created WindowFactory for 'CEGUI/Menubar' windows.
-23/04/2020 17:55:27 (Std) 	WindowFactory for 'CEGUI/Menubar' windows added. (000001DEAD426F80)
-23/04/2020 17:55:27 (Std) 	Created WindowFactory for 'CEGUI/PopupMenu' windows.
-23/04/2020 17:55:27 (Std) 	WindowFactory for 'CEGUI/PopupMenu' windows added. (000001DEAD425380)
-23/04/2020 17:55:27 (Std) 	Created WindowFactory for 'CEGUI/MenuItem' windows.
-23/04/2020 17:55:27 (Std) 	WindowFactory for 'CEGUI/MenuItem' windows added. (000001DEAD426680)
-23/04/2020 17:55:27 (Std) 	Created WindowFactory for 'CEGUI/MultiColumnList' windows.
-23/04/2020 17:55:27 (Std) 	WindowFactory for 'CEGUI/MultiColumnList' windows added. (000001DEAD426A80)
-23/04/2020 17:55:27 (Std) 	Created WindowFactory for 'CEGUI/MultiLineEditbox' windows.
-23/04/2020 17:55:27 (Std) 	WindowFactory for 'CEGUI/MultiLineEditbox' windows added. (000001DEAD426B80)
-23/04/2020 17:55:27 (Std) 	Created WindowFactory for 'CEGUI/ProgressBar' windows.
-23/04/2020 17:55:27 (Std) 	WindowFactory for 'CEGUI/ProgressBar' windows added. (000001DEAD427080)
-23/04/2020 17:55:27 (Std) 	Created WindowFactory for 'CEGUI/ScrollablePane' windows.
-23/04/2020 17:55:27 (Std) 	WindowFactory for 'CEGUI/ScrollablePane' windows added. (000001DEAD426C80)
-23/04/2020 17:55:27 (Std) 	Created WindowFactory for 'CEGUI/Scrollbar' windows.
-23/04/2020 17:55:27 (Std) 	WindowFactory for 'CEGUI/Scrollbar' windows added. (000001DEAD427F80)
-23/04/2020 17:55:27 (Std) 	Created WindowFactory for 'CEGUI/Slider' windows.
-23/04/2020 17:55:27 (Std) 	WindowFactory for 'CEGUI/Slider' windows added. (000001DEAD428780)
-23/04/2020 17:55:27 (Std) 	Created WindowFactory for 'CEGUI/Spinner' windows.
-23/04/2020 17:55:27 (Std) 	WindowFactory for 'CEGUI/Spinner' windows added. (000001DEAD426880)
-23/04/2020 17:55:27 (Std) 	Created WindowFactory for 'CEGUI/TabButton' windows.
-23/04/2020 17:55:27 (Std) 	WindowFactory for 'CEGUI/TabButton' windows added. (000001DEAD427A80)
-23/04/2020 17:55:27 (Std) 	Created WindowFactory for 'CEGUI/TabControl' windows.
-23/04/2020 17:55:27 (Std) 	WindowFactory for 'CEGUI/TabControl' windows added. (000001DEAD425D80)
-23/04/2020 17:55:27 (Std) 	Created WindowFactory for 'CEGUI/Thumb' windows.
-23/04/2020 17:55:27 (Std) 	WindowFactory for 'CEGUI/Thumb' windows added. (000001DEAD427380)
-23/04/2020 17:55:27 (Std) 	Created WindowFactory for 'CEGUI/Titlebar' windows.
-23/04/2020 17:55:27 (Std) 	WindowFactory for 'CEGUI/Titlebar' windows added. (000001DEAD424E80)
-23/04/2020 17:55:27 (Std) 	Created WindowFactory for 'CEGUI/ToggleButton' windows.
-23/04/2020 17:55:27 (Std) 	WindowFactory for 'CEGUI/ToggleButton' windows added. (000001DEAD426D80)
-23/04/2020 17:55:27 (Std) 	Created WindowFactory for 'CEGUI/Tooltip' windows.
-23/04/2020 17:55:27 (Std) 	WindowFactory for 'CEGUI/Tooltip' windows added. (000001DEAD426580)
-23/04/2020 17:55:27 (Std) 	Created WindowFactory for 'CEGUI/ItemListbox' windows.
-23/04/2020 17:55:27 (Std) 	WindowFactory for 'CEGUI/ItemListbox' windows added. (000001DEAD425980)
-23/04/2020 17:55:27 (Std) 	Created WindowFactory for 'CEGUI/GroupBox' windows.
-23/04/2020 17:55:27 (Std) 	WindowFactory for 'CEGUI/GroupBox' windows added. (000001DEAD426E80)
-23/04/2020 17:55:27 (Std) 	Created WindowFactory for 'CEGUI/Tree' windows.
-23/04/2020 17:55:27 (Std) 	WindowFactory for 'CEGUI/Tree' windows added. (000001DEAD427180)
-23/04/2020 17:55:27 (Std) 	Created WindowFactory for 'LayoutCell' windows.
-23/04/2020 17:55:27 (Std) 	WindowFactory for 'LayoutCell' windows added. (000001DEAD425F80)
-23/04/2020 17:55:27 (Std) 	Created WindowFactory for 'HorizontalLayoutContainer' windows.
-23/04/2020 17:55:27 (Std) 	WindowFactory for 'HorizontalLayoutContainer' windows added. (000001DEAD425280)
-23/04/2020 17:55:27 (Std) 	Created WindowFactory for 'VerticalLayoutContainer' windows.
-23/04/2020 17:55:27 (Std) 	WindowFactory for 'VerticalLayoutContainer' windows added. (000001DEAD425080)
-23/04/2020 17:55:27 (Std) 	Created WindowFactory for 'GridLayoutContainer' windows.
-23/04/2020 17:55:27 (Std) 	WindowFactory for 'GridLayoutContainer' windows added. (000001DEAD427480)
-23/04/2020 17:55:27 (Std) 	CEGUI::System singleton created. (000001DEAD302D60)
-23/04/2020 17:55:27 (Std) 	---- CEGUI System initialisation completed ----
-23/04/2020 17:55:27 (Std) 	
-23/04/2020 17:55:39 (Std) 	---- Begining CEGUI System destruction ----
-23/04/2020 17:55:39 (Std) 	WindowFactory for 'CEGUI/Tree' windows removed. (000001DEAD427180)
-23/04/2020 17:55:39 (Std) 	Deleted WindowFactory for 'CEGUI/Tree' windows.
-23/04/2020 17:55:39 (Std) 	WindowFactory for 'LayoutCell' windows removed. (000001DEAD425F80)
-23/04/2020 17:55:39 (Std) 	Deleted WindowFactory for 'LayoutCell' windows.
-23/04/2020 17:55:39 (Std) 	WindowFactory for 'CEGUI/Thumb' windows removed. (000001DEAD427380)
-23/04/2020 17:55:39 (Std) 	Deleted WindowFactory for 'CEGUI/Thumb' windows.
-23/04/2020 17:55:39 (Std) 	WindowFactory for 'CEGUI/Slider' windows removed. (000001DEAD428780)
-23/04/2020 17:55:39 (Std) 	Deleted WindowFactory for 'CEGUI/Slider' windows.
-23/04/2020 17:55:39 (Std) 	WindowFactory for 'CEGUI/Editbox' windows removed. (000001DEAD425580)
-23/04/2020 17:55:39 (Std) 	Deleted WindowFactory for 'CEGUI/Editbox' windows.
-23/04/2020 17:55:39 (Std) 	WindowFactory for 'CEGUI/Listbox' windows removed. (000001DEAD426380)
-23/04/2020 17:55:39 (Std) 	Deleted WindowFactory for 'CEGUI/Listbox' windows.
-23/04/2020 17:55:39 (Std) 	WindowFactory for 'CEGUI/Menubar' windows removed. (000001DEAD426F80)
-23/04/2020 17:55:39 (Std) 	Deleted WindowFactory for 'CEGUI/Menubar' windows.
-23/04/2020 17:55:39 (Std) 	WindowFactory for 'CEGUI/Spinner' windows removed. (000001DEAD426880)
-23/04/2020 17:55:39 (Std) 	Deleted WindowFactory for 'CEGUI/Spinner' windows.
-23/04/2020 17:55:39 (Std) 	WindowFactory for 'CEGUI/Tooltip' windows removed. (000001DEAD426580)
-23/04/2020 17:55:39 (Std) 	Deleted WindowFactory for 'CEGUI/Tooltip' windows.
-23/04/2020 17:55:39 (Std) 	WindowFactory for 'DefaultWindow' windows removed. (000001DEA33FB580)
-23/04/2020 17:55:39 (Std) 	Deleted WindowFactory for 'DefaultWindow' windows.
-23/04/2020 17:55:39 (Std) 	WindowFactory for 'DragContainer' windows removed. (000001DEAD428880)
-23/04/2020 17:55:39 (Std) 	Deleted WindowFactory for 'DragContainer' windows.
-23/04/2020 17:55:39 (Std) 	WindowFactory for 'CEGUI/Combobox' windows removed. (000001DEAD426980)
-23/04/2020 17:55:39 (Std) 	Deleted WindowFactory for 'CEGUI/Combobox' windows.
-23/04/2020 17:55:39 (Std) 	WindowFactory for 'CEGUI/GroupBox' windows removed. (000001DEAD426E80)
-23/04/2020 17:55:39 (Std) 	Deleted WindowFactory for 'CEGUI/GroupBox' windows.
-23/04/2020 17:55:39 (Std) 	WindowFactory for 'CEGUI/MenuItem' windows removed. (000001DEAD426680)
-23/04/2020 17:55:39 (Std) 	Deleted WindowFactory for 'CEGUI/MenuItem' windows.
-23/04/2020 17:55:39 (Std) 	WindowFactory for 'CEGUI/Titlebar' windows removed. (000001DEAD424E80)
-23/04/2020 17:55:39 (Std) 	Deleted WindowFactory for 'CEGUI/Titlebar' windows.
-23/04/2020 17:55:39 (Std) 	WindowFactory for 'CEGUI/ItemEntry' windows removed. (000001DEAD427C80)
-23/04/2020 17:55:39 (Std) 	Deleted WindowFactory for 'CEGUI/ItemEntry' windows.
-23/04/2020 17:55:39 (Std) 	WindowFactory for 'CEGUI/PopupMenu' windows removed. (000001DEAD425380)
-23/04/2020 17:55:39 (Std) 	Deleted WindowFactory for 'CEGUI/PopupMenu' windows.
-23/04/2020 17:55:39 (Std) 	WindowFactory for 'CEGUI/Scrollbar' windows removed. (000001DEAD427F80)
-23/04/2020 17:55:39 (Std) 	Deleted WindowFactory for 'CEGUI/Scrollbar' windows.
-23/04/2020 17:55:39 (Std) 	WindowFactory for 'CEGUI/TabButton' windows removed. (000001DEAD427A80)
-23/04/2020 17:55:39 (Std) 	Deleted WindowFactory for 'CEGUI/TabButton' windows.
-23/04/2020 17:55:39 (Std) 	WindowFactory for 'CEGUI/ListHeader' windows removed. (000001DEAD427E80)
-23/04/2020 17:55:39 (Std) 	Deleted WindowFactory for 'CEGUI/ListHeader' windows.
-23/04/2020 17:55:39 (Std) 	WindowFactory for 'CEGUI/PushButton' windows removed. (000001DEAD425C80)
-23/04/2020 17:55:39 (Std) 	Deleted WindowFactory for 'CEGUI/PushButton' windows.
-23/04/2020 17:55:39 (Std) 	WindowFactory for 'CEGUI/TabControl' windows removed. (000001DEAD425D80)
-23/04/2020 17:55:39 (Std) 	Deleted WindowFactory for 'CEGUI/TabControl' windows.
-23/04/2020 17:55:39 (Std) 	WindowFactory for 'ClippedContainer' windows removed. (000001DEAD425180)
-23/04/2020 17:55:39 (Std) 	Deleted WindowFactory for 'ClippedContainer' windows.
-23/04/2020 17:55:39 (Std) 	WindowFactory for 'CEGUI/FrameWindow' windows removed. (000001DEAD426780)
-23/04/2020 17:55:39 (Std) 	Deleted WindowFactory for 'CEGUI/FrameWindow' windows.
-23/04/2020 17:55:39 (Std) 	WindowFactory for 'CEGUI/ItemListbox' windows removed. (000001DEAD425980)
-23/04/2020 17:55:39 (Std) 	Deleted WindowFactory for 'CEGUI/ItemListbox' windows.
-23/04/2020 17:55:39 (Std) 	WindowFactory for 'CEGUI/ProgressBar' windows removed. (000001DEAD427080)
-23/04/2020 17:55:39 (Std) 	Deleted WindowFactory for 'CEGUI/ProgressBar' windows.
-23/04/2020 17:55:39 (Std) 	WindowFactory for 'CEGUI/RadioButton' windows removed. (000001DEAD425880)
-23/04/2020 17:55:39 (Std) 	Deleted WindowFactory for 'CEGUI/RadioButton' windows.
-23/04/2020 17:55:39 (Std) 	WindowFactory for 'ScrolledContainer' windows removed. (000001DEAD427780)
-23/04/2020 17:55:39 (Std) 	Deleted WindowFactory for 'ScrolledContainer' windows.
-23/04/2020 17:55:39 (Std) 	WindowFactory for 'CEGUI/ToggleButton' windows removed. (000001DEAD426D80)
-23/04/2020 17:55:39 (Std) 	Deleted WindowFactory for 'CEGUI/ToggleButton' windows.
-23/04/2020 17:55:39 (Std) 	WindowFactory for 'CEGUI/ComboDropList' windows removed. (000001DEAD427D80)
-23/04/2020 17:55:39 (Std) 	Deleted WindowFactory for 'CEGUI/ComboDropList' windows.
-23/04/2020 17:55:39 (Std) 	WindowFactory for 'GridLayoutContainer' windows removed. (000001DEAD427480)
-23/04/2020 17:55:39 (Std) 	Deleted WindowFactory for 'GridLayoutContainer' windows.
-23/04/2020 17:55:39 (Std) 	WindowFactory for 'CEGUI/ScrollablePane' windows removed. (000001DEAD426C80)
-23/04/2020 17:55:39 (Std) 	Deleted WindowFactory for 'CEGUI/ScrollablePane' windows.
-23/04/2020 17:55:39 (Std) 	WindowFactory for 'CEGUI/MultiColumnList' windows removed. (000001DEAD426A80)
-23/04/2020 17:55:39 (Std) 	Deleted WindowFactory for 'CEGUI/MultiColumnList' windows.
-23/04/2020 17:55:39 (Std) 	WindowFactory for 'CEGUI/MultiLineEditbox' windows removed. (000001DEAD426B80)
-23/04/2020 17:55:39 (Std) 	Deleted WindowFactory for 'CEGUI/MultiLineEditbox' windows.
-23/04/2020 17:55:39 (Std) 	WindowFactory for 'CEGUI/ListHeaderSegment' windows removed. (000001DEAD428480)
-23/04/2020 17:55:39 (Std) 	Deleted WindowFactory for 'CEGUI/ListHeaderSegment' windows.
-23/04/2020 17:55:39 (Std) 	WindowFactory for 'VerticalLayoutContainer' windows removed. (000001DEAD425080)
-23/04/2020 17:55:39 (Std) 	Deleted WindowFactory for 'VerticalLayoutContainer' windows.
-23/04/2020 17:55:39 (Std) 	WindowFactory for 'HorizontalLayoutContainer' windows removed. (000001DEAD425280)
-23/04/2020 17:55:39 (Std) 	Deleted WindowFactory for 'HorizontalLayoutContainer' windows.
-23/04/2020 17:55:39 (Std) 	---- Begining cleanup of GUI Scheme system ----
-23/04/2020 17:55:39 (Std) 	CEGUI::SchemeManager singleton destroyed. (000001DEA621ADF0)
-23/04/2020 17:55:39 (Std) 	CEGUI::WindowManager singleton destroyed (000001DEAD401510)
-23/04/2020 17:55:39 (Std) 	CEGUI::WindowFactoryManager singleton destroyed
-23/04/2020 17:55:39 (Std) 	CEGUI::WidgetLookManager singleton destroyed. (000001DEAD40A1E0)
-23/04/2020 17:55:39 (Std) 	CEGUI::WindowRendererManager singleton destroyed (000001DEAD40A360)
-23/04/2020 17:55:39 (Std) 	CEGUI::AnimationManager singleton destroyed (000001DEAD3FF590)
-23/04/2020 17:55:39 (Std) 	CEGUI::RenderEffectManager singleton destroyed (000001DEAD41BC60)
-23/04/2020 17:55:39 (Std) 	---- Begining cleanup of Font system ----
-23/04/2020 17:55:39 (Std) 	CEGUI::FontManager singleton destroyed. (000001DEA6219270)
-23/04/2020 17:55:39 (Std) 	[CEGUI::ImageManager] Unregistered Image type: BasicImage
-23/04/2020 17:55:39 (Std) 	[CEGUI::ImageManager] Singleton destroyed (000001DEAD3CCA50)
-23/04/2020 17:55:39 (Std) 	CEGUI::GlobalEventSet singleton destroyed. (000001DEAD3F7880)
-23/04/2020 17:55:39 (Std) 	CEGUI::System singleton destroyed. (000001DEAD302D60)
-23/04/2020 17:55:39 (Std) 	---- CEGUI System destruction completed ----
-23/04/2020 17:55:39 (Std) 	CEGUI::Logger singleton destroyed. (000001DEAD1F89A0)
+23/04/2020 18:24:49 (Std) 	CEGUI::Logger singleton created. (0000022FA7945E20)
+23/04/2020 18:24:49 (Std) 	
+23/04/2020 18:24:49 (Std) 	********************************************************************************
+23/04/2020 18:24:49 (Std) 	* Important:                                                                   *
+23/04/2020 18:24:49 (Std) 	*     To get support at the CEGUI forums, you must post _at least_ the section *
+23/04/2020 18:24:49 (Std) 	*     of this log file indicated below.  Failure to do this will result in no  *
+23/04/2020 18:24:49 (Std) 	*     support being given; please do not waste our time.                       *
+23/04/2020 18:24:49 (Std) 	********************************************************************************
+23/04/2020 18:24:49 (Std) 	********************************************************************************
+23/04/2020 18:24:49 (Std) 	* -------- START OF ESSENTIAL SECTION TO BE POSTED ON THE FORUM       -------- *
+23/04/2020 18:24:49 (Std) 	********************************************************************************
+23/04/2020 18:24:49 (Std) 	---- Version: 0.8.7 (Build: Apr 17 2020 Debug Microsoft Windows MSVC++ Unknown MSVC++ version 64 bit) ----
+23/04/2020 18:24:49 (Std) 	---- Renderer module is: CEGUI::OgreRenderer - Official OGRE based 2nd generation renderer module. ----
+23/04/2020 18:24:49 (Std) 	---- XML Parser module is: CEGUI::ExpatParser - Official expat based parser module for CEGUI ----
+23/04/2020 18:24:49 (Std) 	---- Image Codec module is: OgreImageCodec - Integrated ImageCodec using the Ogre engine. ----
+23/04/2020 18:24:49 (Std) 	---- Scripting module is: None ----
+23/04/2020 18:24:49 (Std) 	********************************************************************************
+23/04/2020 18:24:49 (Std) 	* -------- END OF ESSENTIAL SECTION TO BE POSTED ON THE FORUM         -------- *
+23/04/2020 18:24:49 (Std) 	********************************************************************************
+23/04/2020 18:24:49 (Std) 	
+23/04/2020 18:24:49 (Std) 	---- Begining CEGUI System initialisation ----
+23/04/2020 18:24:49 (Std) 	[CEGUI::ImageManager] Singleton created (0000022FA79D3380)
+23/04/2020 18:24:49 (Std) 	[CEGUI::ImageManager] Registered Image type: BasicImage
+23/04/2020 18:24:49 (Std) 	CEGUI::FontManager singleton created. (0000022FA796AB90)
+23/04/2020 18:24:49 (Std) 	CEGUI::WindowFactoryManager singleton created
+23/04/2020 18:24:49 (Std) 	CEGUI::WindowManager singleton created (0000022FA79F0A40)
+23/04/2020 18:24:49 (Std) 	CEGUI::SchemeManager singleton created. (0000022FA796ACD0)
+23/04/2020 18:24:49 (Std) 	CEGUI::GlobalEventSet singleton created. (0000022FA79DD640)
+23/04/2020 18:24:49 (Std) 	CEGUI::AnimationManager singleton created (0000022FA79F2D80)
+23/04/2020 18:24:49 (Std) 	CEGUI::WidgetLookManager singleton created. (0000022FA7AC5070)
+23/04/2020 18:24:49 (Std) 	CEGUI::WindowRendererManager singleton created (0000022FA7AC50D0)
+23/04/2020 18:24:49 (Std) 	CEGUI::RenderEffectManager singleton created (0000022FA7868B30)
+23/04/2020 18:24:49 (Std) 	Created WindowFactory for 'DefaultWindow' windows.
+23/04/2020 18:24:49 (Std) 	WindowFactory for 'DefaultWindow' windows added. (0000022FA718FAE0)
+23/04/2020 18:24:49 (Std) 	Created WindowFactory for 'DragContainer' windows.
+23/04/2020 18:24:49 (Std) 	WindowFactory for 'DragContainer' windows added. (0000022FA718FCE0)
+23/04/2020 18:24:49 (Std) 	Created WindowFactory for 'ScrolledContainer' windows.
+23/04/2020 18:24:49 (Std) 	WindowFactory for 'ScrolledContainer' windows added. (0000022FA7192BE0)
+23/04/2020 18:24:49 (Std) 	Created WindowFactory for 'ClippedContainer' windows.
+23/04/2020 18:24:49 (Std) 	WindowFactory for 'ClippedContainer' windows added. (0000022FA7192FE0)
+23/04/2020 18:24:49 (Std) 	Created WindowFactory for 'CEGUI/PushButton' windows.
+23/04/2020 18:24:49 (Std) 	WindowFactory for 'CEGUI/PushButton' windows added. (0000022FA718FDE0)
+23/04/2020 18:24:49 (Std) 	Created WindowFactory for 'CEGUI/RadioButton' windows.
+23/04/2020 18:24:49 (Std) 	WindowFactory for 'CEGUI/RadioButton' windows added. (0000022FA718FEE0)
+23/04/2020 18:24:49 (Std) 	Created WindowFactory for 'CEGUI/Combobox' windows.
+23/04/2020 18:24:49 (Std) 	WindowFactory for 'CEGUI/Combobox' windows added. (0000022FA71900E0)
+23/04/2020 18:24:49 (Std) 	Created WindowFactory for 'CEGUI/ComboDropList' windows.
+23/04/2020 18:24:49 (Std) 	WindowFactory for 'CEGUI/ComboDropList' windows added. (0000022FA71902E0)
+23/04/2020 18:24:49 (Std) 	Created WindowFactory for 'CEGUI/Editbox' windows.
+23/04/2020 18:24:49 (Std) 	WindowFactory for 'CEGUI/Editbox' windows added. (0000022FA71903E0)
+23/04/2020 18:24:49 (Std) 	Created WindowFactory for 'CEGUI/FrameWindow' windows.
+23/04/2020 18:24:49 (Std) 	WindowFactory for 'CEGUI/FrameWindow' windows added. (0000022FA71904E0)
+23/04/2020 18:24:49 (Std) 	Created WindowFactory for 'CEGUI/ItemEntry' windows.
+23/04/2020 18:24:49 (Std) 	WindowFactory for 'CEGUI/ItemEntry' windows added. (0000022FA7190EE0)
+23/04/2020 18:24:49 (Std) 	Created WindowFactory for 'CEGUI/Listbox' windows.
+23/04/2020 18:24:49 (Std) 	WindowFactory for 'CEGUI/Listbox' windows added. (0000022FA79C0750)
+23/04/2020 18:24:49 (Std) 	Created WindowFactory for 'CEGUI/ListHeader' windows.
+23/04/2020 18:24:49 (Std) 	WindowFactory for 'CEGUI/ListHeader' windows added. (0000022FA79C0650)
+23/04/2020 18:24:49 (Std) 	Created WindowFactory for 'CEGUI/ListHeaderSegment' windows.
+23/04/2020 18:24:49 (Std) 	WindowFactory for 'CEGUI/ListHeaderSegment' windows added. (0000022FA79BFC50)
+23/04/2020 18:24:49 (Std) 	Created WindowFactory for 'CEGUI/Menubar' windows.
+23/04/2020 18:24:49 (Std) 	WindowFactory for 'CEGUI/Menubar' windows added. (0000022FA79C0A50)
+23/04/2020 18:24:49 (Std) 	Created WindowFactory for 'CEGUI/PopupMenu' windows.
+23/04/2020 18:24:49 (Std) 	WindowFactory for 'CEGUI/PopupMenu' windows added. (0000022FA79BF150)
+23/04/2020 18:24:49 (Std) 	Created WindowFactory for 'CEGUI/MenuItem' windows.
+23/04/2020 18:24:49 (Std) 	WindowFactory for 'CEGUI/MenuItem' windows added. (0000022FA79C0B50)
+23/04/2020 18:24:49 (Std) 	Created WindowFactory for 'CEGUI/MultiColumnList' windows.
+23/04/2020 18:24:49 (Std) 	WindowFactory for 'CEGUI/MultiColumnList' windows added. (0000022FA79BFD50)
+23/04/2020 18:24:49 (Std) 	Created WindowFactory for 'CEGUI/MultiLineEditbox' windows.
+23/04/2020 18:24:49 (Std) 	WindowFactory for 'CEGUI/MultiLineEditbox' windows added. (0000022FA79C0550)
+23/04/2020 18:24:49 (Std) 	Created WindowFactory for 'CEGUI/ProgressBar' windows.
+23/04/2020 18:24:49 (Std) 	WindowFactory for 'CEGUI/ProgressBar' windows added. (0000022FA79BFE50)
+23/04/2020 18:24:49 (Std) 	Created WindowFactory for 'CEGUI/ScrollablePane' windows.
+23/04/2020 18:24:49 (Std) 	WindowFactory for 'CEGUI/ScrollablePane' windows added. (0000022FA79C0C50)
+23/04/2020 18:24:49 (Std) 	Created WindowFactory for 'CEGUI/Scrollbar' windows.
+23/04/2020 18:24:49 (Std) 	WindowFactory for 'CEGUI/Scrollbar' windows added. (0000022FA79C0850)
+23/04/2020 18:24:49 (Std) 	Created WindowFactory for 'CEGUI/Slider' windows.
+23/04/2020 18:24:49 (Std) 	WindowFactory for 'CEGUI/Slider' windows added. (0000022FA79BF250)
+23/04/2020 18:24:49 (Std) 	Created WindowFactory for 'CEGUI/Spinner' windows.
+23/04/2020 18:24:49 (Std) 	WindowFactory for 'CEGUI/Spinner' windows added. (0000022FA79BFF50)
+23/04/2020 18:24:49 (Std) 	Created WindowFactory for 'CEGUI/TabButton' windows.
+23/04/2020 18:24:49 (Std) 	WindowFactory for 'CEGUI/TabButton' windows added. (0000022FA79C0950)
+23/04/2020 18:24:49 (Std) 	Created WindowFactory for 'CEGUI/TabControl' windows.
+23/04/2020 18:24:49 (Std) 	WindowFactory for 'CEGUI/TabControl' windows added. (0000022FA79C0050)
+23/04/2020 18:24:49 (Std) 	Created WindowFactory for 'CEGUI/Thumb' windows.
+23/04/2020 18:24:49 (Std) 	WindowFactory for 'CEGUI/Thumb' windows added. (0000022FA79C0450)
+23/04/2020 18:24:49 (Std) 	Created WindowFactory for 'CEGUI/Titlebar' windows.
+23/04/2020 18:24:49 (Std) 	WindowFactory for 'CEGUI/Titlebar' windows added. (0000022FA79BEE50)
+23/04/2020 18:24:49 (Std) 	Created WindowFactory for 'CEGUI/ToggleButton' windows.
+23/04/2020 18:24:49 (Std) 	WindowFactory for 'CEGUI/ToggleButton' windows added. (0000022FA79BF550)
+23/04/2020 18:24:49 (Std) 	Created WindowFactory for 'CEGUI/Tooltip' windows.
+23/04/2020 18:24:49 (Std) 	WindowFactory for 'CEGUI/Tooltip' windows added. (0000022FA79BF650)
+23/04/2020 18:24:49 (Std) 	Created WindowFactory for 'CEGUI/ItemListbox' windows.
+23/04/2020 18:24:49 (Std) 	WindowFactory for 'CEGUI/ItemListbox' windows added. (0000022FA79C0250)
+23/04/2020 18:24:49 (Std) 	Created WindowFactory for 'CEGUI/GroupBox' windows.
+23/04/2020 18:24:49 (Std) 	WindowFactory for 'CEGUI/GroupBox' windows added. (0000022FA79BF850)
+23/04/2020 18:24:49 (Std) 	Created WindowFactory for 'CEGUI/Tree' windows.
+23/04/2020 18:24:49 (Std) 	WindowFactory for 'CEGUI/Tree' windows added. (0000022FA79BEF50)
+23/04/2020 18:24:49 (Std) 	Created WindowFactory for 'LayoutCell' windows.
+23/04/2020 18:24:49 (Std) 	WindowFactory for 'LayoutCell' windows added. (0000022FA79BF050)
+23/04/2020 18:24:49 (Std) 	Created WindowFactory for 'HorizontalLayoutContainer' windows.
+23/04/2020 18:24:49 (Std) 	WindowFactory for 'HorizontalLayoutContainer' windows added. (0000022FA79BF350)
+23/04/2020 18:24:49 (Std) 	Created WindowFactory for 'VerticalLayoutContainer' windows.
+23/04/2020 18:24:49 (Std) 	WindowFactory for 'VerticalLayoutContainer' windows added. (0000022FA79BF450)
+23/04/2020 18:24:49 (Std) 	Created WindowFactory for 'GridLayoutContainer' windows.
+23/04/2020 18:24:49 (Std) 	WindowFactory for 'GridLayoutContainer' windows added. (0000022FA79BF750)
+23/04/2020 18:24:49 (Std) 	CEGUI::System singleton created. (0000022FA717CE70)
+23/04/2020 18:24:49 (Std) 	---- CEGUI System initialisation completed ----
+23/04/2020 18:24:49 (Std) 	
+23/04/2020 18:24:49 (Std) 	Started creation of Scheme from XML specification:
+23/04/2020 18:24:49 (Std) 	---- CEGUI GUIScheme name: A_Toda_Pastilla
+23/04/2020 18:24:49 (Std) 	[ImageManager] Started creation of Imageset from XML specification:
+23/04/2020 18:24:49 (Std) 	[ImageManager] ---- CEGUI Imageset name: A_Toda_Pastilla
+23/04/2020 18:24:49 (Std) 	[ImageManager] ---- Source texture file: A_Toda_Pastilla.png
+23/04/2020 18:24:49 (Std) 	[ImageManager] ---- Source texture resource group: (Default)
+23/04/2020 18:24:49 (Std) 	[OgreRenderer] Created texture: A_Toda_Pastilla
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'A_Toda_Pastilla/Close_Normal' (0000022FA7A360A0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'A_Toda_Pastilla/Close_Hover' (0000022FA7A35E00) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'A_Toda_Pastilla/Close_ClickHover' (0000022FA7A35380) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'A_Toda_Pastilla/Close_Click' (0000022FA7A35F50) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'A_Toda_Pastilla/Settings_Normal' (0000022FA7A35A10) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'A_Toda_Pastilla/Settings_Hover' (0000022FA7A35B60) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'A_Toda_Pastilla/Settings_ClickHover' (0000022FA7A354D0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'A_Toda_Pastilla/Settings_Click' (0000022FA7A35CB0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'A_Toda_Pastilla/Play_Normal' (0000022FA7A35620) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'A_Toda_Pastilla/Play_Hover' (0000022FA7B10720) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'A_Toda_Pastilla/Play_ClickHover' (0000022FA7B0FCA0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'A_Toda_Pastilla/Play_Click' (0000022FA7B0EF80) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'A_Toda_Pastilla/Mouse_Arrow' (0000022FA7B0F8B0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'A_Toda_Pastilla/Mouse_Move' (0000022FA7B101E0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'A_Toda_Pastilla/Mouse_Resize' (0000022FA7B0ECE0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'A_Toda_Pastilla/Mouse_Text' (0000022FA7B10330) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'A_Toda_Pastilla/RightArrow_1' (0000022FA7B0F760) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'A_Toda_Pastilla/RightArrow_2' (0000022FA7B0EE30) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'A_Toda_Pastilla/RightArrow_3' (0000022FA7B0F4C0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'A_Toda_Pastilla/RightArrow_4' (0000022FA7B0FA00) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'A_Toda_Pastilla/LeftArrow_4' (0000022FA7B0FF40) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'A_Toda_Pastilla/LeftArrow_3' (0000022FA7B0F610) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'A_Toda_Pastilla/LeftArrow_2' (0000022FA7B0F0D0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'A_Toda_Pastilla/LeftArrow_1' (0000022FA7B0EB90) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'A_Toda_Pastilla/ScoreCup' (0000022FA7B0FB50) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	===== Falagard 'root' element: look and feel parsing begins =====
+23/04/2020 18:24:49 (Std) 	===== Look and feel parsing completed =====
+23/04/2020 18:24:49 (Std) 	No window renderer factories specified for module 'CEGUICoreWindowRendererSet' - adding all available factories...
+23/04/2020 18:24:49 (Std) 	Created WindowRendererFactory for 'Core/Button' WindowRenderers.
+23/04/2020 18:24:49 (Std) 	WindowRendererFactory 'Core/Button' added. (0000022FA7B2EC30)
+23/04/2020 18:24:49 (Std) 	Created WindowRendererFactory for 'Core/Default' WindowRenderers.
+23/04/2020 18:24:49 (Std) 	WindowRendererFactory 'Core/Default' added. (0000022FA7B2E830)
+23/04/2020 18:24:49 (Std) 	Created WindowRendererFactory for 'Core/Editbox' WindowRenderers.
+23/04/2020 18:24:49 (Std) 	WindowRendererFactory 'Core/Editbox' added. (0000022FA7B2F930)
+23/04/2020 18:24:49 (Std) 	Created WindowRendererFactory for 'Core/FrameWindow' WindowRenderers.
+23/04/2020 18:24:49 (Std) 	WindowRendererFactory 'Core/FrameWindow' added. (0000022FA7B2DA30)
+23/04/2020 18:24:49 (Std) 	Created WindowRendererFactory for 'Core/ItemEntry' WindowRenderers.
+23/04/2020 18:24:49 (Std) 	WindowRendererFactory 'Core/ItemEntry' added. (0000022FA7B2CB30)
+23/04/2020 18:24:49 (Std) 	Created WindowRendererFactory for 'Core/ListHeader' WindowRenderers.
+23/04/2020 18:24:49 (Std) 	WindowRendererFactory 'Core/ListHeader' added. (0000022FA7B2DF30)
+23/04/2020 18:24:49 (Std) 	Created WindowRendererFactory for 'Core/ListHeaderSegment' WindowRenderers.
+23/04/2020 18:24:49 (Std) 	WindowRendererFactory 'Core/ListHeaderSegment' added. (0000022FA7B2D130)
+23/04/2020 18:24:49 (Std) 	Created WindowRendererFactory for 'Core/Listbox' WindowRenderers.
+23/04/2020 18:24:49 (Std) 	WindowRendererFactory 'Core/Listbox' added. (0000022FA7B2D530)
+23/04/2020 18:24:49 (Std) 	Created WindowRendererFactory for 'Core/Menubar' WindowRenderers.
+23/04/2020 18:24:49 (Std) 	WindowRendererFactory 'Core/Menubar' added. (0000022FA7B2F030)
+23/04/2020 18:24:49 (Std) 	Created WindowRendererFactory for 'Core/MenuItem' WindowRenderers.
+23/04/2020 18:24:49 (Std) 	WindowRendererFactory 'Core/MenuItem' added. (0000022FA7B2C330)
+23/04/2020 18:24:49 (Std) 	Created WindowRendererFactory for 'Core/MultiColumnList' WindowRenderers.
+23/04/2020 18:24:49 (Std) 	WindowRendererFactory 'Core/MultiColumnList' added. (0000022FA7B2D630)
+23/04/2020 18:24:49 (Std) 	Created WindowRendererFactory for 'Core/MultiLineEditbox' WindowRenderers.
+23/04/2020 18:24:49 (Std) 	WindowRendererFactory 'Core/MultiLineEditbox' added. (0000022FA7B2D830)
+23/04/2020 18:24:49 (Std) 	Created WindowRendererFactory for 'Core/PopupMenu' WindowRenderers.
+23/04/2020 18:24:49 (Std) 	WindowRendererFactory 'Core/PopupMenu' added. (0000022FA7B2D230)
+23/04/2020 18:24:49 (Std) 	Created WindowRendererFactory for 'Core/ProgressBar' WindowRenderers.
+23/04/2020 18:24:49 (Std) 	WindowRendererFactory 'Core/ProgressBar' added. (0000022FA7B2E930)
+23/04/2020 18:24:49 (Std) 	Created WindowRendererFactory for 'Core/ScrollablePane' WindowRenderers.
+23/04/2020 18:24:49 (Std) 	WindowRendererFactory 'Core/ScrollablePane' added. (0000022FA7B2FC30)
+23/04/2020 18:24:49 (Std) 	Created WindowRendererFactory for 'Core/Scrollbar' WindowRenderers.
+23/04/2020 18:24:49 (Std) 	WindowRendererFactory 'Core/Scrollbar' added. (0000022FA7B2C530)
+23/04/2020 18:24:49 (Std) 	Created WindowRendererFactory for 'Core/Slider' WindowRenderers.
+23/04/2020 18:24:49 (Std) 	WindowRendererFactory 'Core/Slider' added. (0000022FA7B2E030)
+23/04/2020 18:24:49 (Std) 	Created WindowRendererFactory for 'Core/Static' WindowRenderers.
+23/04/2020 18:24:49 (Std) 	WindowRendererFactory 'Core/Static' added. (0000022FA7B2E730)
+23/04/2020 18:24:49 (Std) 	Created WindowRendererFactory for 'Core/StaticImage' WindowRenderers.
+23/04/2020 18:24:49 (Std) 	WindowRendererFactory 'Core/StaticImage' added. (0000022FA7B2D730)
+23/04/2020 18:24:49 (Std) 	Created WindowRendererFactory for 'Core/StaticText' WindowRenderers.
+23/04/2020 18:24:49 (Std) 	WindowRendererFactory 'Core/StaticText' added. (0000022FA7B2E130)
+23/04/2020 18:24:49 (Std) 	Created WindowRendererFactory for 'Core/TabButton' WindowRenderers.
+23/04/2020 18:24:49 (Std) 	WindowRendererFactory 'Core/TabButton' added. (0000022FA7B2EA30)
+23/04/2020 18:24:49 (Std) 	Created WindowRendererFactory for 'Core/TabControl' WindowRenderers.
+23/04/2020 18:24:49 (Std) 	WindowRendererFactory 'Core/TabControl' added. (0000022FA7B2D930)
+23/04/2020 18:24:49 (Std) 	Created WindowRendererFactory for 'Core/Titlebar' WindowRenderers.
+23/04/2020 18:24:49 (Std) 	WindowRendererFactory 'Core/Titlebar' added. (0000022FA7B2DB30)
+23/04/2020 18:24:49 (Std) 	Created WindowRendererFactory for 'Core/ToggleButton' WindowRenderers.
+23/04/2020 18:24:49 (Std) 	WindowRendererFactory 'Core/ToggleButton' added. (0000022FA7B2EB30)
+23/04/2020 18:24:49 (Std) 	Created WindowRendererFactory for 'Core/Tooltip' WindowRenderers.
+23/04/2020 18:24:49 (Std) 	WindowRendererFactory 'Core/Tooltip' added. (0000022FA7B2FA30)
+23/04/2020 18:24:49 (Std) 	Created WindowRendererFactory for 'Core/ItemListbox' WindowRenderers.
+23/04/2020 18:24:49 (Std) 	WindowRendererFactory 'Core/ItemListbox' added. (0000022FA7B2D330)
+23/04/2020 18:24:49 (Std) 	Created WindowRendererFactory for 'Core/Tree' WindowRenderers.
+23/04/2020 18:24:49 (Std) 	WindowRendererFactory 'Core/Tree' added. (0000022FA7B2F830)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'A_Toda_Pastilla/Play' using base type 'CEGUI/PushButton', window renderer 'Core/Button' Look'N'Feel 'A_Toda_Pastilla/Play' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'A_Toda_Pastilla/Settings' using base type 'CEGUI/PushButton', window renderer 'Core/Button' Look'N'Feel 'A_Toda_Pastilla/Settings' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'A_Toda_Pastilla/Close' using base type 'CEGUI/PushButton', window renderer 'Core/Button' Look'N'Feel 'A_Toda_Pastilla/Close' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'A_Toda_Pastilla/LeftArrow' using base type 'CEGUI/PushButton', window renderer 'Core/Button' Look'N'Feel 'A_Toda_Pastilla/LeftArrow' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'A_Toda_Pastilla/RightArrow' using base type 'CEGUI/PushButton', window renderer 'Core/Button' Look'N'Feel 'A_Toda_Pastilla/RightArrow' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Started creation of Scheme from XML specification:
+23/04/2020 18:24:49 (Std) 	---- CEGUI GUIScheme name: GWEN
+23/04/2020 18:24:49 (Std) 	[ImageManager] Started creation of Imageset from XML specification:
+23/04/2020 18:24:49 (Std) 	[ImageManager] ---- CEGUI Imageset name: GWEN
+23/04/2020 18:24:49 (Std) 	[ImageManager] ---- Source texture file: GWENDefaultSkin.png
+23/04/2020 18:24:49 (Std) 	[ImageManager] ---- Source texture resource group: (Default)
+23/04/2020 18:24:49 (Std) 	[OgreRenderer] Created texture: GWEN
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Shadow' (0000022FA7BA1CF0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tooltip.Top.Left' (0000022FA7BA1F90) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/StatusBar' (0000022FA7BA2770) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Selection' (0000022FA7BA20E0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Panel.Normal' (0000022FA7BA2230) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Panel.Bright' (0000022FA7BA2380) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Panel.Dark' (0000022FA7BA24D0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Panel.Highlight' (0000022FA7B01B40) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Window.Head.Normal.Middle' (0000022FA7B02B00) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Window.Head.Inactive.Middle' (0000022FA7B02C50) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Checkbox.Active.Checked' (0000022FA7B01360) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Checkbox.Active.Normal' (0000022FA7B01750) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Checkbox.Disabled.Checked' (0000022FA7B01C90) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Checkbox.Disabled.Normal' (0000022FA7B01DE0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/RadioButton.Active.Checked' (0000022FA7B01F30) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/RadioButton.Active.Normal' (0000022FA7B83670) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/RadioButton.Disabled.Checked' (0000022FA7B82410) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/RadioButton.Disabled.Normal' (0000022FA7B826B0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Menu.Strip' (0000022FA7B82020) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Menu.BackgroundWithMargin' (0000022FA7B83A60) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Menu.Background.Top.Middle' (0000022FA7B82800) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Menu.Hover.Top.Left' (0000022FA7B686A0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Menu.RightArrow' (0000022FA7B69900) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Menu.LeftArrow' (0000022FA7B69A50) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Control.Top.Left' (0000022FA7B69BA0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Bottom.Active.Top.Left' (0000022FA7B72C40) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Bottom.Inactive.Top.Left' (0000022FA7B71DD0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Top.Active.Top.Right' (0000022FA7B72310) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Top.Inactive.Top.Left' (0000022FA7B725B0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Left.Active' (0000022FA7B81ED0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Left.Inactive' (0000022FA7BA2620) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Right.Active' (0000022FA7B021D0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Right.Inactive' (0000022FA7BA5290) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.HeaderBar' (0000022FA7BA5E60) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Window.Close' (0000022FA7BA4EA0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Window.Close_Hover' (0000022FA7BA6100) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Window.Close_Down' (0000022FA7BA5920) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Window.Close_Disabled' (0000022FA7BA63A0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tree.Top.Left' (0000022FA7BA64F0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tree.Plus' (0000022FA7BA4FF0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tree.Minus' (0000022FA7BA6250) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Button.Normal.Bottom.Middle' (0000022FA7BA6640) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Button.Hovered.Top.Middle' (0000022FA7BA6790) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Button.Disabled.Top.Middle' (0000022FA7BA6A30) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Button.Pressed.Top.Middle' (0000022FA7BA68E0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.Button.Left.Normal' (0000022FA7BA5A70) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.Button.Left.Hover' (0000022FA7BA4C00) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.Button.Left.Down' (0000022FA7BA5530) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.Button.Left.Disabled' (0000022FA7BA53E0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.Button.Up.Normal' (0000022FA7BA5BC0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.Button.Up.Hover' (0000022FA7BA5FB0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.Button.Up.Down' (0000022FA7BA4D50) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.Button.Up.Disabled' (0000022FA7BA5680) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.Button.Right.Normal' (0000022FA7BA5140) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.Button.Right.Hover' (0000022FA7BA57D0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.Button.Right.Down' (0000022FA7BA5D10) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.Button.Right.Disabled' (0000022FA7BC6A90) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.Button.Down.Normal' (0000022FA7BC99D0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.Button.Down.Hover' (0000022FA7BC7660) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.Button.Down.Down' (0000022FA7BC6E80) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.Button.Down.Disabled' (0000022FA7BC9490) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.TrackV' (0000022FA7BC8620) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.ButtonV.Normal.Middle' (0000022FA7BC6FD0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.ButtonV.Hover.Middle' (0000022FA7BC6D30) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.ButtonV.Down.Middle' (0000022FA7BC8F50) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.ButtonV.Disabled.Middle' (0000022FA7BC7BA0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.TrackH' (0000022FA7BC8230) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.ButtonH.Normal.Left' (0000022FA7BC6940) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.ButtonH.Hover.Left' (0000022FA7BC9340) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.ButtonH.Down.Left' (0000022FA7BC7270) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.ButtonH.Disabled.Middle' (0000022FA7BC9B20) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ListBox.Top.Left' (0000022FA7BC66A0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ListBox.Hovered' (0000022FA7BC62B0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ListBox.EvenLine' (0000022FA7BC9DC0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ListBox.OddLine' (0000022FA7BC7120) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ListBox.EvenLineSelected' (0000022FA7BC73C0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ListBox.OddLineSelected' (0000022FA7BC9730) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ComboBox.Normal.Top.Middle' (0000022FA7BC8E00) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ComboBox.Hover.Middle' (0000022FA7BC7510) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ComboBox.Down.Middle' (0000022FA7BC7A50) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ComboBox.Disabled.Top.Middle' (0000022FA7BC90A0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ComboBox.Button.Normal' (0000022FA7BC67F0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ComboBox.Button.Hover' (0000022FA7BC77B0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ComboBox.Button.Down' (0000022FA7BC91F0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ComboBox.Button.Disabled' (0000022FA7BC9C70) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.UpDown.Up.Normal' (0000022FA7BC95E0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.UpDown.Up.Hover' (0000022FA7BC8380) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.UpDown.Up.Down' (0000022FA7BC9F10) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.UpDown.Up.Disabled' (0000022FA7BC6400) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.UpDown.Down.Normal' (0000022FA7BC84D0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.UpDown.Down.Hover' (0000022FA7BC8A10) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.UpDown.Down.Down' (0000022FA7BC7CF0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.UpDown.Down.Disabled' (0000022FA7BC6BE0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/ProgressBar.Back.Top.Middle' (0000022FA7BC9880) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/ProgressBar.Front.Top.Middle' (0000022FA7BC8CB0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Slider.H.Normal' (0000022FA7BCA060) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Slider.H.Hover' (0000022FA7BC6550) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Slider.H.Down' (0000022FA7BC7E40) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Slider.H.Disabled' (0000022FA7BC88C0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Slider.V.Normal' (0000022FA7BC7900) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Slider.V.Hover' (0000022FA7BC7F90) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Slider.V.Down' (0000022FA7BC80E0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Slider.V.Disabled' (0000022FA7BC8770) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/CategoryList.Outer' (0000022FA7BC8B60) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/CategoryList.Inner' (0000022FA7BCD920) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/CategoryList.Header.Middle' (0000022FA7BCC420) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Button.Normal.Bottom.Left' (0000022FA7BCDFB0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Button.Normal.Bottom.Right' (0000022FA7BCC570) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Button.Disabled.Top.Left' (0000022FA7BCC960) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Button.Disabled.Top.Right' (0000022FA7BCD140) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Button.Hovered.Top.Left' (0000022FA7BCC2D0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Button.Hovered.Top.Right' (0000022FA7BCDA70) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Button.Pressed.Top.Left' (0000022FA7BCC810) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Button.Pressed.Top.Right' (0000022FA7BCDD10) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/TextBox.SelectedTextColor' (0000022FA7BCC6C0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/TextBox.CursorColor' (0000022FA7BCCAB0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Window.Head.Normal.Left' (0000022FA7BCDBC0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Window.Head.Normal.Right' (0000022FA7BCD7D0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Window.Head.Inactive.Right' (0000022FA7BCCC00) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Window.Head.Inactive.Left' (0000022FA7BCE100) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Window.Bottom.Normal.Left' (0000022FA7BCCD50) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Window.Bottom.Normal.Right' (0000022FA7BCD290) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Window.Bottom.Normal.Middle' (0000022FA7BCCEA0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Window.Middle.Normal.Left' (0000022FA7BCDE60) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Window.Middle.Normal.Right' (0000022FA7BCCFF0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Window.Middle.Normal.Middle' (0000022FA7BCD3E0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Window.Middle.Inactive.Middle' (0000022FA7BCD530) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Window.Middle.Inactive.Left' (0000022FA7BCD680) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Window.Middle.Inactive.Right' (0000022FA7BD06E0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Window.Bottom.Inactive.Left' (0000022FA7BD0830) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Window.Bottom.Inactive.Right' (0000022FA7BD2270) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Window.Bottom.Inactive.Middle' (0000022FA7BD0EC0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/GroupBox.Normal.Top.Left' (0000022FA7BD1550) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/GroupBox.Normal.Top.Middle' (0000022FA7BD1FD0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/GroupBox.Normal.Top.Right' (0000022FA7BD23C0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/GroupBox.Normal.Middle.Left' (0000022FA7BD2BA0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/GroupBox.Normal.Bottom.Middle' (0000022FA7BD3A10) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/GroupBox.Normal.Middle.Middle' (0000022FA7BD1160) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/GroupBox.Normal.Middle.Right' (0000022FA7BD2E40) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/GroupBox.Normal.Bottom.Left' (0000022FA7BD3B60) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/GroupBox.Normal.Bottom.Right' (0000022FA7BD0980) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/ProgressBar.Front.Top.Left' (0000022FA7BD2900) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/ProgressBar.Front.Top.Right' (0000022FA7BD1010) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/ProgressBar.Back.Top.Left' (0000022FA7BD40A0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/ProgressBar.Back.Top.Right' (0000022FA7BD2F90) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/VProgressBar.Front.Top.Right' (0000022FA7BD1BE0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/VProgressBar.Front.Top.Middle' (0000022FA7BD3620) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/VProgressBar.Front.Top.Left' (0000022FA7BD0AD0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/VProgressBar.Back.Top.Right' (0000022FA7BD3CB0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/VProgressBar.Back.Top.Left' (0000022FA7BD2CF0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/VProgressBar.Back.Top.Middle' (0000022FA7BD12B0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Slider' (0000022FA7BD1A90) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.ButtonH.Normal.Middle' (0000022FA7BD3E00) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.ButtonH.Normal.Right' (0000022FA7BD0C20) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.ButtonH.Disabled.Left' (0000022FA7BD3F50) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.ButtonH.Disabled.Right' (0000022FA7BD3770) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.ButtonH.Down.Middle' (0000022FA7BD27B0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.ButtonH.Down.Right' (0000022FA7BD16A0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.ButtonH.Hover.Middle' (0000022FA7BD0D70) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.ButtonH.Hover.Right' (0000022FA7BD0440) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.ButtonV.Disabled.Top' (0000022FA7BD02F0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.ButtonV.Disabled.Bottom' (0000022FA7BD2510) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.ButtonV.Down.Top' (0000022FA7BD2A50) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.ButtonV.Down.Bottom' (0000022FA7BD0590) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.ButtonV.Hover.Top' (0000022FA7BD38C0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.ButtonV.Hover.Bottom' (0000022FA7BD1400) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.ButtonV.Normal.Top' (0000022FA7BD30E0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Scroller.ButtonV.Normal.Bottom' (0000022FA7BD17F0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ListBox.Top.Middle' (0000022FA7BD1940) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ListBox.Top.Right' (0000022FA7BD1D30) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ListBox.Middle.Left' (0000022FA7BD1E80) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ListBox.Middle.Middle' (0000022FA7BD2120) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ListBox.Middle.Right' (0000022FA7BD2660) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ListBox.Bottom.Left' (0000022FA7BD3230) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ListBox.Bottom.Middle' (0000022FA7BD3380) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ListBox.Bottom.Right' (0000022FA7BD34D0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Menu.Background.Top.Left' (0000022FA7BD7EA0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Menu.Background.Top.Right' (0000022FA7BD6700) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Menu.Background.Middle.Left' (0000022FA7BD7960) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Menu.Background.Middle.Middle' (0000022FA7BD7FF0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Menu.Background.Middle.Right' (0000022FA7BD6850) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Menu.Background.Bottom.Left' (0000022FA7BD6EE0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Menu.Background.Bottom.Middle' (0000022FA7BD7420) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Menu.Background.Bottom.Right' (0000022FA7BD8140) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ComboBox.Normal.Top.Left' (0000022FA7BD6D90) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ComboBox.Normal.Top.Right' (0000022FA7BD6C40) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ComboBox.Hover.Left' (0000022FA7BD69A0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ComboBox.Hover.Right' (0000022FA7BD7030) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ComboBox.Down.Top.Left' (0000022FA7BD6310) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ComboBox.Down.Right' (0000022FA7BD6460) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ComboBox.Disabled.Top.Left' (0000022FA7BD65B0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ComboBox.Disabled.Top.Right' (0000022FA7BD7180) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/CategoryList.Header.Left' (0000022FA7BD6AF0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/CategoryList.Header.Right' (0000022FA7BD76C0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/TextBox.Normal.Top.Left' (0000022FA7BD7570) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/TextBox.Normal.Top.Middle' (0000022FA7BD72D0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/TextBox.Focus.Top.Right' (0000022FA7BD7810) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/TextBox.Disabled.Top.Right' (0000022FA7BD7AB0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/TextBox.Disabled.Middle.Left' (0000022FA7BD7C00) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/TextBox.Disabled.Middle.Middle' (0000022FA7BD7D50) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/TextBox.Disabled.Middle.Right' (0000022FA7BE9590) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/TextBox.Disabled.Bottom.Left' (0000022FA7BEA010) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/TextBox.Disabled.Bottom.Middle' (0000022FA7BE8C60) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/TextBox.Normal.Top.Right' (0000022FA7BE9AD0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/TextBox.Normal.Middle.Left' (0000022FA7BEA160) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/TextBox.Normal.Middle.Middle' (0000022FA7BE8870) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/TextBox.Normal.Middle.Right' (0000022FA7BE8B10) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/TextBox.Normal.Bottom.Left' (0000022FA7BE8480) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/TextBox.Normal.Bottom.Middle' (0000022FA7BE8330) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/TextBox.Normal.Bottom.Right' (0000022FA7BE8DB0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/TextBox.Focus.Top.Left' (0000022FA7BE9050) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/TextBox.Focus.Top.Middle' (0000022FA7BE8F00) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/TextBox.Focus.Middle.Left' (0000022FA7BE89C0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/TextBox.Focus.Middle.Middle' (0000022FA7BE9830) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/TextBox.Focus.Middle.Right' (0000022FA7BE85D0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/TextBox.Focus.Bottom.Left' (0000022FA7BE91A0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/TextBox.Focus.Bottom.Middle' (0000022FA7BE8720) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/TextBox.Focus.Bottom.Right' (0000022FA7BE92F0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/TextBox.Disabled.Top.Left' (0000022FA7BE9980) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/TextBox.Disabled.Top.Middle' (0000022FA7BE9C20) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/TextBox.Disabled.Bottom.Right' (0000022FA7BE9D70) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tooltip.Top.Middle' (0000022FA7BE96E0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tooltip.Top.Right' (0000022FA7BE9440) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tooltip.Middle.Left' (0000022FA7BE9EC0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tooltip.Middle.Middle' (0000022FA7BEA490) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tooltip.Middle.Right' (0000022FA7BEB1B0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tooltip.Bottom.Left' (0000022FA7BEA730) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tooltip.Bottom.Middle' (0000022FA7BEAB20) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tooltip.Bottom.Right' (0000022FA7BEAC70) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Top.Active.Top.Middle' (0000022FA7BEB300) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Top.Active.Top.Left' (0000022FA7BEC020) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Top.Inactive.Middle.Right' (0000022FA7BEB6F0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Bottom.Active.Bottom.Right' (0000022FA7BEB450) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Bottom.Inactive.Middle.Left' (0000022FA7BEC170) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Bottom.Inactive.Middle.Middle' (0000022FA7BEBC30) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Bottom.Inactive.Middle.Right' (0000022FA7BEB060) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Bottom.Inactive.Bottom.Left' (0000022FA7BEB5A0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Bottom.Inactive.Bottom.Middle' (0000022FA7BEAF10) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Bottom.Inactive.Bottom.Right' (0000022FA7BEB840) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Top.Active.Middle.Left' (0000022FA7BEB990) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Top.Active.Middle.Middle' (0000022FA7BEBAE0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Top.Active.Middle.Right' (0000022FA7BEBD80) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Top.Active.Bottom.Left' (0000022FA7BEA340) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Top.Active.Bottom.Middle' (0000022FA7BEBED0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Top.Active.Bottom.Right' (0000022FA7BEA5E0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Top.Inactive.Top.Middle' (0000022FA7BEADC0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Top.Inactive.Top.Right' (0000022FA7BEA880) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Top.Inactive.Middle.Left' (0000022FA7BEA9D0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Top.Inactive.Middle.Middle' (0000022FA7BF0980) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Top.Inactive.Bottom.Left' (0000022FA7BF06E0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Bottom.Active.Top.Middle' (0000022FA7BEF1E0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Top.Inactive.Bottom.Middle' (0000022FA7BF34D0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Top.Inactive.Bottom.Right' (0000022FA7BF1A90) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Bottom.Active.Top.Right' (0000022FA7BF3230) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Bottom.Active.Middle.Left' (0000022FA7BF3620) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Bottom.Active.Middle.Middle' (0000022FA7BEE610) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Bottom.Active.Middle.Right' (0000022FA7BEE370) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Bottom.Active.Bottom.Left' (0000022FA7BF1FD0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Bottom.Active.Bottom.Middle' (0000022FA7BEE4C0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Bottom.Inactive.Top.Middle' (0000022FA7BEE760) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Bottom.Inactive.Top.Right' (0000022FA7BF2A50) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Control.Top.Middle' (0000022FA7BEE8B0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Control.Top.Right' (0000022FA7BF2120) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Control.Middle.Left' (0000022FA7BF2660) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Control.Middle.Middle' (0000022FA7BEF720) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Control.Middle.Right' (0000022FA7BF2270) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Control.Bottom.Left' (0000022FA7BEEA00) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Control.Bottom.Middle' (0000022FA7BF01A0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tab.Control.Bottom.Right' (0000022FA7BF1010) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Menu.Check' (0000022FA7BEFDB0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Menu.Hover.Top.Middle' (0000022FA7BF2BA0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Menu.Hover.Top.Right' (0000022FA7BEEB50) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Menu.Hover.Middle.Left' (0000022FA7BEF870) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Menu.Hover.Middle.Middle' (0000022FA7BF3380) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Menu.Hover.Middle.Right' (0000022FA7BF02F0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Menu.Hover.Bottom.Left' (0000022FA7BF27B0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Menu.Hover.Bottom.Middle' (0000022FA7BF23C0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Menu.Hover.Bottom.Right' (0000022FA7BF0440) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tree.Top.Middle' (0000022FA7BF0590) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tree.Top.Right' (0000022FA7BEECA0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tree.Bottom.Left' (0000022FA7BF2510) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tree.Bottom.Middle' (0000022FA7BF1160) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tree.Bottom.Right' (0000022FA7BEF330) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tree.Middle.Left' (0000022FA7BF12B0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tree.Middle.Middle' (0000022FA7BEFF00) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Tree.Middle.Right' (0000022FA7BEF9C0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Button.Normal.Top.Left' (0000022FA7BF1400) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Button.Normal.Top.Middle' (0000022FA7BEEDF0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Button.Normal.Top.Right' (0000022FA7BEF5D0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Button.Normal.Middle.Left' (0000022FA7BEFB10) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Button.Normal.Middle.Middle' (0000022FA7BF2900) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Button.Normal.Middle.Right' (0000022FA7BF16A0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Button.Hovered.Middle.Left' (0000022FA7BF0830) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Button.Hovered.Middle.Middle' (0000022FA7BEF480) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Button.Hovered.Middle.Right' (0000022FA7BEFC60) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Button.Hovered.Bottom.Left' (0000022FA7BF2CF0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Button.Hovered.Bottom.Middle' (0000022FA7BF0AD0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Button.Hovered.Bottom.Right' (0000022FA7BF0C20) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Button.Disabled.Middle.Left' (0000022FA7BF2E40) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Button.Disabled.Middle.Middle' (0000022FA7BF1D30) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Button.Disabled.Middle.Right' (0000022FA7BF0D70) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Button.Disabled.Bottom.Left' (0000022FA7BF0050) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Button.Disabled.Bottom.Middle' (0000022FA7BEEF40) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Button.Disabled.Bottom.Right' (0000022FA7BF0EC0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Button.Pressed.Middle.Left' (0000022FA7BF1E80) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Button.Pressed.Middle.Middle' (0000022FA7BF1550) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Button.Pressed.Bottom.Left' (0000022FA7BF17F0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Button.Pressed.Bottom.Middle' (0000022FA7BF2F90) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Button.Pressed.Bottom.Right' (0000022FA7BF1940) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.Button.Pressed.Middle.Right' (0000022FA7BF1BE0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ComboBox.Normal.Middle.Left' (0000022FA7BEF090) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ComboBox.Normal.Middle.Middle' (0000022FA7BF30E0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ComboBox.Normal.Middle.Right' (0000022FA7BF40A0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ComboBox.Normal.Bottom.Left' (0000022FA7BF5300) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ComboBox.Normal.Bottom.Middle' (0000022FA7BF5990) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ComboBox.Normal.Bottom.Right' (0000022FA7BF4340) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ComboBox.Disabled.Middle.Left' (0000022FA7BF6020) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ComboBox.Disabled.Middle.Middle' (0000022FA7BF41F0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ComboBox.Disabled.Middle.Right' (0000022FA7BF4B20) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ComboBox.Disabled.Bottom.Left' (0000022FA7BF5AE0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ComboBox.Disabled.Bottom.Middle' (0000022FA7BF4490) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/Input.ComboBox.Disabled.Bottom.Right' (0000022FA7BF4DC0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/ProgressBar.Back.Middle.Left' (0000022FA7BF3A10) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/ProgressBar.Back.Middle.Middle' (0000022FA7BF5840) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/ProgressBar.Back.Middle.Right' (0000022FA7BF5D80) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/ProgressBar.Back.Bottom.Left' (0000022FA7BF45E0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/ProgressBar.Back.Bottom.Middle' (0000022FA7BF3E00) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/ProgressBar.Back.Bottom.Right' (0000022FA7BF4730) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/ProgressBar.Front.Middle.Left' (0000022FA7BF5450) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/ProgressBar.Front.Middle.Middle' (0000022FA7BF3F50) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/ProgressBar.Front.Bottom.Left' (0000022FA7BF3B60) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/ProgressBar.Front.Middle.Right' (0000022FA7BF5C30) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/ProgressBar.Front.Bottom.Middle' (0000022FA7BF49D0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/ProgressBar.Front.Bottom.Right' (0000022FA7BF4880) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/VProgressBar.Back.Middle.Left' (0000022FA7BF4C70) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/VProgressBar.Back.Middle.Middle' (0000022FA7BF5ED0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/VProgressBar.Back.Middle.Right' (0000022FA7BF3770) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/VProgressBar.Back.Bottom.Left' (0000022FA7BF3CB0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/VProgressBar.Back.Bottom.Middle' (0000022FA7BF4F10) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/VProgressBar.Back.Bottom.Right' (0000022FA7BF5060) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/VProgressBar.Front.Middle.Left' (0000022FA7BF51B0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/VProgressBar.Front.Middle.Middle' (0000022FA7BF6170) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/VProgressBar.Front.Middle.Right' (0000022FA7BF38C0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/VProgressBar.Front.Bottom.Left' (0000022FA7BF55A0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/VProgressBar.Front.Bottom.Middle' (0000022FA7BF56F0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	[ImageManager] Created image: 'GWEN/VProgressBar.Front.Bottom.Right' (0000022FA7C051C0) of type: BasicImage
+23/04/2020 18:24:49 (Std) 	---- Returning existing instance of Font named 'shump-48'.
+23/04/2020 18:24:49 (Std) 	===== Falagard 'root' element: look and feel parsing begins =====
+23/04/2020 18:24:49 (Std) 	===== Look and feel parsing completed =====
+23/04/2020 18:24:49 (Std) 	No window renderer factories specified for module 'CEGUICoreWindowRendererSet' - adding all available factories...
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/Button' using base type 'CEGUI/PushButton', window renderer 'Core/Button' Look'N'Feel 'GWEN/Button' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/RadioButton' using base type 'CEGUI/RadioButton', window renderer 'Core/ToggleButton' Look'N'Feel 'GWEN/RadioButton' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/Checkbox' using base type 'CEGUI/ToggleButton', window renderer 'Core/ToggleButton' Look'N'Feel 'GWEN/Checkbox' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/Editbox' using base type 'CEGUI/Editbox', window renderer 'Core/Editbox' Look'N'Feel 'GWEN/Editbox' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/Titlebar' using base type 'CEGUI/Titlebar', window renderer 'Core/Titlebar' Look'N'Feel 'GWEN/Titlebar' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/ImageButton' using base type 'CEGUI/PushButton', window renderer 'Core/Button' Look'N'Feel 'GWEN/ImageButton' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/FrameWindow' using base type 'CEGUI/FrameWindow', window renderer 'Core/FrameWindow' Look'N'Feel 'GWEN/FrameWindow' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/GroupBox' using base type 'CEGUI/GroupBox', window renderer 'Core/Default' Look'N'Feel 'GWEN/GroupBox' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/ProgressBar' using base type 'CEGUI/ProgressBar', window renderer 'Core/ProgressBar' Look'N'Feel 'GWEN/ProgressBar' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/VUMeter' using base type 'CEGUI/ProgressBar', window renderer 'Core/ProgressBar' Look'N'Feel 'GWEN/VUMeter' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/SliderThumb' using base type 'CEGUI/Thumb', window renderer 'Core/Button' Look'N'Feel 'GWEN/SliderThumb' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/HorizontalSliderThumb' using base type 'CEGUI/Thumb', window renderer 'Core/Button' Look'N'Feel 'GWEN/HorizontalSliderThumb' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/Slider' using base type 'CEGUI/Slider', window renderer 'Core/Slider' Look'N'Feel 'GWEN/Slider' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/HorizontalSlider' using base type 'CEGUI/Slider', window renderer 'Core/Slider' Look'N'Feel 'GWEN/HorizontalSlider' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/HorizontalScrollbarThumb' using base type 'CEGUI/Thumb', window renderer 'Core/Button' Look'N'Feel 'GWEN/HorizontalScrollbarThumb' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/HorizontalScrollbar' using base type 'CEGUI/Scrollbar', window renderer 'Core/Scrollbar' Look'N'Feel 'GWEN/HorizontalScrollbar' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/VerticalScrollbarThumb' using base type 'CEGUI/Thumb', window renderer 'Core/Button' Look'N'Feel 'GWEN/VerticalScrollbarThumb' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/VerticalScrollbar' using base type 'CEGUI/Scrollbar', window renderer 'Core/Scrollbar' Look'N'Feel 'GWEN/VerticalScrollbar' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/Listbox' using base type 'CEGUI/Listbox', window renderer 'Core/Listbox' Look'N'Feel 'GWEN/Listbox' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/ListboxItem' using base type 'CEGUI/ItemEntry', window renderer 'Core/ItemEntry' Look'N'Feel 'GWEN/ListboxItem' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/ComboDropList' using base type 'CEGUI/ComboDropList', window renderer 'Core/Listbox' Look'N'Feel 'GWEN/ComboDropList' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/ComboEditbox' using base type 'CEGUI/Editbox', window renderer 'Core/Editbox' Look'N'Feel 'GWEN/ComboEditbox' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/Combobox' using base type 'CEGUI/Combobox', window renderer 'Core/Default' Look'N'Feel 'GWEN/Combobox' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/Spinner' using base type 'CEGUI/Spinner', window renderer 'Core/Default' Look'N'Feel 'GWEN/Spinner' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/StaticImage' using base type 'DefaultWindow', window renderer 'Core/StaticImage' Look'N'Feel 'GWEN/StaticImage' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/StaticText' using base type 'DefaultWindow', window renderer 'Core/StaticText' Look'N'Feel 'GWEN/StaticText' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/ListHeaderSegment' using base type 'CEGUI/ListHeaderSegment', window renderer 'Core/ListHeaderSegment' Look'N'Feel 'GWEN/ListHeaderSegment' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/ListHeader' using base type 'CEGUI/ListHeader', window renderer 'Core/ListHeader' Look'N'Feel 'GWEN/ListHeader' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/MultiColumnList' using base type 'CEGUI/MultiColumnList', window renderer 'Core/MultiColumnList' Look'N'Feel 'GWEN/MultiColumnList' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/MultiLineEditbox' using base type 'CEGUI/MultiLineEditbox', window renderer 'Core/MultiLineEditbox' Look'N'Feel 'GWEN/MultiLineEditbox' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/SystemButton' using base type 'CEGUI/PushButton', window renderer 'Core/Button' Look'N'Feel 'GWEN/Button' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/Tooltip' using base type 'CEGUI/Tooltip', window renderer 'Core/Tooltip' Look'N'Feel 'GWEN/Tooltip' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/ScrollablePane' using base type 'CEGUI/ScrollablePane', window renderer 'Core/ScrollablePane' Look'N'Feel 'GWEN/ScrollablePane' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/TabButton' using base type 'CEGUI/TabButton', window renderer 'Core/TabButton' Look'N'Feel 'GWEN/TabButton' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/TabContentPane' using base type 'DefaultWindow', window renderer 'Core/Default' Look'N'Feel 'GWEN/TabContentPane' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/TabButtonPane' using base type 'DefaultWindow', window renderer 'Core/Default' Look'N'Feel 'GWEN/TabButtonPane' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/TabControl' using base type 'CEGUI/TabControl', window renderer 'Core/TabControl' Look'N'Feel 'GWEN/TabControl' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/MenuItem' using base type 'CEGUI/MenuItem', window renderer 'Core/MenuItem' Look'N'Feel 'GWEN/MenuItem' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/Menubar' using base type 'CEGUI/Menubar', window renderer 'Core/Menubar' Look'N'Feel 'GWEN/Menubar' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/PopupMenu' using base type 'CEGUI/PopupMenu', window renderer 'Core/PopupMenu' Look'N'Feel 'GWEN/PopupMenu' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/ItemListbox' using base type 'CEGUI/ItemListbox', window renderer 'Core/ItemListbox' Look'N'Feel 'GWEN/ItemListbox' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/Tree' using base type 'CEGUI/Tree', window renderer 'Core/Tree' Look'N'Feel 'GWEN/Tree' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:49 (Std) 	Creating falagard mapping for type 'GWEN/Label' using base type 'DefaultWindow', window renderer 'Core/Default' Look'N'Feel 'GWEN/Label' and RenderEffect ''. (000000E2F74FBBB0)
+23/04/2020 18:24:50 (Std) 	---- Successfully completed loading of GUI layout from 'Menu.layout' ----
+23/04/2020 18:24:50 (Std) 	[OgreRenderer] Created texture: shump-48_auto_glyph_images_32

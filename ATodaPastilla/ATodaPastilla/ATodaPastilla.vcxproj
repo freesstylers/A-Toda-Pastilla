@@ -172,8 +172,10 @@
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\Components\ChangeSceneButtonComponent.cpp" />
     <ClCompile Include="..\src\Components\Danio.cpp" />
     <ClCompile Include="..\src\Components\EntitySpawner.cpp" />
+    <ClCompile Include="..\src\Components\ExitButtonComponent.cpp" />
     <ClCompile Include="..\src\Components\MovimientoMando.cpp" />
     <ClCompile Include="..\src\Components\Vida.cpp" />
     <ClCompile Include="ATodaPastilla.cpp" />
@@ -184,8 +186,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\include\Components\ChangeSceneButtonComponent.h" />
     <ClInclude Include="..\include\Components\Danio.h" />
     <ClInclude Include="..\include\Components\EntitySpawner.h" />
+    <ClInclude Include="..\include\Components\ExitButtonComponent.h" />
     <ClInclude Include="..\include\Components\MovimientoMando.h" />
     <ClInclude Include="..\include\Components\Vida.h" />
   </ItemGroup>

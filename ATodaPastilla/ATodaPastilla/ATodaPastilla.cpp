@@ -12,7 +12,8 @@
 #include "Scene/JsonFactoryParser.h"
 #include "Components/Danio.h"
 #include "Components/Vida.h"
-
+#include "Components/ChangeSceneButtonComponent.h"
+#include "Components/ExitButtonComponent.h"
 
 MotorCasaPaco* motorCasaPaco;
 
@@ -50,6 +51,25 @@ public:
 	};
 };
 
+class ChangeSceneButtonComponentFactory : public BaseFactory
+{
+public:
+	Component* createComponent(json& args) override
+	{
+		return new ChangeSceneButtonComponent(args);
+	};
+};
+
+class ExitButtonComponentFactory : public BaseFactory
+{
+public:
+	Component* createComponent(json& args) override
+	{
+		return new ExitButtonComponent(args);
+	};
+};
+
+
 void setupFactories()
 {
 	JsonFactoryParser* j = JsonFactoryParser::getInstance();
@@ -58,6 +78,8 @@ void setupFactories()
 	j->addFactory("EntitySpawner", new EntitySpawnerFactory());
 	j->addFactory("Danio", new DanioFactory());
 	j->addFactory("Vida", new VidaFactory());
+	j->addFactory("ChangeSceneButtonComponent", new ChangeSceneButtonComponentFactory());
+	j->addFactory("ExitButtonComponent", new ExitButtonComponentFactory());
 
 }
 
@@ -90,7 +112,10 @@ WinMain(HINSTANCE hinstance, HINSTANCE prevInstance, LPSTR lpCmdLine, int nCmdSh
 		return 0;
 	}
 
-	motorCasaPaco->changeScene("ATodaPastilla");
+	motorCasaPaco->getGUI_Manager()->getInstance()->loadScheme("A_Toda_Pastilla.scheme");
+	motorCasaPaco->getGUI_Manager()->getInstance()->loadScheme("GWEN.scheme");
+	motorCasaPaco->getGUI_Manager()->getInstance()->setMouseCursor("A_Toda_Pastilla/Mouse_Arrow");
+	motorCasaPaco->changeScene("Menu");
 
 	motorCasaPaco->start();
 

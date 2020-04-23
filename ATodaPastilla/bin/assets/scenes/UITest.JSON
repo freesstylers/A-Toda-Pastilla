@@ -60,13 +60,23 @@
 				}
 				
 			]
+		},
+		{
+			"name" : "UI",
+			"components" : 
+			[
+				{
+					"type": "ChangeSceneButtonComponent",
+					"buttonName" : "MainMenu/PlayButton",
+					"sceneName" : "verticalSlice"
+				}				
+			]
 		}
 	],
 	"UI" :
 	[
 		{
-		"type" : 1,
-		"route" : "Button"
+		"name" : "Button"
 		}
 	]
 }
