@@ -19,6 +19,12 @@
     <ClCompile Include="..\src\Components\EntitySpawner.cpp">
       <Filter>Components</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\Components\ProjectileSpawner.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Components\DisparoWiterico.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Components\MovimientoMando.h">
@@ -31,6 +37,12 @@
       <Filter>Components</Filter>
     </ClInclude>
     <ClInclude Include="..\include\Components\EntitySpawner.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Components\ProjectileSpawner.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Components\DisparoWiterico.h">
       <Filter>Components</Filter>
     </ClInclude>
   </ItemGroup>

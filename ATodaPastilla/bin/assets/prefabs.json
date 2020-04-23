@@ -53,6 +53,30 @@
 		]
 	}, 
 
+	"pastillazo" :
+	{
+		"position" : [0, 0, 0],
+		"rotation" : [0, 0, 0],
+		"scale" : [10, 10, 10],
+		"components" : [
+			{
+				"type" : "Mesh",
+				"mesh" : "pastilla_ibuprofeno.mesh",
+				"material" : "palette.ibuprofeno"
+			},
+			{
+				"type" : "RigidBody",
+				"shape" : "mesh",
+				"mass" : 100,
+				"gravity" : [0, 0, 0]
+			},
+			{
+				"type" : "Vida",
+				"vida" : 50
+			}
+		]
+	},
+
 	"nave" : 
 	{
 		"position" : [0, 10, 0],
@@ -85,7 +109,12 @@
 			{
 				"type" : "Danio",
 				"danio" : 1
+			},
+			{
+				"type" : "DisparoWiterico",
+				"prefab" : "pastillazo"
 			}
+
 		]
 
 	},
@@ -111,29 +140,5 @@
 			}
 		]
 
-	},
-	
-	"pastillazo" :
-	{
-		"position" : [0, 0, 0],
-		"rotation" : [0, 0, 0],
-		"scale" : [10, 10, 10],
-		"components" : [
-			{
-				"type" : "Mesh",
-				"mesh" : "NaveWiterico.mesh",
-				"material" : "NaveWiterico"
-			},
-			{
-				"type" : "RigidBody",
-				"shape" : "mesh",
-				"mass" : 100,
-				"isKinematic": true
-			},
-			{
-				"type" : "Vida",
-				"vida" : 50
-			}
-		]
 	}
 }
