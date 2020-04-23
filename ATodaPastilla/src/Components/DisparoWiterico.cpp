@@ -21,10 +21,9 @@ void DisparoWiterico::start()
 
 void DisparoWiterico::update()
 {
-	if (timeSinceLastShot >= cadence && MotorCasaPaco::getInstance()->getInputManager()->IsKeyDown(SCANCODE_E)) {
+	if (timeSinceLastShot >= cadence && MotorCasaPaco::getInstance()->getInputManager()->GameControllerIsButtonDown(CONTROLLER_BUTTON_A)) {
 		timeSinceLastShot = 0;
-		float deltatime = MotorCasaPaco::getInstance()->DeltaTime() / 1000.0f;
-		spawnProjectiles(getEntity()->getComponent<Transform>("Transform")->getPosition(), Vector3(0, 0, -1), 5, 1);
+		spawnProjectiles(getEntity()->getComponent<Transform>("Transform")->getPosition(), Vector3(0, 0, -1), 300, 5, 30);
 	}
 	timeSinceLastShot += MotorCasaPaco::getInstance()->DeltaTime();
 }

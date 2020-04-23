@@ -178,6 +178,7 @@
     <ClCompile Include="..\src\Components\EntitySpawner.cpp" />
     <ClCompile Include="..\src\Components\ExitButtonComponent.cpp" />
     <ClCompile Include="..\src\Components\MovimientoMando.cpp" />
+    <ClCompile Include="..\src\Components\ProjectileBehaviour.cpp" />
     <ClCompile Include="..\src\Components\ProjectileSpawner.cpp" />
     <ClCompile Include="..\src\Components\Vida.cpp" />
     <ClCompile Include="ATodaPastilla.cpp" />
@@ -194,6 +195,7 @@
     <ClInclude Include="..\include\Components\EntitySpawner.h" />
     <ClInclude Include="..\include\Components\ExitButtonComponent.h" />
     <ClInclude Include="..\include\Components\MovimientoMando.h" />
+    <ClInclude Include="..\include\Components\ProjectileBehaviour.h" />
     <ClInclude Include="..\include\Components\ProjectileSpawner.h" />
     <ClInclude Include="..\include\Components\Vida.h" />
   </ItemGroup>

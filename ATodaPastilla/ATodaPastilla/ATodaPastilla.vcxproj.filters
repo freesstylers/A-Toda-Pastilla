@@ -1,57 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Components">
-      <UniqueIdentifier>{572a77b0-db68-4ec5-910e-da226b6b28a4}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\src\Components\MovimientoMando.cpp">
-      <Filter>Components</Filter>
-    </ClCompile>
+    <ClCompile Include="..\src\Components\ChangeSceneButtonComponent.cpp" />
+    <ClCompile Include="..\src\Components\Danio.cpp" />
+    <ClCompile Include="..\src\Components\DisparoWiterico.cpp" />
+    <ClCompile Include="..\src\Components\EntitySpawner.cpp" />
+    <ClCompile Include="..\src\Components\ExitButtonComponent.cpp" />
+    <ClCompile Include="..\src\Components\MovimientoMando.cpp" />
+    <ClCompile Include="..\src\Components\ProjectileSpawner.cpp" />
+    <ClCompile Include="..\src\Components\Vida.cpp" />
     <ClCompile Include="ATodaPastilla.cpp" />
-    <ClCompile Include="..\src\Components\Vida.cpp">
-      <Filter>Components</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Components\Danio.cpp">
-      <Filter>Components</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Components\EntitySpawner.cpp">
-      <Filter>Components</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Components\ProjectileSpawner.cpp">
-      <Filter>Components</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Components\DisparoWiterico.cpp">
-    <ClCompile Include="..\src\Components\ChangeSceneButtonComponent.cpp">
-      <Filter>Components</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Components\ExitButtonComponent.cpp">
-      <Filter>Components</Filter>
-    </ClCompile>
+    <ClCompile Include="..\src\Components\ProjectileBehaviour.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\include\Components\MovimientoMando.h">
-      <Filter>Components</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\Components\Vida.h">
-      <Filter>Components</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\Components\Danio.h">
-      <Filter>Components</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\Components\EntitySpawner.h">
-      <Filter>Components</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\Components\ProjectileSpawner.h">
-      <Filter>Components</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\Components\DisparoWiterico.h">
-    <ClInclude Include="..\include\Components\ChangeSceneButtonComponent.h">
-      <Filter>Components</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\Components\ExitButtonComponent.h">
-      <Filter>Components</Filter>
-    </ClInclude>
+    <ClInclude Include="..\include\Components\ChangeSceneButtonComponent.h" />
+    <ClInclude Include="..\include\Components\Danio.h" />
+    <ClInclude Include="..\include\Components\DisparoWiterico.h" />
+    <ClInclude Include="..\include\Components\EntitySpawner.h" />
+    <ClInclude Include="..\include\Components\ExitButtonComponent.h" />
+    <ClInclude Include="..\include\Components\MovimientoMando.h" />
+    <ClInclude Include="..\include\Components\ProjectileSpawner.h" />
+    <ClInclude Include="..\include\Components\Vida.h" />
+    <ClInclude Include="..\include\Components\ProjectileBehaviour.h" />
   </ItemGroup>
 </Project>

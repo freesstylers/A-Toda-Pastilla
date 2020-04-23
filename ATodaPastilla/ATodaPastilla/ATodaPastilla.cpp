@@ -11,6 +11,7 @@
 #include "Components/DisparoWiterico.h"
 
 #include "Scene/JsonFactoryParser.h"
+#include "Components/ProjectileBehaviour.h"
 #include "Components/Danio.h"
 #include "Components/Vida.h"
 #include "Components/ChangeSceneButtonComponent.h"
@@ -38,6 +39,13 @@ class DisparoWitericoFactory : public BaseFactory {
 public:
 	Component* createComponent(json& args) override {
 		return new DisparoWiterico(args);
+	}
+};
+
+class ProjectileBehaviourFactory : public BaseFactory {
+public:
+	Component* createComponent(json& args) override {
+		return new ProjectileBehaviour(args);
 	}
 };
 
@@ -89,6 +97,7 @@ void setupFactories()
 	j->addFactory("DisparoWiterico", new DisparoWitericoFactory());
 	j->addFactory("ChangeSceneButtonComponent", new ChangeSceneButtonComponentFactory());
 	j->addFactory("ExitButtonComponent", new ExitButtonComponentFactory());
+	j->addFactory("ProjectileBehaviour", new ProjectileBehaviourFactory());
 }
 
 #ifdef  _DEBUG

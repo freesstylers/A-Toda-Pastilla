@@ -68,11 +68,15 @@
 				"type" : "RigidBody",
 				"shape" : "mesh",
 				"mass" : 100,
-				"gravity" : [0, 0, 0]
+				"gravity" : [0, 0, 0],
+				"isKinematic" : true
 			},
 			{
 				"type" : "Vida",
 				"vida" : 50
+			},
+			{
+				"type" : "ProjectileBehaviour"
 			}
 		]
 	},

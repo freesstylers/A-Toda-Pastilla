@@ -1,6 +1,7 @@
 #include "Components/ProjectileSpawner.h"
 #include "Entity/Entity.h"
-#include "Physics/RigidBody.h"
+#include "Components/ProjectileBehaviour.h"
+#include "Entity/Transform.h"
 #include "MotorCasaPaco.h"
 
 ProjectileSpawner::ProjectileSpawner(json& args):EntitySpawner(args)
@@ -22,14 +23,19 @@ void ProjectileSpawner::spawnProjectiles(Vector3 pos, Vector3 dir, float speed, 
 	Vector3 Dir = dir;
 	if (nbullets > 1) {
 		iniAngle = dispersionAngle / 2;
-		Dir.X = Dir.X * cos(iniAngle) + Dir.Z * sin(iniAngle);
-		Dir.Z = Dir.Z * sin(iniAngle) + Dir.Z * cos(iniAngle);
+		Dir.X = Dir.X * cos(iniAngle * M_PI / 180.0) + Dir.Z * sin(iniAngle * M_PI / 180.0);
+		Dir.Z = Dir.Z * sin(iniAngle * M_PI / 180.0) + Dir.Z * cos(iniAngle * M_PI / 180.0);
 	}
 	float ang = dispersionAngle / nbullets;
 	for (int i = 0; i < nbullets; i++) {
 		Entity* prj = spawnEntity(pos, prefab);
-		prj->getComponent<RigidBody>("RigidBody")->applyForce(LINEAR_VELOCITY, Dir * speed * MotorCasaPaco::getInstance()->DeltaTime());
-		Dir.X = Dir.X * cos(-ang) + Dir.Z * sin(-ang);
-		Dir.Z = Dir.Z * sin(-ang) + Dir.Z * cos(-ang);
+		double rot=dir.Angle(dir, Dir)* 180.0/ M_PI;
+		if (Dir.X > 0) rot *= -1;
+
+		prj->getComponent<Transform>("Transform")->setRotation(Vector3(0, rot, 0));
+		prj->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->setDir(Dir);
+		prj->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->setSpeed(speed);
+		Dir.X = Dir.X * cos(-ang * M_PI / 180.0) + Dir.Z * sin(-ang * M_PI / 180.0);
+		Dir.Z = Dir.Z * sin(-ang * M_PI / 180.0) + Dir.Z * cos(-ang * M_PI / 180.0);
 	}
 }
