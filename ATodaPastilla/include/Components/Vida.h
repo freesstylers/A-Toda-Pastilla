@@ -15,6 +15,10 @@ public:
 	void sumaVida(int valor);
 private:
 	int vida_ = 1;
+	int timeToLive_;
+	float time_ = 0;
+	bool timeD_ = false;
+
 };
 
 #endif // VIDA_H

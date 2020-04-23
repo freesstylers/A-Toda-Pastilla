@@ -79,7 +79,8 @@
 			},
 			{
 				"type" : "Vida",
-				"vida" : 10
+				"vida" : 10,
+				"time" : 6
 			},
 			{
 				"type" : "Danio",
