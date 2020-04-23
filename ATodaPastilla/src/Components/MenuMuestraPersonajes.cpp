@@ -19,6 +19,33 @@ void MenuMuestraPersonaje::update()
 	//nextCharacter();
 }
 
+void MenuMuestraPersonaje::nextCharacter()
+{
+	SceneManager::getInstance()->getCurrentScene()->getEntity(entidades_[n_])->setActive(false);
+	n_++;
+	n_ = n_ % 4;
+	spawnEntity(pos_, entidades_[n_]);
+}
+
+void MenuMuestraPersonaje::prevCharacter()
+{
+	SceneManager::getInstance()->getCurrentScene()->getEntity(entidades_[n_])->setActive(false);
+	if (n_ != 0)n_--; else n_ = 3;
+	spawnEntity(pos_, entidades_[n_]);
+}
+
+bool MenuMuestraPersonaje::function1(const CEGUI::EventArgs& e)
+{
+	prevCharacter();
+	return true;
+}
+
+bool MenuMuestraPersonaje::function2(const CEGUI::EventArgs& e)
+{
+	nextCharacter();
+	return true;
+}
+
 void MenuMuestraPersonaje::init(json& j)
 {
 	if (!j["position"].is_null()) {
@@ -33,19 +60,12 @@ void MenuMuestraPersonaje::init(json& j)
 		entidades_.push_back(j["entidades"][3]);
 	}
 	spawnEntity(pos_, entidades_[0]);
-}
 
-void MenuMuestraPersonaje::nextCharacter()
-{
-	SceneManager::getInstance()->getCurrentScene()->getEntity(entidades_[n_])->setActive(false);
-	n_++;
-	n_ = n_ % 4;
-	spawnEntity(pos_, entidades_[n_]);
-}
-
-void MenuMuestraPersonaje::prevCharacter()
-{
-	SceneManager::getInstance()->getCurrentScene()->getEntity(entidades_[n_])->setActive(false);
-	if (n_ != 0)n_--; else n_ = 3;
-	spawnEntity(pos_, entidades_[n_]);
+	if (!j["buttonName1"].is_null() && !j["buttonName2"].is_null())
+	{
+		auto helperFunction1 = std::bind(&MenuMuestraPersonaje::function1, this, std::placeholders::_1);
+		auto helperFunction2 = std::bind(&MenuMuestraPersonaje::function2, this, std::placeholders::_1);
+		GUI_Manager::getInstance()->setEvents(GUI_Manager::getInstance()->getPushButton(j["buttonName1"]), helperFunction1);
+		GUI_Manager::getInstance()->setEvents(GUI_Manager::getInstance()->getPushButton(j["buttonName2"]), helperFunction2);
+	}
 }

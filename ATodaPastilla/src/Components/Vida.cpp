@@ -21,7 +21,6 @@ void Vida::update()
 		if (MotorCasaPaco::getInstance()->getTimeDifference(time_) /1000.0f >= timeToLive_)
 			sumaVida(-vida_);
 	}
-	std::cout << e_->getName() << ": " << vida_ << " \n";
 }
 
 void Vida::init(json& j)
