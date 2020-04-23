@@ -73,7 +73,8 @@
 			},
 			{
 				"type" : "Vida",
-				"vida" : 50
+				"vida" : 50,
+				"time" : 5
 			},
 			{
 				"type" : "ProjectileBehaviour"
