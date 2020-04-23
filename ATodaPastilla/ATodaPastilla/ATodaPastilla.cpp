@@ -14,6 +14,8 @@
 #include "Components/Vida.h"
 #include "Components/ChangeSceneButtonComponent.h"
 #include "Components/ExitButtonComponent.h"
+#include "Components/GiroContinuo.h"
+#include "Components/MenuMuestraPersonaje.h"
 
 MotorCasaPaco* motorCasaPaco;
 
@@ -69,6 +71,24 @@ public:
 	};
 };
 
+class GiroContinuoFactory : public BaseFactory
+{
+public:
+	Component* createComponent(json& args) override
+	{
+		return new GiroContinuo(args);
+	};
+};
+
+class MenuMuestraPersonajeFactory : public BaseFactory
+{
+public:
+	Component* createComponent(json& args) override
+	{
+		return new MenuMuestraPersonaje(args);
+	};
+};
+
 
 void setupFactories()
 {
@@ -80,6 +100,8 @@ void setupFactories()
 	j->addFactory("Vida", new VidaFactory());
 	j->addFactory("ChangeSceneButtonComponent", new ChangeSceneButtonComponentFactory());
 	j->addFactory("ExitButtonComponent", new ExitButtonComponentFactory());
+	j->addFactory("GiroContinuo", new GiroContinuoFactory());
+	j->addFactory("MenuMuestraPersonaje", new MenuMuestraPersonajeFactory());
 
 }
 
@@ -92,7 +114,7 @@ WinMain(HINSTANCE hinstance, HINSTANCE prevInstance, LPSTR lpCmdLine, int nCmdSh
 #endif
 {
 
-	try { MotorCasaPaco::setupInstance("Motor Casa Paco"); }
+	try { MotorCasaPaco::setupInstance("A Toda Pastilla"); }
 	catch (const std::exception& e)
 	{
 		throw std::runtime_error("Motor Casa Paco init fail \n" + std::string(e.what()) + "\n");	return 0;

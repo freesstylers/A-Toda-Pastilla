@@ -4,7 +4,7 @@
 	[
 		{
 			"name" : "camera",
-			"position" : [0, 50, 70],
+			"position" : [-500, 150, 0],
 			"rotation" : [0, 0, 0], 
 			"scale" : [1, 1, 1],
 			"components" : [
@@ -22,6 +22,10 @@
 					"rotateSpeed": 1.0
 				}
 			]
+		},
+		{
+			"name" : "light",
+			"prefab" : "pointLight"
 		}
 	],
 	
@@ -44,6 +48,10 @@
 				{
 					"type": "ExitButtonComponent",
 					"buttonName" : "MainMenu/Close"
+				},
+				{
+					"type" : "MenuMuestraPersonaje",
+					"entidades" : ["witericoMenu", "teodegondaMenu", "hermenegildoMenu", "ricibergaMenu"]
 				}
 			]
 		}

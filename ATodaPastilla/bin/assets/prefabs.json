@@ -61,8 +61,8 @@
 		"components" : [
 			{
 				"type" : "Mesh",
-				"mesh" : "NaveWiterico.mesh",
-				"material" : "NaveWiterico"
+				"mesh" : "Witerico.mesh",
+				"material" : "Witerico"
 			},
 			{
 				"type" : "RigidBody",
@@ -97,8 +97,8 @@
 		"components" : [
 			{
 				"type" : "Mesh",
-				"mesh" : "NaveWiterico.mesh",
-				"material" : "NaveWiterico"
+				"mesh" : "Witerico.mesh",
+				"material" : "Witerico"
 			},
 			{
 				"type" : "RigidBody",
@@ -121,8 +121,8 @@
 		"components" : [
 			{
 				"type" : "Mesh",
-				"mesh" : "NaveWiterico.mesh",
-				"material" : "NaveWiterico"
+				"mesh" : "Witerico.mesh",
+				"material" : "Witerico"
 			},
 			{
 				"type" : "RigidBody",
@@ -134,6 +134,86 @@
 				"type" : "Vida",
 				"vida" : 50
 			}
+		]
+	},
+
+	"witericoMenu" :
+	{
+		"position" : [0, 400, 0],
+		"rotation" : [0, 0, 0],
+		"scale" : [15, 15, 15],
+		"components" : [
+			
+			{
+				"type" : "Mesh",
+				"mesh" : "Witerico.mesh",
+				"material" : "Witerico"
+			},
+			{
+				"type" : "GiroContinuo",
+				"rotation" : 0.2
+			}
+			
+		]
+	},
+
+	"teodegondaMenu" :
+	{
+		"position" : [0, 400, 0],
+		"rotation" : [0, 0, 0],
+		"scale" : [15, 15, 15],
+		"components" : [
+			
+			{
+				"type" : "Mesh",
+				"mesh" : "Teodegonda.mesh",
+				"material" : "Teodegonda"
+			},
+			{
+				"type" : "GiroContinuo",
+				"rotation" : 0.2
+			}
+			
+		]
+	},
+
+	"hermenegildoMenu" :
+	{
+		"position" : [0, 400, 0],
+		"rotation" : [0, 0, 0],
+		"scale" : [15, 15, 15],
+		"components" : [
+			
+			{
+				"type" : "Mesh",
+				"mesh" : "Hermenegildo.mesh",
+				"material" : "Hermenegildo"
+			},
+			{
+				"type" : "GiroContinuo",
+				"rotation" : 0.2
+			}
+			
+		]
+	},
+
+	"ricibergaMenu" :
+	{
+		"position" : [0, 400, 0],
+		"rotation" : [0, 0, 0],
+		"scale" : [15, 15, 15],
+		"components" : [
+			
+			{
+				"type" : "Mesh",
+				"mesh" : "Riciberga.mesh",
+				"material" : "Riciberga"
+			},
+			{
+				"type" : "GiroContinuo",
+				"rotation" : 0.2
+			}
+			
 		]
 	}
 }
