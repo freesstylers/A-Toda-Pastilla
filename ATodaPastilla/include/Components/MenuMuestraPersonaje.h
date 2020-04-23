@@ -3,6 +3,7 @@
 #define MENUMUESTRAPERSONAJE_H
 
 #include "Components/EntitySpawner.h"
+#include <GUI\GUI_Manager.h>
 
 class MenuMuestraPersonaje : public EntitySpawner
 {
@@ -11,6 +12,8 @@ public:
 	~MenuMuestraPersonaje();
 	void update() override;
 	void init(json& j) override;
+	bool function1(const CEGUI::EventArgs& e);
+	bool function2(const CEGUI::EventArgs& e);
 
 	void nextCharacter();
 	void prevCharacter();
