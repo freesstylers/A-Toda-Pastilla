@@ -75,12 +75,12 @@
 				"xRIGHT" : 200,
 				"xLEFT" : -200,
 				"zUP" : -200,
-				"zDOWN" : 200
+				"zDOWN" : 200,
+				"speed" : 0.7
 			},
 			{
 				"type" : "Vida",
-				"vida" : 10,
-				"time" : 6
+				"vida" : 10
 			},
 			{
 				"type" : "Danio",
