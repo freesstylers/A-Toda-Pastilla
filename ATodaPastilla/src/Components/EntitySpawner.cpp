@@ -34,7 +34,7 @@ void EntitySpawner::update()
 		}
 		i = aux;
 	}
-	std::cout << items.size();
+	std::cout << items.size()<< "\n";
 
 	if (MotorCasaPaco::getInstance()->getInputManager()->GameControllerIsButtonDown(CONTROLLER_BUTTON_A)) {
 		spawnEntity();
@@ -68,7 +68,6 @@ Entity* EntitySpawner::spawnEntity(Vector3 pos, std::string prefab)
 				}
 		}
 		instance->getComponent<Transform>("Transform")->setPosition(pos);
-		instance->setActive(true);
 		if (!idsUnused.empty() && id == idsUnused.back()) idsUnused.pop_back();
 		items.push_back({ instance, id });
 	}
