@@ -10,6 +10,7 @@
             <Property name="MaxSize" value="{{1,0},{1,0}}" />
             <Property name="FrameEnabled" value="false" />
             <Property name="BackgroundEnabled" value="false" />
+            <Property name="RiseOnClickEnabled" value="false" />
         </Window>
         <Window type="A_Toda_Pastilla/Play" name="Play" >
             <Property name="Area" value="{{0,575},{0,553},{0,748},{0,675}}" />
