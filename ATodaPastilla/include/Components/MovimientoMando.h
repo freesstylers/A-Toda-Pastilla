@@ -15,6 +15,7 @@ public:
 private:
 	Vector3 insideBounds(Vector3 position);
 
+	float speed_ = 1;
 	float zUP_;
 	float zDOWN_;
 	float xLEFT_;

@@ -23,6 +23,10 @@
       <Filter>Components</Filter>
     </ClCompile>
     <ClCompile Include="..\src\Components\DisparoWiterico.cpp">
+    <ClCompile Include="..\src\Components\ChangeSceneButtonComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Components\ExitButtonComponent.cpp">
       <Filter>Components</Filter>
     </ClCompile>
   </ItemGroup>
@@ -43,6 +47,10 @@
       <Filter>Components</Filter>
     </ClInclude>
     <ClInclude Include="..\include\Components\DisparoWiterico.h">
+    <ClInclude Include="..\include\Components\ChangeSceneButtonComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Components\ExitButtonComponent.h">
       <Filter>Components</Filter>
     </ClInclude>
   </ItemGroup>
