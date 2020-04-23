@@ -11,4 +11,8 @@ public:
 private:
 	float speed;
 	Vector3 dir;
+	float bordeSup;
+	float bordeInf;
+	float bordeDer;
+	float bordeIzq;
 };
