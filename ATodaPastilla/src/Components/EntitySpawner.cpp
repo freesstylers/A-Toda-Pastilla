@@ -23,54 +23,6 @@ void EntitySpawner::init(json& j)
 
 void EntitySpawner::update()
 {
-	for (auto i : items) {
-		i.first->update();
-	}
-}
-
-void EntitySpawner::preupdate()
-{
-	if (MotorCasaPaco::getInstance()->getInputManager()->GameControllerIsButtonDown(CONTROLLER_BUTTON_A)) {
-		spawnEntity();
-	}
-	if (MotorCasaPaco::getInstance()->getInputManager()->GameControllerIsButtonDown(CONTROLLER_BUTTON_B)) {
-		if(items.begin()!=items.end())
-			(*items.begin()).first->setActive(false);
-	}
-
-	for (auto i : items) {
-		i.first->preupdate();
-	}
-}
-
-void EntitySpawner::physicsUpdate()
-{
-	for (auto i : items) {
-		i.first->physicsUpdate();
-	}
-}
-
-void EntitySpawner::lateUpdate()
-{
-	for (auto i : items) {
-		i.first->lateUpdate();
-	}
-
-	auto i = items.begin();
-	while (i != items.end()) {
-		auto aux = i;
-		aux++;
-		if (!((*i).first)->getActive()) {
-			delete (*i).first;
-			idsUnused.push_back((*i).second);
-			items.erase(i);
-		}
-		i = aux;
-	}
-}
-
-void EntitySpawner::render()
-{
 }
 
 Entity* EntitySpawner::spawnEntity(Vector3 pos, std::string prefab)
@@ -79,18 +31,11 @@ Entity* EntitySpawner::spawnEntity(Vector3 pos, std::string prefab)
 	json prefabs = MotorCasaPaco::getInstance()->getResourceManager()->getPrefabs();
 	std::string prfb = prefab;
 
-	int id;
-
-	if (idsUnused.empty())
-		id = items.size() + 1;
-	else
-		id = idsUnused.back();
-
 	if (prfb == "") prfb = defaultPrefab;
 
 	if (!prefabs[prfb].is_null()) {
 		json aux = prefabs[prfb];
-		instance = new Entity(MotorCasaPaco::getInstance()->getSceneManager()->getCurrentScene(), prfb + "_" + std::to_string(id));
+		instance=MotorCasaPaco::getInstance()->getSceneManager()->getCurrentScene()->addEntity(prfb);
 		aux["name"] = instance->getName();
 		instance->init(aux);
 		if (!aux["components"].is_null() && aux["components"].is_array()) {
@@ -100,9 +45,6 @@ Entity* EntitySpawner::spawnEntity(Vector3 pos, std::string prefab)
 				}
 		}
 		instance->getComponent<Transform>("Transform")->setPosition(pos);
-		instance->setActive(true);
-		if (!idsUnused.empty() && id == idsUnused.back()) idsUnused.pop_back();
-		items.push_back({ instance, id });
 	}
 	return instance;
 }

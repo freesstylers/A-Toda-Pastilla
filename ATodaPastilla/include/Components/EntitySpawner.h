@@ -7,15 +7,9 @@ public:
 	~EntitySpawner() {};
 	void init(json& j) override;
 	void update() override;
-	void preupdate() override;
-	void physicsUpdate() override;
-	void lateUpdate() override;
-	void render() override;
 	Entity* spawnEntity(Vector3 pos = Vector3(0,0,0), std::string prefab = "");
 
 private:
 	std::string defaultPrefab;
-	std::list<std::pair<Entity*, int>>items;
-	std::vector<int> idsUnused;
 };
 
