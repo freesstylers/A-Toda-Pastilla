@@ -66,15 +66,13 @@
 			},
 			{
 				"type" : "RigidBody",
-				"shape" : "mesh",
-				"mass" : 100,
-				"gravity" : [0, 0, 0],
+				"shape" : "cube",
 				"isKinematic" : true
 			},
 			{
 				"type" : "Vida",
 				"vida" : 50,
-				"time" : 5
+				"time" : 3
 			},
 			{
 				"type" : "ProjectileBehaviour"
