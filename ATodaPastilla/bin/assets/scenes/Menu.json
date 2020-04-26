@@ -26,6 +26,24 @@
 		{
 			"name" : "light",
 			"prefab" : "pointLight"
+		},
+		{
+			"name" : "background",
+			"rotation" : [90, 0, 90],
+			"position" : [90, 0, 0],
+			"scale" : [10, 1, 6],
+			"components" : [
+			{
+				"type" : "Mesh",
+				"mesh" : "cube.mesh",
+				"material" : "background"
+			},
+			{   
+				"type" : "Skybox",
+				"material" : "background",
+				"skyType" : "box"
+			}
+			]
 		}
 	],
 	
