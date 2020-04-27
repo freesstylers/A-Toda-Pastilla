@@ -18,6 +18,10 @@
 #include "Components/ExitButtonComponent.h"
 #include "Components/GiroContinuo.h"
 #include "Components/MenuMuestraPersonaje.h"
+#include "Components/ApplyGraphicChangesComponent.h"
+#include "Components//ChangeFullScreenComponent.h"
+#include "Components/ChangeVyncComponent.h"
+#include "Components/FormatResolutionChangeComponent.h"
 
 MotorCasaPaco* motorCasaPaco;
 
@@ -105,6 +109,42 @@ public:
 	};
 };
 
+class ChangeFullScreenComponentFactory : public BaseFactory
+{
+public:
+	Component* createComponent(json& args) override
+	{
+		return new ChangeFullScreenComponent(args);
+	};
+};
+
+class FormatResolutionChangeComponentFactory : public BaseFactory
+{
+public:
+	Component* createComponent(json& args) override
+	{
+		return new FormatResolutionChangeComponent(args);
+	};
+};
+
+class ApplyGraphicChangesComponentFactory : public BaseFactory
+{
+public:
+	Component* createComponent(json& args) override
+	{
+		return new ApplyGraphicChangesComponent(args);
+	};
+};
+
+class ChangeVSyncComponentFactory : public BaseFactory
+{
+public:
+	Component* createComponent(json& args) override
+	{
+		return new ChangeVSyncComponent(args);
+	};
+};
+
 
 void setupFactories()
 {
@@ -120,6 +160,10 @@ void setupFactories()
 	j->addFactory("GiroContinuo", new GiroContinuoFactory());
 	j->addFactory("MenuMuestraPersonaje", new MenuMuestraPersonajeFactory());
 	j->addFactory("ProjectileBehaviour", new ProjectileBehaviourFactory());
+	j->addFactory("ChangeFullScreenComponent", new ChangeFullScreenComponentFactory());
+	j->addFactory("FormatResolutionChangeComponent", new FormatResolutionChangeComponentFactory());
+	j->addFactory("ApplyGraphicChangesComponent", new ApplyGraphicChangesComponentFactory());
+	j->addFactory("ChangeVSyncComponent", new ChangeVSyncComponentFactory());
 }
 
 #ifdef  _DEBUG
@@ -151,9 +195,8 @@ WinMain(HINSTANCE hinstance, HINSTANCE prevInstance, LPSTR lpCmdLine, int nCmdSh
 		return 0;
 	}
 
-	motorCasaPaco->getGUI_Manager()->getInstance()->loadScheme("A_Toda_Pastilla.scheme");
-	motorCasaPaco->getGUI_Manager()->getInstance()->loadScheme("GWEN.scheme");
-	motorCasaPaco->getGUI_Manager()->getInstance()->setMouseCursor("A_Toda_Pastilla/Mouse_Arrow");
+	MotorCasaPaco::getInstance()->getGUI_Manager()->getInstance()->setupDefaultResources();
+
 	motorCasaPaco->changeScene("Menu");
 
 	motorCasaPaco->start();

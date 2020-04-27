@@ -1,379 +1,2758 @@
-12:08:51: Creating resource group General
-12:08:51: Creating resource group OgreInternal
-12:08:51: Creating resource group OgreAutodetect
-12:08:51: SceneManagerFactory for type 'DefaultSceneManager' registered.
-12:08:51: Registering ResourceManager for type Material
-12:08:51: Registering ResourceManager for type Mesh
-12:08:51: Registering ResourceManager for type Skeleton
-12:08:51: MovableObjectFactory for type 'ParticleSystem' registered.
-12:08:51: ArchiveFactory for archive type FileSystem registered.
-12:08:51: ArchiveFactory for archive type Zip registered.
-12:08:51: ArchiveFactory for archive type EmbeddedZip registered.
-12:08:51: DDS codec registering
-12:08:51: ETC codec registering
-12:08:51: Registering ResourceManager for type HighLevelGpuProgram
-12:08:51: Registering ResourceManager for type Compositor
-12:08:51: MovableObjectFactory for type 'Entity' registered.
-12:08:51: MovableObjectFactory for type 'Light' registered.
-12:08:51: MovableObjectFactory for type 'BillboardSet' registered.
-12:08:51: MovableObjectFactory for type 'ManualObject' registered.
-12:08:51: MovableObjectFactory for type 'BillboardChain' registered.
-12:08:51: MovableObjectFactory for type 'RibbonTrail' registered.
-12:08:51: Loading library .\Plugin_PCZSceneManager_d.dll
-12:08:51: Installing plugin: Portal Connected Zone Scene Manager
-12:08:51: PCZone Factory Type 'ZoneType_Default' registered
-12:08:51: Plugin successfully installed
-12:08:51: Loading library .\Plugin_OctreeZone_d.dll
-12:08:51: Installing plugin: Octree Zone Factory
-12:08:51: Plugin successfully installed
-12:08:51: Loading library .\Plugin_OctreeSceneManager_d.dll
-12:08:51: Installing plugin: Octree Scene Manager
-12:08:51: Plugin successfully installed
-12:08:51: Loading library .\Codec_STBI_d.dll
-12:08:51: stb_image - v2.23 - public domain image loader
-12:08:51: Supported formats: jpeg,jpg,png,bmp,psd,tga,gif,pic,ppm,pgm,hdr
-12:08:51: Loading library .\Plugin_ParticleFX_d.dll
-12:08:51: Installing plugin: ParticleFX
-12:08:51: Particle Emitter Type 'Point' registered
-12:08:51: Particle Emitter Type 'Box' registered
-12:08:51: Particle Emitter Type 'Ellipsoid' registered
-12:08:51: Particle Emitter Type 'Cylinder' registered
-12:08:51: Particle Emitter Type 'Ring' registered
-12:08:51: Particle Emitter Type 'HollowEllipsoid' registered
-12:08:51: Particle Affector Type 'LinearForce' registered
-12:08:51: Particle Affector Type 'ColourFader' registered
-12:08:51: Particle Affector Type 'ColourFader2' registered
-12:08:51: Particle Affector Type 'ColourImage' registered
-12:08:51: Particle Affector Type 'ColourInterpolator' registered
-12:08:51: Particle Affector Type 'Scaler' registered
-12:08:51: Particle Affector Type 'Rotator' registered
-12:08:51: Particle Affector Type 'DirectionRandomiser' registered
-12:08:51: Particle Affector Type 'DeflectorPlane' registered
-12:08:51: Plugin successfully installed
-12:08:51: Loading library .\Plugin_BSPSceneManager_d.dll
-12:08:51: Installing plugin: BSP Scene Manager
-12:08:51: Plugin successfully installed
-12:08:51: Loading library .\RenderSystem_Direct3D11_d.dll
-12:08:51: Installing plugin: D3D11 RenderSystem
-12:08:51: D3D11: Direct3D11 Rendering Subsystem created.
-12:08:51: D3D11: Driver Detection Starts
-12:08:51: D3D11: "Intel(R) UHD Graphics 630"
-12:08:51: D3D11: "NVIDIA GeForce GTX 1660 Ti"
-12:08:51: D3D11: "Microsoft Basic Render Driver (software)"
-12:08:51: D3D11: Driver Detection Ends
-12:08:51: Plugin successfully installed
-12:08:51: Loading library .\RenderSystem_GL_d.dll
-12:08:51: Installing plugin: GL RenderSystem
-12:08:51: OpenGL Rendering Subsystem created.
-12:08:51: Plugin successfully installed
-12:08:51: *-*-* OGRE Initialising
-12:08:51: *-*-* Version 1.12.4 (Rhagorthua)
-12:08:51: D3D11: RenderSystem Option: Allow NVPerfHUD = No
-12:08:51: D3D11: RenderSystem Option: Backbuffer Count = Auto
-12:08:51: D3D11: RenderSystem Option: Driver type = Hardware
-12:08:51: D3D11: RenderSystem Option: FSAA = 1
-12:08:51: D3D11: RenderSystem Option: Floating-point mode = Fastest
-12:08:51: D3D11: RenderSystem Option: Full Screen = No
-12:08:51: D3D11: RenderSystem Option: Information Queue Exceptions Bottom Level = Info (exception on any message)
-12:08:51: D3D11: RenderSystem Option: Max Requested Feature Levels = 11.0
-12:08:51: D3D11: RenderSystem Option: Min Requested Feature Levels = 9.1
-12:08:51: D3D11: RenderSystem Option: Rendering Device = (default)
-12:08:51: D3D11: RenderSystem Option: Reversed Z-Buffer = No
-12:08:51: D3D11: RenderSystem Option: VSync = Yes
-12:08:51: D3D11: RenderSystem Option: VSync Interval = 1
-12:08:51: D3D11: RenderSystem Option: Video Mode = 800 x 600 @ 32-bit colour
-12:08:51: D3D11: RenderSystem Option: sRGB Gamma Conversion = No
-12:08:51: D3D11: RenderSystem Option: Allow NVPerfHUD = No
-12:08:51: D3D11: RenderSystem Option: Backbuffer Count = Auto
-12:08:51: D3D11: RenderSystem Option: Driver type = Hardware
-12:08:51: D3D11: RenderSystem Option: FSAA = 1
-12:08:51: D3D11: RenderSystem Option: Floating-point mode = Fastest
-12:08:51: D3D11: RenderSystem Option: Full Screen = No
-12:08:51: D3D11: RenderSystem Option: Information Queue Exceptions Bottom Level = Info (exception on any message)
-12:08:51: D3D11: RenderSystem Option: Max Requested Feature Levels = 11.0
-12:08:51: D3D11: RenderSystem Option: Min Requested Feature Levels = 9.1
-12:08:51: D3D11: RenderSystem Option: Rendering Device = (default)
-12:08:51: D3D11: RenderSystem Option: Reversed Z-Buffer = No
-12:08:51: D3D11: RenderSystem Option: VSync = Yes
-12:08:51: D3D11: RenderSystem Option: VSync Interval = 1
-12:08:51: D3D11: RenderSystem Option: Video Mode = 800 x 600 @ 32-bit colour
-12:08:51: D3D11: RenderSystem Option: sRGB Gamma Conversion = No
-12:08:51: CPU Identifier & Features
-12:08:51: -------------------------
-12:08:51:  *   CPU ID: GenuineIntel: Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz
-12:08:51:  *          SSE: yes
-12:08:51:  *         SSE2: yes
-12:08:51:  *         SSE3: yes
-12:08:51:  *        SSE41: yes
-12:08:51:  *        SSE42: yes
-12:08:51:  *          MMX: yes
-12:08:51:  *       MMXEXT: yes
-12:08:51:  *        3DNOW: no
-12:08:51:  *     3DNOWEXT: no
-12:08:51:  *         CMOV: yes
-12:08:51:  *          TSC: yes
-12:08:51:  *INVARIANT TSC: yes
-12:08:51:  *          FPU: yes
-12:08:51:  *          PRO: yes
-12:08:51:  *           HT: no
-12:08:51: -------------------------
-12:08:51: *** Starting Win32GL Subsystem ***
-12:08:51: Registering ResourceManager for type Texture
-12:08:52: GLRenderSystem::_createRenderWindow "A Toda Pastilla", 1280x768 windowed  miscParams: FSAA=0 externalWindowHandle=42798410 gamma=No vsync=No 
-12:08:52: Supported WGL extensions: WGL_EXT_depth_float WGL_ARB_buffer_region WGL_ARB_extensions_string WGL_ARB_make_current_read WGL_ARB_pixel_format WGL_ARB_pbuffer WGL_EXT_extensions_string WGL_EXT_swap_control WGL_ARB_multisample WGL_ARB_pixel_format_float WGL_ARB_framebuffer_sRGB WGL_ARB_create_context WGL_ARB_create_context_profile WGL_EXT_pixel_format_packed_float WGL_EXT_create_context_es_profile WGL_EXT_create_context_es2_profile WGL_NV_DX_interop WGL_INTEL_cl_sharing WGL_NV_DX_interop2 WGL_ARB_create_context_robustness WGL_ARB_context_flush_control 
-12:08:52: GL_VERSION = 4.5.0.0
-12:08:52: GL_VENDOR = Intel
-12:08:52: GL_RENDERER = Intel(R) UHD Graphics 630
-12:08:52: GL_EXTENSIONS = GL_3DFX_texture_compression_FXT1 GL_AMD_depth_clamp_separate GL_AMD_vertex_shader_layer GL_AMD_vertex_shader_viewport_index GL_ARB_ES2_compatibility GL_ARB_ES3_1_compatibility GL_ARB_ES3_compatibility GL_ARB_arrays_of_arrays GL_ARB_base_instance GL_ARB_bindless_texture GL_ARB_blend_func_extended GL_ARB_buffer_storage GL_ARB_cl_event GL_ARB_clear_buffer_object GL_ARB_clear_texture GL_ARB_clip_control GL_ARB_color_buffer_float GL_ARB_compatibility GL_ARB_compressed_texture_pixel_storage GL_ARB_compute_shader GL_ARB_conditional_render_inverted GL_ARB_conservative_depth GL_ARB_copy_buffer GL_ARB_copy_image GL_ARB_cull_distance GL_ARB_debug_output GL_ARB_depth_buffer_float GL_ARB_depth_clamp GL_ARB_depth_texture GL_ARB_derivative_control GL_ARB_direct_state_access GL_ARB_draw_buffers GL_ARB_draw_buffers_blend GL_ARB_draw_elements_base_vertex GL_ARB_draw_indirect GL_ARB_draw_instanced GL_ARB_enhanced_layouts GL_ARB_explicit_attrib_location GL_ARB_explicit_uniform_location GL_ARB_fragment_coord_conventions GL_ARB_fragment_layer_viewport GL_ARB_fragment_program GL_ARB_fragment_program_shadow GL_ARB_fragment_shader GL_ARB_fragment_shader_interlock GL_ARB_framebuffer_no_attachments GL_ARB_framebuffer_object GL_ARB_framebuffer_sRGB GL_ARB_geometry_shader4 GL_ARB_get_program_binary GL_ARB_get_texture_sub_image GL_ARB_gl_spirv GL_ARB_gpu_shader5 GL_ARB_gpu_shader_fp64 GL_ARB_half_float_pixel GL_ARB_half_float_vertex GL_ARB_indirect_parameters GL_ARB_instanced_arrays GL_ARB_internalformat_query GL_ARB_internalformat_query2 GL_ARB_invalidate_subdata GL_ARB_map_buffer_alignment GL_ARB_map_buffer_range GL_ARB_multi_bind GL_ARB_multi_draw_indirect GL_ARB_multisample GL_ARB_multitexture GL_ARB_occlusion_query GL_ARB_occlusion_query2 GL_ARB_pipeline_statistics_query GL_ARB_pixel_buffer_object GL_ARB_point_parameters GL_ARB_point_sprite GL_ARB_polygon_offset_clamp GL_ARB_post_depth_coverage GL_ARB_program_interface_query GL_ARB_provoking_vertex GL_ARB_query_buffer_object GL_ARB_robust_buffer_access_behavior GL_ARB_robustness GL_ARB_robustness_isolation GL_ARB_sample_shading GL_ARB_sampler_objects GL_ARB_seamless_cube_map GL_ARB_seamless_cubemap_per_texture GL_ARB_separate_shader_objects GL_ARB_shader_atomic_counter_ops GL_ARB_shader_atomic_counters GL_ARB_shader_bit_encoding GL_ARB_shader_draw_parameters GL_ARB_shader_group_vote GL_ARB_shader_image_load_store GL_ARB_shader_image_size GL_ARB_shader_objects GL_ARB_shader_precision GL_ARB_shader_stencil_export GL_ARB_shader_storage_buffer_object GL_ARB_shader_subroutine GL_ARB_shader_texture_image_samples GL_ARB_shading_language_100 GL_ARB_shading_language_420pack GL_ARB_shading_language_packing GL_ARB_shadow GL_ARB_spirv_extensions GL_ARB_stencil_texturing GL_ARB_sync GL_ARB_tessellation_shader GL_ARB_texture_barrier GL_ARB_texture_border_clamp GL_ARB_texture_buffer_object GL_ARB_texture_buffer_object_rgb32 GL_ARB_texture_buffer_range GL_ARB_texture_compression GL_ARB_texture_compression_bptc GL_ARB_texture_compression_rgtc GL_ARB_texture_cube_map GL_ARB_texture_cube_map_array GL_ARB_texture_env_add GL_ARB_texture_env_combine GL_ARB_texture_env_crossbar GL_ARB_texture_env_dot3 GL_ARB_texture_filter_anisotropic GL_ARB_texture_float GL_ARB_texture_gather GL_ARB_texture_mirror_clamp_to_edge GL_ARB_texture_mirrored_repeat GL_ARB_texture_multisample GL_ARB_texture_non_power_of_two GL_ARB_texture_query_levels GL_ARB_texture_query_lod GL_ARB_texture_rectangle GL_ARB_texture_rg GL_ARB_texture_rgb10_a2ui GL_ARB_texture_stencil8 GL_ARB_texture_storage GL_ARB_texture_storage_multisample GL_ARB_texture_swizzle GL_ARB_texture_view GL_ARB_timer_query GL_ARB_transform_feedback2 GL_ARB_transform_feedback3 GL_ARB_transform_feedback_instanced GL_ARB_transform_feedback_overflow_query GL_ARB_transpose_matrix GL_ARB_uniform_buffer_object GL_ARB_vertex_array_bgra GL_ARB_vertex_array_object GL_ARB_vertex_attrib_64bit GL_ARB_vertex_attrib_binding GL_ARB_vertex_buffer_object GL_ARB_vertex_program GL_ARB_vertex_shader GL_ARB_vertex_type_10f_11f_11f_rev GL_ARB_vertex_type_2_10_10_10_rev GL_ARB_viewport_array GL_ARB_window_pos GL_ATI_separate_stencil GL_EXT_abgr GL_EXT_bgra GL_EXT_blend_color GL_EXT_blend_equation_separate GL_EXT_blend_func_separate GL_EXT_blend_minmax GL_EXT_blend_subtract GL_EXT_clip_volume_hint GL_EXT_compiled_vertex_array GL_EXT_direct_state_access GL_EXT_draw_buffers2 GL_EXT_draw_range_elements GL_EXT_fog_coord GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXT_framebuffer_object GL_EXT_geometry_shader4 GL_EXT_gpu_program_parameters GL_EXT_gpu_shader4 GL_EXT_multi_draw_arrays GL_EXT_packed_depth_stencil GL_EXT_packed_float GL_EXT_packed_pixels GL_EXT_polygon_offset_clamp GL_EXT_rescale_normal GL_EXT_secondary_color GL_EXT_separate_specular_color GL_EXT_shader_framebuffer_fetch GL_EXT_shader_integer_mix GL_EXT_shadow_funcs GL_EXT_stencil_two_side GL_EXT_stencil_wrap GL_EXT_texture3D GL_EXT_texture_array GL_EXT_texture_compression_s3tc GL_EXT_texture_edge_clamp GL_EXT_texture_env_add GL_EXT_texture_env_combine GL_EXT_texture_filter_anisotropic GL_EXT_texture_integer GL_EXT_texture_lod_bias GL_EXT_texture_rectangle GL_EXT_texture_sRGB GL_EXT_texture_sRGB_decode GL_EXT_texture_shared_exponent GL_EXT_texture_snorm GL_EXT_texture_storage GL_EXT_texture_swizzle GL_EXT_timer_query GL_EXT_transform_feedback GL_IBM_texture_mirrored_repeat GL_INTEL_conservative_rasterization GL_INTEL_fragment_shader_ordering GL_INTEL_framebuffer_CMAA GL_INTEL_map_texture GL_INTEL_multi_rate_fragment_shader GL_INTEL_performance_query GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent GL_KHR_context_flush_control GL_KHR_debug GL_KHR_no_error GL_KHR_texture_compression_astc_hdr GL_KHR_texture_compression_astc_ldr GL_NV_blend_square GL_NV_conditional_render GL_NV_primitive_restart GL_NV_texgen_reflection GL_SGIS_generate_mipmap GL_SGIS_texture_edge_clamp GL_SGIS_texture_lod GL_SUN_multi_draw_arrays GL_WIN_swap_hint WGL_EXT_swap_control
-12:08:52: ***************************
-12:08:52: *** GL Renderer Started ***
-12:08:52: ***************************
-12:08:52: Registering ResourceManager for type GpuProgram
-12:08:52: GLSL support detected
-12:08:52: GL: Using GL_EXT_framebuffer_object for rendering to textures (best)
-12:08:52: FBO PF_UNKNOWN depth/stencil support: D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8
-12:08:52: FBO PF_A8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8
-12:08:52: FBO PF_R5G6B5 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8
-12:08:52: FBO PF_A4R4G4B4 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8
-12:08:52: FBO PF_A1R5G5B5 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8
-12:08:52: FBO PF_R8G8B8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8
-12:08:52: FBO PF_B8G8R8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8
-12:08:52: FBO PF_A8R8G8B8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8
-12:08:52: FBO PF_A8B8G8R8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8
-12:08:52: FBO PF_B8G8R8A8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8
-12:08:52: FBO PF_FLOAT16_RGB depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8
-12:08:52: FBO PF_FLOAT16_RGBA depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8
-12:08:52: FBO PF_FLOAT32_RGB depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8
-12:08:52: FBO PF_FLOAT32_RGBA depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8
-12:08:52: FBO PF_X8R8G8B8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8
-12:08:52: FBO PF_X8B8G8R8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8
-12:08:52: FBO PF_R8G8B8A8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8
-12:08:52: FBO PF_DEPTH16 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8
-12:08:52: FBO PF_SHORT_RGBA depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8
-12:08:52: FBO PF_R3G3B2 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8
-12:08:52: FBO PF_SHORT_RGB depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8
-12:08:52: [GL] : Valid FBO targets PF_UNKNOWN PF_A8 PF_R5G6B5 PF_A4R4G4B4 PF_A1R5G5B5 PF_R8G8B8 PF_B8G8R8 PF_A8R8G8B8 PF_A8B8G8R8 PF_B8G8R8A8 PF_FLOAT16_RGB PF_FLOAT16_RGBA PF_FLOAT32_RGB PF_FLOAT32_RGBA PF_X8R8G8B8 PF_X8B8G8R8 PF_R8G8B8A8 PF_DEPTH16 PF_SHORT_RGBA PF_R3G3B2 PF_SHORT_RGB 
-12:08:52: RenderSystem capabilities
-12:08:52: -------------------------
-12:08:52: RenderSystem Name: OpenGL Rendering Subsystem
-12:08:52: GPU Vendor: intel
-12:08:52: Device Name: Intel(R) UHD Graphics 630
-12:08:52: Driver Version: 4.5.0.0
-12:08:52:  * Fixed function pipeline: yes
-12:08:52:  * Anisotropic texture filtering: yes
-12:08:52:  * Hardware stencil buffer: yes
-12:08:52:    - Stencil depth: 8
-12:08:52:    - Two sided stencil support: yes
-12:08:52:    - Wrap stencil values: yes
-12:08:52:  * 32-bit index buffers: yes
-12:08:52:  * Vertex programs: yes
-12:08:52:  * Number of floating-point constants for vertex programs: 256
-12:08:52:  * Number of integer constants for vertex programs: 0
-12:08:52:  * Number of boolean constants for vertex programs: 0
-12:08:52:  * Fragment programs: yes
-12:08:52:  * Number of floating-point constants for fragment programs: 256
-12:08:52:  * Number of integer constants for fragment programs: 0
-12:08:52:  * Number of boolean constants for fragment programs: 0
-12:08:52:  * Geometry programs: yes
-12:08:52:  * Number of floating-point constants for geometry programs: 4096
-12:08:52:  * Number of integer constants for geometry programs: 0
-12:08:52:  * Number of boolean constants for geometry programs: 0
-12:08:52:  * Tessellation Hull programs: no
-12:08:52:  * Number of floating-point constants for tessellation hull programs: 52685
-12:08:52:  * Number of integer constants for tessellation hull programs: 52685
-12:08:52:  * Number of boolean constants for tessellation hull programs: 52685
-12:08:52:  * Tessellation Domain programs: no
-12:08:52:  * Number of floating-point constants for tessellation domain programs: 52685
-12:08:52:  * Number of integer constants for tessellation domain programs: 52685
-12:08:52:  * Number of boolean constants for tessellation domain programs: 52685
-12:08:52:  * Compute programs: no
-12:08:52:  * Number of floating-point constants for compute programs: 52685
-12:08:52:  * Number of integer constants for compute programs: 52685
-12:08:52:  * Number of boolean constants for compute programs: 52685
-12:08:52:  * Supported Shader Profiles: arbfp1 arbvp1 glsl glsl100 glsl110 glsl120
-12:08:52:  * Texture Compression: yes
-12:08:52:    - DXT: yes
-12:08:52:    - VTC: no
-12:08:52:    - PVRTC: no
-12:08:52:    - ATC: no
-12:08:52:    - ETC1: no
-12:08:52:    - ETC2: no
-12:08:52:    - BC4/BC5: no
-12:08:52:    - BC6H/BC7: no
-12:08:52:    - ASTC: no
-12:08:52:    - Mipmaps for compressed formats: yes
-12:08:52:  * Hardware Occlusion Query: yes
-12:08:52:  * User clip planes: yes
-12:08:52:  * VET_UBYTE4 vertex element type: yes
-12:08:52:  * Infinite far plane projection: yes
-12:08:52:  * Hardware render-to-texture: yes
-12:08:52:  * Floating point textures: yes
-12:08:52:  * Non-power-of-two textures: yes
-12:08:52:  * 1d textures: yes
-12:08:52:  * Volume textures: yes
-12:08:52:  * Multiple Render Targets: 8
-12:08:52:    - With different bit depths: yes
-12:08:52:  * Point Sprites: yes
-12:08:52:  * Wide Lines: yes
-12:08:52:  * Hardware Gamma: yes
-12:08:52:  * Extended point parameters: yes
-12:08:52:  * Max Point Size: 255
-12:08:52:  * Vertex texture fetch: yes
-12:08:52:  * Number of texture units: 16
-12:08:52:  * Number of vertex attributes: 16
-12:08:52:  * Stencil buffer depth: 8
-12:08:52:  * Number of vertex blend matrices: 0
-12:08:52:    - Max vertex textures: 32
-12:08:52:    - Vertex textures shared: yes
-12:08:52:  * Render to Vertex Buffer : no
-12:08:52:  * Hardware Atomic Counters: no
-12:08:52:  * PBuffer support: yes
-12:08:52:  * Vertex Array Objects: no
-12:08:52:  * Separate shader objects: no
-12:08:52:  * GLSL SSO redeclare interface block: no
-12:08:52:  * Debugging/ profiling events: no
-12:08:52:  * Map buffer storage: yes
-12:08:52: DefaultWorkQueue('Root') initialising on thread 27024.
-1212::088::5252: : DefaultWorkQueue('Root')::WorkerFunc - thread 47272 starting.DefaultWorkQueue('Root')::WorkerFunc - thread 30420 starting.
+14:58:23: Creating resource group General
+14:58:23: Creating resource group OgreInternal
+14:58:23: Creating resource group OgreAutodetect
+14:58:23: SceneManagerFactory for type 'DefaultSceneManager' registered.
+14:58:23: Registering ResourceManager for type Material
+14:58:23: Registering ResourceManager for type Mesh
+14:58:23: Registering ResourceManager for type Skeleton
+14:58:23: MovableObjectFactory for type 'ParticleSystem' registered.
+14:58:23: ArchiveFactory for archive type FileSystem registered.
+14:58:23: ArchiveFactory for archive type Zip registered.
+14:58:23: ArchiveFactory for archive type EmbeddedZip registered.
+14:58:23: DDS codec registering
+14:58:23: ETC codec registering
+14:58:23: Registering ResourceManager for type HighLevelGpuProgram
+14:58:23: Registering ResourceManager for type Compositor
+14:58:23: MovableObjectFactory for type 'Entity' registered.
+14:58:23: MovableObjectFactory for type 'Light' registered.
+14:58:23: MovableObjectFactory for type 'BillboardSet' registered.
+14:58:23: MovableObjectFactory for type 'ManualObject' registered.
+14:58:23: MovableObjectFactory for type 'BillboardChain' registered.
+14:58:23: MovableObjectFactory for type 'RibbonTrail' registered.
+14:58:23: Loading library .\Plugin_PCZSceneManager_d.dll
+14:58:23: Installing plugin: Portal Connected Zone Scene Manager
+14:58:23: PCZone Factory Type 'ZoneType_Default' registered
+14:58:23: Plugin successfully installed
+14:58:23: Loading library .\Plugin_OctreeZone_d.dll
+14:58:23: Installing plugin: Octree Zone Factory
+14:58:23: Plugin successfully installed
+14:58:23: Loading library .\Plugin_OctreeSceneManager_d.dll
+14:58:23: Installing plugin: Octree Scene Manager
+14:58:23: Plugin successfully installed
+14:58:23: Loading library .\Codec_STBI_d.dll
+14:58:23: stb_image - v2.23 - public domain image loader
+14:58:23: Supported formats: jpeg,jpg,png,bmp,psd,tga,gif,pic,ppm,pgm,hdr
+14:58:23: Loading library .\Plugin_ParticleFX_d.dll
+14:58:23: Installing plugin: ParticleFX
+14:58:23: Particle Emitter Type 'Point' registered
+14:58:23: Particle Emitter Type 'Box' registered
+14:58:23: Particle Emitter Type 'Ellipsoid' registered
+14:58:23: Particle Emitter Type 'Cylinder' registered
+14:58:23: Particle Emitter Type 'Ring' registered
+14:58:23: Particle Emitter Type 'HollowEllipsoid' registered
+14:58:23: Particle Affector Type 'LinearForce' registered
+14:58:23: Particle Affector Type 'ColourFader' registered
+14:58:23: Particle Affector Type 'ColourFader2' registered
+14:58:23: Particle Affector Type 'ColourImage' registered
+14:58:23: Particle Affector Type 'ColourInterpolator' registered
+14:58:23: Particle Affector Type 'Scaler' registered
+14:58:23: Particle Affector Type 'Rotator' registered
+14:58:23: Particle Affector Type 'DirectionRandomiser' registered
+14:58:23: Particle Affector Type 'DeflectorPlane' registered
+14:58:23: Plugin successfully installed
+14:58:23: Loading library .\Plugin_BSPSceneManager_d.dll
+14:58:23: Installing plugin: BSP Scene Manager
+14:58:23: Plugin successfully installed
+14:58:23: Loading library .\RenderSystem_Direct3D11_d.dll
+14:58:23: Installing plugin: D3D11 RenderSystem
+14:58:23: D3D11: Direct3D11 Rendering Subsystem created.
+14:58:23: D3D11: Driver Detection Starts
+14:58:23: D3D11: "Radeon (TM) RX 480 Graphics"
+14:58:23: D3D11: "Intel(R) HD Graphics 4600"
+14:58:23: D3D11: "Microsoft Basic Render Driver (software)"
+14:58:23: D3D11: Driver Detection Ends
+14:58:23: Plugin successfully installed
+14:58:23: Loading library .\RenderSystem_GL_d.dll
+14:58:24: Installing plugin: GL RenderSystem
+14:58:24: OpenGL Rendering Subsystem created.
+14:58:24: Plugin successfully installed
+14:58:24: *-*-* OGRE Initialising
+14:58:24: *-*-* Version 1.12.4 (Rhagorthua)
+14:58:24: CPU Identifier & Features
+14:58:24: -------------------------
+14:58:24:  *   CPU ID: GenuineIntel: Intel(R) Core(TM) i5-4670 CPU @ 3.40GHz
+14:58:24:  *          SSE: yes
+14:58:24:  *         SSE2: yes
+14:58:24:  *         SSE3: yes
+14:58:24:  *        SSE41: yes
+14:58:24:  *        SSE42: yes
+14:58:24:  *          MMX: yes
+14:58:24:  *       MMXEXT: yes
+14:58:24:  *        3DNOW: no
+14:58:24:  *     3DNOWEXT: no
+14:58:24:  *         CMOV: yes
+14:58:24:  *          TSC: yes
+14:58:24:  *INVARIANT TSC: yes
+14:58:24:  *          FPU: yes
+14:58:24:  *          PRO: yes
+14:58:24:  *           HT: no
+14:58:24: -------------------------
+14:58:24: *** Starting Win32GL Subsystem ***
+14:58:24: Registering ResourceManager for type Texture
+14:58:24: GLRenderSystem::_createRenderWindow "A Toda Pastilla", 1280x720 windowed  miscParams: FSAA=0 externalWindowHandle=3213302 gamma=No vsync=No 
+14:58:24: Supported WGL extensions: WGL_ARB_extensions_string WGL_ARB_pixel_format WGL_ATI_pixel_format_float WGL_ARB_pixel_format_float WGL_ARB_multisample WGL_EXT_swap_control WGL_EXT_swap_control_tear WGL_ARB_pbuffer WGL_ARB_render_texture WGL_ARB_make_current_read WGL_EXT_extensions_string WGL_ARB_buffer_region WGL_EXT_framebuffer_sRGB WGL_ATI_render_texture_rectangle WGL_EXT_pixel_format_packed_float WGL_I3D_genlock WGL_NV_swap_group WGL_ARB_create_context WGL_AMD_gpu_association WGL_ARB_create_context_profile WGL_ARB_context_flush_control WGL_NV_DX_interop WGL_ARB_create_context_no_error WGL_NV_DX_interop2 WGL_NV_float_buffer
+14:58:24: GL_VERSION = 4.6.13586.0
+14:58:24: GL_VENDOR = ATI Technologies Inc.
+14:58:24: GL_RENDERER = Radeon (TM) RX 480 Graphics
+14:58:24: GL_EXTENSIONS = GL_AMDX_debug_output GL_AMD_blend_minmax_factor GL_AMD_conservative_depth GL_AMD_debug_output GL_AMD_depth_clamp_separate GL_AMD_draw_buffers_blend GL_AMD_framebuffer_sample_positions GL_AMD_gcn_shader GL_AMD_gpu_shader_half_float GL_AMD_gpu_shader_int16 GL_AMD_gpu_shader_int64 GL_AMD_interleaved_elements GL_AMD_multi_draw_indirect GL_AMD_name_gen_delete GL_AMD_occlusion_query_event GL_AMD_performance_monitor GL_AMD_pinned_memory GL_AMD_query_buffer_object GL_AMD_sample_positions GL_AMD_seamless_cubemap_per_texture GL_AMD_shader_atomic_counter_ops GL_AMD_shader_stencil_export GL_AMD_shader_stencil_value_export GL_AMD_shader_trace GL_AMD_shader_trinary_minmax GL_AMD_sparse_texture GL_AMD_sparse_texture_pool GL_AMD_stencil_operation_extended GL_AMD_texture_cube_map_array GL_AMD_texture_texture4 GL_AMD_transform_feedback3_lines_triangles GL_AMD_transform_feedback4 GL_AMD_vertex_shader_layer GL_AMD_vertex_shader_viewport_index GL_ARB_ES2_compatibility GL_ARB_ES3_1_compatibility GL_ARB_ES3_compatibility GL_ARB_arrays_of_arrays GL_ARB_base_instance GL_ARB_bindless_texture GL_ARB_blend_func_extended GL_ARB_buffer_storage GL_ARB_clear_buffer_object GL_ARB_clear_texture GL_ARB_clip_control GL_ARB_color_buffer_float GL_ARB_compatibility GL_ARB_compressed_texture_pixel_storage GL_ARB_compute_shader GL_ARB_conditional_render_inverted GL_ARB_conservative_depth GL_ARB_copy_buffer GL_ARB_copy_image GL_ARB_cull_distance GL_ARB_debug_output GL_ARB_depth_buffer_float GL_ARB_depth_clamp GL_ARB_depth_texture GL_ARB_derivative_control GL_ARB_direct_state_access GL_ARB_draw_buffers GL_ARB_draw_buffers_blend GL_ARB_draw_elements_base_vertex GL_ARB_draw_indirect GL_ARB_draw_instanced GL_ARB_enhanced_layouts GL_ARB_explicit_attrib_location GL_ARB_explicit_uniform_location GL_ARB_fragment_coord_conventions GL_ARB_fragment_layer_viewport GL_ARB_fragment_program GL_ARB_fragment_program_shadow GL_ARB_fragment_shader GL_ARB_framebuffer_no_attachments GL_ARB_framebuffer_object GL_ARB_framebuffer_sRGB GL_ARB_geometry_shader4 GL_ARB_get_program_binary GL_ARB_get_texture_sub_image GL_ARB_gl_spirv GL_ARB_gpu_shader5 GL_ARB_gpu_shader_fp64 GL_ARB_half_float_pixel GL_ARB_half_float_vertex GL_ARB_imaging GL_ARB_indirect_parameters GL_ARB_instanced_arrays GL_ARB_internalformat_query GL_ARB_internalformat_query2 GL_ARB_invalidate_subdata GL_ARB_map_buffer_alignment GL_ARB_map_buffer_range GL_ARB_multi_bind GL_ARB_multi_draw_indirect GL_ARB_multisample GL_ARB_multitexture GL_ARB_occlusion_query GL_ARB_occlusion_query2 GL_ARB_parallel_shader_compile GL_ARB_pipeline_statistics_query GL_ARB_pixel_buffer_object GL_ARB_point_parameters GL_ARB_point_sprite GL_ARB_polygon_offset_clamp GL_ARB_program_interface_query GL_ARB_provoking_vertex GL_ARB_query_buffer_object GL_ARB_robust_buffer_access_behavior GL_ARB_sample_shading GL_ARB_sampler_objects GL_ARB_seamless_cube_map GL_ARB_seamless_cubemap_per_texture GL_ARB_separate_shader_objects GL_ARB_shader_atomic_counters GL_ARB_shader_ballot GL_ARB_shader_bit_encoding GL_ARB_shader_draw_parameters GL_ARB_shader_group_vote GL_ARB_shader_image_load_store GL_ARB_shader_image_size GL_ARB_shader_objects GL_ARB_shader_precision GL_ARB_shader_stencil_export GL_ARB_shader_storage_buffer_object GL_ARB_shader_subroutine GL_ARB_shader_texture_image_samples GL_ARB_shader_texture_lod GL_ARB_shader_viewport_layer_array GL_ARB_shading_language_100 GL_ARB_shading_language_420pack GL_ARB_shading_language_packing GL_ARB_shadow GL_ARB_shadow_ambient GL_ARB_sparse_buffer GL_ARB_sparse_texture GL_ARB_spirv_extensions GL_ARB_stencil_texturing GL_ARB_sync GL_ARB_tessellation_shader GL_ARB_texture_barrier GL_ARB_texture_border_clamp GL_ARB_texture_buffer_object GL_ARB_texture_buffer_object_rgb32 GL_ARB_texture_buffer_range GL_ARB_texture_compression GL_ARB_texture_compression_bptc GL_ARB_texture_compression_rgtc GL_ARB_texture_cube_map GL_ARB_texture_cube_map_array GL_ARB_texture_env_add GL_ARB_texture_env_combine GL_ARB_texture_env_crossbar GL_ARB_texture_env_dot3 GL_ARB_texture_float GL_ARB_texture_gather GL_ARB_texture_mirror_clamp_to_edge GL_ARB_texture_mirrored_repeat GL_ARB_texture_multisample GL_ARB_texture_non_power_of_two GL_ARB_texture_query_levels GL_ARB_texture_query_lod GL_ARB_texture_rectangle GL_ARB_texture_rg GL_ARB_texture_rgb10_a2ui GL_ARB_texture_snorm GL_ARB_texture_stencil8 GL_ARB_texture_storage GL_ARB_texture_storage_multisample GL_ARB_texture_swizzle GL_ARB_texture_view GL_ARB_timer_query GL_ARB_transform_feedback2 GL_ARB_transform_feedback3 GL_ARB_transform_feedback_instanced GL_ARB_transform_feedback_overflow_query GL_ARB_transpose_matrix GL_ARB_uniform_buffer_object GL_ARB_vertex_array_bgra GL_ARB_vertex_array_object GL_ARB_vertex_attrib_64bit GL_ARB_vertex_attrib_binding GL_ARB_vertex_buffer_object GL_ARB_vertex_program GL_ARB_vertex_shader GL_ARB_vertex_type_10f_11f_11f_rev GL_ARB_vertex_type_2_10_10_10_rev GL_ARB_viewport_array GL_ARB_window_pos GL_ATI_draw_buffers GL_ATI_envmap_bumpmap GL_ATI_fragment_shader GL_ATI_separate_stencil GL_ATI_texture_compression_3dc GL_ATI_texture_env_combine3 GL_ATI_texture_float GL_ATI_texture_mirror_once GL_EXT_abgr GL_EXT_bgra GL_EXT_bindable_uniform GL_EXT_blend_color GL_EXT_blend_equation_separate GL_EXT_blend_func_separate GL_EXT_blend_minmax GL_EXT_blend_subtract GL_EXT_compiled_vertex_array GL_EXT_copy_buffer GL_EXT_copy_texture GL_EXT_depth_bounds_test GL_EXT_direct_state_access GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_draw_range_elements GL_EXT_fog_coord GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXT_framebuffer_object GL_EXT_framebuffer_sRGB GL_EXT_geometry_shader4 GL_EXT_gpu_program_parameters GL_EXT_gpu_shader4 GL_EXT_histogram GL_EXT_memory_object GL_EXT_memory_object_win32 GL_EXT_multi_draw_arrays GL_EXT_packed_depth_stencil GL_EXT_packed_float GL_EXT_packed_pixels GL_EXT_pixel_buffer_object GL_EXT_point_parameters GL_EXT_polygon_offset_clamp GL_EXT_provoking_vertex GL_EXT_rescale_normal GL_EXT_secondary_color GL_EXT_semaphore GL_EXT_semaphore_win32 GL_EXT_separate_specular_color GL_EXT_shader_image_load_store GL_EXT_shader_integer_mix GL_EXT_shadow_funcs GL_EXT_stencil_wrap GL_EXT_subtexture GL_EXT_texgen_reflection GL_EXT_texture3D GL_EXT_texture_array GL_EXT_texture_buffer_object GL_EXT_texture_compression_bptc GL_EXT_texture_compression_latc GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc GL_EXT_texture_cube_map GL_EXT_texture_edge_clamp GL_EXT_texture_env_add GL_EXT_texture_env_combine GL_EXT_texture_env_dot3 GL_EXT_texture_filter_anisotropic GL_EXT_texture_integer GL_EXT_texture_lod GL_EXT_texture_lod_bias GL_EXT_texture_mirror_clamp GL_EXT_texture_object GL_EXT_texture_rectangle GL_EXT_texture_sRGB GL_EXT_texture_sRGB_R8 GL_EXT_texture_sRGB_RG8 GL_EXT_texture_sRGB_decode GL_EXT_texture_shared_exponent GL_EXT_texture_snorm GL_EXT_texture_storage GL_EXT_texture_swizzle GL_EXT_timer_query GL_EXT_transform_feedback GL_EXT_vertex_array GL_EXT_vertex_array_bgra GL_EXT_vertex_attrib_64bit GL_IBM_texture_mirrored_repeat GL_KHR_context_flush_control GL_KHR_debug GL_KHR_no_error GL_KHR_parallel_shader_compile GL_KHR_robust_buffer_access_behavior GL_KHR_robustness GL_KTX_buffer_region GL_NV_alpha_to_coverage_dither_control GL_NV_blend_square GL_NV_conditional_render GL_NV_copy_depth_to_color GL_NV_copy_image GL_NV_depth_buffer_float GL_NV_explicit_multisample GL_NV_float_buffer GL_NV_half_float GL_NV_primitive_restart GL_NV_shader_atomic_int64 GL_NV_texgen_reflection GL_NV_texture_barrier GL_OES_EGL_image GL_SGIS_generate_mipmap GL_SGIS_texture_edge_clamp GL_SGIS_texture_lod GL_SUN_multi_draw_arrays GL_WIN_swap_hint WGL_EXT_swap_control
+14:58:24: ***************************
+14:58:24: *** GL Renderer Started ***
+14:58:24: ***************************
+14:58:24: Registering ResourceManager for type GpuProgram
+14:58:24: GLSL support detected
+14:58:24: GL: Using GL_EXT_framebuffer_object for rendering to textures (best)
+14:58:24: FBO PF_UNKNOWN depth/stencil support: D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8
+14:58:24: FBO PF_L8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8
+14:58:24: FBO PF_L16 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8
+14:58:24: FBO PF_A8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8
+14:58:24: FBO PF_BYTE_LA depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8
+14:58:24: FBO PF_R5G6B5 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8
+14:58:24: FBO PF_A4R4G4B4 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8
+14:58:24: FBO PF_A1R5G5B5 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8
+14:58:24: FBO PF_R8G8B8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8
+14:58:24: FBO PF_B8G8R8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8
+14:58:24: FBO PF_A8R8G8B8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8
+14:58:24: FBO PF_A8B8G8R8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8
+14:58:24: FBO PF_B8G8R8A8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8
+14:58:24: FBO PF_FLOAT16_RGB depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8
+14:58:24: FBO PF_FLOAT16_RGBA depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8
+14:58:24: FBO PF_FLOAT32_RGB depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8
+14:58:24: FBO PF_FLOAT32_RGBA depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8
+14:58:24: FBO PF_X8R8G8B8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8
+14:58:24: FBO PF_X8B8G8R8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8
+14:58:24: FBO PF_R8G8B8A8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8
+14:58:24: FBO PF_DEPTH16 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8
+14:58:24: FBO PF_SHORT_RGBA depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8
+14:58:24: FBO PF_R3G3B2 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8
+14:58:24: FBO PF_FLOAT16_R depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8
+14:58:24: FBO PF_FLOAT32_R depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8
+14:58:24: FBO PF_SHORT_GR depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8
+14:58:24: FBO PF_FLOAT16_GR depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8
+14:58:24: FBO PF_FLOAT32_GR depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8
+14:58:24: FBO PF_SHORT_RGB depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D24S0 D32S0 Packed-D24S8
+14:58:24: [GL] : Valid FBO targets PF_UNKNOWN PF_L8 PF_L16 PF_A8 PF_BYTE_LA PF_R5G6B5 PF_A4R4G4B4 PF_A1R5G5B5 PF_R8G8B8 PF_B8G8R8 PF_A8R8G8B8 PF_A8B8G8R8 PF_B8G8R8A8 PF_FLOAT16_RGB PF_FLOAT16_RGBA PF_FLOAT32_RGB PF_FLOAT32_RGBA PF_X8R8G8B8 PF_X8B8G8R8 PF_R8G8B8A8 PF_DEPTH16 PF_SHORT_RGBA PF_R3G3B2 PF_FLOAT16_R PF_FLOAT32_R PF_SHORT_GR PF_FLOAT16_GR PF_FLOAT32_GR PF_SHORT_RGB 
+14:58:24: RenderSystem capabilities
+14:58:24: -------------------------
+14:58:24: RenderSystem Name: OpenGL Rendering Subsystem
+14:58:24: GPU Vendor: amd
+14:58:24: Device Name: Radeon (TM) RX 480 Graphics
+14:58:24: Driver Version: 4.6.13586.0
+14:58:24:  * Fixed function pipeline: yes
+14:58:24:  * Anisotropic texture filtering: yes
+14:58:24:  * Hardware stencil buffer: yes
+14:58:24:    - Stencil depth: 8
+14:58:24:    - Two sided stencil support: yes
+14:58:24:    - Wrap stencil values: yes
+14:58:24:  * 32-bit index buffers: yes
+14:58:24:  * Vertex programs: yes
+14:58:24:  * Number of floating-point constants for vertex programs: 256
+14:58:24:  * Number of integer constants for vertex programs: 0
+14:58:24:  * Number of boolean constants for vertex programs: 0
+14:58:24:  * Fragment programs: yes
+14:58:24:  * Number of floating-point constants for fragment programs: 256
+14:58:24:  * Number of integer constants for fragment programs: 0
+14:58:24:  * Number of boolean constants for fragment programs: 0
+14:58:24:  * Geometry programs: yes
+14:58:24:  * Number of floating-point constants for geometry programs: 16384
+14:58:24:  * Number of integer constants for geometry programs: 0
+14:58:24:  * Number of boolean constants for geometry programs: 0
+14:58:24:  * Tessellation Hull programs: no
+14:58:24:  * Number of floating-point constants for tessellation hull programs: 52685
+14:58:24:  * Number of integer constants for tessellation hull programs: 52685
+14:58:24:  * Number of boolean constants for tessellation hull programs: 52685
+14:58:24:  * Tessellation Domain programs: no
+14:58:24:  * Number of floating-point constants for tessellation domain programs: 52685
+14:58:24:  * Number of integer constants for tessellation domain programs: 52685
+14:58:24:  * Number of boolean constants for tessellation domain programs: 52685
+14:58:24:  * Compute programs: no
+14:58:24:  * Number of floating-point constants for compute programs: 52685
+14:58:24:  * Number of integer constants for compute programs: 52685
+14:58:24:  * Number of boolean constants for compute programs: 52685
+14:58:24:  * Supported Shader Profiles: arbfp1 arbvp1 glsl glsl100 glsl110 glsl120 ps_1_1 ps_1_2 ps_1_3 ps_1_4
+14:58:24:  * Texture Compression: yes
+14:58:24:    - DXT: yes
+14:58:24:    - VTC: no
+14:58:24:    - PVRTC: no
+14:58:24:    - ATC: no
+14:58:24:    - ETC1: no
+14:58:24:    - ETC2: no
+14:58:24:    - BC4/BC5: no
+14:58:24:    - BC6H/BC7: no
+14:58:24:    - ASTC: no
+14:58:24:    - Mipmaps for compressed formats: yes
+14:58:24:  * Hardware Occlusion Query: yes
+14:58:24:  * User clip planes: yes
+14:58:24:  * VET_UBYTE4 vertex element type: yes
+14:58:24:  * Infinite far plane projection: yes
+14:58:24:  * Hardware render-to-texture: yes
+14:58:24:  * Floating point textures: yes
+14:58:24:  * Non-power-of-two textures: yes
+14:58:24:  * 1d textures: yes
+14:58:24:  * Volume textures: yes
+14:58:24:  * Multiple Render Targets: 8
+14:58:24:    - With different bit depths: yes
+14:58:24:  * Point Sprites: yes
+14:58:24:  * Wide Lines: yes
+14:58:24:  * Hardware Gamma: yes
+14:58:24:  * Extended point parameters: yes
+14:58:24:  * Max Point Size: 8192
+14:58:24:  * Vertex texture fetch: yes
+14:58:24:  * Number of texture units: 16
+14:58:24:  * Number of vertex attributes: 29
+14:58:24:  * Stencil buffer depth: 8
+14:58:24:  * Number of vertex blend matrices: 0
+14:58:24:    - Max vertex textures: 32
+14:58:24:    - Vertex textures shared: yes
+14:58:24:  * Render to Vertex Buffer : no
+14:58:24:  * Hardware Atomic Counters: no
+14:58:24:  * PBuffer support: yes
+14:58:24:  * Vertex Array Objects: no
+14:58:24:  * Separate shader objects: no
+14:58:24:  * GLSL SSO redeclare interface block: no
+14:58:24:  * Debugging/ profiling events: no
+14:58:24:  * Map buffer storage: yes
+14:58:24: DefaultWorkQueue('Root') initialising on thread 6776.
+14:58:24: DefaultWorkQueue('Root')::WorkerFunc - thread 2164 starting.
+14:58:24: DefaultWorkQueue('Root')::WorkerFunc - thread 16136 starting.
+14:58:24: Particle Renderer Type 'billboard' registered
+14:58:24: SceneManagerFactory for type 'PCZSceneManager' registered.
+14:58:24: MovableObjectFactory for type 'PCZLight' registered.
+14:58:24: MovableObjectFactory for type 'Portal' registered.
+14:58:24: MovableObjectFactory for type 'AntiPortal' registered.
+14:58:24: PCZone Factory Type 'ZoneType_Octree' registered
+14:58:24: SceneManagerFactory for type 'OctreeSceneManager' registered.
+14:58:24: SceneManagerFactory for type 'BspSceneManager' registered.
+14:58:24: Registering SceneLoader Q3BSP
+14:58:24: Creating resource group Essential
+14:58:24: Added resource location './assets/ogre/packs/SdkTrays.zip' of type 'Zip' to resource group 'Essential'
+14:58:24: Added resource location './assets/ogre/packs/profiler.zip' of type 'Zip' to resource group 'Essential'
+14:58:24: Creating resource group Fonts
+14:58:24: Added resource location './assets/UI/fonts' of type 'FileSystem' to resource group 'Fonts'
+14:58:24: Added resource location './assets/ogre/' of type 'FileSystem' to resource group 'General'
+14:58:24: Creating resource group Imagesets
+14:58:24: Added resource location './assets/UI/imagesets' of type 'FileSystem' to resource group 'Imagesets'
+14:58:24: Creating resource group Layouts
+14:58:24: Added resource location './assets/UI/layouts' of type 'FileSystem' to resource group 'Layouts'
+14:58:24: Creating resource group LookNFeel
+14:58:24: Added resource location './assets/UI/looknfeel' of type 'FileSystem' to resource group 'LookNFeel'
+14:58:24: Added resource location './assets/ogre/Media/ShadowVolume' of type 'FileSystem' to resource group 'OgreInternal'
+14:58:24: Added resource location './assets/ogre/Media/RTShaderLib/materials' of type 'FileSystem' to resource group 'OgreInternal'
+14:58:24: Added resource location './assets/ogre/Media/RTShaderLib/GLSL' of type 'FileSystem' to resource group 'OgreInternal'
+14:58:24: Added resource location './assets/ogre/Media/RTShaderLib/HLSL_Cg' of type 'FileSystem' to resource group 'OgreInternal'
+14:58:24: Added resource location './assets/ogre/Media/Terrain/' of type 'FileSystem' to resource group 'OgreInternal'
+14:58:24: Creating resource group Schemes
+14:58:24: Added resource location './assets/UI/schemes' of type 'FileSystem' to resource group 'Schemes'
+14:58:24: Added resource location './assets/ogre//shaders/programs/GLSL120' of type 'FileSystem' to resource group 'General'
+14:58:24: Added resource location './assets/ogre//shaders/programs/GLSL' of type 'FileSystem' to resource group 'General'
+14:58:24: Added resource location './assets/ogre//shaders/programs/RTShaderLib/materials' of type 'FileSystem' to resource group 'General'
+14:58:24: Added resource location './assets/ogre//shaders/programs/RTShaderLib/GLSL' of type 'FileSystem' to resource group 'General'
+14:58:24: Parsing scripts for resource group Essential
+14:58:24: Parsing script SdkTrays.material
+14:58:24: Parsing script OgreProfiler.material
+14:58:24: Finished parsing scripts for resource group Essential
+14:58:24: Creating resources for group Essential
+14:58:24: All done
+14:58:24: Parsing scripts for resource group Fonts
+14:58:24: Finished parsing scripts for resource group Fonts
+14:58:24: Creating resources for group Fonts
+14:58:24: All done
+14:58:24: Parsing scripts for resource group General
+14:58:24: Parsing script materials.material
+14:58:24: Parsing script palette.ibuprofeno.material
+14:58:24: Parsing script palette.Riciberga.material
+14:58:24: Parsing script palette.Witerico.material
+14:58:24: Finished parsing scripts for resource group General
+14:58:24: Creating resources for group General
+14:58:24: All done
+14:58:24: Parsing scripts for resource group Imagesets
+14:58:24: Finished parsing scripts for resource group Imagesets
+14:58:24: Creating resources for group Imagesets
+14:58:24: All done
+14:58:24: Parsing scripts for resource group Layouts
+14:58:24: Finished parsing scripts for resource group Layouts
+14:58:24: Creating resources for group Layouts
+14:58:24: All done
+14:58:24: Parsing scripts for resource group LookNFeel
+14:58:24: Finished parsing scripts for resource group LookNFeel
+14:58:24: Creating resources for group LookNFeel
+14:58:24: All done
+14:58:24: Parsing scripts for resource group OgreAutodetect
+14:58:24: Finished parsing scripts for resource group OgreAutodetect
+14:58:24: Creating resources for group OgreAutodetect
+14:58:24: All done
+14:58:25: Parsing scripts for resource group OgreInternal
+14:58:25: Parsing script ShadowVolumeExtude.program
+14:58:25: Parsing script DualQuaternionSkinning_Shadow.material
+14:58:25: Parsing script HardwareSkinningShadow.material
+14:58:25: Parsing script RTShaderSystem.material
+14:58:25: Parsing script TriplanarTexturing.material
+14:58:25: Finished parsing scripts for resource group OgreInternal
+14:58:25: Creating resources for group OgreInternal
+14:58:25: All done
+14:58:25: Parsing scripts for resource group Schemes
+14:58:25: Finished parsing scripts for resource group Schemes
+14:58:25: Creating resources for group Schemes
+14:58:25: All done
+14:58:25: Mesh: Loading cube.mesh.
+14:58:25: Texture 'Fondo.jpg': Loading 1 faces(PF_B8G8R8,1920x1080x1) with 10 hardware generated mipmaps from Image. Internal format is PF_B8G8R8,1920x1080x1.
+14:58:25: Warning: skybox material background is not supported, defaulting
+14:58:25: Mesh: Loading Witerico.mesh.
+14:58:25: Warning: Witerico.mesh is an older format ([MeshSerializer_v1.41]); you should upgrade it as soon as possible using the OgreMeshUpgrade tool.
+14:58:25: Error: preparing texture 'Nave.png'. Texture layer will be blank: Cannot locate resource Nave.png in resource group General.
+14:58:25: Texture 'Witerico.png': Loading 1 faces(PF_A8B8G8R8,256x1x1) with 8 hardware generated mipmaps from Image. Internal format is PF_A8B8G8R8,256x1x1.
+14:58:25: Vertex Program:Ogre/ShadowExtrudeDirLight_glsl Fragment Program:Ogre/ShadowBlendFP_glsl GLSL link result : 
+Validation successful.
 
-12:08:52: Particle Renderer Type 'billboard' registered
-12:08:52: SceneManagerFactory for type 'PCZSceneManager' registered.
-12:08:52: MovableObjectFactory for type 'PCZLight' registered.
-12:08:52: MovableObjectFactory for type 'Portal' registered.
-12:08:52: MovableObjectFactory for type 'AntiPortal' registered.
-12:08:52: PCZone Factory Type 'ZoneType_Octree' registered
-12:08:52: SceneManagerFactory for type 'OctreeSceneManager' registered.
-12:08:52: SceneManagerFactory for type 'BspSceneManager' registered.
-12:08:52: Registering SceneLoader Q3BSP
-12:08:52: Creating resource group Essential
-12:08:52: Added resource location './assets/ogre/packs/SdkTrays.zip' of type 'Zip' to resource group 'Essential'
-12:08:52: Added resource location './assets/ogre/packs/profiler.zip' of type 'Zip' to resource group 'Essential'
-12:08:52: Creating resource group Fonts
-12:08:52: Added resource location './assets/UI/fonts' of type 'FileSystem' to resource group 'Fonts'
-12:08:52: Added resource location './assets/ogre/' of type 'FileSystem' to resource group 'General'
-12:08:52: Creating resource group Imagesets
-12:08:52: Added resource location './assets/UI/imagesets' of type 'FileSystem' to resource group 'Imagesets'
-12:08:52: Creating resource group Layouts
-12:08:52: Added resource location './assets/UI/layouts' of type 'FileSystem' to resource group 'Layouts'
-12:08:52: Creating resource group LookNFeel
-12:08:52: Added resource location './assets/UI/looknfeel' of type 'FileSystem' to resource group 'LookNFeel'
-12:08:52: Added resource location './assets/ogre/Media/ShadowVolume' of type 'FileSystem' to resource group 'OgreInternal'
-12:08:52: Added resource location './assets/ogre/Media/RTShaderLib/materials' of type 'FileSystem' to resource group 'OgreInternal'
-12:08:52: Added resource location './assets/ogre/Media/RTShaderLib/GLSL' of type 'FileSystem' to resource group 'OgreInternal'
-12:08:52: Added resource location './assets/ogre/Media/RTShaderLib/HLSL_Cg' of type 'FileSystem' to resource group 'OgreInternal'
-12:08:52: Added resource location './assets/ogre/Media/Terrain/' of type 'FileSystem' to resource group 'OgreInternal'
-12:08:52: Creating resource group Schemes
-12:08:52: Added resource location './assets/UI/schemes' of type 'FileSystem' to resource group 'Schemes'
-12:08:52: Added resource location './assets/ogre//shaders/programs/GLSL120' of type 'FileSystem' to resource group 'General'
-12:08:52: Added resource location './assets/ogre//shaders/programs/GLSL' of type 'FileSystem' to resource group 'General'
-12:08:52: Added resource location './assets/ogre//shaders/programs/RTShaderLib/materials' of type 'FileSystem' to resource group 'General'
-12:08:52: Added resource location './assets/ogre//shaders/programs/RTShaderLib/GLSL' of type 'FileSystem' to resource group 'General'
-12:08:52: Parsing scripts for resource group Essential
-12:08:52: Parsing script SdkTrays.material
-12:08:52: Parsing script OgreProfiler.material
-12:08:52: Finished parsing scripts for resource group Essential
-12:08:52: Creating resources for group Essential
-12:08:52: All done
-12:08:52: Parsing scripts for resource group Fonts
-12:08:52: Finished parsing scripts for resource group Fonts
-12:08:52: Creating resources for group Fonts
-12:08:52: All done
-12:08:52: Parsing scripts for resource group General
-12:08:52: Parsing script materials.material
-12:08:52: Parsing script palette.ibuprofeno.material
-12:08:52: Parsing script palette.Riciberga.material
-12:08:52: Parsing script palette.Witerico.material
-12:08:52: Finished parsing scripts for resource group General
-12:08:52: Creating resources for group General
-12:08:52: All done
-12:08:52: Parsing scripts for resource group Imagesets
-12:08:52: Finished parsing scripts for resource group Imagesets
-12:08:52: Creating resources for group Imagesets
-12:08:52: All done
-12:08:52: Parsing scripts for resource group Layouts
-12:08:52: Finished parsing scripts for resource group Layouts
-12:08:52: Creating resources for group Layouts
-12:08:52: All done
-12:08:52: Parsing scripts for resource group LookNFeel
-12:08:52: Finished parsing scripts for resource group LookNFeel
-12:08:52: Creating resources for group LookNFeel
-12:08:52: All done
-12:08:52: Parsing scripts for resource group OgreAutodetect
-12:08:52: Finished parsing scripts for resource group OgreAutodetect
-12:08:52: Creating resources for group OgreAutodetect
-12:08:52: All done
-12:08:52: Parsing scripts for resource group OgreInternal
-12:08:52: Parsing script ShadowVolumeExtude.program
-12:08:52: 'ShadowBlend.vert' WARNING: 0:1: '' :  #version directive missing
+14:58:25: Texture 'Warning': Loading 1 faces(PF_R5G6B5,8x8x1) with 3 hardware generated mipmaps from Image. Internal format is PF_R5G6B5,8x8x1.
+14:58:25: Vertex Program:Ogre/ShadowBlendVP_glsl Fragment Program:Ogre/ShadowBlendFP_glsl GLSL link result : 
+Validation successful.
 
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
 
-12:08:52: Parsing script DualQuaternionSkinning_Shadow.material
-12:08:52: Parsing script HardwareSkinningShadow.material
-12:08:52: Parsing script RTShaderSystem.material
-12:08:52: Parsing script TriplanarTexturing.material
-12:08:52: Finished parsing scripts for resource group OgreInternal
-12:08:52: Creating resources for group OgreInternal
-12:08:52: All done
-12:08:52: Parsing scripts for resource group Schemes
-12:08:52: Finished parsing scripts for resource group Schemes
-12:08:52: Creating resources for group Schemes
-12:08:52: All done
-12:08:53: Mesh: Loading cube.mesh.
-12:08:53: Texture 'Fondo.jpg': Loading 1 faces(PF_B8G8R8,1920x1080x1) with 10 hardware generated mipmaps from Image. Internal format is PF_B8G8R8,1920x1080x1.
-12:08:53: Mesh: Loading Witerico.mesh.
-12:08:53: Warning: Witerico.mesh is an older format ([MeshSerializer_v1.41]); you should upgrade it as soon as possible using the OgreMeshUpgrade tool.
-12:08:53: Error: preparing texture 'Nave.png'. Texture layer will be blank: Cannot locate resource Nave.png in resource group General.
-12:08:53: Texture 'Witerico.png': Loading 1 faces(PF_A8B8G8R8,256x1x1) with 8 hardware generated mipmaps from Image. Internal format is PF_A8B8G8R8,256x1x1.
-12:08:53: 'ShadowExtrudePointLight.vert' WARNING: 0:2: '' :  #version directive missing
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
 
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
 
-12:08:53: 'ShadowExtrudeDirLight.vert' WARNING: 0:2: '' :  #version directive missing
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
 
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
 
-12:08:53: 'ShadowExtrudePointLightFinite.vert' WARNING: 0:2: '' :  #version directive missing
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
 
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
 
-12:08:53: 'ShadowExtrudeDirLightFinite.vert' WARNING: 0:2: '' :  #version directive missing
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
 
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
 
-12:08:53: 'ShadowBlend.frag' WARNING: 0:1: '' :  #version directive missing
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
 
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
 
-12:08:53: Texture 'Warning': Loading 1 faces(PF_R5G6B5,8x8x1) with 3 hardware generated mipmaps from Image. Internal format is PF_R5G6B5,8x8x1.
-12:08:54: DefaultWorkQueue('Root') shutting down on thread 27024.
-12:08:54: DefaultWorkQueue('Root')::WorkerFunc - thread 47272 stopped.
-12:08:54: DefaultWorkQueue('Root')::WorkerFunc - thread 30420 stopped.
-12:08:54: PCZone Factory Type 'ZoneType_Octree' unregistered
-12:08:54: *-*-* OGRE Shutdown
-12:08:54: Unregistering ResourceManager for type Compositor
-12:08:54: Uninstalling plugin: GL RenderSystem
-12:08:54: Unregistering ResourceManager for type GpuProgram
-12:08:54: *** Stopping Win32GL Subsystem ***
-12:08:54: Unregistering ResourceManager for type Texture
-12:08:54: Plugin successfully uninstalled
-12:08:54: Unloading library .\RenderSystem_GL
-12:08:54: Uninstalling plugin: D3D11 RenderSystem
-12:08:54: D3D11: Shutting down cleanly.
-12:08:54: D3D11: Direct3D11 Rendering Subsystem destroyed.
-12:08:54: Plugin successfully uninstalled
-12:08:54: Unloading library .\RenderSystem_Direct3D11
-12:08:54: Uninstalling plugin: BSP Scene Manager
-12:08:54: Plugin successfully uninstalled
-12:08:54: Unloading library .\Plugin_BSPSceneManager
-12:08:54: Uninstalling plugin: ParticleFX
-12:08:54: Plugin successfully uninstalled
-12:08:54: Unloading library .\Plugin_ParticleFX
-12:08:55: Unloading library .\Codec_STBI
-12:08:55: Uninstalling plugin: Octree Scene Manager
-12:08:55: Plugin successfully uninstalled
-12:08:55: Unloading library .\Plugin_OctreeSceneManager
-12:08:55: Uninstalling plugin: Octree Zone Factory
-12:08:55: Plugin successfully uninstalled
-12:08:55: Unloading library .\Plugin_OctreeZone
-12:08:55: Uninstalling plugin: Portal Connected Zone Scene Manager
-12:08:55: Plugin successfully uninstalled
-12:08:55: Unloading library .\Plugin_PCZSceneManager
-12:08:55: Unregistering ResourceManager for type Skeleton
-12:08:55: Unregistering ResourceManager for type Mesh
-12:08:55: Unregistering ResourceManager for type HighLevelGpuProgram
-12:08:55: Unregistering ResourceManager for type Material
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:25: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:26: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: Error prior to using GLSL Program Object : GL_INVALID_OPERATION
+Validation successful.
+
+14:58:27: DefaultWorkQueue('Root') shutting down on thread 6776.
+14:58:27: DefaultWorkQueue('Root')::WorkerFunc - thread 16136 stopped.
+14:58:27: DefaultWorkQueue('Root')::WorkerFunc - thread 2164 stopped.
+14:58:27: PCZone Factory Type 'ZoneType_Octree' unregistered
+14:58:27: *-*-* OGRE Shutdown
+14:58:27: Unregistering ResourceManager for type Compositor
+14:58:27: Uninstalling plugin: GL RenderSystem
+14:58:27: Unregistering ResourceManager for type GpuProgram
+14:58:27: *** Stopping Win32GL Subsystem ***
+14:58:27: Unregistering ResourceManager for type Texture
+14:58:27: Plugin successfully uninstalled
+14:58:27: Unloading library .\RenderSystem_GL
+14:58:27: Uninstalling plugin: D3D11 RenderSystem
+14:58:27: D3D11: Shutting down cleanly.
+14:58:27: D3D11: Direct3D11 Rendering Subsystem destroyed.
+14:58:27: Plugin successfully uninstalled
+14:58:27: Unloading library .\RenderSystem_Direct3D11
+14:58:27: Uninstalling plugin: BSP Scene Manager
+14:58:27: Plugin successfully uninstalled
+14:58:27: Unloading library .\Plugin_BSPSceneManager
+14:58:27: Uninstalling plugin: ParticleFX
+14:58:27: Plugin successfully uninstalled
+14:58:27: Unloading library .\Plugin_ParticleFX
+14:58:27: Unloading library .\Codec_STBI
+14:58:27: Uninstalling plugin: Octree Scene Manager
+14:58:27: Plugin successfully uninstalled
+14:58:27: Unloading library .\Plugin_OctreeSceneManager
+14:58:27: Uninstalling plugin: Octree Zone Factory
+14:58:27: Plugin successfully uninstalled
+14:58:27: Unloading library .\Plugin_OctreeZone
+14:58:27: Uninstalling plugin: Portal Connected Zone Scene Manager
+14:58:27: Plugin successfully uninstalled
+14:58:27: Unloading library .\Plugin_PCZSceneManager
+14:58:27: Unregistering ResourceManager for type Skeleton
+14:58:27: Unregistering ResourceManager for type Mesh
+14:58:27: Unregistering ResourceManager for type HighLevelGpuProgram
+14:58:27: Unregistering ResourceManager for type Material

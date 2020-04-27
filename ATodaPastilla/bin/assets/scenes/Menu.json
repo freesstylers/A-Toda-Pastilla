@@ -51,7 +51,7 @@
 	[
 		{
 			"type" : "layout", 
-			"name" : "Menu.layout"
+			"name" : "MainMenu.layout"
 		},
 		{
 			"type" : "entity",
@@ -72,6 +72,18 @@
 					"entidades" : ["witericoMenu", "teodegondaMenu", "hermenegildoMenu", "ricibergaMenu"],
 					"buttonName1" : "MainMenu/LeftArrow",
 					"buttonName2" : "MainMenu/RightArrow"
+				}
+			]
+		},
+		{
+			"type" : "entity",
+			"name" : "UI_2",
+			"components" : 
+			[
+				{
+					"type": "ChangeSceneButtonComponent",
+					"buttonName" : "MainMenu/Settings",
+					"sceneName" : "GraphicOptions"
 				}
 			]
 		}
