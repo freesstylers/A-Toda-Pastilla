@@ -6,32 +6,30 @@
 *.lo
 *.o
 *.obj
+*.pdb
+*.ipdb
+*.iobj
 
 # Precompiled Headers
 *.gch
 *.pch
 
 # Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
+ATodaPastilla/bin/*.so
+ATodaPastilla/bin/*.dylib
+ATodaPastilla/bin/*.dll
 
 # Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+ATodaPastilla/bin/*.lai
+ATodaPastilla/bin/*.la
+ATodaPastilla/bin/*.a
+ATodaPastilla/bin/*.lib
 
 # Executables
-*.exe
-*.out
-*.app
+ATodaPastilla/bin/*.exe
+ATodaPastilla/bin/*.out
+ATodaPastilla/bin/*.app
 
 *.vs
 # interm
 interm/
-dependencies/
