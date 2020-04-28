@@ -1,0 +1,91 @@
+{
+	"name" : "test",
+	"entities" :
+	[
+		{
+			"name" : "camera",
+			"position" : [-500, 150, 0],
+			"rotation" : [0, 0, 0], 
+			"scale" : [1, 1, 1],
+			"components" : [
+				{
+					"type" : "Camera",
+					"lookAt" : [1, 0.8, 0],
+					"bgColour" : [0, 0, 1, 1]
+				},
+				{
+					"type": "AudioListenerComponent"
+				},
+				{
+					"type": "SimpleMovement",
+					"speed": 5.0,
+					"rotateSpeed": 1.0
+				}
+			]
+		},
+		{
+			"name" : "light",
+			"prefab" : "pointLight"
+		},
+		{
+			"name" : "background",
+			"rotation" : [90, 0, 90],
+			"position" : [90, 0, 0],
+			"scale" : [10, 1, 6],
+			"components" : [
+			{
+				"type" : "Mesh",
+				"mesh" : "cube.mesh",
+				"material" : "background"
+			},
+			{   
+				"type" : "Skybox",
+				"material" : "background",
+				"skyType" : "box"
+			}
+			]
+		}
+	],
+	
+	"UI" :
+	[
+		{
+			"type" : "layout", 
+			"name" : "MainMenu.layout"
+		},
+		{
+			"type" : "entity",
+			"name" : "UI",
+			"components" : 
+			[
+				{
+					"type": "ChangeSceneButtonComponent",
+					"buttonName" : "MainMenu/Play",
+					"sceneName" : "ATodaPastilla"
+				},
+				{
+					"type": "ExitButtonComponent",
+					"buttonName" : "MainMenu/Close"
+				},
+				{
+					"type" : "MenuMuestraPersonaje",
+					"entidades" : ["witericoMenu", "teodegondaMenu", "hermenegildoMenu", "ricibergaMenu"],
+					"buttonName1" : "MainMenu/LeftArrow",
+					"buttonName2" : "MainMenu/RightArrow"
+				}
+			]
+		},
+		{
+			"type" : "entity",
+			"name" : "UI_2",
+			"components" : 
+			[
+				{
+					"type": "ChangeSceneButtonComponent",
+					"buttonName" : "MainMenu/Settings",
+					"sceneName" : "GraphicOptions"
+				}
+			]
+		}
+	]
+}

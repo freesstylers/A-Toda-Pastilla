@@ -1,9 +1,9 @@
 {
 	"marble" : 
 	{
-		"position" : [1, 20, 0],
+		"position" : [0, 20, 0],
 		"rotation" : [0, 0, 0],
-		"scale" : [0.7, 0.7, 0.7],
+		"scale" : [0.1, 0.1, 0.1],
 		"components" : [
 				{
 					"type" : "Mesh",
@@ -50,6 +50,178 @@
 				"lightType" : "directional",
 				"lightDir"  : [1, -0.5, 0]
 			}
+		]
+	}, 
+
+	"pastillazo" :
+	{
+		"position" : [0, 0, 0],
+		"rotation" : [0, 0, 0],
+		"scale" : [10, 10, 10],
+		"components" : [
+			{
+				"type" : "Mesh",
+				"mesh" : "pastilla_ibuprofeno.mesh",
+				"material" : "palette.ibuprofeno"
+			},
+			{
+				"type" : "RigidBody",
+				"shape" : "cube",
+				"isKinematic" : true
+			},
+			{
+				"type" : "Vida",
+				"vida" : 50,
+				"time" : 3
+			},
+			{
+				"type" : "ProjectileBehaviour"
+			}
+		]
+	},
+
+	"nave" : 
+	{
+		"position" : [0, 10, 0],
+		"rotation" : [0, 180, 0],
+		"scale" : [10, 10, 10],
+		"components" : [
+			{
+				"type" : "Mesh",
+				"mesh" : "Witerico.mesh",
+				"material" : "Witerico"
+			},
+			{
+				"type" : "RigidBody",
+				"shape" : "mesh",
+				"mass" : 100,
+				"isKinematic": true
+			},
+			{
+				"type" : "MovimientoMando",
+				"xRIGHT" : 200,
+				"xLEFT" : -200,
+				"zUP" : -200,
+				"zDOWN" : 200,
+				"speed" : 0.7
+			},
+			{
+				"type" : "Vida",
+				"vida" : 10
+			},
+			{
+				"type" : "Danio",
+				"danio" : 1
+			},
+			{
+				"type" : "DisparoWiterico",
+				"prefab" : "pastillazo"
+			}
+
+		]
+
+	},
+	"nave1" : 
+	{
+		"position" : [0, 400, 0],
+		"rotation" : [0, 180, 0],
+		"scale" : [25, 25, 25],
+		"components" : [
+			{
+				"type" : "Mesh",
+				"mesh" : "Witerico.mesh",
+				"material" : "Witerico"
+			},
+			{
+				"type" : "RigidBody",
+				"shape" : "mesh",
+				"mass" : 100
+			},
+			{
+				"type" : "Vida",
+				"vida" : 1000
+			}
+		]
+
+	},
+
+	"witericoMenu" :
+	{
+		"position" : [0, 400, 0],
+		"rotation" : [0, 0, 0],
+		"scale" : [15, 15, 15],
+		"components" : [
+			
+			{
+				"type" : "Mesh",
+				"mesh" : "Witerico.mesh",
+				"material" : "Witerico"
+			},
+			{
+				"type" : "GiroContinuo",
+				"rotation" : 0.2
+			}
+			
+		]
+	},
+
+	"teodegondaMenu" :
+	{
+		"position" : [0, 400, 0],
+		"rotation" : [0, 0, 0],
+		"scale" : [15, 15, 15],
+		"components" : [
+			
+			{
+				"type" : "Mesh",
+				"mesh" : "Teodegonda.mesh",
+				"material" : "Teodegonda"
+			},
+			{
+				"type" : "GiroContinuo",
+				"rotation" : 0.2
+			}
+			
+		]
+	},
+
+	"hermenegildoMenu" :
+	{
+		"position" : [0, 400, 0],
+		"rotation" : [0, 0, 0],
+		"scale" : [15, 15, 15],
+		"components" : [
+			
+			{
+				"type" : "Mesh",
+				"mesh" : "Hermenegildo.mesh",
+				"material" : "Hermenegildo"
+			},
+			{
+				"type" : "GiroContinuo",
+				"rotation" : 0.2
+			}
+			
+		]
+	},
+
+	"ricibergaMenu" :
+	{
+		"position" : [0, 400, 0],
+		"rotation" : [0, 0, 0],
+		"scale" : [15, 15, 15],
+		"components" : [
+			
+			{
+				"type" : "Mesh",
+				"mesh" : "Riciberga.mesh",
+				"material" : "Riciberga"
+			},
+			{
+				"type" : "GiroContinuo",
+				"rotation" : 0.2
+			}
+			
 		]
 	}
 }

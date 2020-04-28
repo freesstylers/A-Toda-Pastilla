@@ -26,23 +26,8 @@
 			]
 		},
 		{
-			"name" : "barrel",
-			"position" : [30, 40, 0],
-			"rotation" : [70, 0, 70],
-			"scale" : [10, 10, 10],
-			"components" : [
-				{
-					"type" : "Mesh",
-					"mesh" : "barrel.mesh",
-					"material" : "blank"
-				},
-				{
-					"type" : "RigidBody",
-					"shape" : "mesh",
-					"mass" : 100,
-					"disableDeactivation" : true
-				}
-			]
+			"name" : "nave",
+			"prefab" : "nave"
 		},
 		{
 			"name" : "floor",
@@ -55,13 +40,13 @@
 		},
 		{
 			"name" : "camera",
-			"position" : [0, 100, 500],
+			"position" : [0, 300, 1],
 			"rotation" : [0, 0, 0], 
 			"scale" : [1, 1, 1],
 			"components" : [
 				{
 					"type" : "Camera",
-					"lookAt" : [1, 0.8, 0],
+					"lookAt" : [0, -1, 0],
 					"bgColour" : [0.5, 0.5, 0.5, 1]
 				},
 				{
@@ -75,13 +60,23 @@
 				}
 				
 			]
+		},
+		{
+			"name" : "UI",
+			"components" : 
+			[
+				{
+					"type": "ChangeSceneButtonComponent",
+					"buttonName" : "MainMenu/PlayButton",
+					"sceneName" : "verticalSlice"
+				}				
+			]
 		}
 	],
 	"UI" :
 	[
 		{
-		"type" : 1,
-		"route" : "Button"
+		"name" : "Button"
 		}
 	]
 }
