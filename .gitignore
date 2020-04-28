@@ -29,6 +29,7 @@ ATodaPastilla/bin/*.lib
 ATodaPastilla/bin/*.exe
 ATodaPastilla/bin/*.out
 ATodaPastilla/bin/*.app
+ATodaPastilla/bin/*.log
 
 *.vs
 # interm

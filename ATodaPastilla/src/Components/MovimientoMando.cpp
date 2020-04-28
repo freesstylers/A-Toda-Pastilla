@@ -5,6 +5,7 @@
 #include "Entity/Entity.h"
 #include "Entity/Transform.h"
 #include "MotorCasaPaco.h"
+#include "Physics/PhysicsManager.h"
 
 MovimientoMando::MovimientoMando(json& args) : Component(args)
 {
@@ -29,7 +30,6 @@ void MovimientoMando::update()
 	position = insideBounds(position);
 
 	e_->getComponent<Transform>("Transform")->setPosition(position);
-
 }
 
 void MovimientoMando::init(json& j)
