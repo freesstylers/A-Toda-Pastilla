@@ -1,5 +1,6 @@
 #include "Components/ExitButtonComponent.h"
 #include "MotorCasaPaco.h"
+#include "Audio/AudioManager.h"
 
 ExitButtonComponent::ExitButtonComponent(json& args): Component(args)
 {
@@ -13,6 +14,7 @@ ExitButtonComponent::~ExitButtonComponent()
 
 bool ExitButtonComponent::function(const CEGUI::EventArgs& e)
 {
+	//AudioManager::getInstance()->playSound("assets/sound/buttonSound.mp3", 0); //Comentado de momento para que no pete al cerrar, si no se han reproducido más sonidos
 	MotorCasaPaco::getInstance()->exit();
 	return true;
 }

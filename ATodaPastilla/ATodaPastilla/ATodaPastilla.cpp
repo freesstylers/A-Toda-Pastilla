@@ -18,10 +18,18 @@
 #include "Components/ExitButtonComponent.h"
 #include "Components/GiroContinuo.h"
 #include "Components/MenuMuestraPersonaje.h"
+
 #include "Components/ApplyGraphicChangesComponent.h"
-#include "Components//ChangeFullScreenComponent.h"
+#include "Components/ChangeFullScreenComponent.h"
 #include "Components/ChangeVyncComponent.h"
 #include "Components/FormatResolutionChangeComponent.h"
+#include "Components/RevertGraphicChangesComponent.h"
+#include "Components/RevertAdvancedGraphicChangesComponent.h"
+#include "Components/ChangeGammaComponent.h"
+#include "Components/ChangeGraphicSceneComponent.h"
+#include "Components/ApplyAdvancedGraphicChangesComponent.h"
+#include "Components/FSAAChangeComponent.h"
+#include "Components/ShadowsChangeComponent.h"
 
 MotorCasaPaco* motorCasaPaco;
 
@@ -145,6 +153,69 @@ public:
 	};
 };
 
+class FSAAChangeComponentFactory : public BaseFactory
+{
+public:
+	Component* createComponent(json& args) override
+	{
+		return new FSAAChangeComponent(args);
+	};
+};
+
+class ShadowsChangeComponentFactory : public BaseFactory
+{
+public:
+	Component* createComponent(json& args) override
+	{
+		return new ShadowsChangeComponent(args);
+	};
+};
+
+class ApplyAdvancedGraphicChangesComponentFactory : public BaseFactory
+{
+public:
+	Component* createComponent(json& args) override
+	{
+		return new ApplyAdvancedGraphicChangesComponent(args);
+	};
+};
+
+class RevertGraphicChangesComponentFactory : public BaseFactory
+{
+public:
+	Component* createComponent(json& args) override
+	{
+		return new RevertGraphicChangesComponent(args);
+	};
+};
+
+class RevertAdvancedGraphicChangesComponentFactory : public BaseFactory
+{
+public:
+	Component* createComponent(json& args) override
+	{
+		return new RevertAdvancedGraphicChangesComponent(args);
+	};
+};
+
+class ChangeGammaComponentFactory : public BaseFactory
+{
+public:
+	Component* createComponent(json& args) override
+	{
+		return new ChangeGammaComponent(args);
+	};
+};
+
+class ChangeGraphicSceneComponentFactory : public BaseFactory
+{
+public:
+	Component* createComponent(json& args) override
+	{
+		return new ChangeGraphicSceneComponent(args);
+	};
+};
+
 
 void setupFactories()
 {
@@ -164,6 +235,13 @@ void setupFactories()
 	j->addFactory("FormatResolutionChangeComponent", new FormatResolutionChangeComponentFactory());
 	j->addFactory("ApplyGraphicChangesComponent", new ApplyGraphicChangesComponentFactory());
 	j->addFactory("ChangeVSyncComponent", new ChangeVSyncComponentFactory());
+	j->addFactory("FSAAChangeComponent", new FSAAChangeComponentFactory());
+	j->addFactory("ShadowsChangeComponent", new ShadowsChangeComponentFactory());
+	j->addFactory("ApplyAdvancedGraphicChangesComponent", new ApplyAdvancedGraphicChangesComponentFactory());
+	j->addFactory("RevertGraphicChangesComponent", new RevertGraphicChangesComponentFactory());
+	j->addFactory("RevertAdvancedGraphicChangesComponent", new RevertAdvancedGraphicChangesComponentFactory());
+	j->addFactory("ChangeGammaComponent", new ChangeGammaComponentFactory());
+	j->addFactory("ChangeGraphicSceneComponent", new ChangeGraphicSceneComponentFactory());
 }
 
 #ifdef  _DEBUG
@@ -196,6 +274,8 @@ WinMain(HINSTANCE hinstance, HINSTANCE prevInstance, LPSTR lpCmdLine, int nCmdSh
 	}
 
 	MotorCasaPaco::getInstance()->getGUI_Manager()->getInstance()->setupDefaultResources();
+	MotorCasaPaco::getInstance()->getGUI_Manager()->loadScheme("A_Toda_Pastilla.scheme");
+	MotorCasaPaco::getInstance()->getGUI_Manager()->setMouseCursor("A_Toda_Pastilla/Mouse_Arrow");
 
 	motorCasaPaco->changeScene("Menu");
 

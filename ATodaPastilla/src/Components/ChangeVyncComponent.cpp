@@ -1,5 +1,6 @@
 #include "Components/ChangeVyncComponent.h"
 #include "MotorCasaPaco.h"
+#include "Audio/AudioManager.h"
 
 ChangeVSyncComponent::ChangeVSyncComponent(json& args): Component(args)
 {
@@ -8,7 +9,8 @@ ChangeVSyncComponent::ChangeVSyncComponent(json& args): Component(args)
 
 ChangeVSyncComponent::~ChangeVSyncComponent()
 {
-	Component::~Component();
+	//EventManager::getInstance()->UnregisterListenerForAll(this);
+	//Component::~Component();
 }
 
 bool ChangeVSyncComponent::function(const CEGUI::EventArgs& e)
@@ -24,7 +26,24 @@ bool ChangeVSyncComponent::function(const CEGUI::EventArgs& e)
 		GUI_Manager::getInstance()->changeText(textToChange, "Si");
 	}
 
+	AudioManager::getInstance()->playSound("assets/sound/buttonSound.mp3", 0);
+
 	return true;
+}
+
+bool ChangeVSyncComponent::ReceiveEvent(Event& event)
+{
+	if (event.type == "RESET_GRAPHIC_INFO") {
+		if (MotorCasaPaco::getInstance()->getVSync())
+		{
+			GUI_Manager::getInstance()->changeText(textToChange, "Si");
+		}
+		else
+		{
+			GUI_Manager::getInstance()->changeText(textToChange, "No");
+		}
+	}
+	return false;
 }
 
 void ChangeVSyncComponent::init(json& j)
@@ -44,5 +63,7 @@ void ChangeVSyncComponent::init(json& j)
 		{
 			GUI_Manager::getInstance()->changeText(textToChange, "No");
 		}
+
+		EventManager::getInstance()->RegisterListener(this, "RESET_GRAPHIC_INFO");
 	}
 }
