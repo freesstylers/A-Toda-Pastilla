@@ -1,52 +1,169 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="..\src\Components\ChangeSceneButtonComponent.cpp" />
-    <ClCompile Include="..\src\Components\Danio.cpp" />
-    <ClCompile Include="..\src\Components\DisparoWiterico.cpp" />
-    <ClCompile Include="..\src\Components\EntitySpawner.cpp" />
-    <ClCompile Include="..\src\Components\ExitButtonComponent.cpp" />
-    <ClCompile Include="..\src\Components\GiroContinuo.cpp" />
-    <ClCompile Include="..\src\Components\MenuMuestraPersonajes.cpp" />
-    <ClCompile Include="..\src\Components\MovimientoMando.cpp" />
-    <ClCompile Include="..\src\Components\ProjectileBehaviour.cpp" />
-    <ClCompile Include="..\src\Components\ProjectileSpawner.cpp" />
-    <ClCompile Include="..\src\Components\Vida.cpp" />
     <ClCompile Include="ATodaPastilla.cpp" />
-    <ClCompile Include="..\src\Components\ApplyGraphicChangesComponent.cpp" />
-    <ClCompile Include="..\src\Components\ChangeFullScreenComponent.cpp" />
-    <ClCompile Include="..\src\Components\ChangeVyncComponent.cpp" />
-    <ClCompile Include="..\src\Components\FormatResolutionChangeComponent.cpp" />
-    <ClCompile Include="..\src\Components\ChangeGraphicSceneComponent.cpp" />
-    <ClCompile Include="..\src\Components\FSAAChangeComponent.cpp" />
-    <ClCompile Include="..\src\Components\ApplyAdvancedGraphicChangesComponent.cpp" />
-    <ClCompile Include="..\src\Components\RevertAdvancedGraphicChangesComponent.cpp" />
-    <ClCompile Include="..\src\Components\RevertGraphicChangesComponent.cpp" />
-    <ClCompile Include="..\src\Components\ChangeGammaComponent.cpp" />
-    <ClCompile Include="..\src\Components\ShadowsChangeComponent.cpp" />
+    <ClCompile Include="..\src\Components\ExitButtonComponent.cpp">
+      <Filter>UI\Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Components\MenuMuestraPersonajes.cpp">
+      <Filter>UI\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Components\ChangeFullScreenComponent.cpp">
+      <Filter>UI\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Components\ChangeGammaComponent.cpp">
+      <Filter>UI\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Components\ChangeGraphicSceneComponent.cpp">
+      <Filter>UI\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Components\ChangeSceneButtonComponent.cpp">
+      <Filter>UI\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Components\ChangeVyncComponent.cpp">
+      <Filter>UI\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Components\ApplyAdvancedGraphicChangesComponent.cpp">
+      <Filter>UI\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Components\ApplyGraphicChangesComponent.cpp">
+      <Filter>UI\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Components\RevertAdvancedGraphicChangesComponent.cpp">
+      <Filter>UI\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Components\RevertGraphicChangesComponent.cpp">
+      <Filter>UI\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Components\ShadowsChangeComponent.cpp">
+      <Filter>UI\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Components\Danio.cpp">
+      <Filter>Logic\Damage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Components\Vida.cpp">
+      <Filter>Logic\Damage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Components\DisparoWiterico.cpp">
+      <Filter>Logic\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Components\ProjectileBehaviour.cpp">
+      <Filter>Logic\Projectiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Components\ProjectileSpawner.cpp">
+      <Filter>Logic\Projectiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Components\MovimientoMando.cpp">
+      <Filter>Logic\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Components\GiroContinuo.cpp">
+      <Filter>Logic\General</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Components\FSAAChangeComponent.cpp">
+      <Filter>UI\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Components\FormatResolutionChangeComponent.cpp">
+      <Filter>UI\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Components\EntitySpawner.cpp">
+      <Filter>Logic\General</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\include\Components\ChangeSceneButtonComponent.h" />
-    <ClInclude Include="..\include\Components\Danio.h" />
-    <ClInclude Include="..\include\Components\DisparoWiterico.h" />
-    <ClInclude Include="..\include\Components\EntitySpawner.h" />
-    <ClInclude Include="..\include\Components\ExitButtonComponent.h" />
-    <ClInclude Include="..\include\Components\GiroContinuo.h" />
-    <ClInclude Include="..\include\Components\MenuMuestraPersonaje.h" />
-    <ClInclude Include="..\include\Components\MovimientoMando.h" />
-    <ClInclude Include="..\include\Components\ProjectileBehaviour.h" />
-    <ClInclude Include="..\include\Components\ProjectileSpawner.h" />
-    <ClInclude Include="..\include\Components\Vida.h" />
-    <ClInclude Include="..\include\Components\ChangeVyncComponent.h" />
-    <ClInclude Include="..\include\Components\ApplyGraphicChangesComponent.h" />
-    <ClInclude Include="..\include\Components\FormatResolutionChangeComponent.h" />
-    <ClInclude Include="..\include\Components\ChangeFullScreenComponent.h" />
-    <ClInclude Include="..\include\Components\ShadowsChangeComponent.h" />
-    <ClInclude Include="..\include\Components\ChangeGammaComponent.h" />
-    <ClInclude Include="..\include\Components\FSAAChangeComponent.h" />
-    <ClInclude Include="..\include\Components\RevertGraphicChangesComponent.h" />
-    <ClInclude Include="..\include\Components\RevertAdvancedGraphicChangesComponent.h" />
-    <ClInclude Include="..\include\Components\ChangeGraphicSceneComponent.h" />
-    <ClInclude Include="..\include\Components\ApplyAdvancedGraphicChangesComponent.h" />
+    <ClInclude Include="..\include\Components\ExitButtonComponent.h">
+      <Filter>UI\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Components\MenuMuestraPersonaje.h">
+      <Filter>UI\Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Components\ChangeVyncComponent.h">
+      <Filter>UI\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Components\ChangeFullScreenComponent.h">
+      <Filter>UI\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Components\ChangeGammaComponent.h">
+      <Filter>UI\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Components\ChangeGraphicSceneComponent.h">
+      <Filter>UI\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Components\ChangeSceneButtonComponent.h">
+      <Filter>UI\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Components\ApplyGraphicChangesComponent.h">
+      <Filter>UI\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Components\ApplyAdvancedGraphicChangesComponent.h">
+      <Filter>UI\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Components\ShadowsChangeComponent.h">
+      <Filter>UI\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Components\RevertAdvancedGraphicChangesComponent.h">
+      <Filter>UI\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Components\RevertGraphicChangesComponent.h">
+      <Filter>UI\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Components\Danio.h">
+      <Filter>Logic\Damage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Components\Vida.h">
+      <Filter>Logic\Damage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Components\DisparoWiterico.h">
+      <Filter>Logic\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Components\ProjectileSpawner.h">
+      <Filter>Logic\Projectiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Components\ProjectileBehaviour.h">
+      <Filter>Logic\Projectiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Components\MovimientoMando.h">
+      <Filter>Logic\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Components\GiroContinuo.h">
+      <Filter>Logic\General</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Components\FSAAChangeComponent.h">
+      <Filter>UI\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Components\FormatResolutionChangeComponent.h">
+      <Filter>UI\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Components\EntitySpawner.h">
+      <Filter>Logic\General</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="UI">
+      <UniqueIdentifier>{21654342-4557-4d77-8c54-c6c27ea3eed8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic">
+      <UniqueIdentifier>{3cb0b4db-d34f-4a15-992f-20cb4704cfa9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Settings">
+      <UniqueIdentifier>{18bc8e63-a0b1-4daa-b742-b0b8d7a7d90a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Buttons">
+      <UniqueIdentifier>{95bed23e-1c0e-47ce-9d55-562c0e3fa927}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Menus">
+      <UniqueIdentifier>{8bc205e2-dc37-4aa7-abdb-ddbdaed6ab38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic\Player">
+      <UniqueIdentifier>{27ce9ac3-69eb-45fb-80af-1e93b4c043c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic\Damage">
+      <UniqueIdentifier>{9fbcc6fd-3a8d-4fdf-adc8-4d259595b3ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic\General">
+      <UniqueIdentifier>{1cf67f45-11a6-4fd2-bd9c-61e9da6da163}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic\Projectiles">
+      <UniqueIdentifier>{6c2977dd-541c-4ebb-b4e4-d39594ff31fa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
