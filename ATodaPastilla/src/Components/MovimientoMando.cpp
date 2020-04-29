@@ -9,8 +9,7 @@
 
 MovimientoMando::MovimientoMando(json& args) : Component(args)
 {
-
-
+	EventManager::getInstance()->RegisterListener(this, "PAUSE");
 }
 
 MovimientoMando::~MovimientoMando()
@@ -30,6 +29,10 @@ void MovimientoMando::update()
 	position = insideBounds(position);
 
 	e_->getComponent<Transform>("Transform")->setPosition(position);
+
+	if (InputManager::getInstance()->GameControllerIsButtonDown(GameControllerButton::CONTROLLER_BUTTON_START)) {
+		EventManager::getInstance()->EmitEvent("PAUSE");
+	}
 }
 
 void MovimientoMando::init(json& j)

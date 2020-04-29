@@ -21,23 +21,17 @@ void Danio::update()
 void Danio::init(json& j)
 {
 	if (!j["danio"].is_null()) danio_ = j["danio"];
-	EventManager::getInstance()->RegisterListener(getEntity(), EventType::RIGIDBODY_COLLISION);
+	EventManager::getInstance()->RegisterListener(getEntity(), "RIGIDBODY_COLLISION");
 }
 
 bool Danio::ReceiveEvent(Event& event)
 {
-	switch (event.type)
-	{
-	case EventType::RIGIDBODY_COLLISION:
-	{
+	if (event.type == "RIGIDBODY_COLLISION") {
 		Entity* e1 = static_cast<RigidBodyCollisionEvent&>(event).obj1;
 		Entity* e2 = static_cast<RigidBodyCollisionEvent&>(event).obj2;
 		doDamage(e1, e2);
-		break;
 	}
-	default:
-		break;
-	}
+
 	return false;
 }
 

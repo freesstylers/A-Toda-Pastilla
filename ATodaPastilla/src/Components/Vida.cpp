@@ -39,6 +39,6 @@ void Vida::sumaVida(int valor)
 	vida_ += valor;
 	if (vida_ <= 0) {
 		EventManager::getInstance()->UnregisterListenerForAll(e_);
-		e_->setActive(false);
+		e_->setEnabled(false);
 	}
 }

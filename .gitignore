@@ -9,6 +9,7 @@
 *.pdb
 *.ipdb
 *.iobj
+*.ilk
 
 # Precompiled Headers
 *.gch

@@ -21,7 +21,7 @@ void MenuMuestraPersonaje::update()
 
 void MenuMuestraPersonaje::nextCharacter()
 {
-	SceneManager::getInstance()->getCurrentScene()->getEntity(entidades_[n_])->setActive(false);
+	SceneManager::getInstance()->getCurrentScene()->deleteEntity(entidades_[n_]);
 	n_++;
 	n_ = n_ % 4;
 	spawnEntity(pos_, entidades_[n_]);
@@ -29,7 +29,7 @@ void MenuMuestraPersonaje::nextCharacter()
 
 void MenuMuestraPersonaje::prevCharacter()
 {
-	SceneManager::getInstance()->getCurrentScene()->getEntity(entidades_[n_])->setActive(false);
+	SceneManager::getInstance()->getCurrentScene()->deleteEntity(entidades_[n_]);
 	if (n_ != 0)n_--; else n_ = 3;
 	spawnEntity(pos_, entidades_[n_]);
 }

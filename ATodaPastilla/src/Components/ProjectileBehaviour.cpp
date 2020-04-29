@@ -23,7 +23,7 @@ void ProjectileBehaviour::update()
 	Transform* t = getEntity()->getComponent<Transform>("Transform");
 	if (t->getPosition().X > bordeDer || t->getPosition().X < bordeIzq ||
 		t->getPosition().Z > bordeSup || t->getPosition().Z < bordeInf) {
-		getEntity()->setActive(false);
+		getEntity()->setEnabled(false);
 	}
 	Vector3 pos = t->getPosition();
 	float deltatime = MotorCasaPaco::getInstance()->DeltaTime() / 1000.0f;
