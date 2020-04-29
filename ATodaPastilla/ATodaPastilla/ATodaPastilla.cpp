@@ -30,6 +30,7 @@
 #include "Components/ApplyAdvancedGraphicChangesComponent.h"
 #include "Components/FSAAChangeComponent.h"
 #include "Components/ShadowsChangeComponent.h"
+#include "Components/PlayerInput.h"
 
 MotorCasaPaco* motorCasaPaco;
 
@@ -216,6 +217,14 @@ public:
 	};
 };
 
+class PlayerInputFactory : public BaseFactory
+{
+public:
+	Component* createComponent(json& args) override
+	{
+		return new PlayerInput(args);
+	};
+};
 
 void setupFactories()
 {
@@ -242,6 +251,7 @@ void setupFactories()
 	j->addFactory("RevertAdvancedGraphicChangesComponent", new RevertAdvancedGraphicChangesComponentFactory());
 	j->addFactory("ChangeGammaComponent", new ChangeGammaComponentFactory());
 	j->addFactory("ChangeGraphicSceneComponent", new ChangeGraphicSceneComponentFactory());
+	j->addFactory("PlayerInput", new PlayerInputFactory());
 }
 
 #ifdef  _DEBUG

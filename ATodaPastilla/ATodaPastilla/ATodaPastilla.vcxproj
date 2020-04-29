@@ -188,6 +188,7 @@
     <ClCompile Include="..\src\Components\GiroContinuo.cpp" />
     <ClCompile Include="..\src\Components\MenuMuestraPersonajes.cpp" />
     <ClCompile Include="..\src\Components\MovimientoMando.cpp" />
+    <ClCompile Include="..\src\Components\PlayerInput.cpp" />
     <ClCompile Include="..\src\Components\ProjectileBehaviour.cpp" />
     <ClCompile Include="..\src\Components\ProjectileSpawner.cpp" />
     <ClCompile Include="..\src\Components\RevertAdvancedGraphicChangesComponent.cpp" />
@@ -218,6 +219,7 @@
     <ClInclude Include="..\include\Components\GiroContinuo.h" />
     <ClInclude Include="..\include\Components\MenuMuestraPersonaje.h" />
     <ClInclude Include="..\include\Components\MovimientoMando.h" />
+    <ClInclude Include="..\include\Components\PlayerInput.h" />
     <ClInclude Include="..\include\Components\ProjectileBehaviour.h" />
     <ClInclude Include="..\include\Components\ProjectileSpawner.h" />
     <ClInclude Include="..\include\Components\RevertAdvancedGraphicChangesComponent.h" />

@@ -11,6 +11,8 @@ ProjectileBehaviour::ProjectileBehaviour(json& args):Component(args)
 	bordeInf = -500;
 	bordeDer = 500;
 	bordeIzq = -500;
+
+	EventManager::getInstance()->RegisterListener(this, "PAUSE");
 }
 
 void ProjectileBehaviour::init(json& args)
@@ -39,4 +41,13 @@ void ProjectileBehaviour::setDir(Vector3 dir)
 void ProjectileBehaviour::setSpeed(float speed)
 {
 	this->speed = speed;
+}
+
+bool ProjectileBehaviour::ReceiveEvent(Event& event)
+{
+	if (event.type == "PAUSE") {
+		setEnabled(!isEnabled());
+	}
+
+	return false;
 }

@@ -45,6 +45,7 @@ Entity* EntitySpawner::spawnEntity(Vector3 pos, std::string prefab)
 				}
 		}
 		instance->getComponent<Transform>("Transform")->setPosition(pos);
+		instance->setEnabled(true);
 	}
 	return instance;
 }

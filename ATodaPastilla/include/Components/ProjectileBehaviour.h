@@ -8,6 +8,8 @@ public:
 	void setDir(Vector3 dir);
 	void setSpeed(float speed);
 
+	bool ReceiveEvent(Event& event) override;
+
 private:
 	float speed;
 	Vector3 dir;
