@@ -1,5 +1,6 @@
 #include "Components/ChangeFullScreenComponent.h"
 #include "MotorCasaPaco.h"
+#include "Audio/AudioManager.h"
 
 ChangeFullScreenComponent::ChangeFullScreenComponent(json& args): Component(args)
 {
@@ -8,7 +9,8 @@ ChangeFullScreenComponent::ChangeFullScreenComponent(json& args): Component(args
 
 ChangeFullScreenComponent::~ChangeFullScreenComponent()
 {
-	Component::~Component();
+	//EventManager::getInstance()->UnregisterListenerForAll(this);
+	//Component::~Component();
 }
 
 bool ChangeFullScreenComponent::function(const CEGUI::EventArgs& e)
@@ -24,7 +26,24 @@ bool ChangeFullScreenComponent::function(const CEGUI::EventArgs& e)
 		GUI_Manager::getInstance()->changeText(textToChange, "Si");
 	}
 
+	AudioManager::getInstance()->playSound("assets/sound/buttonSound.mp3", 0);
+
 	return true;
+}
+
+bool ChangeFullScreenComponent::ReceiveEvent(Event& event)
+{
+	if (event.type == "RESET_GRAPHIC_INFO") {
+		if (MotorCasaPaco::getInstance()->getFullScreen())
+		{
+			GUI_Manager::getInstance()->changeText(textToChange, "Si");
+		}
+		else
+		{
+			GUI_Manager::getInstance()->changeText(textToChange, "No");
+		}
+	}
+	return false;
 }
 
 void ChangeFullScreenComponent::init(json& j)
@@ -44,5 +63,7 @@ void ChangeFullScreenComponent::init(json& j)
 		{
 			GUI_Manager::getInstance()->changeText(textToChange, "No");
 		}
+
+		EventManager::getInstance()->RegisterListener(this, "RESET_GRAPHIC_INFO");
 	}
 }

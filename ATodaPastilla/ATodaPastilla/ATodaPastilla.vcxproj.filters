@@ -17,6 +17,13 @@
     <ClCompile Include="..\src\Components\ChangeFullScreenComponent.cpp" />
     <ClCompile Include="..\src\Components\ChangeVyncComponent.cpp" />
     <ClCompile Include="..\src\Components\FormatResolutionChangeComponent.cpp" />
+    <ClCompile Include="..\src\Components\ChangeGraphicSceneComponent.cpp" />
+    <ClCompile Include="..\src\Components\FSAAChangeComponent.cpp" />
+    <ClCompile Include="..\src\Components\ApplyAdvancedGraphicChangesComponent.cpp" />
+    <ClCompile Include="..\src\Components\RevertAdvancedGraphicChangesComponent.cpp" />
+    <ClCompile Include="..\src\Components\RevertGraphicChangesComponent.cpp" />
+    <ClCompile Include="..\src\Components\ChangeGammaComponent.cpp" />
+    <ClCompile Include="..\src\Components\ShadowsChangeComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Components\ChangeSceneButtonComponent.h" />
@@ -34,5 +41,12 @@
     <ClInclude Include="..\include\Components\ApplyGraphicChangesComponent.h" />
     <ClInclude Include="..\include\Components\FormatResolutionChangeComponent.h" />
     <ClInclude Include="..\include\Components\ChangeFullScreenComponent.h" />
+    <ClInclude Include="..\include\Components\ShadowsChangeComponent.h" />
+    <ClInclude Include="..\include\Components\ChangeGammaComponent.h" />
+    <ClInclude Include="..\include\Components\FSAAChangeComponent.h" />
+    <ClInclude Include="..\include\Components\RevertGraphicChangesComponent.h" />
+    <ClInclude Include="..\include\Components\RevertAdvancedGraphicChangesComponent.h" />
+    <ClInclude Include="..\include\Components\ChangeGraphicSceneComponent.h" />
+    <ClInclude Include="..\include\Components\ApplyAdvancedGraphicChangesComponent.h" />
   </ItemGroup>
 </Project>

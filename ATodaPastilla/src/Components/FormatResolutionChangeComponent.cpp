@@ -1,5 +1,6 @@
 #include "Components/FormatResolutionChangeComponent.h"
 #include "MotorCasaPaco.h"
+#include "Audio/AudioManager.h"
 
 FormatResolutionChangeComponent::FormatResolutionChangeComponent(json& args): Component(args)
 {
@@ -31,7 +32,8 @@ FormatResolutionChangeComponent::FormatResolutionChangeComponent(json& args): Co
 
 FormatResolutionChangeComponent::~FormatResolutionChangeComponent()
 {
-	Component::~Component();
+	//EventManager::getInstance()->UnregisterListenerForAll(this);
+	//Component::~Component();
 }
 
 bool FormatResolutionChangeComponent::functionResLess(const CEGUI::EventArgs& e)
@@ -83,6 +85,7 @@ bool FormatResolutionChangeComponent::functionResLess(const CEGUI::EventArgs& e)
 
 	GUI_Manager::getInstance()->changeText(ResText, currentRes);
 	MotorCasaPaco::getInstance()->setResolution(currentRes);
+	AudioManager::getInstance()->playSound("assets/sound/buttonSound.mp3", 0);
 
 	return true;
 }
@@ -135,6 +138,7 @@ bool FormatResolutionChangeComponent::functionResMore(const CEGUI::EventArgs& e)
 
 	GUI_Manager::getInstance()->changeText(ResText, currentRes);
 	MotorCasaPaco::getInstance()->setResolution(currentRes);
+	AudioManager::getInstance()->playSound("assets/sound/buttonSound.mp3", 0);
 
 	return true;
 }
@@ -170,6 +174,7 @@ bool FormatResolutionChangeComponent::functionForLess(const CEGUI::EventArgs& e)
 	GUI_Manager::getInstance()->changeText(ResText, currentRes);
 	MotorCasaPaco::getInstance()->setScreenProportion(currentFormat);
 	MotorCasaPaco::getInstance()->setResolution(currentRes);
+	AudioManager::getInstance()->playSound("assets/sound/buttonSound.mp3", 0);
 
 	return true;
 }
@@ -205,8 +210,21 @@ bool FormatResolutionChangeComponent::functionForMore(const CEGUI::EventArgs& e)
 	GUI_Manager::getInstance()->changeText(ResText, currentRes);
 	MotorCasaPaco::getInstance()->setScreenProportion(currentFormat);
 	MotorCasaPaco::getInstance()->setResolution(currentRes);
+	AudioManager::getInstance()->playSound("assets/sound/buttonSound.mp3", 0);
 
 	return true;
+}
+
+bool FormatResolutionChangeComponent::ReceiveEvent(Event& event)
+{
+	if (event.type == "RESET_GRAPHIC_INFO") {
+		currentFormat = MotorCasaPaco::getInstance()->getScreenProportion();
+		currentRes = MotorCasaPaco::getInstance()->getResolution();
+		currentPos = getCurrentPos(currentFormat, currentRes);
+		GUI_Manager::getInstance()->changeText(ResText, currentRes);
+		GUI_Manager::getInstance()->changeText(ForText, currentFormat);
+	}
+	return false;
 }
 
 int FormatResolutionChangeComponent::getCurrentPos(std::string currentFormat_, std::string currentRes_)
@@ -288,5 +306,7 @@ void FormatResolutionChangeComponent::init(json& j)
 		currentPos = getCurrentPos(currentFormat, currentRes);
 		GUI_Manager::getInstance()->changeText(ResText, currentRes);
 		GUI_Manager::getInstance()->changeText(ForText, currentFormat);
+
+		EventManager::getInstance()->RegisterListener(this, "RESET_GRAPHIC_INFO");
 	}
 }
