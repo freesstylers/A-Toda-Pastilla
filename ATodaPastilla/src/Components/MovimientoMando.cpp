@@ -29,10 +29,6 @@ void MovimientoMando::update()
 	position = insideBounds(position);
 
 	e_->getComponent<Transform>("Transform")->setPosition(position);
-
-	if (InputManager::getInstance()->GameControllerIsButtonDown(GameControllerButton::CONTROLLER_BUTTON_START)) {
-		EventManager::getInstance()->EmitEvent("PAUSE");
-	}
 }
 
 void MovimientoMando::init(json& j)
@@ -42,6 +38,14 @@ void MovimientoMando::init(json& j)
 	if (!j["xLEFT"].is_null()) xLEFT_ = j["xLEFT"];
 	if (!j["zUP"].is_null()) zUP_ = j["zUP"];
 	if (!j["zDOWN"].is_null()) zDOWN_ = j["zDOWN"];
+}
+
+bool MovimientoMando::ReceiveEvent(Event& event)
+{
+	if (event.type == "PAUSE")
+		setEnabled(!isEnabled());
+
+	return false;
 }
 
 Vector3 MovimientoMando::insideBounds(Vector3 position)

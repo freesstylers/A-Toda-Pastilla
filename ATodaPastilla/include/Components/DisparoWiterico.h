@@ -8,6 +8,8 @@ public:
 	void init(json& args) override;
 	void start() override;
 	void update() override;
+	bool ReceiveEvent(Event& event) override;
+
 private:
 	float timeSinceLastShot;
 	float cadence;

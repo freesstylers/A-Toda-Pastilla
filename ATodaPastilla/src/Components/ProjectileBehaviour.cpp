@@ -1,4 +1,4 @@
-#include "..\..\include\Components\ProjectileBehaviour.h"
+#include "Components\ProjectileBehaviour.h"
 #include "Entity/Transform.h"
 #include "Entity/Entity.h"
 #include "MotorCasaPaco.h"
@@ -45,9 +45,8 @@ void ProjectileBehaviour::setSpeed(float speed)
 
 bool ProjectileBehaviour::ReceiveEvent(Event& event)
 {
-	if (event.type == "PAUSE") {
+	if (event.type == "PAUSE")
 		setEnabled(!isEnabled());
-	}
 
 	return false;
 }
