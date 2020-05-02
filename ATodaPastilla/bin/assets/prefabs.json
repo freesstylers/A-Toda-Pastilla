@@ -115,7 +115,13 @@
 			},
 			{
 				"type" : "DisparoWiterico",
-				"prefab" : "pastillazo"
+				"prefab" : "pastillazo",
+				"cadence": 100,
+				"shotPos": [0, 0, -50],
+				"shotDir": [0, 0, -1],
+				"nBullets": 15,
+				"bulletSpeed": 250,
+				"dispersionAngle": 30
 			},
 			{
 				"type" : "PlayerInput"

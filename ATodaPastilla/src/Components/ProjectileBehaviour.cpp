@@ -28,7 +28,9 @@ void ProjectileBehaviour::update()
 		getEntity()->setEnabled(false);
 	}
 	Vector3 pos = t->getPosition();
+
 	float deltatime = MotorCasaPaco::getInstance()->DeltaTime() / 1000.0f;
+
 	pos += dir.Normalized(dir) * speed * deltatime;
 	t->setPosition(pos);
 }

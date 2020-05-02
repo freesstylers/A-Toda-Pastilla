@@ -25,7 +25,7 @@ void MovimientoMando::update()
 	float sumX = InputManager::getInstance()->GameControllerGetAxisMovement(GameControllerAxis::CONTROLLER_AXIS_LEFTX, true);
 	float sumY = InputManager::getInstance()->GameControllerGetAxisMovement(GameControllerAxis::CONTROLLER_AXIS_LEFTY, true);
 	
-	position += Vector3(sumX, 0.0f, sumY)*MotorCasaPaco::getInstance()->DeltaTime()*speed_;
+	position += Vector3(sumX, 0.0f, sumY)* MotorCasaPaco::getInstance()->DeltaTime() *speed_;
 	position = insideBounds(position);
 
 	e_->getComponent<Transform>("Transform")->setPosition(position);
