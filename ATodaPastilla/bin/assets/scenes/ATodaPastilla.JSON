@@ -59,6 +59,10 @@
 				}
 				
 			]
+		},
+		{
+			"name": "GM",
+			"prefab" : "gameManager"
 		}
 	],
 	"UI" :

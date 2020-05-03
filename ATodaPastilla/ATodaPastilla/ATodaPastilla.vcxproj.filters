@@ -71,6 +71,9 @@
     <ClCompile Include="..\src\Components\PlayerInput.cpp">
       <Filter>Logic\Player</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\Components\GameManager.cpp">
+      <Filter>Logic\General</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Components\ExitButtonComponent.h">
@@ -141,6 +144,12 @@
     </ClInclude>
     <ClInclude Include="..\include\Components\PlayerInput.h">
       <Filter>Logic\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Components\GameManager.h">
+      <Filter>Logic\General</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Components\EventsATodaPastilla.h">
+      <Filter>Logic\General</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

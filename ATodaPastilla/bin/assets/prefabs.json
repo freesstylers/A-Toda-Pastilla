@@ -235,5 +235,15 @@
 			}
 			
 		]
+	},
+
+	"gameManager" : 
+	{
+		"position" : [0, 0, 0],
+		"components" : [
+			{
+				"type" : "GameManager"
+			}
+		]
 	}
 }
