@@ -185,6 +185,7 @@
     <ClCompile Include="..\src\Components\ExitButtonComponent.cpp" />
     <ClCompile Include="..\src\Components\FormatResolutionChangeComponent.cpp" />
     <ClCompile Include="..\src\Components\FSAAChangeComponent.cpp" />
+    <ClCompile Include="..\src\Components\GameManager.cpp" />
     <ClCompile Include="..\src\Components\GiroContinuo.cpp" />
     <ClCompile Include="..\src\Components\MenuMuestraPersonajes.cpp" />
     <ClCompile Include="..\src\Components\MovimientoMando.cpp" />
@@ -213,9 +214,11 @@
     <ClInclude Include="..\include\Components\Danio.h" />
     <ClInclude Include="..\include\Components\DisparoWiterico.h" />
     <ClInclude Include="..\include\Components\EntitySpawner.h" />
+    <ClInclude Include="..\include\Components\EventsATodaPastilla.h" />
     <ClInclude Include="..\include\Components\ExitButtonComponent.h" />
     <ClInclude Include="..\include\Components\FormatResolutionChangeComponent.h" />
     <ClInclude Include="..\include\Components\FSAAChangeComponent.h" />
+    <ClInclude Include="..\include\Components\GameManager.h" />
     <ClInclude Include="..\include\Components\GiroContinuo.h" />
     <ClInclude Include="..\include\Components\MenuMuestraPersonaje.h" />
     <ClInclude Include="..\include\Components\MovimientoMando.h" />

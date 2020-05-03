@@ -31,6 +31,7 @@
 #include "Components/FSAAChangeComponent.h"
 #include "Components/ShadowsChangeComponent.h"
 #include "Components/PlayerInput.h"
+#include "Components/GameManager.h"
 
 MotorCasaPaco* motorCasaPaco;
 
@@ -226,6 +227,15 @@ public:
 	};
 };
 
+class GameManagerFactory : public BaseFactory
+{
+public:
+	Component* createComponent(json& args) override
+	{
+		return (Component*)GameManager::getInstance();
+	};
+};
+
 void setupFactories()
 {
 	JsonFactoryParser* j = JsonFactoryParser::getInstance();
@@ -252,6 +262,7 @@ void setupFactories()
 	j->addFactory("ChangeGammaComponent", new ChangeGammaComponentFactory());
 	j->addFactory("ChangeGraphicSceneComponent", new ChangeGraphicSceneComponentFactory());
 	j->addFactory("PlayerInput", new PlayerInputFactory());
+	j->addFactory("GameManager", new GameManagerFactory());
 }
 
 #ifdef  _DEBUG
