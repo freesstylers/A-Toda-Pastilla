@@ -2,14 +2,14 @@
 #include"Components/EntitySpawner.h"
 
 struct ShotInfo {
-	Vector3 shotPos;
-	Vector3 shotDir;
-	int nBullets;
-	float cadence;
-	float bulletSpeed;
-	float dispersionAngle;
-	float inacDispersion;
-	float inaccuracy;
+	Vector3 shotPos=Vector3(0,0,0);
+	Vector3 shotDir=Vector3(0, 0, -1);
+	int nBullets=0;
+	float cadence=0;
+	float bulletSpeed=0;
+	float dispersionAngle=0;
+	float inacDispersion=0;
+	float inaccuracy=0;
 };
 class ProjectileSpawner :public EntitySpawner
 {
@@ -28,5 +28,9 @@ protected:
 	std::vector<ShotInfo>shotModes;
 	int currMode;
 	int nModes;
+
+private:
+	void rotateVector(Vector3& vec, float angle);
+	void calculateInaccuracy(Vector3& shot, float inaccuracy, float inacDispersion);
 };
 

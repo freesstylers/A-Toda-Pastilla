@@ -122,7 +122,9 @@
 				"shotDir": [0, 0, -1],
 				"nBullets": [1, 3, 5],
 				"bulletSpeed": [400, 600, 800],
-				"dispersionAngle": [30, 60, 90]
+				"dispersionAngle": [30, 60, 90],
+				"inaccuracy":[15, 10, 5],
+				"inacDispersion": [10, 10, 5]
 			},
 			{
 				"type" : "PlayerInput"
