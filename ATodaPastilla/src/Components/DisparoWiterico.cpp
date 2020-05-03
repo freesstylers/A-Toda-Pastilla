@@ -11,50 +11,111 @@ DisparoWiterico::DisparoWiterico(json& args):ProjectileSpawner(args)
 void DisparoWiterico::init(json& j)
 {
 	ProjectileSpawner::init(j);
-	if (!j["cadence"].is_null()) {
-		float inter = j["cadence"];
-		cadence = j["cadence"];
+	nModes = 1;
+	if (!j["nModes"].is_null()) {
+		nModes = j["nModes"];
 	}
-	if (!j["shotPos"].is_null()) {
-		float inter = j["shotPos"][0];
-		shotPos.X= inter;
-		inter = j["shotPos"][1];
-		shotPos.Y = inter;
-		inter = j["shotPos"][2];
-		shotPos.Z = inter;
+
+	shotModes = std::vector<ShotInfo>(nModes);
+
+	if (!j["cadence"].is_null()) {
+		if (!j["cadence"].is_array()) {
+			for (int i = 0; i < shotModes.size(); i++) {
+				shotModes[i].cadence = j["cadence"];
+			}
+		}
+		else {
+			for (int i = 0; i < shotModes.size(); i++) {
+				shotModes[i].cadence = j["cadence"][i];
+			}
+		}
+	}
+	if (!j["shotPos"].is_null() && j["shotPos"].is_array()) {
+		if(!j["shotPos"][0].is_array()){
+			for (int i = 0; i < shotModes.size(); i++) {
+				shotModes[i].shotPos.X = j["shotPos"][0];
+				shotModes[i].shotPos.Y = j["shotPos"][1];
+				shotModes[i].shotPos.Z = j["shotPos"][2];
+			}
+		}
+		else {
+			for (int i = 0; i < shotModes.size(); i++) {
+				shotModes[i].shotPos.X = j["shotPos"][i][0];
+				shotModes[i].shotPos.Y = j["shotPos"][i][1];
+				shotModes[i].shotPos.Z = j["shotPos"][i][2];
+			}
+		}
 	}
 	if (!j["shotDir"].is_null()) {
-		float inter = j["shotDir"][0];
-		shotDir.X = inter;
-		inter = j["shotDir"][1];
-		shotDir.Y = inter;
-		inter = j["shotDir"][2];
-		shotDir.Z = inter;
+		if (!j["shotDir"][0].is_array()) {
+			for (int i = 0; i < shotModes.size(); i++) {
+				shotModes[i].shotDir.X = j["shotDir"][0];
+				shotModes[i].shotDir.Y = j["shotDir"][1];
+				shotModes[i].shotDir.Z = j["shotDir"][2];
+			}
+		}
+		else {
+			for (int i = 0; i < shotModes.size(); i++) {
+				shotModes[i].shotDir.X = j["shotDir"][i][0];
+				shotModes[i].shotDir.Y = j["shotDir"][i][1];
+				shotModes[i].shotDir.Z = j["shotDir"][i][2];
+			}
+		}
 	}
-	if (!j["nBullets"].is_null()) {
-		int inter = j["nBullets"];
-		nBullets = j["nBullets"];
+	if (!j["nBullets"].is_null() && j["nBullets"].is_array()) {
+		if (!j["nBullets"].is_array()) {
+			for (int i = 0; i < shotModes.size(); i++) {
+				shotModes[i].nBullets = j["nBullets"];
+			}
+		}
+		else {
+			for (int i = 0; i < shotModes.size(); i++) {
+				shotModes[i].nBullets = j["nBullets"][i];
+			}
+		}
 	}
 	if (!j["bulletSpeed"].is_null()) {
-		float inter = j["bulletSpeed"];
-		bulletSpeed = j["bulletSpeed"];
+		if (!j["bulletSpeed"].is_array()) {
+			for (int i = 0; i < shotModes.size(); i++) {
+				shotModes[i].bulletSpeed = j["bulletSpeed"];
+			}
+		}
+		else {
+			for (int i = 0; i < shotModes.size(); i++) {
+				shotModes[i].bulletSpeed = j["bulletSpeed"][i];
+			}
+		}
 	}
 	if (!j["dispersionAngle"].is_null()) {
-		float inter = j["dispersionAngle"];
-		dispersionAngle = j["dispersionAngle"];
+		if (!j["dispersionAngle"].is_array()) {
+			for (int i = 0; i < shotModes.size(); i++) {
+				shotModes[i].dispersionAngle = j["dispersionAngle"];
+			}
+		}
+		else {
+			for (int i = 0; i < shotModes.size(); i++) {
+				shotModes[i].dispersionAngle = j["dispersionAngle"][i];
+			}
+		}
 	}
 }
 
 void DisparoWiterico::start()
 {
-	timeSinceLastShot = cadence;
+	currMode = 0;
+	timeSinceLastShot = shotModes[currMode].cadence;
+
 }
 
 void DisparoWiterico::update()
 {
-	if (timeSinceLastShot >= cadence && MotorCasaPaco::getInstance()->getInputManager()->GameControllerIsButtonDown(CONTROLLER_BUTTON_A)) {
+	if (MotorCasaPaco::getInstance()->getInputManager()->GameControllerIsButtonDown(CONTROLLER_BUTTON_B)) {
+		currMode = (currMode + 1) % nModes;
+	}
+	if (timeSinceLastShot >= shotModes[currMode].cadence && MotorCasaPaco::getInstance()->getInputManager()->GameControllerIsButtonDown(CONTROLLER_BUTTON_A)) {
 		timeSinceLastShot = 0;
-		spawnProjectiles(getEntity()->getComponent<Transform>("Transform")->getPosition()+ shotPos, shotDir, bulletSpeed, nBullets, dispersionAngle);
+		spawnProjectiles(getEntity()->getComponent<Transform>("Transform")->getPosition() + shotModes[currMode].shotPos,
+			shotModes[currMode].shotDir, shotModes[currMode].bulletSpeed, shotModes[currMode].nBullets, shotModes[currMode].dispersionAngle);
 	}
 	timeSinceLastShot += MotorCasaPaco::getInstance()->DeltaTime();
 }

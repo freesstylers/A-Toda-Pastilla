@@ -1,5 +1,17 @@
 #pragma once
 #include "ProjectileSpawner.h"
+
+struct ShotInfo {
+	Vector3 shotPos;
+	Vector3 shotDir;
+	int nBullets;
+	float cadence;
+	float bulletSpeed;
+	float dispersionAngle;
+	float inacDispersion;
+	float inaccuracy;
+};
+
 class DisparoWiterico : public ProjectileSpawner
 {
 public:
@@ -12,14 +24,9 @@ public:
 
 private:
 	float timeSinceLastShot;
-
-	Vector3 shotPos;
-	Vector3 shotDir;
-	int nBullets;
-	float cadence;
-	float bulletSpeed;
-	float dispersionAngle;
-	float inacDispersion;
-	float inaccuracy;
+	std::vector<ShotInfo>shotModes;
+	int currMode;
+	int nModes;
+	
 };
 
