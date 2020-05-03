@@ -110,7 +110,13 @@ void DisparoWiterico::start()
 void DisparoWiterico::update()
 {
 	if (MotorCasaPaco::getInstance()->getInputManager()->GameControllerIsButtonDown(CONTROLLER_BUTTON_B)) {
-		currMode = (currMode + 1) % nModes;
+		setShotMode(2);
+	}
+	if (MotorCasaPaco::getInstance()->getInputManager()->GameControllerIsButtonDown(CONTROLLER_BUTTON_Y)) {
+		setShotMode(1);
+	}
+	if (MotorCasaPaco::getInstance()->getInputManager()->GameControllerIsButtonDown(CONTROLLER_BUTTON_X)) {
+		setShotMode(0);
 	}
 	if (timeSinceLastShot >= shotModes[currMode].cadence && MotorCasaPaco::getInstance()->getInputManager()->GameControllerIsButtonDown(CONTROLLER_BUTTON_A)) {
 		timeSinceLastShot = 0;

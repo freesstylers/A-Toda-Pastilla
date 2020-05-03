@@ -39,3 +39,20 @@ void ProjectileSpawner::spawnProjectiles(Vector3 pos, Vector3 dir, float speed, 
 		Dir.Z = Dir.Z * sin(-ang * M_PI / 180.0) + Dir.Z * cos(-ang * M_PI / 180.0);
 	}
 }
+
+std::vector<ShotInfo> ProjectileSpawner::getShotModes()
+{
+	return shotModes;
+}
+
+ShotInfo ProjectileSpawner::getCurrentShotMode()
+{
+	return shotModes[currMode];
+}
+
+void ProjectileSpawner::setShotMode(int mode)
+{
+	if (mode >= 0 && mode < nModes) {
+		currMode = mode;
+	}
+}
