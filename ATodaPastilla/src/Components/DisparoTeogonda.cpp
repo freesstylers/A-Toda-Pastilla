@@ -27,6 +27,11 @@ void DisparoTeogonda::init(json& j)
 		}
 	}
 
+	for (int i = 0; i < nModes; i++) {
+		teoModes[i].burstCadence = std::vector<float>(teoModes[i].chargeLevels);
+		teoModes[i].burstShots = std::vector<int>(teoModes[i].chargeLevels);
+	}
+
 	if (!j["chargeTime"].is_null()) {
 		if (!j["chargeTime"].is_array()) {
 			for (int i = 0; i < teoModes.size(); i++) {
@@ -95,15 +100,23 @@ void DisparoTeogonda::start()
 	currMode = 0;
 	burstShotsFired = 0;
 	timeCharged = 0;
-	currChargeLevel = 0;
+	currChargeLevel = -1;
 }
 
 void DisparoTeogonda::update()
 {
+	std::cout << "ShotsFired: " << burstShotsFired << "chargeLevel: " << currChargeLevel;
+	if(currChargeLevel>=0)
+		std::cout << "burstShots: "<<teoModes[currMode].burstShots[currChargeLevel];
+
+	std::cout << "\n";
 	if (MotorCasaPaco::getInstance()->getInputManager()->GameControllerIsButtonDown(CONTROLLER_BUTTON_A)) {
 		chargeShot();
 	}
-	timeSinceLastShot += MotorCasaPaco::getInstance()->DeltaTime();
+	else {
+		fireBurst();
+		timeCharged = 0;
+	}
 }
 
 bool DisparoTeogonda::ReceiveEvent(Event& event)
@@ -114,18 +127,37 @@ bool DisparoTeogonda::ReceiveEvent(Event& event)
 	return false;
 }
 
-void DisparoTeogonda::burstStart()
-{
-	spawnProjectiles(getEntity()->getComponent<Transform>("Transform")->getPosition() + shotModes[currMode].shotPos,
-		shotModes[currMode].shotDir, shotModes[currMode].bulletSpeed, shotModes[currMode].nBullets,
-		shotModes[currMode].dispersionAngle, shotModes[currMode].inaccuracy, shotModes[currMode].inacDispersion);
-}
 
 void DisparoTeogonda::chargeShot()
 {
-	timeCharged+= MotorCasaPaco::getInstance()->DeltaTime();
+	timeCharged += MotorCasaPaco::getInstance()->DeltaTime();
+
 	if (timeCharged >= teoModes[currMode].chargeTime) {
-		if (currChargeLevel < teoModes[currMode].chargeLevels)
+
+		if (currChargeLevel < teoModes[currMode].chargeLevels - 1)
 			currChargeLevel++;
+		timeCharged = 0;
 	}
+
+	if (currChargeLevel >= 0)
+		timeSinceLastShot = teoModes[currMode].burstCadence[currChargeLevel];
+	
+}
+
+void DisparoTeogonda::fireBurst()
+{
+	if (currChargeLevel >= 0 && timeSinceLastShot >= teoModes[currMode].burstCadence[currChargeLevel] 
+		&& burstShotsFired < teoModes[currMode].burstShots[currChargeLevel]) {
+
+		spawnProjectiles(getEntity()->getComponent<Transform>("Transform")->getPosition() + shotModes[currMode].shotPos,
+			shotModes[currMode].shotDir, shotModes[currMode].bulletSpeed, shotModes[currMode].nBullets,
+			shotModes[currMode].dispersionAngle, shotModes[currMode].inaccuracy, shotModes[currMode].inacDispersion);
+		burstShotsFired++;
+		timeSinceLastShot = 0;
+	}
+	if (currChargeLevel>= 0 &&  burstShotsFired >= teoModes[currMode].burstShots[currChargeLevel]) {
+		currChargeLevel = -1;
+		burstShotsFired = 0;
+	}
+	timeSinceLastShot += MotorCasaPaco::getInstance()->DeltaTime();
 }

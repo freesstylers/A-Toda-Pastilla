@@ -4,8 +4,8 @@
 struct TeogondaShotInfo {
 	float chargeTime;
 	int chargeLevels;
-	std::vector<float> burstCadence = std::vector<float>(chargeLevels);
-	std::vector<int> burstShots = std::vector<int>(chargeLevels);
+	std::vector<float> burstCadence;
+	std::vector<int> burstShots;
 };
 class DisparoTeogonda : public ProjectileSpawner
 {
@@ -22,8 +22,8 @@ private:
 	float timeCharged;
 	int burstShotsFired;
 	int currChargeLevel;
-	void burstStart();
 	void chargeShot();
+	void fireBurst();
 
 };
 
