@@ -74,6 +74,9 @@
     <ClCompile Include="..\src\Components\GameManager.cpp">
       <Filter>Logic\General</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\Components\DisparoTeogonda.cpp">
+      <Filter>Logic\Player</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Components\ExitButtonComponent.h">
@@ -150,6 +153,9 @@
     </ClInclude>
     <ClInclude Include="..\include\Components\EventsATodaPastilla.h">
       <Filter>Logic\General</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Components\DisparoTeogonda.h">
+      <Filter>Logic\Player</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
