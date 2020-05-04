@@ -64,12 +64,5 @@
 			"name": "GM",
 			"prefab" : "gameManager"
 		}
-	],
-	"UI" :
-	[
-		{
-		"type" : 1,
-		"route" : "Button"
-		}
 	]
 }

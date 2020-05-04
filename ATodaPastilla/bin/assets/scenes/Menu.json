@@ -51,7 +51,8 @@
 	[
 		{
 			"type" : "layout", 
-			"name" : "MainMenu.layout"
+			"name" : "MainMenu.layout",
+			"visible" : true
 		},
 		{
 			"type" : "entity",
