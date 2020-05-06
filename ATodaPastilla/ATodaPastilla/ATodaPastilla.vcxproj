@@ -196,6 +196,7 @@
     <ClCompile Include="..\src\Components\RevertAdvancedGraphicChangesComponent.cpp" />
     <ClCompile Include="..\src\Components\RevertGraphicChangesComponent.cpp" />
     <ClCompile Include="..\src\Components\ShadowsChangeComponent.cpp" />
+    <ClCompile Include="..\src\Components\SpawnerMejora.cpp" />
     <ClCompile Include="..\src\Components\Vida.cpp" />
     <ClCompile Include="ATodaPastilla.cpp" />
   </ItemGroup>
@@ -230,6 +231,7 @@
     <ClInclude Include="..\include\Components\RevertAdvancedGraphicChangesComponent.h" />
     <ClInclude Include="..\include\Components\RevertGraphicChangesComponent.h" />
     <ClInclude Include="..\include\Components\ShadowsChangeComponent.h" />
+    <ClInclude Include="..\include\Components\SpawnerMejora.h" />
     <ClInclude Include="..\include\Components\Vida.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

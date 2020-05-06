@@ -33,6 +33,7 @@
 #include "Components/ShadowsChangeComponent.h"
 #include "Components/PlayerInput.h"
 #include "Components/GameManager.h"
+#include "Components//SpawnerMejora.h"
 
 MotorCasaPaco* motorCasaPaco;
 
@@ -244,6 +245,16 @@ public:
 	};
 };
 
+class SpawnerMejoraFactory : public BaseFactory
+{
+public:
+	
+	Component* createComponent(json& args) override {
+		return new SpawnerMejora(args);
+	}
+	
+};
+
 void setupFactories()
 {
 	JsonFactoryParser* j = JsonFactoryParser::getInstance();
@@ -272,6 +283,7 @@ void setupFactories()
 	j->addFactory("ChangeGraphicSceneComponent", new ChangeGraphicSceneComponentFactory());
 	j->addFactory("PlayerInput", new PlayerInputFactory());
 	j->addFactory("GameManager", new GameManagerFactory());
+	j->addFactory("SpawnerMejora", new SpawnerMejoraFactory());
 }
 
 #ifdef  _DEBUG
