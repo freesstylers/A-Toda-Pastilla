@@ -217,11 +217,11 @@ void DisparoTeogonda::start()
 
 void DisparoTeogonda::update()
 {
-	std::cout << "ShotsFired: " << burstShotsFired << "chargeLevel: " << currChargeLevel;
+	/*std::cout << "ShotsFired: " << burstShotsFired << "chargeLevel: " << currChargeLevel;
 	if(currChargeLevel>=0)
 		std::cout << "burstShots: "<<shotModes[currMode].burstShots[currChargeLevel];
 
-	std::cout << "\n";
+	std::cout << "\n";*/
 	if (MotorCasaPaco::getInstance()->getInputManager()->GameControllerIsButtonDown(CONTROLLER_BUTTON_A)) {
 		chargeShot();
 	}
