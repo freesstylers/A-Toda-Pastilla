@@ -18,7 +18,8 @@ Vida::~Vida()
 void Vida::update()
 {
 	if (timeD_) {
-		if (MotorCasaPaco::getInstance()->getTimeDifference(time_) /1000.0f >= timeToLive_)
+		time_ += MotorCasaPaco::getInstance()->DeltaTime();
+		if (time_ >= timeToLive_)
 			sumaVida(-vida_);
 	}
 }
@@ -28,7 +29,6 @@ void Vida::init(json& j)
 	if (!j["vida"].is_null()) vida_ = j["vida"];
 	if (!j["time"].is_null()) {
 		timeToLive_ = j["time"];
-		time_ = MotorCasaPaco::getInstance()->getTime();
 		timeD_ = true;
 	}
 	

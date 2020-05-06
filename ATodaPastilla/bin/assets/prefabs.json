@@ -103,7 +103,7 @@
 				"xLEFT" : -200,
 				"zUP" : -200,
 				"zDOWN" : 200,
-				"speed" : 0.7
+				"speed" : 1000
 			},
 			{
 				"type" : "Vida",
