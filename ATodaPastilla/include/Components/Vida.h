@@ -11,6 +11,7 @@ public:
 	~Vida();
 	void update() override;
 	void init(json& j) override;
+	void OnCollision(Entity* other) override;
 
 	void sumaVida(int valor);
 private:

@@ -17,6 +17,10 @@
 			"prefab" : "nave"
 		},
 		{
+			"name" : "Enemy",
+			"prefab" : "Riciberga"
+		},
+		{
 			"name" : "EntitySpawner",
 			"position": [30, 40, 20],
 			"rotation" : [0, 0, 0],

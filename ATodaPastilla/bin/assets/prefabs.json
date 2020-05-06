@@ -27,6 +27,7 @@
 		"position" : [0, 0, 0],
 		"rotation" : [0, 0, 0],
 		"scale" : [7, 0.1, 3],
+		"tag" : "suelo",
 		"components" : [
 			{
 				"type" : "Mesh",
@@ -53,7 +54,7 @@
 		]
 	}, 
 
-	"pastillazo" :
+	"ibuprofeno" :
 	{
 		"position" : [0, 0, 0],
 		"rotation" : [0, 0, 0],
@@ -66,8 +67,9 @@
 			},
 			{
 				"type" : "RigidBody",
-				"shape" : "cube",
-				"isKinematic" : true
+				"shape" : "mesh",
+				"isKinematic" : true,
+				"disableDeactivation" : true
 			},
 			{
 				"type" : "Vida",
@@ -85,6 +87,7 @@
 		"position" : [0, 10, 0],
 		"rotation" : [0, 180, 0],
 		"scale" : [10, 10, 10],
+		"tag" : "Player",
 		"components" : [
 			{
 				"type" : "Mesh",
@@ -95,7 +98,8 @@
 				"type" : "RigidBody",
 				"shape" : "mesh",
 				"mass" : 100,
-				"isKinematic": true
+				"gravity" : [0,0,0],
+				"disableDeactivation" : true
 			},
 			{
 				"type" : "MovimientoMando",
@@ -106,25 +110,25 @@
 				"speed" : 1000
 			},
 			{
-				"type" : "Vida",
-				"vida" : 10
-			},
-			{
 				"type" : "Danio",
 				"danio" : 1
 			},
 			{
-				"type" : "DisparoWiterico",
-				"prefab" : "pastillazo",
+				"type" : "DisparoTeogonda",
+				"prefab" : "ibuprofeno",
 				"nModes": 3,
 				"cadence": [100, 70, 50],
 				"shotPos": [0, 0, -50],
 				"shotDir": [0, 0, -1],
 				"nBullets": [1, 3, 5],
-				"bulletSpeed": [400, 600, 800],
+				"bulletSpeed": [600, 600, 800],
 				"dispersionAngle": [30, 60, 90],
 				"inaccuracy":[15, 10, 5],
-				"inacDispersion": [10, 10, 5]
+				"inacDispersion": [10, 10, 5],
+				"chargeLevels": 3,
+				"chargeTime": 100,
+				"burstCadence": 35,
+				"burstShots": [[3, 6, 9], [3, 6, 9], [3, 6, 9]]
 			},
 			{
 				"type" : "PlayerInput"
@@ -152,6 +156,32 @@
 			{
 				"type" : "Vida",
 				"vida" : 1000
+			}
+		]
+
+	},
+
+	"Riciberga" : 
+	{
+		"position" : [0, 10, -100],
+		"rotation" : [0, 0, 0],
+		"scale" : [25, 25, 25],
+		"components" : [
+			{
+				"type" : "Mesh",
+				"mesh" : "Riciberga.mesh",
+				"material" : "Riciberga"
+			},
+			{
+				"type" : "RigidBody",
+				"shape" : "mesh",
+				"mass" : 100,
+				"gravity" : [0,0,0],
+				"disableDeactivation" : true
+			},
+			{
+				"type" : "Vida",
+				"vida" : 100
 			}
 		]
 

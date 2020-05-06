@@ -2,10 +2,18 @@
 #include "ProjectileSpawner.h"
 
 struct TeogondaShotInfo {
+	Vector3 shotPos = Vector3(0, 0, 0);
+	Vector3 shotDir = Vector3(0, 0, -1);
 	float chargeTime;
 	int chargeLevels;
-	std::vector<float> burstCadence = std::vector<float>(chargeLevels);
-	std::vector<int> burstShots = std::vector<int>(chargeLevels);
+	
+	std::vector<int> nBullets;
+	std::vector<float> bulletSpeed;
+	std::vector<float> dispersionAngle;
+	std::vector<float> inacDispersion;
+	std::vector<float> inaccuracy;
+	std::vector<float> burstCadence;
+	std::vector<int> burstShots;
 };
 class DisparoTeogonda : public ProjectileSpawner
 {
@@ -18,12 +26,12 @@ public:
 	bool ReceiveEvent(Event& event) override;
 
 private:
-	std::vector<TeogondaShotInfo> teoModes;
+	std::vector<TeogondaShotInfo> shotModes;
 	float timeCharged;
 	int burstShotsFired;
 	int currChargeLevel;
-	void burstStart();
 	void chargeShot();
+	void fireBurst();
 
 };
 
