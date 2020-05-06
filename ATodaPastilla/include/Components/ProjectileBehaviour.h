@@ -8,6 +8,8 @@ public:
 	void setDir(Vector3 dir);
 	void setSpeed(float speed);
 
+	void OnCollision(Entity* other) override;
+
 	bool ReceiveEvent(Event& event) override;
 
 private:

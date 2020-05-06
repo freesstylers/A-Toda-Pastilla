@@ -38,6 +38,10 @@ Entity* EntitySpawner::spawnEntity(Vector3 pos, std::string prefab)
 		instance=MotorCasaPaco::getInstance()->getSceneManager()->getCurrentScene()->addEntity(prfb);
 		aux["name"] = instance->getName();
 		instance->init(aux);
+
+		if(!aux["tag"].is_null())
+			instance->setTag(aux["tag"]);
+
 		if (!aux["components"].is_null() && aux["components"].is_array()) {
 			std::vector<json> e = aux["components"];
 				for (json c : e) {

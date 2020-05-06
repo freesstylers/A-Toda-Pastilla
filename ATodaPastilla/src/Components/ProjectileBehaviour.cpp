@@ -1,4 +1,5 @@
 #include "Components\ProjectileBehaviour.h"
+#include"Components/Vida.h"
 #include "Entity/Transform.h"
 #include "Entity/Entity.h"
 #include "MotorCasaPaco.h"
@@ -43,6 +44,14 @@ void ProjectileBehaviour::setDir(Vector3 dir)
 void ProjectileBehaviour::setSpeed(float speed)
 {
 	this->speed = speed;
+}
+
+void ProjectileBehaviour::OnCollision(Entity* other)
+{
+	if (other->getTag() == "Enemy") {
+		other->getComponent<Vida>("Vida")->sumaVida(-10);
+		getEntity()->setEnabled(false);
+	}
 }
 
 bool ProjectileBehaviour::ReceiveEvent(Event& event)

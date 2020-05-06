@@ -36,9 +36,6 @@ void Vida::init(json& j)
 
 void Vida::OnCollision(Entity* other)
 {
-	std::string e=  getEntity()->getName();
-	std::string o = other->getName();
-	std::cout << "colision: " << other->getTag()<< "\n";
 }
 
 void Vida::sumaVida(int valor)
