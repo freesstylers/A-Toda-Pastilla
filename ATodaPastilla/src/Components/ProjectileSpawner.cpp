@@ -35,12 +35,13 @@ void ProjectileSpawner::spawnProjectiles(Vector3 pos, Vector3 dir, float speed, 
 
 		calculateInaccuracy(inaccSh, inaccuracy, inacDispersion);
 
-		double rot = dir.Angle(dir, inaccSh) * 180.0 / M_PI;
-		if (inaccSh.X > 0) rot *= -1;
 
 		double auxAng;
 		Vector3 prevRot;
-		prj->getComponent<Transform>("Transform")->getRotation().ToAngleAxis(prj->getComponent<Transform>("Transform")->getRotation(), auxAng, prevRot);
+		Quaternion::ToAngleAxis(prj->getComponent<Transform>("Transform")->getRotation(), auxAng, prevRot);
+
+		double rot = dir.Angle(dir, inaccSh) * 180.0 / M_PI;
+		if (inaccSh.X > 0) rot *= -1;
 
 		prj->getComponent<Transform>("Transform")->setRotation(prevRot * auxAng + Vector3(0, rot, 0));
 		prj->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->setDir(inaccSh);

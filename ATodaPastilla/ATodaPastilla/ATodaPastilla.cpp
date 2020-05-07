@@ -10,6 +10,7 @@
 #include "Components/EntitySpawner.h"
 #include "Components/DisparoWiterico.h"
 #include "Components/DisparoTeodegonda.h"
+#include "Components/RicibergaBehaviour.h"
 
 #include "Scene/JsonFactoryParser.h"
 #include "Components/ProjectileBehaviour.h"
@@ -63,6 +64,13 @@ class DisparoTeodegondaFactory : public BaseFactory {
 public:
 	Component* createComponent(json& args) override {
 		return new DisparoTeodegonda(args);
+	}
+};
+
+class RicibergaBehaviourFactory : public BaseFactory {
+public:
+	Component* createComponent(json& args) override {
+		return new RicibergaBehaviour(args);
 	}
 };
 
@@ -254,6 +262,7 @@ void setupFactories()
 	j->addFactory("Vida", new VidaFactory());
 	j->addFactory("DisparoWiterico", new DisparoWitericoFactory());
 	j->addFactory("DisparoTeodegonda", new DisparoTeodegondaFactory());
+	j->addFactory("RicibergaBehaviour", new RicibergaBehaviourFactory());
 	j->addFactory("ChangeSceneButtonComponent", new ChangeSceneButtonComponentFactory());
 	j->addFactory("ExitButtonComponent", new ExitButtonComponentFactory());
 	j->addFactory("GiroContinuo", new GiroContinuoFactory());

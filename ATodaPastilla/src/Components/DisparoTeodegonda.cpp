@@ -2,6 +2,7 @@
 #include "MotorCasaPaco.h"
 #include "Input/InputManager.h"
 #include "Entity/Transform.h"
+#include "Audio/AudioManager.h"
 
 
 DisparoTeodegonda::DisparoTeodegonda(json& args):ProjectileSpawner(args)

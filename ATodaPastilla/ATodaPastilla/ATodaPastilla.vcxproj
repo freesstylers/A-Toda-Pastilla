@@ -195,6 +195,7 @@
     <ClCompile Include="..\src\Components\ProjectileSpawner.cpp" />
     <ClCompile Include="..\src\Components\RevertAdvancedGraphicChangesComponent.cpp" />
     <ClCompile Include="..\src\Components\RevertGraphicChangesComponent.cpp" />
+    <ClCompile Include="..\src\Components\RicibergaBehaviour.cpp" />
     <ClCompile Include="..\src\Components\ShadowsChangeComponent.cpp" />
     <ClCompile Include="..\src\Components\Vida.cpp" />
     <ClCompile Include="ATodaPastilla.cpp" />
@@ -229,6 +230,7 @@
     <ClInclude Include="..\include\Components\ProjectileSpawner.h" />
     <ClInclude Include="..\include\Components\RevertAdvancedGraphicChangesComponent.h" />
     <ClInclude Include="..\include\Components\RevertGraphicChangesComponent.h" />
+    <ClInclude Include="..\include\Components\RicibergaBehaviour.h" />
     <ClInclude Include="..\include\Components\ShadowsChangeComponent.h" />
     <ClInclude Include="..\include\Components\Vida.h" />
   </ItemGroup>

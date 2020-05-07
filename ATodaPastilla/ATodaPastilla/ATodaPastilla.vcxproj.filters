@@ -77,6 +77,9 @@
     <ClCompile Include="..\src\Components\DisparoTeodegonda.cpp">
       <Filter>Logic\Player</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\Components\RicibergaBehaviour.cpp">
+      <Filter>Logic\Enemies</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Components\ExitButtonComponent.h">
@@ -157,6 +160,9 @@
     <ClInclude Include="..\include\Components\DisparoTeodegonda.h">
       <Filter>Logic\Player</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\Components\RicibergaBehaviour.h">
+      <Filter>Logic\Enemies</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="UI">
@@ -185,6 +191,9 @@
     </Filter>
     <Filter Include="Logic\Projectiles">
       <UniqueIdentifier>{6c2977dd-541c-4ebb-b4e4-d39594ff31fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic\Enemies">
+      <UniqueIdentifier>{9f3b4ae0-c7a6-465f-b495-2f98d0161bd2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

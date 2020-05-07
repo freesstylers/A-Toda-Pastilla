@@ -56,15 +56,15 @@
 
 	"ibuprofeno" :
 	{
-		"position" : [0, 0, 0],
+		"position" : [0, 50, 0],
 		"rotation" : [0, 0, 0],
 		"scale" : [10, 10, 10],
 		"tag" : "Projectile",
 		"components" : [
 			{
 				"type" : "Mesh",
-				"mesh" : "pastilla_capsula.mesh",
-				"material" : "pastilla_capsula"
+				"mesh" : "pastilla_ibuprofeno.mesh",
+				"material" : "pastilla_ibuprofeno"
 			},
 			{
 				"type" : "RigidBody",
@@ -87,7 +87,7 @@
 
 	"capsula" :
 	{
-		"position" : [0, 0, 0],
+		"position" : [0, 50, 0],
 		"rotation" : [0, 90, 0],
 		"scale" : [10, 10, 10],
 		"tag" : "Projectile",
@@ -117,7 +117,7 @@
 
 	"Witerico" : 
 	{
-		"position" : [0, 10, 0],
+		"position" : [0, 50, 125],
 		"rotation" : [0, 180, 0],
 		"scale" : [10, 10, 10],
 		"tag" : "Player",
@@ -132,6 +132,7 @@
 				"shape" : "mesh",
 				"mass" : 100,
 				"gravity" : [0,0,0],
+				"FixRotation" : true,
 				"disableDeactivation" : true
 			},
 			{
@@ -156,9 +157,7 @@
 				"nBullets": [1, 3, 5],
 				"damagePerBullet" : 10,
 				"bulletSpeed": [600, 600, 800],
-				"dispersionAngle": [30, 60, 90],
-				"inaccuracy":[15, 10, 5],
-				"inacDispersion": [10, 10, 5]
+				"dispersionAngle": [30, 60, 90]
 			},
 			{
 				"type" : "PlayerInput"
@@ -170,7 +169,7 @@
 
 	"Teodegonda" : 
 	{
-		"position" : [0, 10, 0],
+		"position" : [0, 50, 125],
 		"rotation" : [0, 180, 0],
 		"scale" : [15, 15, 15],
 		"tag" : "Player",
@@ -185,6 +184,7 @@
 				"shape" : "mesh",
 				"mass" : 100,
 				"gravity" : [0,0,0],
+				"FixRotation" : true,
 				"disableDeactivation" : true
 			},
 			{
@@ -201,7 +201,7 @@
 			},
 			{
 				"type" : "DisparoTeodegonda",
-				"prefab" : "ibuprofeno",
+				"prefab" : "capsula",
 				"nModes": 1,
 				"shotPos": [0, 0, -50],
 				"shotDir": [0, 0, -1],
@@ -218,6 +218,10 @@
 			},
 			{
 				"type" : "PlayerInput"
+			},
+			{
+				"type" : "Vida",
+				"vida" : 100
 			}
 
 		]
@@ -225,7 +229,7 @@
 	},
 	"Riciberga" : 
 	{
-		"position" : [0, 10, -100],
+		"position" : [0, 50, -125],
 		"rotation" : [0, 0, 0],
 		"scale" : [25, 25, 25],
 		"tag" : "Enemy",
@@ -240,12 +244,18 @@
 				"shape" : "mesh",
 				"mass" : 100,
 				"gravity" : [0,0,0],
-				"FixRotation" : true,
 				"disableDeactivation" : true
 			},
 			{
 				"type" : "Vida",
 				"vida" : 100
+			},
+			{
+				"type" : "RicibergaBehaviour",
+				"damage" : 100,
+				"speed" : 20,
+				"bottom" : 150,
+				"seeksPlayer" : true
 			}
 		]
 
