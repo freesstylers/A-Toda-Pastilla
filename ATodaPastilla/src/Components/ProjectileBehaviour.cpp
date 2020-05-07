@@ -7,6 +7,8 @@
 ProjectileBehaviour::ProjectileBehaviour(json& args):Component(args)
 {
 	speed = 0;
+	source = "Player";
+	damage = 10;
 	dir = Vector3(0, 0, 0);
 	bordeSup = 500;
 	bordeInf = -500;
@@ -46,10 +48,20 @@ void ProjectileBehaviour::setSpeed(float speed)
 	this->speed = speed;
 }
 
+void ProjectileBehaviour::setSource(std::string sourc)
+{
+	source = sourc;
+}
+
+void ProjectileBehaviour::setDamage(float dmg)
+{
+	damage = dmg;
+}
+
 void ProjectileBehaviour::OnCollision(Entity* other)
 {
-	if (other->getTag() == "Enemy") {
-		other->getComponent<Vida>("Vida")->sumaVida(-10);
+	if(source=="Player" && other->getTag()=="Enemy"){
+		other->getComponent<Vida>("Vida")->sumaVida(-damage);
 		getEntity()->setEnabled(false);
 	}
 }

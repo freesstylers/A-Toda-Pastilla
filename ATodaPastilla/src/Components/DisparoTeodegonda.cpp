@@ -1,14 +1,14 @@
-#include "Components/DisparoTeogonda.h"
+#include "Components/DisparoTeodegonda.h"
 #include "MotorCasaPaco.h"
 #include "Input/InputManager.h"
 #include "Entity/Transform.h"
 
 
-DisparoTeogonda::DisparoTeogonda(json& args):ProjectileSpawner(args)
+DisparoTeodegonda::DisparoTeodegonda(json& args):ProjectileSpawner(args)
 {
 }
 
-void DisparoTeogonda::init(json& j)
+void DisparoTeodegonda::init(json& j)
 {
 	ProjectileSpawner::init(j);
 
@@ -17,7 +17,7 @@ void DisparoTeogonda::init(json& j)
 		nModes = j["nModes"];
 	}
 
-	shotModes = std::vector<TeogondaShotInfo>(nModes);
+	shotModes = std::vector<TeodegondaShotInfo>(nModes);
 
 	if (!j["shotPos"].is_null() && j["shotPos"].is_array()) {
 		if (!j["shotPos"][0].is_array()) {
@@ -35,7 +35,7 @@ void DisparoTeogonda::init(json& j)
 			}
 		}
 	}
-	if (!j["shotDir"].is_null()) {
+	if (!j["shotDir"].is_null() && j["shotDir"].is_array()) {
 		if (!j["shotDir"][0].is_array()) {
 			for (int i = 0; i < shotModes.size(); i++) {
 				shotModes[i].shotDir.X = j["shotDir"][0];
@@ -78,6 +78,7 @@ void DisparoTeogonda::init(json& j)
 
 	for (int i = 0; i < nModes; i++) {
 		shotModes[i].nBullets = std::vector<int>(shotModes[i].chargeLevels);
+		shotModes[i].damagePerBullet = std::vector<float>(shotModes[i].chargeLevels);
 		shotModes[i].bulletSpeed = std::vector<float>(shotModes[i].chargeLevels);
 		shotModes[i].dispersionAngle = std::vector<float>(shotModes[i].chargeLevels);
 		shotModes[i].inaccuracy = std::vector<float>(shotModes[i].chargeLevels);
@@ -93,11 +94,28 @@ void DisparoTeogonda::init(json& j)
 					j["nBullets"][i].is_array() && j["nBullets"][i].size() == shotModes[i].nBullets.size()) {
 					shotModes[i].nBullets[s] = j["nBullets"][i][s];
 				}
-				else if(j["nBullets"].is_array() && j["nBullets"].size() == shotModes.size()) {
+				else if(j["nBullets"].is_array() && j["nBullets"].size() == shotModes.size() && !j["nBullets"][i].is_array()) {
 					shotModes[i].nBullets[s] = j["nBullets"][i];
 				}
-				else {
+				else if (!j["nBullets"].is_array()) {
 					shotModes[i].nBullets[s] = j["nBullets"];
+				}
+			}
+		}
+	}
+
+	if (!j["damagePerBullet"].is_null()) {
+		for (int i = 0; i < shotModes.size(); i++) {
+			for (int s = 0; s < shotModes[i].damagePerBullet.size(); s++) {
+				if (j["damagePerBullet"].is_array() && j["damagePerBullet"].size() == shotModes.size() &&
+					j["damagePerBullet"][i].is_array() && j["damagePerBullet"][i].size() == shotModes[i].damagePerBullet.size()) {
+					shotModes[i].damagePerBullet[s] = j["damagePerBullet"][i][s];
+				}
+				else if (j["damagePerBullet"].is_array() && j["damagePerBullet"].size() == shotModes.size() && !j["damagePerBullet"][i].is_array()) {
+					shotModes[i].damagePerBullet[s] = j["damagePerBullet"][i];
+				}
+				else if (!j["damagePerBullet"].is_array()) {
+					shotModes[i].damagePerBullet[s] = j["damagePerBullet"];
 				}
 			}
 		}
@@ -110,10 +128,10 @@ void DisparoTeogonda::init(json& j)
 					j["bulletSpeed"][i].is_array() && j["bulletSpeed"][i].size() == shotModes[i].bulletSpeed.size()) {
 					shotModes[i].bulletSpeed[s] = j["bulletSpeed"][i][s];
 				}
-				else if (j["bulletSpeed"].is_array() && j["bulletSpeed"].size() == shotModes.size()) {
+				else if (j["bulletSpeed"].is_array() && j["bulletSpeed"].size() == shotModes.size() && !j["bulletSpeed"][i].is_array()) {
 					shotModes[i].bulletSpeed[s] = j["bulletSpeed"][i];
 				}
-				else {
+				else if(!j["bulletSpeed"].is_array()) {
 					shotModes[i].bulletSpeed[s] = j["bulletSpeed"];
 				}
 			}
@@ -127,10 +145,10 @@ void DisparoTeogonda::init(json& j)
 					j["dispersionAngle"][i].is_array() && j["dispersionAngle"][i].size() == shotModes[i].dispersionAngle.size()) {
 					shotModes[i].dispersionAngle[s] = j["dispersionAngle"][i][s];
 				}
-				else if (j["dispersionAngle"].is_array() && j["dispersionAngle"].size() == shotModes.size()) {
+				else if (j["dispersionAngle"].is_array() && j["dispersionAngle"].size() == shotModes.size() && !j["dispersionAngle"][i].is_array()) {
 					shotModes[i].dispersionAngle[s] = j["dispersionAngle"][i];
 				}
-				else {
+				else if (!j["dispersionAngle"].is_array()) {
 					shotModes[i].dispersionAngle[s] = j["dispersionAngle"];
 				}
 			}
@@ -144,10 +162,10 @@ void DisparoTeogonda::init(json& j)
 					j["inaccuracy"][i].is_array() && j["inaccuracy"][i].size() == shotModes[i].inaccuracy.size()) {
 					shotModes[i].inaccuracy[s] = j["inaccuracy"][i][s];
 				}
-				else if (j["inaccuracy"].is_array() && j["inaccuracy"].size() == shotModes.size()) {
+				else if (j["inaccuracy"].is_array() && j["inaccuracy"].size() == shotModes.size() && !j["inaccuracy"][i].is_array()) {
 					shotModes[i].inaccuracy[s] = j["inaccuracy"][i];
 				}
-				else {
+				else if (!j["inaccuracy"].is_array()) {
 					shotModes[i].inaccuracy[s] = j["inaccuracy"];
 				}
 			}
@@ -161,10 +179,10 @@ void DisparoTeogonda::init(json& j)
 					j["inacDispersion"][i].is_array() && j["inacDispersion"][i].size() == shotModes[i].inacDispersion.size()) {
 					shotModes[i].inacDispersion[s] = j["inacDispersion"][i][s];
 				}
-				else if (j["inacDispersion"].is_array() && j["inacDispersion"].size() == shotModes.size()) {
+				else if (j["inacDispersion"].is_array() && j["inacDispersion"].size() == shotModes.size() && !j["inacDispersion"][i].is_array()) {
 					shotModes[i].inacDispersion[s] = j["inacDispersion"][i];
 				}
-				else {
+				else if (!j["inacDispersion"].is_array()) {
 					shotModes[i].inacDispersion[s] = j["inacDispersion"];
 				}
 			}
@@ -178,10 +196,10 @@ void DisparoTeogonda::init(json& j)
 					j["burstCadence"][i].is_array() && j["burstCadence"][i].size() == shotModes[i].burstCadence.size()) {
 					shotModes[i].dispersionAngle[s] = j["burstCadence"][i][s];
 				}
-				else if (j["burstCadence"].is_array() && j["burstCadence"].size() == shotModes.size()) {
+				else if (j["burstCadence"].is_array() && j["burstCadence"].size() == shotModes.size() && !j["burstCadence"][i].is_array()) {
 					shotModes[i].burstCadence[s] = j["burstCadence"][i];
 				}
-				else {
+				else if (!j["burstCadence"].is_array()) {
 					shotModes[i].burstCadence[s] = j["burstCadence"];
 				}
 			}
@@ -195,10 +213,10 @@ void DisparoTeogonda::init(json& j)
 					j["burstShots"][i].is_array() && j["burstShots"][i].size() == shotModes[i].burstShots.size()) {
 					shotModes[i].burstShots[s] = j["burstShots"][i][s];
 				}
-				else if (j["burstShots"].is_array() && j["burstShots"].size() == shotModes.size()) {
+				else if (j["burstShots"].is_array() && j["burstShots"].size() == shotModes.size() && !j["burstShots"][i].is_array()) {
 					shotModes[i].burstShots[s] = j["burstShots"][i];
 				}
-				else {
+				else if (!j["burstShots"].is_array()) {
 					shotModes[i].burstShots[s] = j["burstShots"];
 				}
 			}
@@ -207,7 +225,7 @@ void DisparoTeogonda::init(json& j)
 	
 }
 
-void DisparoTeogonda::start()
+void DisparoTeodegonda::start()
 {
 	currMode = 0;
 	burstShotsFired = 0;
@@ -215,7 +233,7 @@ void DisparoTeogonda::start()
 	currChargeLevel = -1;
 }
 
-void DisparoTeogonda::update()
+void DisparoTeodegonda::update()
 {
 	/*std::cout << "ShotsFired: " << burstShotsFired << "chargeLevel: " << currChargeLevel;
 	if(currChargeLevel>=0)
@@ -231,7 +249,7 @@ void DisparoTeogonda::update()
 	}
 }
 
-bool DisparoTeogonda::ReceiveEvent(Event& event)
+bool DisparoTeodegonda::ReceiveEvent(Event& event)
 {
 	if (event.type == "PAUSE")
 		setEnabled(!isEnabled());
@@ -240,7 +258,7 @@ bool DisparoTeogonda::ReceiveEvent(Event& event)
 }
 
 
-void DisparoTeogonda::chargeShot()
+void DisparoTeodegonda::chargeShot()
 {
 	timeCharged += MotorCasaPaco::getInstance()->DeltaTime();
 
@@ -256,14 +274,15 @@ void DisparoTeogonda::chargeShot()
 	
 }
 
-void DisparoTeogonda::fireBurst()
+void DisparoTeodegonda::fireBurst()
 {
 	if (currChargeLevel >= 0 && timeSinceLastShot >= shotModes[currMode].burstCadence[currChargeLevel]
 		&& burstShotsFired < shotModes[currMode].burstShots[currChargeLevel]) {
 
 		spawnProjectiles(getEntity()->getComponent<Transform>("Transform")->getPosition() + shotModes[currMode].shotPos,
 			shotModes[currMode].shotDir, shotModes[currMode].bulletSpeed[currChargeLevel], shotModes[currMode].nBullets[currChargeLevel],
-			shotModes[currMode].dispersionAngle[currChargeLevel], shotModes[currMode].inaccuracy[currChargeLevel], shotModes[currMode].inacDispersion[currChargeLevel]);
+			shotModes[currMode].damagePerBullet[currChargeLevel], shotModes[currMode].dispersionAngle[currChargeLevel], 
+			shotModes[currMode].inaccuracy[currChargeLevel], shotModes[currMode].inacDispersion[currChargeLevel]);
 		burstShotsFired++;
 		timeSinceLastShot = 0;
 	}

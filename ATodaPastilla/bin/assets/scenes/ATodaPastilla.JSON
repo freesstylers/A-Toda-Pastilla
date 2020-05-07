@@ -13,24 +13,12 @@
 			]
 		},
 		{
-			"name" : "nave",
-			"prefab" : "nave"
+			"name" : "Player",
+			"prefab" : "Teodegonda"
 		},
 		{
 			"name" : "Enemy",
 			"prefab" : "Riciberga"
-		},
-		{
-			"name" : "EntitySpawner",
-			"position": [30, 40, 20],
-			"rotation" : [0, 0, 0],
-			"scale" : [1, 1, 1],
-			"components" : [
-				{
-					"type" : "EntitySpawner",
-					"prefab" : "pastillazo"	
-				}
-			]				
 		},
 		{
 			"name" : "floor",

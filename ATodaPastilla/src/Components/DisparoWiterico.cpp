@@ -63,7 +63,7 @@ void DisparoWiterico::init(json& j)
 			}
 		}
 	}
-	if (!j["nBullets"].is_null() && j["nBullets"].is_array()) {
+	if (!j["nBullets"].is_null()) {
 		if (!j["nBullets"].is_array()) {
 			for (int i = 0; i < shotModes.size(); i++) {
 				shotModes[i].nBullets = j["nBullets"];
@@ -75,6 +75,20 @@ void DisparoWiterico::init(json& j)
 			}
 		}
 	}
+
+	if (!j["damagePerBullet"].is_null()) {
+		if (!j["damagePerBullet"].is_array()) {
+			for (int i = 0; i < shotModes.size(); i++) {
+				shotModes[i].damagePerBullet = j["damagePerBullet"];
+			}
+		}
+		else {
+			for (int i = 0; i < shotModes.size(); i++) {
+				shotModes[i].damagePerBullet = j["damagePerBullet"][i];
+			}
+		}
+	}
+
 	if (!j["bulletSpeed"].is_null()) {
 		if (!j["bulletSpeed"].is_array()) {
 			for (int i = 0; i < shotModes.size(); i++) {
@@ -146,7 +160,7 @@ void DisparoWiterico::update()
 	if (timeSinceLastShot >= shotModes[currMode].cadence && MotorCasaPaco::getInstance()->getInputManager()->GameControllerIsButtonDown(CONTROLLER_BUTTON_A)) {
 		timeSinceLastShot = 0;
 		spawnProjectiles(getEntity()->getComponent<Transform>("Transform")->getPosition() + shotModes[currMode].shotPos,
-			shotModes[currMode].shotDir, shotModes[currMode].bulletSpeed, shotModes[currMode].nBullets,
+			shotModes[currMode].shotDir, shotModes[currMode].bulletSpeed, shotModes[currMode].nBullets, shotModes[currMode].damagePerBullet,
 			shotModes[currMode].dispersionAngle, shotModes[currMode].inaccuracy, shotModes[currMode].inacDispersion);
 	}
 	timeSinceLastShot += MotorCasaPaco::getInstance()->DeltaTime();

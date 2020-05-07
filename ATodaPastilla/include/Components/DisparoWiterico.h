@@ -5,6 +5,7 @@ struct ShotInfo {
 	Vector3 shotPos = Vector3(0, 0, 0);
 	Vector3 shotDir = Vector3(0, 0, -1);
 	int nBullets = 0;
+	float damagePerBullet = 0;
 	float cadence = 0;
 	float bulletSpeed = 0;
 	float dispersionAngle = 0;

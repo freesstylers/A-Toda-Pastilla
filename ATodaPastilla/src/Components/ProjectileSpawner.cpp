@@ -17,7 +17,7 @@ void ProjectileSpawner::update()
 {
 }
 
-void ProjectileSpawner::spawnProjectiles(Vector3 pos, Vector3 dir, float speed, int nbullets, float dispersionAngle, float inaccuracy, float inacDispersion, std::string prefab)
+void ProjectileSpawner::spawnProjectiles(Vector3 pos, Vector3 dir, float speed, int nbullets, float damage, float dispersionAngle, float inaccuracy, float inacDispersion, std::string prefab)
 {
 	float iniAngle = 0;
 	Vector3 Dir = dir;
@@ -38,9 +38,15 @@ void ProjectileSpawner::spawnProjectiles(Vector3 pos, Vector3 dir, float speed, 
 		double rot = dir.Angle(dir, inaccSh) * 180.0 / M_PI;
 		if (inaccSh.X > 0) rot *= -1;
 
-		prj->getComponent<Transform>("Transform")->setRotation(Vector3(0, rot, 0));
+		double auxAng;
+		Vector3 prevRot;
+		prj->getComponent<Transform>("Transform")->getRotation().ToAngleAxis(prj->getComponent<Transform>("Transform")->getRotation(), auxAng, prevRot);
+
+		prj->getComponent<Transform>("Transform")->setRotation(prevRot * auxAng + Vector3(0, rot, 0));
 		prj->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->setDir(inaccSh);
 		prj->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->setSpeed(speed);
+		prj->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->setDamage(damage);
+		prj->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->setSource(getEntity()->getTag());
 
 		rotateVector(Dir, -ang);
 	}
