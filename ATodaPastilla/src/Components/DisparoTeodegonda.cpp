@@ -286,6 +286,9 @@ void DisparoTeodegonda::fireBurst()
 			shotModes[currMode].inaccuracy[currChargeLevel], shotModes[currMode].inacDispersion[currChargeLevel]);
 		burstShotsFired++;
 		timeSinceLastShot = 0;
+		MotorCasaPaco::getInstance()->getAudioManager()->playMusic("assets/sound/shotGunShot.wav", 3);
+		MotorCasaPaco::getInstance()->getAudioManager()->setVolume(0.1, 3);
+
 	}
 	if (currChargeLevel>= 0 &&  burstShotsFired >= shotModes[currMode].burstShots[currChargeLevel]) {
 		currChargeLevel = -1;

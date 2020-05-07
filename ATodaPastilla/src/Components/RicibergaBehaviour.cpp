@@ -78,4 +78,12 @@ void RicibergaBehaviour::OnCollision(Entity* other)
 			dying = true;
 		}
 	}
+	else if (other->getTag() == "Projectile" && !dying) {
+		float x=rand() % 100;
+		if (x < 90) {
+			MotorCasaPaco::getInstance()->getAudioManager()->playMusic("assets/sound/hit1.mp3", 4);
+		}
+		else
+			MotorCasaPaco::getInstance()->getAudioManager()->playMusic("assets/sound/movie_1.mp3", 4);
+	}
 }
