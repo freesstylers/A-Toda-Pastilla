@@ -11,7 +11,6 @@ public:
 	~MovimientoMando();
 	void update() override;
 	void init(json& j) override;
-	bool ReceiveEvent(Event& event) override;
 
 private:
 	Vector3 insideBounds(Vector3 position);

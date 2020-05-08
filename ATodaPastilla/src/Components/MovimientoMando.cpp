@@ -9,7 +9,6 @@
 
 MovimientoMando::MovimientoMando(json& args) : Component(args)
 {
-	EventManager::getInstance()->RegisterListener(this, "PAUSE");
 }
 
 MovimientoMando::~MovimientoMando()
@@ -39,14 +38,6 @@ void MovimientoMando::init(json& j)
 	if (!j["xLEFT"].is_null()) xLEFT_ = j["xLEFT"];
 	if (!j["zUP"].is_null()) zUP_ = j["zUP"];
 	if (!j["zDOWN"].is_null()) zDOWN_ = j["zDOWN"];
-}
-
-bool MovimientoMando::ReceiveEvent(Event& event)
-{
-	if (event.type == "PAUSE")
-		setEnabled(!isEnabled());
-
-	return false;
 }
 
 Vector3 MovimientoMando::insideBounds(Vector3 position)

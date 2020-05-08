@@ -1,5 +1,6 @@
 #include "Components/PlayerInput.h"
 #include "Input/InputManager.h"
+#include "Components/GameManager.h"
 
 PlayerInput::PlayerInput(json& args) : Component(args)
 {
@@ -9,12 +10,13 @@ PlayerInput::~PlayerInput()
 {
 }
 
-void PlayerInput::update()
+void PlayerInput::alwaysLateUpdate()
 {
-	if (InputManager::getInstance()->GameControllerIsButtonDown(GameControllerButton::CONTROLLER_BUTTON_START)) {
+	if (InputManager::getInstance()->GameControllerIsButtonDown(GameControllerButton::CONTROLLER_BUTTON_START)
+		|| InputManager::getInstance()->IsKeyDown(Scancode::SCANCODE_ESCAPE)) {
 		if (!pausePressed_) {
 			pausePressed_ = true;
-			EventManager::getInstance()->EmitEvent("PAUSE");
+			GameManager::getInstance()->pause();
 		}
 	}
 	else

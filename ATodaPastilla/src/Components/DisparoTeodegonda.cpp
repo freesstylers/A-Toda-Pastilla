@@ -253,7 +253,7 @@ void DisparoTeodegonda::update()
 bool DisparoTeodegonda::ReceiveEvent(Event& event)
 {
 	if (event.type == "PAUSE")
-		setEnabled(!isEnabled());
+		setEnabled(!static_cast<BoolEvent&>(event).flag);
 
 	return false;
 }

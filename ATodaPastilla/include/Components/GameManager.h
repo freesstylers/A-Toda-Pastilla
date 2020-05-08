@@ -14,13 +14,16 @@ public:
 
 	int getScore();
 	void addScore(int s);
+	void pause();
+	void unpause();
+	bool isPaused();
 
 private:
 	GameManager();
 	static GameManager* instance;
 
 	int score_ = 0;
-
+	bool paused_ = false;
 };
 
 #endif // !GAMEMANAGER_H

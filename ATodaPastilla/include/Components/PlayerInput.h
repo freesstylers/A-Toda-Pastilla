@@ -6,7 +6,7 @@ class PlayerInput : public Component {
 public:
 	PlayerInput(json& args);
 	~PlayerInput();
-	void update() override;
+	void alwaysLateUpdate() override;
 	void init(json& j) override;
 
 private:

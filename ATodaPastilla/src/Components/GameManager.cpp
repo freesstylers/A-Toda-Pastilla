@@ -1,4 +1,5 @@
 #include "Components/GameManager.h"
+#include "MotorCasaPaco.h"
 
 GameManager* GameManager::instance = 0;
 
@@ -32,4 +33,17 @@ int GameManager::getScore()
 void GameManager::addScore(int s)
 {
 	score_ += s;
+}
+
+void GameManager::pause()
+{
+	MotorCasaPaco::getInstance()->pause();
+
+	BoolEvent e = BoolEvent("PAUSE", MotorCasaPaco::getInstance()->isPaused());
+	EventManager::getInstance()->EmitEvent(e);
+}
+
+bool GameManager::isPaused()
+{
+	return paused_;
 }

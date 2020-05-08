@@ -5,7 +5,6 @@
 
 DisparoWiterico::DisparoWiterico(json& args):ProjectileSpawner(args)
 {
-	EventManager::getInstance()->RegisterListener(this, "PAUSE");
 }
 
 void DisparoWiterico::init(json& j)
@@ -164,12 +163,4 @@ void DisparoWiterico::update()
 			shotModes[currMode].dispersionAngle, shotModes[currMode].inaccuracy, shotModes[currMode].inacDispersion);
 	}
 	timeSinceLastShot += MotorCasaPaco::getInstance()->DeltaTime();
-}
-
-bool DisparoWiterico::ReceiveEvent(Event& event)
-{
-	if (event.type == "PAUSE")
-		setEnabled(!isEnabled());
-
-	return false;
 }

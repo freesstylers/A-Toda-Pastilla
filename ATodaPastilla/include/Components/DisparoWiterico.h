@@ -20,7 +20,7 @@ public:
 	void init(json& j) override;
 	void start() override;
 	void update() override;
-	bool ReceiveEvent(Event& event) override;
+
 private:
 	std::vector<ShotInfo>shotModes;
 };
