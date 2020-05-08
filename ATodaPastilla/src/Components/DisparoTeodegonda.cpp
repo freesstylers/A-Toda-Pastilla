@@ -13,6 +13,11 @@ void DisparoTeodegonda::init(json& j)
 {
 	ProjectileSpawner::init(j);
 
+	if (!j["shotSound"].is_null()) {
+		std::string inter = j["shotSound"];
+		shotSound = inter;
+	}
+
 	nModes = 1;
 	if (!j["nModes"].is_null()) {
 		nModes = j["nModes"];
@@ -286,7 +291,7 @@ void DisparoTeodegonda::fireBurst()
 			shotModes[currMode].inaccuracy[currChargeLevel], shotModes[currMode].inacDispersion[currChargeLevel]);
 		burstShotsFired++;
 		timeSinceLastShot = 0;
-		MotorCasaPaco::getInstance()->getAudioManager()->playMusic("assets/sound/shotGunShot.wav", 3);
+		MotorCasaPaco::getInstance()->getAudioManager()->playMusic(shotSound.c_str(), 3);
 		MotorCasaPaco::getInstance()->getAudioManager()->setVolume(0.1, 3);
 
 	}

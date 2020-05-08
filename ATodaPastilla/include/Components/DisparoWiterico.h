@@ -23,5 +23,6 @@ public:
 
 private:
 	std::vector<ShotInfo>shotModes;
+	std::string shotSound;
 };
 
