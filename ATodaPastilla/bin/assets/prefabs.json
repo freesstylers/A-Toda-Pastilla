@@ -150,6 +150,7 @@
 			{
 				"type" : "DisparoWiterico",
 				"prefab" : "ibuprofeno",
+				"shotSound" : "assets/sound/shotGunShot.wav",
 				"nModes": 3,
 				"cadence": [0.1, 0.07, 0.05],
 				"shotPos": [0, 0, -50],
@@ -202,6 +203,7 @@
 			{
 				"type" : "DisparoTeodegonda",
 				"prefab" : "capsula",
+				"shotSound" : "assets/sound/shotGunShot.wav",
 				"nModes": 1,
 				"shotPos": [0, 0, -50],
 				"shotDir": [0, 0, -1],
@@ -248,13 +250,17 @@
 			},
 			{
 				"type" : "Vida",
-				"vida" : 100
+				"vida" : 100,
+				"customDeath" : true
 			},
 			{
 				"type" : "RicibergaBehaviour",
 				"damage" : 100,
 				"speed" : 20,
 				"bottom" : 150,
+				"timeToDie" : 1,
+				"hitSound" : "assets/sound/hit1.mp3",
+				"deathSound" : "assets/sound/lego-yoda-death-sound-effect.mp3",
 				"seeksPlayer" : true
 			}
 		]

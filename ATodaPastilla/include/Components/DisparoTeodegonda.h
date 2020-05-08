@@ -27,12 +27,15 @@ public:
 	bool ReceiveEvent(Event& event) override;
 
 private:
+	void chargeShot();
+	void fireBurst();
+
 	std::vector<TeodegondaShotInfo> shotModes;
 	float timeCharged;
 	int burstShotsFired;
 	int currChargeLevel;
-	void chargeShot();
-	void fireBurst();
+	
+	std::string shotSound;
 
 };
 

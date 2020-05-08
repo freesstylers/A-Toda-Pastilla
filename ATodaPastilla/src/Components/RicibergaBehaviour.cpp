@@ -5,6 +5,9 @@
 #include "Entity/Transform.h"
 #include "MotorCasaPaco.h"
 #include "Scene/SceneManager.h"
+#include "Events/EventManager.h"
+#include "Events/Event.h"
+#include "Events/EventListener.h"
 #include <list>
 
 RicibergaBehaviour::RicibergaBehaviour(json& j): Component(j)
@@ -24,6 +27,9 @@ void RicibergaBehaviour::init(json& j)
 	if (!j["bottom"].is_null()) {
 		bottom = j["bottom"];
 	}
+	if (!j["timeToDie"].is_null()) {
+		timeToDie = j["timeToDie"];
+	}
 	if (!j["seeksPlayer"].is_null()) {
 		seeksPlayer = j["seeksPlayer"];
 	}
@@ -31,6 +37,15 @@ void RicibergaBehaviour::init(json& j)
 		dir.X = j["direction"][0];
 		dir.Y = j["direction"][1];
 		dir.Z = j["direction"][2];
+	}
+
+	if (!j["hitSound"].is_null()) {
+		std::string inter = j["hitSound"];
+		hitSound = inter;
+	}
+	if (!j["deathSound"].is_null()) {
+		std::string inter = j["deathSound"];
+		deathSound = inter;
 	}
 }
 
@@ -65,25 +80,44 @@ void RicibergaBehaviour::update()
 		if (getEntity()->getComponent<Transform>("Transform")->getPosition().Z >= bottom) dying = true;
 	}
 	else {
-		MotorCasaPaco::getInstance()->getAudioManager()->playMusic("assets/sound/shotSound.mp3", 3);
-		getEntity()->getComponent<Vida>("Vida")->sumaVida(-100);
+		dyingTime += MotorCasaPaco::getInstance()->DeltaTime();
+		if (dyingTime>=timeToDie) {
+			EventManager::getInstance()->UnregisterListenerForAll(e_);
+			e_->setEnabled(false);
+		}
 	}
 }
 
 void RicibergaBehaviour::OnCollision(Entity* other)
 {
-	if (other->getTag() == "Player" && !dying) {
-		if (other->getComponent<Vida>("Vida") != nullptr) {
-			other->getComponent<Vida>("Vida")->sumaVida(-damage);
+	if (!dying) {
+		if (other->getTag() == "Player") {
+			if (other->getComponent<Vida>("Vida") != nullptr) {
+				other->getComponent<Vida>("Vida")->sumaVida(-damage);
+			}
+		}
+		else if (other->getTag() == "Projectile") {
+			float x = rand() % 100;
+			if (x < 95) {
+				MotorCasaPaco::getInstance()->getAudioManager()->playMusic(hitSound.c_str(), 4);
+			}
+			else
+				MotorCasaPaco::getInstance()->getAudioManager()->playMusic("assets/sound/movie_1.mp3", 4);
+		}
+	}
+}
+
+bool RicibergaBehaviour::ReceiveEvent(Event& event)
+{
+	if (event.type == "TEXT") {
+		TextEvent text=static_cast<TextEvent&>(event);
+		if (text.text == "death") {
 			dying = true;
+			MotorCasaPaco::getInstance()->getAudioManager()->playMusic(deathSound.c_str(), 3);
+			AudioManager::getInstance()->setVolume(0.7, 3);
+			dyingTime = 0;
+			return true;
 		}
 	}
-	else if (other->getTag() == "Projectile" && !dying) {
-		float x=rand() % 100;
-		if (x < 90) {
-			MotorCasaPaco::getInstance()->getAudioManager()->playMusic("assets/sound/hit1.mp3", 4);
-		}
-		else
-			MotorCasaPaco::getInstance()->getAudioManager()->playMusic("assets/sound/movie_1.mp3", 4);
-	}
+	return false;
 }

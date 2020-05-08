@@ -23,5 +23,6 @@ public:
 	bool ReceiveEvent(Event& event) override;
 private:
 	std::vector<ShotInfo>shotModes;
+	std::string shotSound;
 };
 
