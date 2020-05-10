@@ -12,6 +12,9 @@ public:
 	void start() override;
 	void update() override;
 	void init(json& j) override;
+	int GetVida() {
+		return vida_;
+	}
 
 	void sumaVida(int valor);
 private:

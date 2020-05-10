@@ -7,7 +7,6 @@
 
 Vida::Vida(json& args): Component(args)
 {
-	EventManager::getInstance()->RegisterListener(getEntity(), "DEATH");
 }
 
 Vida::~Vida()
@@ -18,6 +17,7 @@ Vida::~Vida()
 void Vida::start()
 {
 	death_ = false;
+	EventManager::getInstance()->RegisterListener(getEntity(), "DEATH");
 }
 
 void Vida::update()
@@ -51,9 +51,9 @@ void Vida::sumaVida(int valor)
 			EventManager::getInstance()->UnregisterListenerForAll(e_);
 			e_->setEnabled(false);
 		}
-		else
+		else {
 			EventManager::getInstance()->EmitEvent("DEATH");
-
+		}
 		death_ = true;
 	}
 }

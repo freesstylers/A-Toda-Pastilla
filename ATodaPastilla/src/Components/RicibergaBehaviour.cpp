@@ -18,6 +18,7 @@ void RicibergaBehaviour::init(json& j)
 {
 	Component::init(j);
 	seeksPlayer = false;
+	sinusoidalMovement = false;
 	if (!j["damage"].is_null()) {
 		damage = j["damage"];
 	}
@@ -33,10 +34,16 @@ void RicibergaBehaviour::init(json& j)
 	if (!j["seeksPlayer"].is_null()) {
 		seeksPlayer = j["seeksPlayer"];
 	}
-	else if (!j["direction"].is_null() && j["direction"].is_array()) {
-		dir.X = j["direction"][0];
-		dir.Y = j["direction"][1];
-		dir.Z = j["direction"][2];
+	if (!j["sinusoidalMovement"].is_null()) {
+		sinusoidalMovement = j["sinusoidalMovement"];
+		if (sinusoidalMovement) {
+			if (!j["sinusoidalMagnitude"].is_null()) {
+				sinusoidalMagnitude = j["sinusoidalMagnitude"];
+			}
+			if (!j["sinusoidalFrequency"].is_null()) {
+				sinusoidalFrequency = j["sinusoidalFrequency"];
+			}
+		}
 	}
 
 	if (!j["hitSound"].is_null()) {
@@ -63,21 +70,30 @@ void RicibergaBehaviour::update()
 {
 	if (!dying) {
 		Vector3 pos = getEntity()->getComponent<Transform>("Transform")->getPosition();
-		Vector3 playerPos = player->getComponent<Transform>("Transform")->getPosition();
 		Vector3 direction;
 		if (player != nullptr) {
+			Vector3 playerPos = player->getComponent<Transform>("Transform")->getPosition();
 			direction = playerPos - pos;
-			direction = Vector3::Normalized(direction);
 		}
 		else {
-			direction = dir;
+			direction = Vector3(0, 0, bottom - pos.Z);
 		}
+
+		direction = Vector3::Normalized(direction);
 		double orientation=Vector3::Angle(Vector3(0, 0, 1), direction);
 		orientation = orientation * 180.0 / M_PI;
 		if (direction.X < 0) orientation = -orientation;
-		getEntity()->getComponent<Transform>("Transform")->setRotation(Vector3(0, orientation, 0));
-		getEntity()->getComponent<Transform>("Transform")->setPosition(getEntity()->getComponent<Transform>("Transform")->getPosition() + direction * speed * MotorCasaPaco::getInstance()->DeltaTime());
-		if (getEntity()->getComponent<Transform>("Transform")->getPosition().Z >= bottom) dying = true;
+		e_->getComponent<Transform>("Transform")->setRotation(Vector3(0, orientation, 0));
+		e_->getComponent<Transform>("Transform")->setPosition(e_->getComponent<Transform>("Transform")->getPosition() + direction * speed * MotorCasaPaco::getInstance()->DeltaTime());
+		if (sinusoidalMovement) {
+			e_->getComponent<Transform>("Transform")->setPosition(e_->getComponent<Transform>("Transform")->getPosition() + 
+				Vector3(sin(MotorCasaPaco::getInstance()->getTime() * sinusoidalFrequency) * sinusoidalMagnitude, 0, 0) * MotorCasaPaco::getInstance()->DeltaTime());
+		}
+
+		if (e_->getComponent<Transform>("Transform")->getPosition().Z >= bottom) {
+			EventManager::getInstance()->UnregisterListenerForAll(e_);
+			e_->setEnabled(false);
+		}
 	}
 	else {
 		dyingTime += MotorCasaPaco::getInstance()->DeltaTime();
@@ -94,15 +110,16 @@ void RicibergaBehaviour::OnCollision(Entity* other)
 		if (other->getTag() == "Player") {
 			if (other->getComponent<Vida>("Vida") != nullptr) {
 				other->getComponent<Vida>("Vida")->sumaVida(-damage);
+				e_->getComponent<Vida>("Vida")->sumaVida(e_->getComponent<Vida>("Vida")->GetVida());
 			}
 		}
 		else if (other->getTag() == "Projectile") {
 			float x = rand() % 100;
 			if (x < 95) {
-				MotorCasaPaco::getInstance()->getAudioManager()->playMusic(hitSound.c_str(), 4);
+				AudioManager::getInstance()->playMusic(hitSound.c_str(), 4);
 			}
 			else
-				MotorCasaPaco::getInstance()->getAudioManager()->playMusic("assets/sound/movie_1.mp3", 4);
+				AudioManager::getInstance()->playMusic("assets/sound/movie_1.mp3", 4);
 		}
 	}
 }
@@ -111,7 +128,7 @@ bool RicibergaBehaviour::ReceiveEvent(Event& event)
 {
 	if (event.type == "DEATH") {
 		dying = true;
-		MotorCasaPaco::getInstance()->getAudioManager()->playMusic(deathSound.c_str(), 3);
+		AudioManager::getInstance()->playMusic(deathSound.c_str(), 3);
 		AudioManager::getInstance()->setVolume(0.7, 3);
 		dyingTime = 0;
 		return true;

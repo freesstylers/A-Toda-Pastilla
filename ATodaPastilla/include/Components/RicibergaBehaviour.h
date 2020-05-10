@@ -20,7 +20,11 @@ private:
 	float speed;
 	float bottom;
 	bool seeksPlayer;
-	Vector3 dir;
+	bool sinusoidalMovement;
+
+	float sinusoidalMagnitude;
+	float sinusoidalFrequency;
+
 	Entity* player=nullptr;
 
 	std::string hitSound;
