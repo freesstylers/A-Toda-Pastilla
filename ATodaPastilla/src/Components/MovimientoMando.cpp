@@ -29,6 +29,8 @@ void MovimientoMando::update()
 	position = insideBounds(position);
 
 	e_->getComponent<Transform>("Transform")->setPosition(position);
+	e_->getComponent<Transform>("Transform")->setRotation(Vector3(0.0, 180.0, sumX*30));
+
 }
 
 void MovimientoMando::init(json& j)
@@ -37,7 +39,7 @@ void MovimientoMando::init(json& j)
 	if (!j["xRIGHT"].is_null()) xRIGHT_ = j["xRIGHT"];
 	if (!j["xLEFT"].is_null()) xLEFT_ = j["xLEFT"];
 	if (!j["zUP"].is_null()) zUP_ = j["zUP"];
-	if (!j["zDOWN"].is_null()) zDOWN_ = j["zDOWN"];
+	if (!j["zDOWN"].is_null()) zDOWN_ = j["zDOWN"]; 
 }
 
 Vector3 MovimientoMando::insideBounds(Vector3 position)
