@@ -80,6 +80,9 @@
     <ClCompile Include="..\src\Components\SpawnerMejora.cpp">
       <Filter>Logic\Mejoras</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\Components\Mejora.cpp">
+      <Filter>Logic\Mejoras</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Components\ExitButtonComponent.h">
@@ -161,6 +164,9 @@
       <Filter>Logic\Player</Filter>
     </ClInclude>
     <ClInclude Include="..\include\Components\SpawnerMejora.h">
+      <Filter>Logic\Mejoras</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Components\Mejora.h">
       <Filter>Logic\Mejoras</Filter>
     </ClInclude>
   </ItemGroup>

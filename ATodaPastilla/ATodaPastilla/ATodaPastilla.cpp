@@ -34,6 +34,7 @@
 #include "Components/PlayerInput.h"
 #include "Components/GameManager.h"
 #include "Components//SpawnerMejora.h"
+#include "Components/Mejora.h"
 
 MotorCasaPaco* motorCasaPaco;
 
@@ -255,6 +256,16 @@ public:
 	
 };
 
+class MejoraFactory : public BaseFactory
+{
+public:
+
+	Component* createComponent(json& args) override {
+		return new Mejora(args);
+	}
+
+};
+
 void setupFactories()
 {
 	JsonFactoryParser* j = JsonFactoryParser::getInstance();
@@ -284,6 +295,7 @@ void setupFactories()
 	j->addFactory("PlayerInput", new PlayerInputFactory());
 	j->addFactory("GameManager", new GameManagerFactory());
 	j->addFactory("SpawnerMejora", new SpawnerMejoraFactory());
+	j->addFactory("Mejora", new MejoraFactory());
 }
 
 #ifdef  _DEBUG

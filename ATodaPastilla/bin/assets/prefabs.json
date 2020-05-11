@@ -244,7 +244,7 @@
 		]
 	},
 
-	"MejoraDisparo": {
+	"Mejora": {
 		"position": [ 0, 0, 0 ],
 		"rotation": [ 0, 0, 0 ],
 		"scale": [ 10, 10, 10 ],
@@ -260,12 +260,11 @@
 				"isKinematic": true
 			},
 			{
-				"type": "Vida",
-				"vida": 50,
-				"time": 3
+				"type": "Mejora"
 			},
 			{
-				"type": "ProjectileBehaviour"
+				"type": "GiroContinuo",
+				"rotation": 0.1
 			}
 		]
 	}

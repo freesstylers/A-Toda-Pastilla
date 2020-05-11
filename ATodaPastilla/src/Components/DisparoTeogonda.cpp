@@ -217,7 +217,7 @@ void DisparoTeogonda::start()
 
 void DisparoTeogonda::update()
 {
-	std::cout << "ShotsFired: " << burstShotsFired << "chargeLevel: " << currChargeLevel;
+	//std::cout << "ShotsFired: " << burstShotsFired << "chargeLevel: " << currChargeLevel;
 	if(currChargeLevel>=0)
 		std::cout << "burstShots: "<<shotModes[currMode].burstShots[currChargeLevel];
 

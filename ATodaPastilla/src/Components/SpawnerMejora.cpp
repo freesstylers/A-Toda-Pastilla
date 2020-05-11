@@ -4,9 +4,10 @@
 #include "Scene/SceneManager.h"
 #include "MotorCasaPaco.h"
 #include <iostream>
+#include <stdlib.h>
 #include "Components/SpawnerMejora.h"
 
-#include "Components/ProjectileBehaviour.h"
+#include "Entity/Transform.h"
 
 SpawnerMejora::SpawnerMejora(json& args):EntitySpawner(args)
 {
@@ -20,24 +21,30 @@ SpawnerMejora::~SpawnerMejora()
 
 void SpawnerMejora::update()
 {
-	spawnEntity();
+	if (timeToSpawn >= timeSinceLastSpawn) {
+		spawnEntity();
+		std::cout << "spawned" << std::endl;
+		timeToSpawn = rand() % maxSpawnTime + minSpawnTime;
+	}
+	timeSinceLastSpawn += MotorCasaPaco::getInstance()->DeltaTime();
 }
 
 void SpawnerMejora::init(json& j)
 {
 	EntitySpawner::init(j);
-	spawnEntity();
+	timeToSpawn = rand() % maxSpawnTime + minSpawnTime;
+
 }
 
-Entity* SpawnerMejora::spawnEntity(Vector3 pos, Vector3 dir, float speed,std::string prefab)
+Entity* SpawnerMejora::spawnEntity(Vector3 pos, float speed,std::string prefab)
 {
 	float iniAngle = 0;
 
 	Entity* prj = EntitySpawner::spawnEntity(pos, prefab);
 
 
-	prj->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->setDir(dir);
-	prj->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->setSpeed(speed);
+	prj->getComponent<Transform>("Transform")->setRotation(Vector3(0, 90, 0));
+
 	std::cout << "spawned" << std::endl;
 	return nullptr;
 }
