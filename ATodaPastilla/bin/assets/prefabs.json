@@ -352,8 +352,8 @@
 	},
 
 	"Mejora": {
-		"position": [ 0, 0, 0 ],
-		"rotation": [ 0, 0, 0 ],
+		"position": [ 0, 50, -125 ],
+		"rotation": [ 0, 0, 180 ],
 		"scale": [ 10, 10, 10 ],
 		"components": [
 			{
@@ -371,7 +371,7 @@
 			},
 			{
 				"type": "GiroContinuo",
-				"rotation": 0.1
+				"rotation": 0.5
 			}
 		]
 	}

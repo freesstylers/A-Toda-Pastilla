@@ -21,10 +21,11 @@ SpawnerMejora::~SpawnerMejora()
 
 void SpawnerMejora::update()
 {
-	if (timeToSpawn >= timeSinceLastSpawn) {
+	if (timeToSpawn <= timeSinceLastSpawn) {
 		spawnEntity();
 		std::cout << "spawned" << std::endl;
 		timeToSpawn = rand() % maxSpawnTime + minSpawnTime;
+		timeSinceLastSpawn = 0;
 	}
 	timeSinceLastSpawn += MotorCasaPaco::getInstance()->DeltaTime();
 }
@@ -32,7 +33,8 @@ void SpawnerMejora::update()
 void SpawnerMejora::init(json& j)
 {
 	EntitySpawner::init(j);
-	timeToSpawn = rand() % maxSpawnTime + minSpawnTime;
+	timeToSpawn = 5;
+	spawnEntity();
 
 }
 

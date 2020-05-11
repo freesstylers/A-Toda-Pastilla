@@ -36,6 +36,6 @@ void Mejora::OnCollision(Entity* ent)
 void Mejora::update()
 {
 	float posY = sin( MotorCasaPaco::getInstance()->DeltaTime() );
-	e_->getComponent<Transform>("Transform")->translate(Vector3(posY, 0.0f, 0.0f));
+	e_->getComponent<Transform>("Transform")->setPosition(Vector3(posY, 0.0f, 0.0f));
 	std::cout << e_->getComponent<Transform>("Transform")->getPosition().X << "  " << e_->getComponent<Transform>("Transform")->getPosition().Y << std::endl;
 }

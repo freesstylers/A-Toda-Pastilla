@@ -80,6 +80,12 @@
     <ClCompile Include="..\src\Components\RicibergaBehaviour.cpp">
       <Filter>Logic\Enemies</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\Components\SpawnerMejora.cpp">
+      <Filter>Logic\Mejoras</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Components\Mejora.cpp">
+      <Filter>Logic\Mejoras</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Components\ExitButtonComponent.h">
@@ -163,6 +169,12 @@
     <ClInclude Include="..\include\Components\RicibergaBehaviour.h">
       <Filter>Logic\Enemies</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\Components\SpawnerMejora.h">
+      <Filter>Logic\Mejoras</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Components\Mejora.h">
+      <Filter>Logic\Mejoras</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="UI">
@@ -194,6 +206,9 @@
     </Filter>
     <Filter Include="Logic\Enemies">
       <UniqueIdentifier>{9f3b4ae0-c7a6-465f-b495-2f98d0161bd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic\Mejoras">
+      <UniqueIdentifier>{8f0b7bad-0156-43c4-bb49-688250159b0e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
