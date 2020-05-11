@@ -22,12 +22,13 @@ Mejora::~Mejora()
 
 void Mejora::init(json& j)
 {
+
 	
 }
 
 void Mejora::OnCollision(Entity* ent)
 {
-	if (ent->getTag() == "nave")
+	if (ent->getTag() == "Player")
 	{
 		getEntity()->setEnabled(false);
 	}
@@ -35,7 +36,7 @@ void Mejora::OnCollision(Entity* ent)
 
 void Mejora::update()
 {
-	float posY = sin( MotorCasaPaco::getInstance()->DeltaTime() );
-	e_->getComponent<Transform>("Transform")->setPosition(Vector3(posY, 0.0f, 0.0f));
-	std::cout << e_->getComponent<Transform>("Transform")->getPosition().X << "  " << e_->getComponent<Transform>("Transform")->getPosition().Y << std::endl;
+	e_->getComponent<Transform>("Transform")->setPosition(e_->getComponent<Transform>("Transform")->getPosition() +
+		Vector3(sin(MotorCasaPaco::getInstance()->getTime() * sinusoidalFrequency) * sinusoidalMagnitude, 0, movVertical) * MotorCasaPaco::getInstance()->DeltaTime());
+
 }

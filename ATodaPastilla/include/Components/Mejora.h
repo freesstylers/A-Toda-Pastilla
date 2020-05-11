@@ -13,4 +13,9 @@ public:
 
 private:
 	float rotation_ = 0.1;
+
+	float sinusoidalMagnitude = 50.0;
+	float sinusoidalFrequency = 2.0;
+
+	int movVertical = 30;
 }; 

@@ -14,8 +14,8 @@ public:
 	virtual Entity* spawnEntity(Vector3 pos = Vector3(0, 0, 0), float speed = 0.0,std::string prefab = "");
 private:
 	std::string defaultPrefab;
-	int maxSpawnTime = 45;
-	int minSpawnTime = 10;
-	int timeToSpawn = 0;
-	int timeSinceLastSpawn = 0;
+	float maxSpawnTime = 40;
+	float minSpawnTime = 5;
+	float timeToSpawn = 0;
+	float timeSinceLastSpawn = 0;
 };
