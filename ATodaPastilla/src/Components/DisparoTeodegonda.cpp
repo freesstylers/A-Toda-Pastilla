@@ -241,7 +241,11 @@ void DisparoTeodegonda::start()
 
 void DisparoTeodegonda::update()
 {
+<<<<<<< HEAD:ATodaPastilla/src/Components/DisparoTeodegonda.cpp
 	/*std::cout << "ShotsFired: " << burstShotsFired << "chargeLevel: " << currChargeLevel;
+=======
+	//std::cout << "ShotsFired: " << burstShotsFired << "chargeLevel: " << currChargeLevel;
+>>>>>>> MEjores:ATodaPastilla/src/Components/DisparoTeogonda.cpp
 	if(currChargeLevel>=0)
 		std::cout << "burstShots: "<<shotModes[currMode].burstShots[currChargeLevel];
 
