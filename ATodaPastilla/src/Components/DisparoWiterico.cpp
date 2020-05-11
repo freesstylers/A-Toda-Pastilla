@@ -12,17 +12,27 @@ void DisparoWiterico::init(json& j)
 {
 	ProjectileSpawner::init(j);
 
-	if (!j["shotSound"].is_null()) {
-		std::string inter = j["shotSound"];
-		shotSound = inter;
-	}
-
 	nModes = 1;
 	if (!j["nModes"].is_null()) {
 		nModes = j["nModes"];
 	}
 
 	shotModes = std::vector<ShotInfo>(nModes);
+
+	if (!j["shotSound"].is_null()) {
+		if (!j["shotSound"].is_array()) {
+			for (int i = 0; i < shotModes.size(); i++) {
+				std::string inter = j["shotSound"];
+				shotModes[i].shotSound = inter;
+			}
+		}
+		else {
+			for (int i = 0; i < shotModes.size(); i++) {
+				std::string inter = j["shotSound"][i];
+				shotModes[i].shotSound = inter;
+			}
+		}
+	}
 
 	if (!j["cadence"].is_null()) {
 		if (!j["cadence"].is_array()) {
@@ -167,7 +177,7 @@ void DisparoWiterico::update()
 		spawnProjectiles(getEntity()->getComponent<Transform>("Transform")->getPosition() + shotModes[currMode].shotPos,
 			shotModes[currMode].shotDir, shotModes[currMode].bulletSpeed, shotModes[currMode].nBullets, shotModes[currMode].damagePerBullet,
 			shotModes[currMode].dispersionAngle, shotModes[currMode].inaccuracy, shotModes[currMode].inacDispersion);
-		AudioManager::getInstance()->playMusic(shotSound.c_str(), 3);
+		AudioManager::getInstance()->playMusic(shotModes[currMode].shotSound.c_str(), 3);
 		AudioManager::getInstance()->setVolume(0.1, 3);
 	}
 	timeSinceLastShot += MotorCasaPaco::getInstance()->DeltaTime();

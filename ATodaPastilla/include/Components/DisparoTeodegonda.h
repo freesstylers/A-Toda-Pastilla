@@ -6,7 +6,9 @@ struct TeodegondaShotInfo {
 	Vector3 shotDir = Vector3(0, 0, -1);
 	float chargeTime;
 	int chargeLevels;
-	
+
+	std::vector<std::string> chargeSound;
+	std::vector<std::string> shotSound;
 	std::vector<int> nBullets;
 	std::vector<float> damagePerBullet;
 	std::vector<float> bulletSpeed;
@@ -34,8 +36,6 @@ private:
 	float timeCharged;
 	int burstShotsFired;
 	int currChargeLevel;
-	
-	std::string shotSound;
 
 };
 

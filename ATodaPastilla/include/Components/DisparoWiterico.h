@@ -4,6 +4,7 @@
 struct ShotInfo {
 	Vector3 shotPos = Vector3(0, 0, 0);
 	Vector3 shotDir = Vector3(0, 0, -1);
+	std::string shotSound;
 	int nBullets = 0;
 	float damagePerBullet = 0;
 	float cadence = 0;
@@ -23,6 +24,5 @@ public:
 
 private:
 	std::vector<ShotInfo>shotModes;
-	std::string shotSound;
 };
 

@@ -6,6 +6,16 @@
 
 ProjectileBehaviour::ProjectileBehaviour(json& args):Component(args)
 {
+	
+}
+
+void ProjectileBehaviour::init(json& args)
+{
+
+}
+
+void ProjectileBehaviour::start()
+{
 	speed = 0;
 	source = "Player";
 	damage = 10;
@@ -16,11 +26,6 @@ ProjectileBehaviour::ProjectileBehaviour(json& args):Component(args)
 	bordeIzq = -500;
 
 	EventManager::getInstance()->RegisterListener(this, "PAUSE");
-}
-
-void ProjectileBehaviour::init(json& args)
-{
-
 }
 
 void ProjectileBehaviour::update()
@@ -60,9 +65,12 @@ void ProjectileBehaviour::setDamage(float dmg)
 
 void ProjectileBehaviour::OnCollision(Entity* other)
 {
-	if(source=="Player" && other->getTag()=="Enemy"){
+	if(source=="Player" && (other->getTag()=="Enemy" || other->getTag() == "Projectile" && 
+		other->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->source == "Enemy")){
+
 		other->getComponent<Vida>("Vida")->sumaVida(-damage);
-		getEntity()->setEnabled(false);
+		e_->getComponent<Vida>("Vida")->sumaVida(-e_->getComponent<Vida>("Vida")->GetVida());
+
 	}
 }
 

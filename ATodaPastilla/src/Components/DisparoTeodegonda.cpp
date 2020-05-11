@@ -13,11 +13,6 @@ void DisparoTeodegonda::init(json& j)
 {
 	ProjectileSpawner::init(j);
 
-	if (!j["shotSound"].is_null()) {
-		std::string inter = j["shotSound"];
-		shotSound = inter;
-	}
-
 	nModes = 1;
 	if (!j["nModes"].is_null()) {
 		nModes = j["nModes"];
@@ -91,6 +86,47 @@ void DisparoTeodegonda::init(json& j)
 		shotModes[i].inacDispersion = std::vector<float>(shotModes[i].chargeLevels);
 		shotModes[i].burstCadence = std::vector<float>(shotModes[i].chargeLevels);
 		shotModes[i].burstShots = std::vector<int>(shotModes[i].chargeLevels);
+		shotModes[i].shotSound = std::vector<std::string>(shotModes[i].chargeLevels);
+		shotModes[i].chargeSound = std::vector<std::string>(shotModes[i].chargeLevels);
+	}
+	if (!j["chargeSound"].is_null()) {
+		for (int i = 0; i < shotModes.size(); i++) {
+			for (int s = 0; s < shotModes[i].chargeSound.size(); s++) {
+				if (j["chargeSound"].is_array() && j["chargeSound"].size() == shotModes.size() &&
+					j["chargeSound"][i].is_array() && j["chargeSound"][i].size() == shotModes[i].chargeSound.size()) {
+					std::string inter = j["chargeSound"][i][s];
+					shotModes[i].chargeSound[s] = inter;
+				}
+				else if (j["chargeSound"].is_array() && j["chargeSound"].size() == shotModes.size() && !j["chargeSound"][i].is_array()) {
+					std::string inter = j["chargeSound"][i];
+					shotModes[i].chargeSound[s] = inter;
+				}
+				else if (!j["chargeSound"].is_array()) {
+					std::string inter = j["chargeSound"];
+					shotModes[i].chargeSound[s] = inter;
+				}
+			}
+		}
+	}
+
+	if (!j["shotSound"].is_null()) {
+		for (int i = 0; i < shotModes.size(); i++) {
+			for (int s = 0; s < shotModes[i].shotSound.size(); s++) {
+				if (j["shotSound"].is_array() && j["shotSound"].size() == shotModes.size() &&
+					j["shotSound"][i].is_array() && j["shotSound"][i].size() == shotModes[i].shotSound.size()) {
+					std::string inter = j["shotSound"][i][s];
+					shotModes[i].shotSound[s] = inter;
+				}
+				else if (j["shotSound"].is_array() && j["shotSound"].size() == shotModes.size() && !j["shotSound"][i].is_array()) {
+					std::string inter = j["shotSound"][i];
+					shotModes[i].shotSound[s] = inter;
+				}
+				else if (!j["shotSound"].is_array()) {
+					std::string inter = j["shotSound"];
+					shotModes[i].shotSound[s] = inter;
+				}
+			}
+		}
 	}
 
 	if (!j["nBullets"].is_null()) {
@@ -264,15 +300,18 @@ void DisparoTeodegonda::chargeShot()
 	timeCharged += MotorCasaPaco::getInstance()->DeltaTime();
 
 	if (timeCharged >= shotModes[currMode].chargeTime) {
-
-		if (currChargeLevel < shotModes[currMode].chargeLevels - 1)
+		if (currChargeLevel < shotModes[currMode].chargeLevels - 1) {
 			currChargeLevel++;
+			if (currChargeLevel == shotModes[currMode].chargeLevels - 1)
+				AudioManager::getInstance()->playMusic("assets/sound/MaximumCharge.wav", 3);
+			else
+				AudioManager::getInstance()->playMusic(shotModes[currMode].chargeSound[currChargeLevel].c_str(), 3);
+			AudioManager::getInstance()->setVolume(0.05 * (currChargeLevel + 1.0), 3);
+		}
 		timeCharged = 0;
 	}
-
 	if (currChargeLevel >= 0)
 		timeSinceLastShot = shotModes[currMode].burstCadence[currChargeLevel];
-	
 }
 
 void DisparoTeodegonda::fireBurst()
@@ -286,8 +325,8 @@ void DisparoTeodegonda::fireBurst()
 			shotModes[currMode].inaccuracy[currChargeLevel], shotModes[currMode].inacDispersion[currChargeLevel]);
 		burstShotsFired++;
 		timeSinceLastShot = 0;
-		MotorCasaPaco::getInstance()->getAudioManager()->playMusic(shotSound.c_str(), 3);
-		MotorCasaPaco::getInstance()->getAudioManager()->setVolume(0.1, 3);
+		MotorCasaPaco::getInstance()->getAudioManager()->playMusic(shotModes[currMode].shotSound[currChargeLevel].c_str(), 3);
+		MotorCasaPaco::getInstance()->getAudioManager()->setVolume(0.05 * (currChargeLevel+1.0), 3);
 
 	}
 	if (currChargeLevel>= 0 &&  burstShotsFired >= shotModes[currMode].burstShots[currChargeLevel]) {

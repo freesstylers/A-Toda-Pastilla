@@ -199,6 +199,7 @@
 			{
 				"type" : "DisparoTeodegonda",
 				"prefab" : "capsula",
+				"chargeSound" : [["assets/sound/LVL1.wav", "assets/sound/LVL2.wav", "assets/sound/LVL3.wav"]],
 				"shotSound" : "assets/sound/shotGunShot.wav",
 				"nModes": 1,
 				"shotPos": [0, 0, -50],

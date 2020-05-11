@@ -4,6 +4,7 @@ public:
 	ProjectileBehaviour(json& args);
 	void init(json& args);
 	~ProjectileBehaviour() {};
+	void start() override;
 	void update() override;
 	void setDir(Vector3 dir);
 	void setSpeed(float speed);
@@ -17,6 +18,7 @@ public:
 private:
 	float speed;
 	float damage;
+	bool destructible;
 	std::string source;
 	Vector3 dir;
 	float bordeSup;
