@@ -57,7 +57,7 @@
 		},
 		{
 			"name": "SpawnerMejora",
-			"position": [ 0, 0, 0 ],
+			"position": [ 0,50, -1000 ],
 			"rotation": [ 0, 0, 0 ],
 			"scale": [ 1, 1, 1 ],
 			"components": [

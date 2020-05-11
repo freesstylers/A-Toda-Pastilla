@@ -34,7 +34,7 @@ void SpawnerMejora::init(json& j)
 {
 	EntitySpawner::init(j);
 	timeToSpawn = 5;
-	spawnEntity();
+	spawnEntity(Vector3(0,0,-250));
 
 }
 
@@ -45,7 +45,7 @@ Entity* SpawnerMejora::spawnEntity(Vector3 pos, float speed,std::string prefab)
 	Entity* prj = EntitySpawner::spawnEntity(pos, prefab);
 
 
-	prj->getComponent<Transform>("Transform")->setRotation(Vector3(0, 90, 0));
+	prj->getComponent<Transform>("Transform")->setRotation(Vector3(0, -95, 90));
 
 	std::cout << "spawned" << std::endl;
 	return nullptr;
