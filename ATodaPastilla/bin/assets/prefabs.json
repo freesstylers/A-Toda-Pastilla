@@ -19,9 +19,7 @@
 				"type": "ForcesTest"
 			}
 		]
-	},
-<<<<<<< HEAD
-	
+	},	
 	"floor" :
 	{
 		"position" : [0, 0, 0],
@@ -38,23 +36,6 @@
 				"type" : "RigidBody",
 				"shape" : "cube",
 				"isKinematic" : true
-=======
-
-	"floor": {
-		"position": [ 0, 0, 0 ],
-		"rotation": [ 0, 0, 0 ],
-		"scale": [ 7, 0.1, 3 ],
-		"components": [
-			{
-				"type": "Mesh",
-				"mesh": "cube.mesh",
-				"material": "red"
-			},
-			{
-				"type": "RigidBody",
-				"shape": "cube",
-				"isKinematic": true
->>>>>>> MEjores
 			}
 		]
 	},
@@ -70,7 +51,6 @@
 		]
 	},
 
-<<<<<<< HEAD
 	"ibuprofeno" :
 	{
 		"position" : [0, 50, 0],
@@ -120,22 +100,6 @@
 				"isKinematic" : true,
 				"isTrigger" : true,
 				"disableDeactivation" : true
-=======
-	"pastillazo": {
-		"position": [ 0, 0, 0 ],
-		"rotation": [ 0, 0, 0 ],
-		"scale": [ 10, 10, 10 ],
-		"components": [
-			{
-				"type": "Mesh",
-				"mesh": "pastilla_ibuprofeno.mesh",
-				"material": "palette.ibuprofeno"
-			},
-			{
-				"type": "RigidBody",
-				"shape": "cube",
-				"isKinematic": true
->>>>>>> MEjores
 			},
 			{
 				"type": "Vida",
@@ -148,7 +112,6 @@
 		]
 	},
 
-<<<<<<< HEAD
 	"Witerico" : 
 	{
 		"position" : [0, 50, 125],
@@ -156,20 +119,12 @@
 		"scale" : [10, 10, 10],
 		"tag" : "Player",
 		"components" : [
-=======
-	"nave": {
-		"position": [ 0, 10, 0 ],
-		"rotation": [ 0, 180, 0 ],
-		"scale": [ 10, 10, 10 ],
-		"components": [
->>>>>>> MEjores
 			{
 				"type": "Mesh",
 				"mesh": "Witerico.mesh",
 				"material": "Witerico"
 			},
 			{
-<<<<<<< HEAD
 				"type" : "RigidBody",
 				"shape" : "mesh",
 				"mass" : 100,
@@ -184,31 +139,12 @@
 				"zUP" : -200,
 				"zDOWN" : 200,
 				"speed" : 500
-=======
-				"type": "RigidBody",
-				"shape": "mesh",
-				"mass": 100,
-				"isKinematic": true
-			},
-			{
-				"type": "MovimientoMando",
-				"xRIGHT": 200,
-				"xLEFT": -200,
-				"zUP": -200,
-				"zDOWN": 200,
-				"speed": 0.7
-			},
-			{
-				"type": "Vida",
-				"vida": 10
->>>>>>> MEjores
 			},
 			{
 				"type": "Danio",
 				"danio": 1
 			},
 			{
-<<<<<<< HEAD
 				"type" : "DisparoWiterico",
 				"prefab" : "ibuprofeno",
 				"shotSound" : "assets/sound/shotGunShot.wav",
@@ -220,27 +156,6 @@
 				"damagePerBullet" : 10,
 				"bulletSpeed": [600, 600, 800],
 				"dispersionAngle": [30, 60, 90]
-=======
-				"type": "DisparoTeogonda",
-				"prefab": "pastillazo",
-				"nModes": 3,
-				"cadence": [ 100, 70, 50 ],
-				"shotPos": [ 0, 0, -50 ],
-				"shotDir": [ 0, 0, -1 ],
-				"nBullets": [ 1, 3, 5 ],
-				"bulletSpeed": [ 600, 600, 800 ],
-				"dispersionAngle": [ 30, 60, 90 ],
-				"inaccuracy": [ 15, 10, 5 ],
-				"inacDispersion": [ 10, 10, 5 ],
-				"chargeLevels": 3,
-				"chargeTime": 200,
-				"burstCadence": 50,
-				"burstShots": [
-					[ 3, 6, 9 ],
-					[ 3, 6, 9 ],
-					[ 3, 6, 9 ]
-				]
->>>>>>> MEjores
 			},
 			{
 				"type": "PlayerInput"
@@ -249,8 +164,6 @@
 		]
 
 	},
-<<<<<<< HEAD
-
 	"Teodegonda" : 
 	{
 		"position" : [0, 50, 125],
@@ -348,26 +261,6 @@
 				"sinusoidalMovement": true,
 				"sinusoidalMagnitude": 50.0,
 				"sinusoidalFrequency": 2.0
-=======
-	"nave1": {
-		"position": [ 0, 400, 0 ],
-		"rotation": [ 0, 180, 0 ],
-		"scale": [ 25, 25, 25 ],
-		"components": [
-			{
-				"type": "Mesh",
-				"mesh": "Witerico.mesh",
-				"material": "Witerico"
-			},
-			{
-				"type": "RigidBody",
-				"shape": "mesh",
-				"mass": 100
-			},
-			{
-				"type": "Vida",
-				"vida": 1000
->>>>>>> MEjores
 			}
 		]
 
