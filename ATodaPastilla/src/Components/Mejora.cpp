@@ -39,5 +39,4 @@ void Mejora::update()
 	e_->getComponent<Transform>("Transform")->setPosition(e_->getComponent<Transform>("Transform")->getPosition() +
 		Vector3(sin(MotorCasaPaco::getInstance()->getTime() * sinusoidalFrequency) * sinusoidalMagnitude, 0, movVertical) * MotorCasaPaco::getInstance()->DeltaTime());
 
-	std::cout << e_->getComponent<Transform>("Transform")->getPosition().X << "  " << e_->getComponent<Transform>("Transform")->getPosition().Z << std::endl;
 }
