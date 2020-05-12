@@ -18,4 +18,6 @@ private:
 	float minSpawnTime = 10;
 	float timeToSpawn = 0;
 	float timeSinceLastSpawn = 0;
+
+	int randomMejora = 0;
 };

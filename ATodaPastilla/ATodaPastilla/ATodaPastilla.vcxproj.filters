@@ -89,6 +89,12 @@
     <ClCompile Include="..\src\Components\MejoraDisparo.cpp">
       <Filter>Logic\Mejoras</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\Components\MejoraVida.cpp">
+      <Filter>Logic\Mejoras</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Components\MejoraEutanasia.cpp">
+      <Filter>Logic\Mejoras</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Components\ExitButtonComponent.h">
@@ -179,6 +185,12 @@
       <Filter>Logic\Mejoras</Filter>
     </ClInclude>
     <ClInclude Include="..\include\Components\MejoraDisparo.h">
+      <Filter>Logic\Mejoras</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Components\MejoraVida.h">
+      <Filter>Logic\Mejoras</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Components\MejoraEutanasia.h">
       <Filter>Logic\Mejoras</Filter>
     </ClInclude>
   </ItemGroup>

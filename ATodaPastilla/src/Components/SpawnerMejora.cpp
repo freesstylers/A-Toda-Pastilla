@@ -23,8 +23,22 @@ SpawnerMejora::~SpawnerMejora()
 void SpawnerMejora::update()
 {
 	if (timeSinceLastSpawn >= timeToSpawn) {
-		spawnEntity(Vector3(0, 0, -250));
-		std::cout << "spawned" << std::endl;
+		randomMejora = (rand() % 3);
+		switch (randomMejora)
+		{
+		case 0:
+			spawnEntity(Vector3(150, 0, -250), 0.0, "MejoraDisparo");
+			break;
+		case 1:
+			spawnEntity(Vector3(-150, 0, -250), 0.0, "MejoraVida");
+			break;
+		case 2:
+			spawnEntity(Vector3(-0, 0, -250), 0.0, "MejoraEutanasia");
+			break;
+		default:
+			std::cout << "Nunca debería salir este mensaje" << std::endl;
+			break;
+		}
 		timeToSpawn = (rand() % (int)(maxSpawnTime)) + minSpawnTime;
 		timeSinceLastSpawn = 0;
 	}
@@ -42,13 +56,10 @@ void SpawnerMejora::init(json& j)
 
 Entity* SpawnerMejora::spawnEntity(Vector3 pos, float speed,std::string prefab)
 {
-	float iniAngle = 0;
+	std::cout << "spawned" << std::endl;
 
 	Entity* prj = EntitySpawner::spawnEntity(pos, prefab);
 
-
 	prj->getComponent<Transform>("Transform")->setRotation(Vector3(0, -95, 90));
-
-	std::cout << "spawned" << std::endl;
-	return nullptr;
+	return prj;
 }

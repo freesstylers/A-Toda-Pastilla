@@ -13,7 +13,7 @@
 		},
 		{
 			"name" : "Player",
-			"prefab" : "Witerico"
+			"prefab" : "Teodegonda"
 		},
 		{
 			"name" : "Enemy",
