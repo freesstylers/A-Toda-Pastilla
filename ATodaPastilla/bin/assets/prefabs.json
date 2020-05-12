@@ -198,7 +198,8 @@
 					[ "assets/sound/LVL1.wav", "assets/sound/LVL2.wav", "assets/sound/LVL3.wav" ],
 					[ "assets/sound/LVL1.wav", "assets/sound/LVL2.wav", "assets/sound/LVL3.wav" ]
 				],
-				"shotSound": "assets/sound/shotGunShot.wav",
+				"maximumChargeSound": "assets/sound/MaximumCharge.wav",
+				"shotSound": [ "assets/sound/shotGunShot.wav", "assets/sound/shotGunShot.wav", "assets/sound/shotGunShot.wav" ],
 				"nModes": 3,
 				"shotPos": [ 0, 0, -50 ],
 				"shotDir": [ 0, 0, -1 ],
