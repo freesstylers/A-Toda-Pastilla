@@ -192,6 +192,8 @@
     <ClCompile Include="..\src\Components\MejoraDisparo.cpp" />
     <ClCompile Include="..\src\Components\MenuMuestraPersonajes.cpp" />
     <ClCompile Include="..\src\Components\MovimientoMando.cpp" />
+    <ClCompile Include="..\src\Components\OptionsMenuComponent.cpp" />
+    <ClCompile Include="..\src\Components\PauseMenuComponent.cpp" />
     <ClCompile Include="..\src\Components\PlayerInput.cpp" />
     <ClCompile Include="..\src\Components\ProjectileBehaviour.cpp" />
     <ClCompile Include="..\src\Components\ProjectileSpawner.cpp" />
@@ -230,6 +232,8 @@
     <ClInclude Include="..\include\Components\MejoraDisparo.h" />
     <ClInclude Include="..\include\Components\MenuMuestraPersonaje.h" />
     <ClInclude Include="..\include\Components\MovimientoMando.h" />
+    <ClInclude Include="..\include\Components\OptionsMenuComponent.h" />
+    <ClInclude Include="..\include\Components\PauseMenuComponent.h" />
     <ClInclude Include="..\include\Components\PlayerInput.h" />
     <ClInclude Include="..\include\Components\ProjectileBehaviour.h" />
     <ClInclude Include="..\include\Components\ProjectileSpawner.h" />
