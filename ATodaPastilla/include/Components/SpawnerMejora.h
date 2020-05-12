@@ -15,7 +15,7 @@ public:
 private:
 	std::string defaultPrefab;
 	float maxSpawnTime = 40;
-	float minSpawnTime = 5;
+	float minSpawnTime = 10;
 	float timeToSpawn = 0;
 	float timeSinceLastSpawn = 0;
 };

@@ -13,7 +13,7 @@
 		},
 		{
 			"name" : "Player",
-			"prefab" : "Teodegonda"
+			"prefab" : "Witerico"
 		},
 		{
 			"name" : "Enemy",
@@ -63,7 +63,7 @@
 			"components": [
 				{
 					"type": "SpawnerMejora",
-					"prefab": "Mejora"
+					"prefab": "MejoraDisparo"
 				}
 			]
 		}

@@ -91,6 +91,8 @@
     </ClCompile>
     <ClCompile Include="..\src\Components\PauseMenuComponent.cpp">
       <Filter>UI\Menus</Filter>
+    <ClCompile Include="..\src\Components\MejoraDisparo.cpp">
+      <Filter>Logic\Mejoras</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -186,6 +188,8 @@
     </ClInclude>
     <ClInclude Include="..\include\Components\PauseMenuComponent.h">
       <Filter>UI\Menus</Filter>
+    <ClInclude Include="..\include\Components\MejoraDisparo.h">
+      <Filter>Logic\Mejoras</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

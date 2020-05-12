@@ -11,7 +11,7 @@ public:
 	virtual void update() override;
 	void init(json& j) override;
 
-private:
+protected:
 	float rotation_ = 0.1;
 
 	float sinusoidalMagnitude = 50.0;

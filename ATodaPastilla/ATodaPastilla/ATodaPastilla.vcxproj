@@ -189,6 +189,7 @@
     <ClCompile Include="..\src\Components\GameManager.cpp" />
     <ClCompile Include="..\src\Components\GiroContinuo.cpp" />
     <ClCompile Include="..\src\Components\Mejora.cpp" />
+    <ClCompile Include="..\src\Components\MejoraDisparo.cpp" />
     <ClCompile Include="..\src\Components\MenuMuestraPersonajes.cpp" />
     <ClCompile Include="..\src\Components\MovimientoMando.cpp" />
     <ClCompile Include="..\src\Components\OptionsMenuComponent.cpp" />
@@ -228,6 +229,7 @@
     <ClInclude Include="..\include\Components\GameManager.h" />
     <ClInclude Include="..\include\Components\GiroContinuo.h" />
     <ClInclude Include="..\include\Components\Mejora.h" />
+    <ClInclude Include="..\include\Components\MejoraDisparo.h" />
     <ClInclude Include="..\include\Components\MenuMuestraPersonaje.h" />
     <ClInclude Include="..\include\Components\MovimientoMando.h" />
     <ClInclude Include="..\include\Components\OptionsMenuComponent.h" />
