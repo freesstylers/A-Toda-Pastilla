@@ -77,189 +77,433 @@ void DisparoTeodegonda::init(json& j)
 		}
 	}
 
+	if (!j["maximumChargeSound"].is_null()) {
+		if (!j["maximumChargeSound"].is_array()) {
+			for (int i = 0; i < shotModes.size(); i++) {
+				std::string inter = j["maximumChargeSound"];
+				shotModes[i].maximumChargeSound = inter;
+			}
+		}
+		else {
+			for (int i = 0; i < shotModes.size(); i++) {
+				std::string inter = j["maximumChargeSound"][i];
+				shotModes[i].maximumChargeSound = inter;
+			}
+		}
+	}
+
 	for (int i = 0; i < nModes; i++) {
-		shotModes[i].nBullets = std::vector<int>(shotModes[i].chargeLevels);
-		shotModes[i].damagePerBullet = std::vector<float>(shotModes[i].chargeLevels);
-		shotModes[i].bulletSpeed = std::vector<float>(shotModes[i].chargeLevels);
-		shotModes[i].dispersionAngle = std::vector<float>(shotModes[i].chargeLevels);
-		shotModes[i].inaccuracy = std::vector<float>(shotModes[i].chargeLevels);
-		shotModes[i].inacDispersion = std::vector<float>(shotModes[i].chargeLevels);
-		shotModes[i].burstCadence = std::vector<float>(shotModes[i].chargeLevels);
-		shotModes[i].burstShots = std::vector<int>(shotModes[i].chargeLevels);
-		shotModes[i].shotSound = std::vector<std::string>(shotModes[i].chargeLevels);
-		shotModes[i].chargeSound = std::vector<std::string>(shotModes[i].chargeLevels);
+		shotModes[i].nBullets = std::vector<int>(shotModes[i].chargeLevels, 0);
+		shotModes[i].damagePerBullet = std::vector<float>(shotModes[i].chargeLevels, 0);
+		shotModes[i].bulletSpeed = std::vector<float>(shotModes[i].chargeLevels, 0);
+		shotModes[i].dispersionAngle = std::vector<float>(shotModes[i].chargeLevels, 0);
+		shotModes[i].inaccuracy = std::vector<float>(shotModes[i].chargeLevels, 0);
+		shotModes[i].inacDispersion = std::vector<float>(shotModes[i].chargeLevels, 0);
+		shotModes[i].burstCadence = std::vector<float>(shotModes[i].chargeLevels, 0);
+		shotModes[i].burstShots = std::vector<int>(shotModes[i].chargeLevels,  0);
+		shotModes[i].shotSound = std::vector<std::string>(shotModes[i].chargeLevels, "");
+		shotModes[i].chargeSound = std::vector<std::string>(shotModes[i].chargeLevels, "");
 	}
 	if (!j["chargeSound"].is_null()) {
-		for (int i = 0; i < shotModes.size(); i++) {
-			for (int s = 0; s < shotModes[i].chargeSound.size(); s++) {
-				if (j["chargeSound"].is_array() && j["chargeSound"].size() == shotModes.size() &&
-					j["chargeSound"][i].is_array() && j["chargeSound"][i].size() == shotModes[i].chargeSound.size()) {
-					std::string inter = j["chargeSound"][i][s];
-					shotModes[i].chargeSound[s] = inter;
-				}
-				else if (j["chargeSound"].is_array() && j["chargeSound"].size() == shotModes.size() && !j["chargeSound"][i].is_array()) {
-					std::string inter = j["chargeSound"][i];
-					shotModes[i].chargeSound[s] = inter;
-				}
-				else if (!j["chargeSound"].is_array()) {
+		if (!j["chargeSound"].is_array()) {
+			for (int i = 0; i < shotModes.size(); i++) {
+				for (int s = 0; s < shotModes[i].chargeLevels; s++){
 					std::string inter = j["chargeSound"];
 					shotModes[i].chargeSound[s] = inter;
+				}
+			}
+		}
+		else {
+			int ModeSiz=shotModes.size();
+			if (j["chargeSound"].size() < ModeSiz) ModeSiz = j["chargeSound"].size();
+			for (int i = 0; i < ModeSiz; i++) {
+				if (!j["chargeSound"][i].is_array()) {
+					for (int s = 0; s < shotModes[i].chargeLevels; s++) {
+						std::string inter = j["chargeSound"][i];
+						shotModes[i].chargeSound[s] = inter;
+					}
+				}
+				else {
+					int LvlSiz = shotModes[i].chargeLevels;
+					if (j["chargeSound"][i].size() < LvlSiz) LvlSiz = j["chargeSound"][i].size();
+					for (int s = 0; s < LvlSiz; s++) {
+						std::string inter = j["chargeSound"][i][s];
+						shotModes[i].chargeSound[s] = inter;
+					}
+					if (LvlSiz < shotModes[i].chargeLevels) {
+						for (int s = LvlSiz; s < shotModes[i].chargeLevels; s++) {
+							shotModes[i].chargeSound[s] = shotModes[i].chargeSound[LvlSiz - 1];
+						}
+					}
+				}
+			}
+			if (ModeSiz < shotModes.size()) {
+				for (int i = ModeSiz; i < shotModes.size(); i++) {
+					for(int s=0; s<shotModes[i].chargeLevels; s++)
+						shotModes[i].chargeSound[s] = shotModes[ModeSiz-1].chargeSound[s];
 				}
 			}
 		}
 	}
 
 	if (!j["shotSound"].is_null()) {
-		for (int i = 0; i < shotModes.size(); i++) {
-			for (int s = 0; s < shotModes[i].shotSound.size(); s++) {
-				if (j["shotSound"].is_array() && j["shotSound"].size() == shotModes.size() &&
-					j["shotSound"][i].is_array() && j["shotSound"][i].size() == shotModes[i].shotSound.size()) {
-					std::string inter = j["shotSound"][i][s];
-					shotModes[i].shotSound[s] = inter;
-				}
-				else if (j["shotSound"].is_array() && j["shotSound"].size() == shotModes.size() && !j["shotSound"][i].is_array()) {
-					std::string inter = j["shotSound"][i];
-					shotModes[i].shotSound[s] = inter;
-				}
-				else if (!j["shotSound"].is_array()) {
+		if (!j["shotSound"].is_array()) {
+			for (int i = 0; i < shotModes.size(); i++) {
+				for (int s = 0; s < shotModes[i].chargeLevels; s++) {
 					std::string inter = j["shotSound"];
 					shotModes[i].shotSound[s] = inter;
+				}
+			}
+		}
+		else {
+			int ModeSiz = shotModes.size();
+			if (j["shotSound"].size() < ModeSiz) ModeSiz = j["shotSound"].size();
+			for (int i = 0; i < ModeSiz; i++) {
+				if (!j["shotSound"][i].is_array()) {
+					for (int s = 0; s < shotModes[i].chargeLevels; s++) {
+						std::string inter = j["shotSound"][i];
+						shotModes[i].shotSound[s] = inter;
+					}
+				}
+				else {
+					int LvlSiz = shotModes[i].chargeLevels;
+					if (j["shotSound"][i].size() < LvlSiz) LvlSiz = j["shotSound"][i].size();
+					for (int s = 0; s < LvlSiz; s++) {
+						std::string inter = j["shotSound"][i][s];
+						shotModes[i].shotSound[s] = inter;
+					}
+					if (LvlSiz < shotModes[i].chargeLevels) {
+						for (int s = LvlSiz; s < shotModes[i].chargeLevels; s++) {
+							shotModes[i].shotSound[s] = shotModes[i].shotSound[LvlSiz - 1];
+						}
+					}
+				}
+			}
+			if (ModeSiz < shotModes.size()) {
+				for (int i = ModeSiz; i < shotModes.size(); i++) {
+					for (int s = 0; s < shotModes[i].chargeLevels; s++)
+						shotModes[i].shotSound[s] = shotModes[ModeSiz - 1].shotSound[s];
 				}
 			}
 		}
 	}
 
 	if (!j["nBullets"].is_null()) {
-		for (int i = 0; i < shotModes.size(); i++) {
-			for (int s = 0; s < shotModes[i].nBullets.size(); s++) {
-				if (j["nBullets"].is_array() && j["nBullets"].size() == shotModes.size() && 
-					j["nBullets"][i].is_array() && j["nBullets"][i].size() == shotModes[i].nBullets.size()) {
-					shotModes[i].nBullets[s] = j["nBullets"][i][s];
-				}
-				else if(j["nBullets"].is_array() && j["nBullets"].size() == shotModes.size() && !j["nBullets"][i].is_array()) {
-					shotModes[i].nBullets[s] = j["nBullets"][i];
-				}
-				else if (!j["nBullets"].is_array()) {
+		if (!j["nBullets"].is_array()) {
+			for (int i = 0; i < shotModes.size(); i++) {
+				for (int s = 0; s < shotModes[i].chargeLevels; s++) {
 					shotModes[i].nBullets[s] = j["nBullets"];
+				}
+			}
+		}
+		else {
+			int ModeSiz = shotModes.size();
+			if (j["nBullets"].size() < ModeSiz) ModeSiz = j["nBullets"].size();
+			for (int i = 0; i < ModeSiz; i++) {
+				if (!j["nBullets"][i].is_array()) {
+					for (int s = 0; s < shotModes[i].chargeLevels; s++) {
+						shotModes[i].nBullets[s] = j["nBullets"][i];
+
+					}
+				}
+				else {
+					int LvlSiz = shotModes[i].chargeLevels;
+					if (j["nBullets"][i].size() < LvlSiz) LvlSiz = j["nBullets"][i].size();
+					for (int s = 0; s < LvlSiz; s++) {
+						shotModes[i].nBullets[s] = j["nBullets"][i][s];
+					}
+					if (LvlSiz < shotModes[i].chargeLevels) {
+						for (int s = LvlSiz; s < shotModes[i].chargeLevels; s++) {
+							shotModes[i].nBullets[s] = shotModes[i].nBullets[LvlSiz - 1];
+						}
+					}
+				}
+			}
+			if (ModeSiz < shotModes.size()) {
+				for (int i = ModeSiz; i < shotModes.size(); i++) {
+					for (int s = 0; s < shotModes[i].chargeLevels; s++)
+						shotModes[i].nBullets[s] = shotModes[ModeSiz - 1].nBullets[s];
 				}
 			}
 		}
 	}
 
 	if (!j["damagePerBullet"].is_null()) {
-		for (int i = 0; i < shotModes.size(); i++) {
-			for (int s = 0; s < shotModes[i].damagePerBullet.size(); s++) {
-				if (j["damagePerBullet"].is_array() && j["damagePerBullet"].size() == shotModes.size() &&
-					j["damagePerBullet"][i].is_array() && j["damagePerBullet"][i].size() == shotModes[i].damagePerBullet.size()) {
-					shotModes[i].damagePerBullet[s] = j["damagePerBullet"][i][s];
-				}
-				else if (j["damagePerBullet"].is_array() && j["damagePerBullet"].size() == shotModes.size() && !j["damagePerBullet"][i].is_array()) {
-					shotModes[i].damagePerBullet[s] = j["damagePerBullet"][i];
-				}
-				else if (!j["damagePerBullet"].is_array()) {
+		if (!j["damagePerBullet"].is_array()) {
+			for (int i = 0; i < shotModes.size(); i++) {
+				for (int s = 0; s < shotModes[i].chargeLevels; s++) {
 					shotModes[i].damagePerBullet[s] = j["damagePerBullet"];
+				}
+			}
+		}
+		else {
+			int ModeSiz = shotModes.size();
+			if (j["damagePerBullet"].size() < ModeSiz) ModeSiz = j["damagePerBullet"].size();
+			for (int i = 0; i < ModeSiz; i++) {
+				if (!j["damagePerBullet"][i].is_array()) {
+					for (int s = 0; s < shotModes[i].chargeLevels; s++) {
+						shotModes[i].damagePerBullet[s] = j["damagePerBullet"][i];
+
+					}
+				}
+				else {
+					int LvlSiz = shotModes[i].chargeLevels;
+					if (j["damagePerBullet"][i].size() < LvlSiz) LvlSiz = j["damagePerBullet"][i].size();
+					for (int s = 0; s < LvlSiz; s++) {
+						shotModes[i].damagePerBullet[s] = j["damagePerBullet"][i][s];
+					}
+					if (LvlSiz < shotModes[i].chargeLevels) {
+						for (int s = LvlSiz; s < shotModes[i].chargeLevels; s++) {
+							shotModes[i].damagePerBullet[s] = shotModes[i].damagePerBullet[LvlSiz - 1];
+						}
+					}
+				}
+			}
+			if (ModeSiz < shotModes.size()) {
+				for (int i = ModeSiz; i < shotModes.size(); i++) {
+					for (int s = 0; s < shotModes[i].chargeLevels; s++)
+						shotModes[i].damagePerBullet[s] = shotModes[ModeSiz - 1].damagePerBullet[s];
 				}
 			}
 		}
 	}
 	
+
 	if (!j["bulletSpeed"].is_null()) {
-		for (int i = 0; i < shotModes.size(); i++) {
-			for (int s = 0; s < shotModes[i].bulletSpeed.size(); s++) {
-				if (j["bulletSpeed"].is_array() && j["bulletSpeed"].size() == shotModes.size() &&
-					j["bulletSpeed"][i].is_array() && j["bulletSpeed"][i].size() == shotModes[i].bulletSpeed.size()) {
-					shotModes[i].bulletSpeed[s] = j["bulletSpeed"][i][s];
-				}
-				else if (j["bulletSpeed"].is_array() && j["bulletSpeed"].size() == shotModes.size() && !j["bulletSpeed"][i].is_array()) {
-					shotModes[i].bulletSpeed[s] = j["bulletSpeed"][i];
-				}
-				else if(!j["bulletSpeed"].is_array()) {
+		if (!j["bulletSpeed"].is_array()) {
+			for (int i = 0; i < shotModes.size(); i++) {
+				for (int s = 0; s < shotModes[i].chargeLevels; s++) {
 					shotModes[i].bulletSpeed[s] = j["bulletSpeed"];
+				}
+			}
+		}
+		else {
+			int ModeSiz = shotModes.size();
+			if (j["bulletSpeed"].size() < ModeSiz) ModeSiz = j["bulletSpeed"].size();
+			for (int i = 0; i < ModeSiz; i++) {
+				if (!j["bulletSpeed"][i].is_array()) {
+					for (int s = 0; s < shotModes[i].chargeLevels; s++) {
+						shotModes[i].bulletSpeed[s] = j["bulletSpeed"][i];
+
+					}
+				}
+				else {
+					int LvlSiz = shotModes[i].chargeLevels;
+					if (j["bulletSpeed"][i].size() < LvlSiz) LvlSiz = j["bulletSpeed"][i].size();
+					for (int s = 0; s < LvlSiz; s++) {
+						shotModes[i].bulletSpeed[s] = j["bulletSpeed"][i][s];
+					}
+					if (LvlSiz < shotModes[i].chargeLevels) {
+						for (int s = LvlSiz; s < shotModes[i].chargeLevels; s++) {
+							shotModes[i].bulletSpeed[s] = shotModes[i].bulletSpeed[LvlSiz - 1];
+						}
+					}
+				}
+			}
+			if (ModeSiz < shotModes.size()) {
+				for (int i = ModeSiz; i < shotModes.size(); i++) {
+					for (int s = 0; s < shotModes[i].chargeLevels; s++)
+						shotModes[i].bulletSpeed[s] = shotModes[ModeSiz - 1].bulletSpeed[s];
 				}
 			}
 		}
 	}
 
 	if (!j["dispersionAngle"].is_null()) {
-		for (int i = 0; i < shotModes.size(); i++) {
-			for (int s = 0; s < shotModes[i].dispersionAngle.size(); s++) {
-				if (j["dispersionAngle"].is_array() && j["dispersionAngle"].size() == shotModes.size() &&
-					j["dispersionAngle"][i].is_array() && j["dispersionAngle"][i].size() == shotModes[i].dispersionAngle.size()) {
-					shotModes[i].dispersionAngle[s] = j["dispersionAngle"][i][s];
-				}
-				else if (j["dispersionAngle"].is_array() && j["dispersionAngle"].size() == shotModes.size() && !j["dispersionAngle"][i].is_array()) {
-					shotModes[i].dispersionAngle[s] = j["dispersionAngle"][i];
-				}
-				else if (!j["dispersionAngle"].is_array()) {
+		if (!j["dispersionAngle"].is_array()) {
+			for (int i = 0; i < shotModes.size(); i++) {
+				for (int s = 0; s < shotModes[i].chargeLevels; s++) {
 					shotModes[i].dispersionAngle[s] = j["dispersionAngle"];
+				}
+			}
+		}
+		else {
+			int ModeSiz = shotModes.size();
+			if (j["dispersionAngle"].size() < ModeSiz) ModeSiz = j["dispersionAngle"].size();
+			for (int i = 0; i < ModeSiz; i++) {
+				if (!j["dispersionAngle"][i].is_array()) {
+					for (int s = 0; s < shotModes[i].chargeLevels; s++) {
+						shotModes[i].dispersionAngle[s] = j["dispersionAngle"][i];
+
+					}
+				}
+				else {
+					int LvlSiz = shotModes[i].chargeLevels;
+					if (j["dispersionAngle"][i].size() < LvlSiz) LvlSiz = j["dispersionAngle"][i].size();
+					for (int s = 0; s < LvlSiz; s++) {
+						shotModes[i].dispersionAngle[s] = j["dispersionAngle"][i][s];
+					}
+					if (LvlSiz < shotModes[i].chargeLevels) {
+						for (int s = LvlSiz; s < shotModes[i].chargeLevels; s++) {
+							shotModes[i].dispersionAngle[s] = shotModes[i].dispersionAngle[LvlSiz - 1];
+						}
+					}
+				}
+			}
+			if (ModeSiz < shotModes.size()) {
+				for (int i = ModeSiz; i < shotModes.size(); i++) {
+					for (int s = 0; s < shotModes[i].chargeLevels; s++)
+						shotModes[i].dispersionAngle[s] = shotModes[ModeSiz - 1].dispersionAngle[s];
 				}
 			}
 		}
 	}
 
 	if (!j["inaccuracy"].is_null()) {
-		for (int i = 0; i < shotModes.size(); i++) {
-			for (int s = 0; s < shotModes[i].inaccuracy.size(); s++) {
-				if (j["inaccuracy"].is_array() && j["inaccuracy"].size() == shotModes.size() &&
-					j["inaccuracy"][i].is_array() && j["inaccuracy"][i].size() == shotModes[i].inaccuracy.size()) {
-					shotModes[i].inaccuracy[s] = j["inaccuracy"][i][s];
-				}
-				else if (j["inaccuracy"].is_array() && j["inaccuracy"].size() == shotModes.size() && !j["inaccuracy"][i].is_array()) {
-					shotModes[i].inaccuracy[s] = j["inaccuracy"][i];
-				}
-				else if (!j["inaccuracy"].is_array()) {
+		if (!j["inaccuracy"].is_array()) {
+			for (int i = 0; i < shotModes.size(); i++) {
+				for (int s = 0; s < shotModes[i].chargeLevels; s++) {
 					shotModes[i].inaccuracy[s] = j["inaccuracy"];
+				}
+			}
+		}
+		else {
+			int ModeSiz = shotModes.size();
+			if (j["inaccuracy"].size() < ModeSiz) ModeSiz = j["inaccuracy"].size();
+			for (int i = 0; i < ModeSiz; i++) {
+				if (!j["inaccuracy"][i].is_array()) {
+					for (int s = 0; s < shotModes[i].chargeLevels; s++) {
+						shotModes[i].inaccuracy[s] = j["inaccuracy"][i];
+
+					}
+				}
+				else {
+					int LvlSiz = shotModes[i].chargeLevels;
+					if (j["inaccuracy"][i].size() < LvlSiz) LvlSiz = j["inaccuracy"][i].size();
+					for (int s = 0; s < LvlSiz; s++) {
+						shotModes[i].inaccuracy[s] = j["inaccuracy"][i][s];
+					}
+					if (LvlSiz < shotModes[i].chargeLevels) {
+						for (int s = LvlSiz; s < shotModes[i].chargeLevels; s++) {
+							shotModes[i].inaccuracy[s] = shotModes[i].inaccuracy[LvlSiz - 1];
+						}
+					}
+				}
+			}
+			if (ModeSiz < shotModes.size()) {
+				for (int i = ModeSiz; i < shotModes.size(); i++) {
+					for (int s = 0; s < shotModes[i].chargeLevels; s++)
+						shotModes[i].inaccuracy[s] = shotModes[ModeSiz - 1].inaccuracy[s];
 				}
 			}
 		}
 	}
 
 	if (!j["inacDispersion"].is_null()) {
-		for (int i = 0; i < shotModes.size(); i++) {
-			for (int s = 0; s < shotModes[i].inacDispersion.size(); s++) {
-				if (j["inacDispersion"].is_array() && j["inacDispersion"].size() == shotModes.size() &&
-					j["inacDispersion"][i].is_array() && j["inacDispersion"][i].size() == shotModes[i].inacDispersion.size()) {
-					shotModes[i].inacDispersion[s] = j["inacDispersion"][i][s];
-				}
-				else if (j["inacDispersion"].is_array() && j["inacDispersion"].size() == shotModes.size() && !j["inacDispersion"][i].is_array()) {
-					shotModes[i].inacDispersion[s] = j["inacDispersion"][i];
-				}
-				else if (!j["inacDispersion"].is_array()) {
+		if (!j["inacDispersion"].is_array()) {
+			for (int i = 0; i < shotModes.size(); i++) {
+				for (int s = 0; s < shotModes[i].chargeLevels; s++) {
 					shotModes[i].inacDispersion[s] = j["inacDispersion"];
+				}
+			}
+		}
+		else {
+			int ModeSiz = shotModes.size();
+			if (j["inacDispersion"].size() < ModeSiz) ModeSiz = j["inacDispersion"].size();
+			for (int i = 0; i < ModeSiz; i++) {
+				if (!j["inacDispersion"][i].is_array()) {
+					for (int s = 0; s < shotModes[i].chargeLevels; s++) {
+						shotModes[i].inacDispersion[s] = j["inacDispersion"][i];
+
+					}
+				}
+				else {
+					int LvlSiz = shotModes[i].chargeLevels;
+					if (j["inacDispersion"][i].size() < LvlSiz) LvlSiz = j["inacDispersion"][i].size();
+					for (int s = 0; s < LvlSiz; s++) {
+						shotModes[i].inacDispersion[s] = j["inacDispersion"][i][s];
+					}
+					if (LvlSiz < shotModes[i].chargeLevels) {
+						for (int s = LvlSiz; s < shotModes[i].chargeLevels; s++) {
+							shotModes[i].inacDispersion[s] = shotModes[i].inacDispersion[LvlSiz - 1];
+						}
+					}
+				}
+			}
+			if (ModeSiz < shotModes.size()) {
+				for (int i = ModeSiz; i < shotModes.size(); i++) {
+					for (int s = 0; s < shotModes[i].chargeLevels; s++)
+						shotModes[i].inacDispersion[s] = shotModes[ModeSiz - 1].inacDispersion[s];
 				}
 			}
 		}
 	}
 
 	if (!j["burstCadence"].is_null()) {
-		for (int i = 0; i < shotModes.size(); i++) {
-			for (int s = 0; s < shotModes[i].burstCadence.size(); s++) {
-				if (j["burstCadence"].is_array() && j["burstCadence"].size() == shotModes.size() &&
-					j["burstCadence"][i].is_array() && j["burstCadence"][i].size() == shotModes[i].burstCadence.size()) {
-					shotModes[i].dispersionAngle[s] = j["burstCadence"][i][s];
-				}
-				else if (j["burstCadence"].is_array() && j["burstCadence"].size() == shotModes.size() && !j["burstCadence"][i].is_array()) {
-					shotModes[i].burstCadence[s] = j["burstCadence"][i];
-				}
-				else if (!j["burstCadence"].is_array()) {
+		if (!j["burstCadence"].is_array()) {
+			for (int i = 0; i < shotModes.size(); i++) {
+				for (int s = 0; s < shotModes[i].chargeLevels; s++) {
 					shotModes[i].burstCadence[s] = j["burstCadence"];
+				}
+			}
+		}
+		else {
+			int ModeSiz = shotModes.size();
+			if (j["burstCadence"].size() < ModeSiz) ModeSiz = j["burstCadence"].size();
+			for (int i = 0; i < ModeSiz; i++) {
+				if (!j["burstCadence"][i].is_array()) {
+					for (int s = 0; s < shotModes[i].chargeLevels; s++) {
+						shotModes[i].burstCadence[s] = j["burstCadence"][i];
+
+					}
+				}
+				else {
+					int LvlSiz = shotModes[i].chargeLevels;
+					if (j["burstCadence"][i].size() < LvlSiz) LvlSiz = j["burstCadence"][i].size();
+					for (int s = 0; s < LvlSiz; s++) {
+						shotModes[i].burstCadence[s] = j["burstCadence"][i][s];
+					}
+					if (LvlSiz < shotModes[i].chargeLevels) {
+						for (int s = LvlSiz; s < shotModes[i].chargeLevels; s++) {
+							shotModes[i].burstCadence[s] = shotModes[i].burstCadence[LvlSiz - 1];
+						}
+					}
+				}
+			}
+			if (ModeSiz < shotModes.size()) {
+				for (int i = ModeSiz; i < shotModes.size(); i++) {
+					for (int s = 0; s < shotModes[i].chargeLevels; s++)
+						shotModes[i].burstCadence[s] = shotModes[ModeSiz - 1].burstCadence[s];
 				}
 			}
 		}
 	}
 
 	if (!j["burstShots"].is_null()) {
-		for (int i = 0; i < shotModes.size(); i++) {
-			for (int s = 0; s < shotModes[i].burstShots.size(); s++) {
-				if (j["burstShots"].is_array() && j["burstShots"].size() == shotModes.size() &&
-					j["burstShots"][i].is_array() && j["burstShots"][i].size() == shotModes[i].burstShots.size()) {
-					shotModes[i].burstShots[s] = j["burstShots"][i][s];
-				}
-				else if (j["burstShots"].is_array() && j["burstShots"].size() == shotModes.size() && !j["burstShots"][i].is_array()) {
-					shotModes[i].burstShots[s] = j["burstShots"][i];
-				}
-				else if (!j["burstShots"].is_array()) {
+		if (!j["burstShots"].is_array()) {
+			for (int i = 0; i < shotModes.size(); i++) {
+				for (int s = 0; s < shotModes[i].chargeLevels; s++) {
 					shotModes[i].burstShots[s] = j["burstShots"];
+				}
+			}
+		}
+		else {
+			int ModeSiz = shotModes.size();
+			if (j["burstShots"].size() < ModeSiz) ModeSiz = j["burstShots"].size();
+			for (int i = 0; i < ModeSiz; i++) {
+				if (!j["burstShots"][i].is_array()) {
+					for (int s = 0; s < shotModes[i].chargeLevels; s++) {
+						shotModes[i].burstShots[s] = j["burstShots"][i];
+
+					}
+				}
+				else {
+					int LvlSiz = shotModes[i].chargeLevels;
+					if (j["burstShots"][i].size() < LvlSiz) LvlSiz = j["burstShots"][i].size();
+					for (int s = 0; s < LvlSiz; s++) {
+						shotModes[i].burstShots[s] = j["burstShots"][i][s];
+					}
+					if (LvlSiz < shotModes[i].chargeLevels) {
+						for (int s = LvlSiz; s < shotModes[i].chargeLevels; s++) {
+							shotModes[i].burstShots[s] = shotModes[i].burstShots[LvlSiz - 1];
+						}
+					}
+				}
+			}
+			if (ModeSiz < shotModes.size()) {
+				for (int i = ModeSiz; i < shotModes.size(); i++) {
+					for (int s = 0; s < shotModes[i].chargeLevels; s++)
+						shotModes[i].burstShots[s] = shotModes[ModeSiz - 1].burstShots[s];
 				}
 			}
 		}
@@ -303,7 +547,7 @@ void DisparoTeodegonda::chargeShot()
 		if (currChargeLevel < shotModes[currMode].chargeLevels - 1) {
 			currChargeLevel++;
 			if (currChargeLevel == shotModes[currMode].chargeLevels - 1)
-				AudioManager::getInstance()->playMusic("assets/sound/MaximumCharge.wav", 3);
+				AudioManager::getInstance()->playMusic(shotModes[currMode].maximumChargeSound.c_str(), 3);
 			else
 				AudioManager::getInstance()->playMusic(shotModes[currMode].chargeSound[currChargeLevel].c_str(), 3);
 			AudioManager::getInstance()->setVolume(0.05 * (currChargeLevel + 1.0), 3);
