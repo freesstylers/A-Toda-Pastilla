@@ -73,6 +73,18 @@
 					"entidades" : ["witericoMenu", "teodegondaMenu", "hermenegildoMenu", "ricibergaMenu"],
 					"buttonName1" : "MainMenu/LeftArrow",
 					"buttonName2" : "MainMenu/RightArrow"
+				},
+				{
+					"type": "MainMenuInputComponent",
+					"buttons" :
+					[
+					 "MainMenu/Settings",
+					 "MainMenu/LeftArrow",
+					 "MainMenu/Play",
+					 "MainMenu/RightArrow",
+					 "MainMenu/Close"
+					],
+					"delay" : 0.2
 				}
 			]
 		},
@@ -84,7 +96,7 @@
 				{
 					"type": "ChangeSceneButtonComponent",
 					"buttonName" : "MainMenu/Settings",
-					"sceneName" : "GraphicOptions"
+					"sceneName" : "OptionsMenu"
 				}
 			]
 		}

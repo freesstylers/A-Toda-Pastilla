@@ -8,8 +8,5 @@ public:
 	~PlayerInput();
 	void alwaysLateUpdate() override;
 	void init(json& j) override;
-
-private:
-	bool pausePressed_ = false;
 };
 

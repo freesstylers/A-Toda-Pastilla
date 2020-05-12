@@ -157,9 +157,6 @@
 				"damagePerBullet": 10,
 				"bulletSpeed": [ 600, 600, 800 ],
 				"dispersionAngle": [ 15, 15, 15 ]
-			},
-			{
-				"type": "PlayerInput"
 			}
 		]
 
@@ -231,9 +228,6 @@
 					[ 1, 2, 4 ],
 					[ 1, 2, 4 ]
 				]
-			},
-			{
-				"type": "PlayerInput"
 			},
 			{
 				"type": "Vida",
