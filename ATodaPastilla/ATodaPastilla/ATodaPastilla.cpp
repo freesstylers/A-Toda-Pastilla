@@ -21,6 +21,7 @@
 #include "Components/GiroContinuo.h"
 #include "Components/MenuMuestraPersonaje.h"
 
+/*
 #include "Components/ApplyGraphicChangesComponent.h"
 #include "Components/ChangeFullScreenComponent.h"
 #include "Components/ChangeVyncComponent.h"
@@ -32,6 +33,11 @@
 #include "Components/ApplyAdvancedGraphicChangesComponent.h"
 #include "Components/FSAAChangeComponent.h"
 #include "Components/ShadowsChangeComponent.h"
+*/
+
+
+#include "Components/PauseMenuComponent.h"
+#include "Components/OptionsMenuComponent.h"
 #include "Components/PlayerInput.h"
 #include "Components/GameManager.h"
 #include "Components/SpawnerMejora.h"
@@ -139,6 +145,7 @@ public:
 	};
 };
 
+/*
 class ChangeFullScreenComponentFactory : public BaseFactory
 {
 public:
@@ -237,6 +244,25 @@ public:
 		return new ChangeGraphicSceneComponent(args);
 	};
 };
+*/
+
+class PauseMenuComponentFactory : public BaseFactory
+{
+public:
+	Component* createComponent(json& args) override
+	{
+		return new PauseMenuComponent(args);
+	};
+};
+
+class OptionsMenuComponentFactory : public BaseFactory
+{
+public:
+	Component* createComponent(json& args) override
+	{
+		return new OptionsMenuComponent(args);
+	};
+};
 
 class PlayerInputFactory : public BaseFactory
 {
@@ -308,6 +334,7 @@ void setupFactories()
 	j->addFactory("GiroContinuo", new GiroContinuoFactory());
 	j->addFactory("MenuMuestraPersonaje", new MenuMuestraPersonajeFactory());
 	j->addFactory("ProjectileBehaviour", new ProjectileBehaviourFactory());
+	/*
 	j->addFactory("ChangeFullScreenComponent", new ChangeFullScreenComponentFactory());
 	j->addFactory("FormatResolutionChangeComponent", new FormatResolutionChangeComponentFactory());
 	j->addFactory("ApplyGraphicChangesComponent", new ApplyGraphicChangesComponentFactory());
@@ -318,7 +345,9 @@ void setupFactories()
 	j->addFactory("RevertGraphicChangesComponent", new RevertGraphicChangesComponentFactory());
 	j->addFactory("RevertAdvancedGraphicChangesComponent", new RevertAdvancedGraphicChangesComponentFactory());
 	j->addFactory("ChangeGammaComponent", new ChangeGammaComponentFactory());
-	j->addFactory("ChangeGraphicSceneComponent", new ChangeGraphicSceneComponentFactory());
+	j->addFactory("ChangeGraphicSceneComponent", new ChangeGraphicSceneComponentFactory());*/
+	j->addFactory("PauseMenuComponent", new PauseMenuComponentFactory());
+	j->addFactory("OptionsMenuComponent", new OptionsMenuComponentFactory());
 	j->addFactory("PlayerInput", new PlayerInputFactory());
 	j->addFactory("GameManager", new GameManagerFactory());
 	j->addFactory("SpawnerMejora", new SpawnerMejoraFactory());

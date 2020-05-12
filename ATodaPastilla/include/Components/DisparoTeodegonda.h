@@ -6,6 +6,7 @@ struct TeodegondaShotInfo {
 	Vector3 shotDir = Vector3(0, 0, -1);
 	float chargeTime;
 	int chargeLevels;
+	std::string maximumChargeSound="";
 
 	std::vector<std::string> chargeSound;
 	std::vector<std::string> shotSound;
