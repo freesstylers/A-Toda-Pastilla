@@ -352,7 +352,7 @@
 		]
 	},
 
-	"Mejora": {
+	"MejoraDisparo": {
 		"position": [ 0, 0,0 ],
 		"rotation": [ 0, 0, 180 ],
 		"scale": [ 5, 5, 5 ],
@@ -368,7 +368,7 @@
 				"isKinematic": true
 			},
 			{
-				"type": "Mejora"
+				"type": "MejoraDisparo"
 			},
 			{
 				"type": "GiroContinuo",

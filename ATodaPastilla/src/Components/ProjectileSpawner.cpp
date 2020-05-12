@@ -84,3 +84,8 @@ void ProjectileSpawner::calculateInaccuracy(Vector3& shot, float inaccuracy, flo
 		rotateVector(shot, inacDispersion * side);
 	}
 }
+
+int ProjectileSpawner::getNmodes()
+{
+	return nModes;
+}

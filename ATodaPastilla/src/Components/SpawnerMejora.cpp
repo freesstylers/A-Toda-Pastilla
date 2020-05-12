@@ -37,7 +37,6 @@ void SpawnerMejora::init(json& j)
 	srand((unsigned)time(NULL));
 	EntitySpawner::init(j);
 	timeToSpawn = 5;
-	//spawnEntity(Vector3(0,0,-250));
 
 }
 

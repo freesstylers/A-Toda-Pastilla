@@ -12,6 +12,7 @@ public:
 	virtual void spawnProjectiles(Vector3 pos = Vector3(0, 0, 0), Vector3 dir = Vector3(0, 0, 0), float speed=0, int nbullets=1, float damage=10, float dispersionAngle=0, float inaccuracy=0, float inacDipsersion=0,  std::string prefab = "");
 	virtual void setShotMode(int mode);
 	virtual int getShotMode();
+	virtual int getNmodes();
 
 protected:
 	float timeSinceLastShot;

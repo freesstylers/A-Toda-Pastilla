@@ -35,7 +35,7 @@
 #include "Components/PlayerInput.h"
 #include "Components/GameManager.h"
 #include "Components/SpawnerMejora.h"
-#include "Components/Mejora.h"
+#include "Components/MejoraDisparo.h"
 
 MotorCasaPaco* motorCasaPaco;
 
@@ -263,12 +263,12 @@ public:
 	};
 };
 
-class MejoraFactory : public BaseFactory
+class MejoraDisparoFactory : public BaseFactory
 {
 public:
 	Component* createComponent(json& args) override
 	{
-		return new Mejora(args);
+		return new MejoraDisparo(args);
 	};
 };
 
@@ -302,7 +302,7 @@ void setupFactories()
 	j->addFactory("PlayerInput", new PlayerInputFactory());
 	j->addFactory("GameManager", new GameManagerFactory());
 	j->addFactory("SpawnerMejora", new SpawnerMejoraFactory());
-	j->addFactory("Mejora", new MejoraFactory());
+	j->addFactory("MejoraDisparo", new MejoraDisparoFactory());
 }
 
 #ifdef  _DEBUG
