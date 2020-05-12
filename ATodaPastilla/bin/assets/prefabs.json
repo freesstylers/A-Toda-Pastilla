@@ -156,11 +156,7 @@
 				"damagePerBullet" : 10,
 				"bulletSpeed": [600, 600, 800],
 				"dispersionAngle": [30, 60, 90]
-			},
-			{
-				"type": "PlayerInput"
 			}
-
 		]
 
 	},
@@ -214,9 +210,6 @@
 				"chargeTime": 0.35,
 				"burstCadence": 0.05,
 				"burstShots": [[3, 6, 9]]
-			},
-			{
-				"type" : "PlayerInput"
 			},
 			{
 				"type" : "Vida",
