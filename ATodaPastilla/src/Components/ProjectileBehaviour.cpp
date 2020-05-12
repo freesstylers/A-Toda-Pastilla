@@ -58,6 +58,11 @@ void ProjectileBehaviour::setSource(std::string sourc)
 	source = sourc;
 }
 
+std::string ProjectileBehaviour::getSource()
+{
+	return source;
+}
+
 void ProjectileBehaviour::setDamage(float dmg)
 {
 	damage = dmg;
@@ -65,12 +70,17 @@ void ProjectileBehaviour::setDamage(float dmg)
 
 void ProjectileBehaviour::OnCollision(Entity* other)
 {
-	if(source=="Player" && (other->getTag()=="Enemy" || other->getTag() == "Projectile" && 
-		other->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->source == "Enemy")){
+	if(source=="Player" && other->getTag()=="Enemy" || source == "Enemy" && other->getTag() == "Player"){
 
 		other->getComponent<Vida>("Vida")->sumaVida(-damage);
 		e_->getComponent<Vida>("Vida")->sumaVida(-e_->getComponent<Vida>("Vida")->GetVida());
 
+	}
+
+	else if (source == "Player" && other->getTag() == "Projectile" && other->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->getSource()=="Enemy") {
+
+		other->getComponent<Vida>("Vida")->sumaVida(-other->getComponent<Vida>("Vida")->GetVida());
+		e_->getComponent<Vida>("Vida")->sumaVida(-e_->getComponent<Vida>("Vida")->GetVida());
 	}
 }
 

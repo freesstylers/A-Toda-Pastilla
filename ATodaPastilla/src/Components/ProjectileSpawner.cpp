@@ -29,7 +29,7 @@ void ProjectileSpawner::spawnProjectiles(Vector3 pos, Vector3 dir, float speed, 
 	float ang = dispersionAngle / nbullets;
 
 	for (int i = 0; i < nbullets; i++) {
-		Entity* prj = spawnEntity(pos, prefab);
+		Entity* prj = spawnEntity(e_->getComponent<Transform>("Transform")->getPosition() + pos, prefab);
 
 		Vector3 inaccSh=Dir;
 

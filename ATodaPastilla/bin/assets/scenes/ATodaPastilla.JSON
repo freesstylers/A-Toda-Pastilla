@@ -16,8 +16,12 @@
 			"prefab" : "Teodegonda"
 		},
 		{
-			"name" : "Enemy",
+			"name" : "Riciberga",
 			"prefab" : "Riciberga"
+		},
+		{
+			"name" : "Hermenegildo",
+			"prefab" : "Hermenegildo"
 		},
 		{
 			"name": "floor",

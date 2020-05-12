@@ -188,6 +188,7 @@
     <ClCompile Include="..\src\Components\FSAAChangeComponent.cpp" />
     <ClCompile Include="..\src\Components\GameManager.cpp" />
     <ClCompile Include="..\src\Components\GiroContinuo.cpp" />
+    <ClCompile Include="..\src\Components\HermenegildoBehaviour.cpp" />
     <ClCompile Include="..\src\Components\Mejora.cpp" />
     <ClCompile Include="..\src\Components\MejoraDisparo.cpp" />
     <ClCompile Include="..\src\Components\MejoraEutanasia.cpp" />
@@ -230,6 +231,7 @@
     <ClInclude Include="..\include\Components\FSAAChangeComponent.h" />
     <ClInclude Include="..\include\Components\GameManager.h" />
     <ClInclude Include="..\include\Components\GiroContinuo.h" />
+    <ClInclude Include="..\include\Components\HermenegildoBehaviour.h" />
     <ClInclude Include="..\include\Components\Mejora.h" />
     <ClInclude Include="..\include\Components\MejoraDisparo.h" />
     <ClInclude Include="..\include\Components\MejoraEutanasia.h" />

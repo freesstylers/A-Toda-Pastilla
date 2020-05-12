@@ -4,6 +4,7 @@
 #include "Audio/AudioManager.h"
 #include "Entity/Transform.h"
 #include "MotorCasaPaco.h"
+#include "Components/ProjectileBehaviour.h"
 #include "Scene/SceneManager.h"
 #include "Events/EventManager.h"
 #include "Events/Event.h"
@@ -113,7 +114,7 @@ void RicibergaBehaviour::OnCollision(Entity* other)
 				e_->getComponent<Vida>("Vida")->sumaVida(e_->getComponent<Vida>("Vida")->GetVida());
 			}
 		}
-		else if (other->getTag() == "Projectile") {
+		else if (other->getTag() == "Projectile" && other->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->getSource()=="Player") {
 			float x = rand() % 100;
 			if (x < 95) {
 				AudioManager::getInstance()->playMusic(hitSound.c_str(), 4);

@@ -563,7 +563,7 @@ void DisparoTeodegonda::fireBurst()
 	if (currChargeLevel >= 0 && timeSinceLastShot >= shotModes[currMode].burstCadence[currChargeLevel]
 		&& burstShotsFired < shotModes[currMode].burstShots[currChargeLevel]) {
 
-		spawnProjectiles(getEntity()->getComponent<Transform>("Transform")->getPosition() + shotModes[currMode].shotPos,
+		spawnProjectiles(shotModes[currMode].shotPos,
 			shotModes[currMode].shotDir, shotModes[currMode].bulletSpeed[currChargeLevel], shotModes[currMode].nBullets[currChargeLevel],
 			shotModes[currMode].damagePerBullet[currChargeLevel], shotModes[currMode].dispersionAngle[currChargeLevel], 
 			shotModes[currMode].inaccuracy[currChargeLevel], shotModes[currMode].inacDispersion[currChargeLevel]);

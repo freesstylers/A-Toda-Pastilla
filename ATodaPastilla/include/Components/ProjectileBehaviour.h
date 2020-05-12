@@ -9,6 +9,7 @@ public:
 	void setDir(Vector3 dir);
 	void setSpeed(float speed);
 	void setSource(std::string sourc);
+	std::string getSource();
 	void setDamage(float dmg);
 
 	void OnCollision(Entity* other) override;

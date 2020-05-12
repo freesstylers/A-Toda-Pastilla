@@ -51,7 +51,7 @@
 	},
 
 	"ibuprofeno": {
-		"position": [ 0, 50, 0 ],
+		"position": [ 0, 0, 0 ],
 		"rotation": [ 0, 0, 0 ],
 		"scale": [ 10, 10, 10 ],
 		"tag": "Projectile",
@@ -64,8 +64,10 @@
 			{
 				"type": "RigidBody",
 				"shape": "mesh",
-				"isKinematic": true,
+				"mass" : 10,
 				"isTrigger": true,
+				"angularFactor" : [0, 0, 1],
+				"linearFactor" : [1, 0, 1],
 				"disableDeactivation": true
 			},
 			{
@@ -81,7 +83,7 @@
 
 
 	"capsula": {
-		"position": [ 0, 50, 0 ],
+		"position": [ 0, 0, 0 ],
 		"rotation": [ 0, 90, 0 ],
 		"scale": [ 10, 10, 10 ],
 		"tag": "Projectile",
@@ -94,8 +96,10 @@
 			{
 				"type": "RigidBody",
 				"shape": "mesh",
-				"isKinematic": true,
+				"mass" : 10,
 				"isTrigger": true,
+				"angularFactor" : [0, 0, 1],
+				"linearFactor" : [1, 0, 1],
 				"disableDeactivation": true
 			},
 			{
@@ -110,7 +114,7 @@
 	},
 
 	"Witerico": {
-		"position": [ 0, 50, 125 ],
+		"position": [ 0, 25, 125 ],
 		"rotation": [ 0, 180, 0 ],
 		"scale": [ 10, 10, 10 ],
 		"tag": "Player",
@@ -123,9 +127,10 @@
 			{
 				"type": "RigidBody",
 				"shape": "mesh",
-				"mass": 100,
+				"mass": 10,
 				"gravity": [ 0, 0, 0 ],
-				"FixRotation": true,
+				"angularFactor" : [0, 0, 1],
+				"linearFactor" : [1, 0, 1],
 				"disableDeactivation": true
 			},
 			{
@@ -160,7 +165,7 @@
 
 	},
 	"Teodegonda": {
-		"position": [ 0, 50, 125 ],
+		"position": [ 0, 25, 125 ],
 		"rotation": [ 0, 180, 0 ],
 		"scale": [ 15, 15, 15 ],
 		"tag": "Player",
@@ -173,9 +178,10 @@
 			{
 				"type": "RigidBody",
 				"shape": "mesh",
-				"mass": 100,
+				"mass": 10,
 				"gravity": [ 0, 0, 0 ],
-				"FixRotation": true,
+				"angularFactor" : [0, 0, 1],
+				"linearFactor" : [1, 0, 1],
 				"disableDeactivation": true
 			},
 			{
@@ -231,14 +237,14 @@
 			},
 			{
 				"type": "Vida",
-				"vida": 100
+				"vida": 10000
 			}
 
 		]
 
 	},
 	"Riciberga": {
-		"position": [ 0, 50, -125 ],
+		"position": [ 0, 25, -125 ],
 		"rotation": [ 0, 0, 0 ],
 		"scale": [ 25, 25, 25 ],
 		"tag": "Enemy",
@@ -251,8 +257,10 @@
 			{
 				"type": "RigidBody",
 				"shape": "mesh",
-				"mass": 100,
+				"mass": 10,
 				"gravity": [ 0, 0, 0 ],
+				"angularFactor" : [0, 1, 0],
+				"linearFactor" : [1, 0, 1],
 				"disableDeactivation": true
 			},
 			{
@@ -273,10 +281,48 @@
 				"sinusoidalMagnitude": 50.0,
 				"sinusoidalFrequency": 2.0
 			}
+			
 		]
 
 	},
+	"Hermenegildo": {
+		"position": [ 70, 25, -125 ],
+		"rotation": [ 0, 0, 0 ],
+		"scale": [15, 15, 15],
+		"tag": "Enemy",
+		"components": [
+			{
+				"type": "Mesh",
+				"mesh": "Hermenegildo.mesh",
+				"material": "Hermenegildo"
+			},
+			{
+				"type": "RigidBody",
+				"shape": "mesh",
+				"mass": 10,
+				"gravity": [ 0, 0, 0 ],
+				"angularFactor" : [0, 0, 0],
+				"linearFactor" : [1, 0, 1],
+				"disableDeactivation": true
+			},
+			{
+				"type": "Vida",
+				"vida": 100,
+				"customDeath": false
+			},
+			{
+				"type": "ProjectileSpawner",
+				"prefab": "ibuprofeno"
+			},
+			{
+				"type": "HermenegildoBehaviour",
+				"cadence": 0.8,
+				"shotsPerAttack": 3,
+				"timeBetweenAttacks": 2
+			}
+		]
 
+	},
 	"witericoMenu": {
 		"position": [ 0, 400, 0 ],
 		"rotation": [ 0, 0, 0 ],
@@ -363,7 +409,7 @@
 	},
 
 	"MejoraDisparo": {
-		"position": [ 0, 0, 0 ],
+		"position": [ 0, 50, 0 ],
 		"rotation": [ 0, 0, 180 ],
 		"scale": [ 5, 5, 5 ],
 		"components": [
@@ -375,7 +421,8 @@
 			{
 				"type": "RigidBody",
 				"shape": "cube",
-				"isKinematic": true
+				"isKinematic": true,
+				"isTrigger": true
 			},
 			{
 				"type": "MejoraDisparo"
@@ -388,7 +435,7 @@
 	},
 
 	"MejoraVida": {
-		"position": [ 0, 0, 0 ],
+		"position": [ 0, 50, 0 ],
 		"rotation": [ 0, 0, 180 ],
 		"scale": [ 12, 12, 12 ],
 		"components": [
@@ -412,7 +459,7 @@
 		]
 	},
 	"MejoraEutanasia": {
-		"position": [ 0, 0, 0 ],
+		"position": [ 0, 50, 0 ],
 		"rotation": [ 0, 0, 180 ],
 		"scale": [ 8, 8, 8 ],
 		"components": [

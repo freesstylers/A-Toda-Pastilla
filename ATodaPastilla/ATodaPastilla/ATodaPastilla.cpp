@@ -8,9 +8,11 @@
 
 #include "Components/MovimientoMando.h"
 #include "Components/EntitySpawner.h"
+#include "Components/ProjectileSpawner.h"
 #include "Components/DisparoWiterico.h"
 #include "Components/DisparoTeodegonda.h"
 #include "Components/RicibergaBehaviour.h"
+#include "Components/HermenegildoBehaviour.h"
 
 #include "Scene/JsonFactoryParser.h"
 #include "Components/ProjectileBehaviour.h"
@@ -63,6 +65,14 @@ public:
 	}
 };
 
+class ProjectileSpawnerFactory : public BaseFactory{
+public:
+	Component * createComponent(json & args) override {
+		return new ProjectileSpawner(args);
+	}
+};
+
+
 class DisparoWitericoFactory : public BaseFactory {
 public:
 	Component* createComponent(json& args) override {
@@ -81,6 +91,13 @@ class RicibergaBehaviourFactory : public BaseFactory {
 public:
 	Component* createComponent(json& args) override {
 		return new RicibergaBehaviour(args);
+	}
+};
+
+class HermenegildoBehaviourFactory : public BaseFactory {
+public:
+	Component* createComponent(json& args) override {
+		return new HermenegildoBehaviour(args);
 	}
 };
 
@@ -324,11 +341,13 @@ void setupFactories()
 
 	j->addFactory("MovimientoMando", new MovimientoMandoFactory());
 	j->addFactory("EntitySpawner", new EntitySpawnerFactory());
+	j->addFactory("ProjectileSpawner", new ProjectileSpawnerFactory());
 	j->addFactory("Danio", new DanioFactory());
 	j->addFactory("Vida", new VidaFactory());
 	j->addFactory("DisparoWiterico", new DisparoWitericoFactory());
 	j->addFactory("DisparoTeodegonda", new DisparoTeodegondaFactory());
 	j->addFactory("RicibergaBehaviour", new RicibergaBehaviourFactory());
+	j->addFactory("HermenegildoBehaviour", new HermenegildoBehaviourFactory());
 	j->addFactory("ChangeSceneButtonComponent", new ChangeSceneButtonComponentFactory());
 	j->addFactory("ExitButtonComponent", new ExitButtonComponentFactory());
 	j->addFactory("GiroContinuo", new GiroContinuoFactory());
