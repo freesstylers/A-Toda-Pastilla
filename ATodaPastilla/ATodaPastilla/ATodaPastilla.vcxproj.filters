@@ -36,6 +36,7 @@
     <ClCompile Include="..\src\Components\Vida.cpp" />
     <ClCompile Include="ATodaPastilla.cpp" />
     <ClCompile Include="..\src\Components\MainMenuInputComponent.cpp" />
+    <ClCompile Include="..\src\Components\HermenegildoBehaviour.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Components\ApplyAdvancedGraphicChangesComponent.h" />
@@ -73,5 +74,6 @@
     <ClInclude Include="..\include\Components\SpawnerMejora.h" />
     <ClInclude Include="..\include\Components\Vida.h" />
     <ClInclude Include="..\include\Components\MainMenuInputComponent.h" />
+    <ClInclude Include="..\include\Components\HermenegildoBehaviour.h" />
   </ItemGroup>
 </Project>
