@@ -12,15 +12,6 @@ PlayerInput::~PlayerInput()
 
 void PlayerInput::alwaysLateUpdate()
 {
-	if (InputManager::getInstance()->GameControllerIsButtonDown(GameControllerButton::CONTROLLER_BUTTON_START)
-		|| InputManager::getInstance()->IsKeyDown(Scancode::SCANCODE_ESCAPE)) {
-		if (!pausePressed_) {
-			pausePressed_ = true;
-			GameManager::getInstance()->pause();
-		}
-	}
-	else
-		pausePressed_ = false;
 }
 
 void PlayerInput::init(json& j)

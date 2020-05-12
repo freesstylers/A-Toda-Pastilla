@@ -36,6 +36,7 @@
 */
 
 
+#include "Components/MainMenuInputComponent.h"
 #include "Components/PauseMenuComponent.h"
 #include "Components/OptionsMenuComponent.h"
 #include "Components/PlayerInput.h"
@@ -246,6 +247,15 @@ public:
 };
 */
 
+class MainMenuInputComponentFactory : public BaseFactory
+{
+public:
+	Component* createComponent(json& args) override
+	{
+		return new MainMenuInputComponent(args);
+	};
+};
+
 class PauseMenuComponentFactory : public BaseFactory
 {
 public:
@@ -346,6 +356,7 @@ void setupFactories()
 	j->addFactory("RevertAdvancedGraphicChangesComponent", new RevertAdvancedGraphicChangesComponentFactory());
 	j->addFactory("ChangeGammaComponent", new ChangeGammaComponentFactory());
 	j->addFactory("ChangeGraphicSceneComponent", new ChangeGraphicSceneComponentFactory());*/
+	j->addFactory("MainMenuInputComponent", new MainMenuInputComponentFactory());
 	j->addFactory("PauseMenuComponent", new PauseMenuComponentFactory());
 	j->addFactory("OptionsMenuComponent", new OptionsMenuComponentFactory());
 	j->addFactory("PlayerInput", new PlayerInputFactory());
