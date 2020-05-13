@@ -15,7 +15,6 @@ public:
 private:
 	float dyingTime;
 	float timeToDie=0;
-	bool dying;
 	float damage;
 	float speed;
 	float bottom;

@@ -59,7 +59,6 @@ void RicibergaBehaviour::init(json& j)
 
 void RicibergaBehaviour::start()
 {
-	dying = false;
 	if (seeksPlayer) {
 		std::list<Entity*> ent = MotorCasaPaco::getInstance()->getSceneManager()->getCurrentScene()->getEntitiesByTag("Player");
 		auto p = ent.begin();
@@ -69,7 +68,7 @@ void RicibergaBehaviour::start()
 
 void RicibergaBehaviour::update()
 {
-	if (!dying) {
+	if (e_->getComponent<Vida>("Vida") != nullptr && !e_->getComponent<Vida>("Vida")->isDead()) {
 		Vector3 pos = getEntity()->getComponent<Transform>("Transform")->getPosition();
 		Vector3 direction;
 		if (player != nullptr) {
@@ -107,9 +106,10 @@ void RicibergaBehaviour::update()
 
 void RicibergaBehaviour::OnCollision(Entity* other)
 {
-	if (!dying) {
+	if (e_->getComponent<Vida>("Vida")!=nullptr && !e_->getComponent<Vida>("Vida")->isDead()) {
 		if (other->getTag() == "Player") {
 			if (other->getComponent<Vida>("Vida") != nullptr) {
+				std::cout << "ColisionPlayer" << std::endl;
 				other->getComponent<Vida>("Vida")->sumaVida(-damage);
 				e_->getComponent<Vida>("Vida")->sumaVida(e_->getComponent<Vida>("Vida")->GetVida());
 			}
@@ -128,7 +128,7 @@ void RicibergaBehaviour::OnCollision(Entity* other)
 bool RicibergaBehaviour::ReceiveEvent(Event& event)
 {
 	if (event.type == "DEATH") {
-		dying = true;
+		std::cout << "colision muerte" << std::endl;
 		AudioManager::getInstance()->playMusic(deathSound.c_str(), 3);
 		AudioManager::getInstance()->setVolume(0.7, 3);
 		dyingTime = 0;

@@ -17,7 +17,6 @@ Vida::~Vida()
 void Vida::start()
 {
 	death_ = false;
-	EventManager::getInstance()->RegisterListener(getEntity(), "DEATH");
 }
 
 void Vida::update()
@@ -31,7 +30,8 @@ void Vida::update()
 
 void Vida::init(json& j)
 {
-	if (!j["vida"].is_null()) vida_ = j["vida"];
+	if (!j["vidaMax"].is_null()) 
+		vidaMax_ = j["vidaMax"];
 	if (!j["time"].is_null()) {
 		timeToLive_ = j["time"];
 		timeD_ = true;
@@ -46,13 +46,18 @@ void Vida::init(json& j)
 void Vida::sumaVida(int valor)
 {
 	vida_ += valor;
-	if (vida_ <= 0&& !death_) {
+	if (vida_ >= vidaMax_)
+		vida_ = vidaMax_;
+	else if (vida_ <= 0&& !death_) {
 		if (!customDeath_) {
 			EventManager::getInstance()->UnregisterListenerForAll(e_);
 			e_->setEnabled(false);
 		}
 		else {
+			EventManager::getInstance()->UnregisterListenerForAll(e_);
+			EventManager::getInstance()->RegisterListener(e_, "DEATH");
 			EventManager::getInstance()->EmitEvent("DEATH");
+			EventManager::getInstance()->UnregisterListenerForAll(e_);
 		}
 		death_ = true;
 	}

@@ -11,8 +11,12 @@ public:
 	void init(json& j) override;
 	void start() override;
 	void update() override;
+	bool ReceiveEvent(Event& event) override;
+	void OnCollision(Entity* other) override;
 
 private:
+	std::string deathSound;
+	std::string hitSound;
 	ProjectileSpawner* prSpawner;
 	float timeSinceLastShot;
 	float timeSinceLastAttack;
@@ -20,5 +24,8 @@ private:
 	int shotsPerAttack;
 	int shotsFired;
 	float timeBetweenAttacks;
+	float dyingTime;
+	float timeToDie;
+	
 };
 

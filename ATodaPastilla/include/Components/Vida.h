@@ -15,10 +15,12 @@ public:
 	int GetVida() {
 		return vida_;
 	}
+	bool isDead() { return death_; };
 
 	void sumaVida(int valor);
 private:
 	bool customDeath_;
+	int vidaMax_ = 1;
 	int vida_ = 1;
 	int timeToLive_;
 	float time_ = 0;

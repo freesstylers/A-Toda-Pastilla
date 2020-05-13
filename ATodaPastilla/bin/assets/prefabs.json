@@ -63,7 +63,7 @@
 			},
 			{
 				"type": "RigidBody",
-				"shape": "mesh",
+				"shape": "cube",
 				"mass" : 10,
 				"isTrigger": true,
 				"angularFactor" : [0, 0, 1],
@@ -72,7 +72,7 @@
 			},
 			{
 				"type": "Vida",
-				"vida": 50,
+				"vidaMax": 50,
 				"time": 3
 			},
 			{
@@ -80,7 +80,37 @@
 			}
 		]
 	},
-
+	
+	"Bala": {
+		"position": [ 0, 0, 0 ],
+		"rotation": [ 0, 0, 0 ],
+		"scale": [ 10, 10, 10 ],
+		"tag": "Projectile",
+		"components": [
+			{
+				"type": "Mesh",
+				"mesh": "Bala.mesh",
+				"material": "Bala"
+			},
+			{
+				"type": "RigidBody",
+				"shape": "cube",
+				"mass" : 10,
+				"isTrigger": true,
+				"angularFactor" : [0, 0, 1],
+				"linearFactor" : [1, 0, 1],
+				"disableDeactivation": true
+			},
+			{
+				"type": "Vida",
+				"vidaMax": 50,
+				"time": 3
+			},
+			{
+				"type": "ProjectileBehaviour"
+			}
+		]
+	},
 
 	"capsula": {
 		"position": [ 0, 0, 0 ],
@@ -95,7 +125,7 @@
 			},
 			{
 				"type": "RigidBody",
-				"shape": "mesh",
+				"shape": "cube",
 				"mass" : 10,
 				"isTrigger": true,
 				"angularFactor" : [0, 0, 1],
@@ -104,7 +134,7 @@
 			},
 			{
 				"type": "Vida",
-				"vida": 50,
+				"vidaMax": 50,
 				"time": 3
 			},
 			{
@@ -157,6 +187,10 @@
 				"damagePerBullet": 10,
 				"bulletSpeed": [ 600, 600, 800 ],
 				"dispersionAngle": [ 15, 15, 15 ]
+			},
+			{
+				"type": "Vida",
+				"vidaMax": 1
 			}
 		]
 
@@ -231,7 +265,7 @@
 			},
 			{
 				"type": "Vida",
-				"vida": 10000
+				"vidaMax": 1
 			}
 
 		]
@@ -259,7 +293,7 @@
 			},
 			{
 				"type": "Vida",
-				"vida": 100,
+				"vidaMax": 100,
 				"customDeath": true
 			},
 			{
@@ -268,21 +302,21 @@
 				"speed": 20,
 				"bottom": 170,
 				"timeToDie": 1,
-				"hitSound": "assets/sound/hit1.mp3",
-				"deathSound": "assets/sound/lego-yoda-death-sound-effect.mp3",
+				"hitSound": "assets/sound/RicibergaHit.mp3",
+				"deathSound": "assets/sound/RicibergaDeath.mp3",
 				"seeksPlayer": false,
 				"sinusoidalMovement": true,
 				"sinusoidalMagnitude": 50.0,
 				"sinusoidalFrequency": 2.0
 			}
-			
 		]
 
 	},
+	
 	"Hermenegildo": {
 		"position": [ 70, 25, -125 ],
 		"rotation": [ 0, 0, 0 ],
-		"scale": [15, 15, 15],
+		"scale": [ 15, 15, 15 ],
 		"tag": "Enemy",
 		"components": [
 			{
@@ -295,28 +329,33 @@
 				"shape": "mesh",
 				"mass": 10,
 				"gravity": [ 0, 0, 0 ],
-				"angularFactor" : [0, 0, 0],
+				"angularFactor" : [0, 1, 0],
 				"linearFactor" : [1, 0, 1],
 				"disableDeactivation": true
 			},
 			{
 				"type": "Vida",
-				"vida": 100,
-				"customDeath": false
+				"vidaMax": 500,
+				"customDeath": true
 			},
 			{
 				"type": "ProjectileSpawner",
-				"prefab": "ibuprofeno"
+				"prefab": "Bala"
 			},
 			{
 				"type": "HermenegildoBehaviour",
-				"cadence": 0.8,
+				"deathSound" : "assets/sound/HermenegildoDeath.mp3",
+				"hitSound" : "assets/sound/HermenegildoHit.mp3",
+				"timeToDie" : 1,
+				"cadence": 0.2,
 				"shotsPerAttack": 3,
-				"timeBetweenAttacks": 2
+				"timeBetweenAttacks": 2 
 			}
+			
 		]
 
 	},
+
 	"witericoMenu": {
 		"position": [ 0, 400, 0 ],
 		"rotation": [ 0, 0, 0 ],
