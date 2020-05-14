@@ -9,6 +9,7 @@
 #include "Components/MovimientoMando.h"
 #include "Components/EntitySpawner.h"
 #include "Components/ProjectileSpawner.h"
+#include "Components/EnemySpawner.h"
 #include "Components/DisparoWiterico.h"
 #include "Components/DisparoTeodegonda.h"
 #include "Components/RicibergaBehaviour.h"
@@ -73,6 +74,12 @@ public:
 	}
 };
 
+class EnemySpawnerFactory : public BaseFactory {
+public: 
+	Component* createComponent(json& args) override {
+		return new EnemySpawner(args);
+	}
+};
 
 class DisparoWitericoFactory : public BaseFactory {
 public:
@@ -352,6 +359,7 @@ void setupFactories()
 	j->addFactory("MovimientoMando", new MovimientoMandoFactory());
 	j->addFactory("EntitySpawner", new EntitySpawnerFactory());
 	j->addFactory("ProjectileSpawner", new ProjectileSpawnerFactory());
+	j->addFactory("EnemySpawner", new EnemySpawnerFactory());
 	j->addFactory("Danio", new DanioFactory());
 	j->addFactory("Vida", new VidaFactory());
 	j->addFactory("DisparoWiterico", new DisparoWitericoFactory());

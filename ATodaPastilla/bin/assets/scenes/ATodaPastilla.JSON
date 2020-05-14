@@ -24,6 +24,10 @@
 			"prefab" : "Hermenegildo"
 		},
 		{
+			"name" : "EnemySpawner",
+			"prefab" : "EnemySpawner"
+		},
+		{
 			"name": "floor",
 			"prefab": "floor",
 			"scale": [ 4, 0.1, 4 ]

@@ -356,6 +356,22 @@
 
 	},
 
+	"EnemySpawner":{
+		"position": [ 0, 0, 0 ],
+		"rotation": [ 0, 0, 0 ],
+		"scale": [ 0, 0, 0 ],
+		"tag": "EnemySpawner",
+		"components": [
+			{
+				"type": "EnemySpawner",
+				"riciberga": "Riciberga",
+				"spawnPos": [0,0,-150],
+				"spawnRate" : 5
+			}
+		]
+
+	},
+
 	"witericoMenu": {
 		"position": [ 0, 400, 0 ],
 		"rotation": [ 0, 0, 0 ],
