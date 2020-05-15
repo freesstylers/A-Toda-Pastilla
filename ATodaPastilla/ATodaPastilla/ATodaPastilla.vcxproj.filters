@@ -38,6 +38,7 @@
     <ClCompile Include="..\src\Components\MainMenuInputComponent.cpp" />
     <ClCompile Include="..\src\Components\HermenegildoBehaviour.cpp" />
     <ClCompile Include="..\src\Components\EnemySpawner.cpp" />
+    <ClCompile Include="..\src\Components\EnemyBehaviour.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Components\ApplyAdvancedGraphicChangesComponent.h" />
@@ -77,5 +78,6 @@
     <ClInclude Include="..\include\Components\MainMenuInputComponent.h" />
     <ClInclude Include="..\include\Components\HermenegildoBehaviour.h" />
     <ClInclude Include="..\include\Components\EnemySpawner.h" />
+    <ClInclude Include="..\include\Components\EnemyBehaviour.h" />
   </ItemGroup>
 </Project>

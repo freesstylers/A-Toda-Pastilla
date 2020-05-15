@@ -293,7 +293,7 @@
 			},
 			{
 				"type": "Vida",
-				"vidaMax": 100,
+				"vidaMax": 50,
 				"customDeath": true
 			},
 			{
@@ -335,7 +335,7 @@
 			},
 			{
 				"type": "Vida",
-				"vidaMax": 500,
+				"vidaMax": 100,
 				"customDeath": true
 			},
 			{
@@ -349,9 +349,9 @@
 				"timeToDie" : 1,
 				"cadence": 0.2,
 				"shotsPerAttack": 3,
-				"timeBetweenAttacks": 2 
+				"timeBetweenAttacks": 2
 			}
-			
+
 		]
 
 	},
@@ -364,9 +364,9 @@
 		"components": [
 			{
 				"type": "EnemySpawner",
-				"riciberga": "Riciberga",
-				"spawnPos": [0,0,-150],
-				"spawnRate" : 5
+				"enemies": ["Riciberga", "Hermenegildo"],
+				"spawnPositions": [[0, 25, -150], [-90, 25, -150], [90, 25, -150]],
+				"spawnRate" : 2
 			}
 		]
 
