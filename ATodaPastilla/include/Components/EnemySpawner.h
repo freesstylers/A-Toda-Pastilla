@@ -1,5 +1,6 @@
 #pragma once
 #include "EntitySpawner.h"
+#include <map>
 class EnemySpawner : public EntitySpawner
 {
 public:
@@ -8,13 +9,12 @@ public:
 	void init(json& j) override;
 	void start() override;
 	void update() override;
+	void setPosUsed(int indx, bool value);
 private:
 	float spawnRate;
 	float timeSinceSpawn;
-	std::string riciberga;
-	std::string hermenegildo;
-	float riciRate;
-	float hermRate;
-	Vector3 spawnPos;
+	std::vector<std::string> enemies;
+	std::vector<Vector3> spawnPositions;
+	std::vector<bool> posUsed;
 };
 

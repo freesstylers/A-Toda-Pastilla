@@ -11,13 +11,13 @@
 #include "Events/EventListener.h"
 #include <list>
 
-RicibergaBehaviour::RicibergaBehaviour(json& j): Component(j)
+RicibergaBehaviour::RicibergaBehaviour(json& j): EnemyBehaviour(j)
 {
 }
 
 void RicibergaBehaviour::init(json& j)
 {
-	Component::init(j);
+	EnemyBehaviour::init(j);
 	seeksPlayer = false;
 	sinusoidalMovement = false;
 	if (!j["damage"].is_null()) {
@@ -125,15 +125,10 @@ void RicibergaBehaviour::OnCollision(Entity* other)
 	}
 }
 
-bool RicibergaBehaviour::ReceiveEvent(Event& event)
+void RicibergaBehaviour::OnDeath()
 {
-	if (event.type == "DEATH") {
-		std::cout << "colision muerte" << std::endl;
-		AudioManager::getInstance()->playMusic(deathSound.c_str(), 3);
-		AudioManager::getInstance()->setVolume(0.7, 3);
-		dyingTime = 0;
-		return true;
-	}
-	
-	return false;
+	EnemyBehaviour::OnDeath();
+	AudioManager::getInstance()->playMusic(deathSound.c_str(), 3);
+	AudioManager::getInstance()->setVolume(0.7, 3);
+	dyingTime = 0;
 }

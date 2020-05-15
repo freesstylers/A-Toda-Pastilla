@@ -1,7 +1,7 @@
 #pragma once
-#include "Entity\Component.h"
+#include "EnemyBehaviour.h"
 
-class RicibergaBehaviour :public Component
+class RicibergaBehaviour :public EnemyBehaviour
 {
 public:
 	RicibergaBehaviour(json& j);
@@ -10,7 +10,7 @@ public:
 	void start() override;
 	void update() override;
 	void OnCollision(Entity* other) override;
-	virtual bool ReceiveEvent(Event& event) override;
+	void OnDeath() override;
 
 private:
 	float dyingTime;

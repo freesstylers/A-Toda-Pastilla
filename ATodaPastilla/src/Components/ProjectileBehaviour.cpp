@@ -78,7 +78,6 @@ void ProjectileBehaviour::OnCollision(Entity* other)
 	}
 
 	else if (source == "Player" && other->getTag() == "Projectile" && other->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->getSource()=="Enemy") {
-
 		other->getComponent<Vida>("Vida")->sumaVida(-other->getComponent<Vida>("Vida")->GetVida());
 		e_->getComponent<Vida>("Vida")->sumaVida(-e_->getComponent<Vida>("Vida")->GetVida());
 	}
