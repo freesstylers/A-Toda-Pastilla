@@ -28,6 +28,10 @@
 			"prefab" : "pointLight"
 		},
 		{
+			"name" : "GM",
+			"prefab": "gameManager"
+		},
+		{
 			"name" : "background",
 			"rotation" : [90, 0, 90],
 			"position" : [90, 0, 0],

@@ -450,6 +450,7 @@
 
 	"gameManager": {
 		"position": [ 0, 0, 0 ],
+		"dontDestroyOnLoad": true,
 		"components": [
 			{
 				"type": "GameManager"
