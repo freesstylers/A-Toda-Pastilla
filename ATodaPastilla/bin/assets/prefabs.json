@@ -189,7 +189,8 @@
 				"dispersionAngle": [ 15, 15, 15 ]
 			},
 			{
-				"type": "Vida",
+				"type": "VidaPlayer",
+				"invulnerabilityTime": 2,
 				"vidaMax": 1
 			}
 		]
@@ -264,8 +265,9 @@
 				]
 			},
 			{
-				"type": "Vida",
-				"vidaMax": 1
+				"type": "VidaPlayer",
+				"invulnerabilityTime" : 2,
+				"vidaMax": 3
 			}
 
 		]
@@ -292,7 +294,8 @@
 				"disableDeactivation": true
 			},
 			{
-				"type": "Vida",
+				"type": "VidaEnemigos",
+				"puntos": 500,
 				"vidaMax": 50,
 				"customDeath": true
 			},
@@ -334,7 +337,8 @@
 				"disableDeactivation": true
 			},
 			{
-				"type": "Vida",
+				"type": "VidaEnemigos",
+				"puntos": 500,
 				"vidaMax": 100,
 				"customDeath": true
 			},

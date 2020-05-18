@@ -39,6 +39,8 @@
     <ClCompile Include="..\src\Components\HermenegildoBehaviour.cpp" />
     <ClCompile Include="..\src\Components\EnemySpawner.cpp" />
     <ClCompile Include="..\src\Components\EnemyBehaviour.cpp" />
+    <ClCompile Include="..\src\Components\VidaPlayer.cpp" />
+    <ClCompile Include="..\src\Components\VidaEnemigos.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Components\ApplyAdvancedGraphicChangesComponent.h" />
@@ -79,5 +81,8 @@
     <ClInclude Include="..\include\Components\HermenegildoBehaviour.h" />
     <ClInclude Include="..\include\Components\EnemySpawner.h" />
     <ClInclude Include="..\include\Components\EnemyBehaviour.h" />
+    <ClInclude Include="..\include\Components\VidaPlayer.h" />
+    <ClInclude Include="..\include\Components\EventsGame.h" />
+    <ClInclude Include="..\include\Components\VidaEnemigos.h" />
   </ItemGroup>
 </Project>

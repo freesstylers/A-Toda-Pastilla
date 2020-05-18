@@ -2,7 +2,7 @@
 #include "Entity/Entity.h"
 #include "Components/ProjectileSpawner.h"
 #include "Audio/AudioManager.h"
-#include "Components/Vida.h"
+#include "Components/VidaEnemigos.h"
 #include "Components/ProjectileBehaviour.h"
 #include "MotorCasaPaco.h"
 
@@ -50,7 +50,7 @@ void HermenegildoBehaviour::start()
 
 void HermenegildoBehaviour::update()
 {
-	if (!e_->getComponent<Vida>("Vida")->isDead()) {
+	if (!e_->getComponent<VidaEnemigos>("VidaEnemigos")->isDead()) {
 		if (prSpawner != nullptr) {
 			if (timeSinceLastAttack >= timeBetweenAttacks) {
 				if (shotsFired < shotsPerAttack) {

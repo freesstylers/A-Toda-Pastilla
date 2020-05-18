@@ -1,5 +1,6 @@
 #include "Components/RicibergaBehaviour.h"
-#include "Components/Vida.h"
+#include "Components/VidaEnemigos.h"
+#include "Components/VidaPlayer.h"
 #include "Entity/Entity.h"
 #include "Audio/AudioManager.h"
 #include "Entity/Transform.h"
@@ -68,7 +69,7 @@ void RicibergaBehaviour::start()
 
 void RicibergaBehaviour::update()
 {
-	if (e_->getComponent<Vida>("Vida") != nullptr && !e_->getComponent<Vida>("Vida")->isDead()) {
+	if (e_->getComponent<VidaEnemigos>("VidaEnemigos") != nullptr && !e_->getComponent<VidaEnemigos>("VidaEnemigos")->isDead()) {
 		Vector3 pos = getEntity()->getComponent<Transform>("Transform")->getPosition();
 		Vector3 direction;
 		if (player != nullptr) {
@@ -106,12 +107,12 @@ void RicibergaBehaviour::update()
 
 void RicibergaBehaviour::OnCollision(Entity* other)
 {
-	if (e_->getComponent<Vida>("Vida")!=nullptr && !e_->getComponent<Vida>("Vida")->isDead()) {
+	if (e_->getComponent<VidaEnemigos>("VidaEnemigos")!=nullptr && !e_->getComponent<VidaEnemigos>("VidaEnemigos")->isDead()) {
 		if (other->getTag() == "Player") {
-			if (other->getComponent<Vida>("Vida") != nullptr) {
+			if (other->getComponent<VidaPlayer>("VidaPlayer") != nullptr) {
 				std::cout << "ColisionPlayer" << std::endl;
-				other->getComponent<Vida>("Vida")->sumaVida(-damage);
-				e_->getComponent<Vida>("Vida")->sumaVida(e_->getComponent<Vida>("Vida")->GetVida());
+				other->getComponent<VidaPlayer>("VidaPlayer")->sumaVida(-damage);
+				e_->getComponent<VidaEnemigos>("VidaEnemigos")->sumaVida(e_->getComponent<VidaEnemigos>("VidaEnemigos")->GetVida());
 			}
 		}
 		else if (other->getTag() == "Projectile" && other->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->getSource()=="Player") {

@@ -8,7 +8,7 @@
 #include "Audio/AudioManager.h"
 #include "Components/MejoraVida.h"
 #include "Components/ProjectileSpawner.h"
-#include "Components/Vida.h"
+#include "Components/VidaPlayer.h"
 #include <math.h>
 
 
@@ -32,9 +32,9 @@ void MejoraVida::OnCollision(Entity* ent)
 {
 	if (ent->getTag() == "Player")
 	{	
-		if (ent->getComponent<Vida>("Vida")->GetVida() <
+		if (ent->getComponent<VidaPlayer>("VidaPlayer")->GetVida() <
 				2) {
-			ent->getComponent<Vida>("Vida")->sumaVida(1);
+			ent->getComponent<VidaPlayer>("VidaPlayer")->sumaVida(1);
 		}
 			getEntity()->setEnabled(false);
 	}

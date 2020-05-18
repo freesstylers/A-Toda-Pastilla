@@ -18,7 +18,8 @@
 #include "Scene/JsonFactoryParser.h"
 #include "Components/ProjectileBehaviour.h"
 #include "Components/Danio.h"
-#include "Components/Vida.h"
+#include "Components/VidaPlayer.h"
+#include "Components/VidaEnemigos.h"
 #include "Components/ChangeSceneButtonComponent.h"
 #include "Components/ExitButtonComponent.h"
 #include "Components/GiroContinuo.h"
@@ -352,6 +353,24 @@ public:
 	};
 };
 
+class VidaPlayerFactory : public BaseFactory
+{
+public:
+	Component* createComponent(json& args) override
+	{
+		return new VidaPlayer(args);
+	};
+};
+
+class VidaEnemigosFactory : public BaseFactory
+{
+public:
+	Component* createComponent(json& args) override
+	{
+		return new VidaEnemigos(args);
+	};
+};
+
 void setupFactories()
 {
 	JsonFactoryParser* j = JsonFactoryParser::getInstance();
@@ -392,6 +411,8 @@ void setupFactories()
 	j->addFactory("MejoraDisparo", new MejoraDisparoFactory());
 	j->addFactory("MejoraVida", new MejoraVidaFactory());
 	j->addFactory("MejoraEutanasia", new MejoraEutanasiaFactory());
+	j->addFactory("VidaPlayer", new VidaPlayerFactory());
+	j->addFactory("VidaEnemigos", new VidaEnemigosFactory());
 }
 
 #ifdef  _DEBUG
