@@ -9,6 +9,7 @@
 #include "Components/MovimientoMando.h"
 #include "Components/EntitySpawner.h"
 #include "Components/ProjectileSpawner.h"
+#include "Components/EnemySpawner.h"
 #include "Components/DisparoWiterico.h"
 #include "Components/DisparoTeodegonda.h"
 #include "Components/RicibergaBehaviour.h"
@@ -17,7 +18,8 @@
 #include "Scene/JsonFactoryParser.h"
 #include "Components/ProjectileBehaviour.h"
 #include "Components/Danio.h"
-#include "Components/Vida.h"
+#include "Components/VidaPlayer.h"
+#include "Components/VidaEnemigos.h"
 #include "Components/ChangeSceneButtonComponent.h"
 #include "Components/ExitButtonComponent.h"
 #include "Components/GiroContinuo.h"
@@ -73,6 +75,12 @@ public:
 	}
 };
 
+class EnemySpawnerFactory : public BaseFactory {
+public: 
+	Component* createComponent(json& args) override {
+		return new EnemySpawner(args);
+	}
+};
 
 class DisparoWitericoFactory : public BaseFactory {
 public:
@@ -345,6 +353,24 @@ public:
 	};
 };
 
+class VidaPlayerFactory : public BaseFactory
+{
+public:
+	Component* createComponent(json& args) override
+	{
+		return new VidaPlayer(args);
+	};
+};
+
+class VidaEnemigosFactory : public BaseFactory
+{
+public:
+	Component* createComponent(json& args) override
+	{
+		return new VidaEnemigos(args);
+	};
+};
+
 void setupFactories()
 {
 	JsonFactoryParser* j = JsonFactoryParser::getInstance();
@@ -352,6 +378,7 @@ void setupFactories()
 	j->addFactory("MovimientoMando", new MovimientoMandoFactory());
 	j->addFactory("EntitySpawner", new EntitySpawnerFactory());
 	j->addFactory("ProjectileSpawner", new ProjectileSpawnerFactory());
+	j->addFactory("EnemySpawner", new EnemySpawnerFactory());
 	j->addFactory("Danio", new DanioFactory());
 	j->addFactory("Vida", new VidaFactory());
 	j->addFactory("DisparoWiterico", new DisparoWitericoFactory());
@@ -384,6 +411,8 @@ void setupFactories()
 	j->addFactory("MejoraDisparo", new MejoraDisparoFactory());
 	j->addFactory("MejoraVida", new MejoraVidaFactory());
 	j->addFactory("MejoraEutanasia", new MejoraEutanasiaFactory());
+	j->addFactory("VidaPlayer", new VidaPlayerFactory());
+	j->addFactory("VidaEnemigos", new VidaEnemigosFactory());
 }
 
 #ifdef  _DEBUG

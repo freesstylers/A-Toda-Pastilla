@@ -16,6 +16,7 @@ Vida::~Vida()
 
 void Vida::start()
 {
+	vida_ = vidaMax_;
 	death_ = false;
 }
 

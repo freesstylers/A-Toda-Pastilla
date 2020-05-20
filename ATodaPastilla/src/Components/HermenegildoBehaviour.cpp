@@ -2,11 +2,11 @@
 #include "Entity/Entity.h"
 #include "Components/ProjectileSpawner.h"
 #include "Audio/AudioManager.h"
-#include "Components/Vida.h"
+#include "Components/VidaEnemigos.h"
 #include "Components/ProjectileBehaviour.h"
 #include "MotorCasaPaco.h"
 
-HermenegildoBehaviour::HermenegildoBehaviour(json& args):Component(args)
+HermenegildoBehaviour::HermenegildoBehaviour(json& args):EnemyBehaviour(args)
 {
 
 }
@@ -50,14 +50,14 @@ void HermenegildoBehaviour::start()
 
 void HermenegildoBehaviour::update()
 {
-	if (!e_->getComponent<Vida>("Vida")->isDead()) {
+	if (!e_->getComponent<VidaEnemigos>("VidaEnemigos")->isDead()) {
 		if (prSpawner != nullptr) {
 			if (timeSinceLastAttack >= timeBetweenAttacks) {
 				if (shotsFired < shotsPerAttack) {
 					if (timeSinceLastShot >= cadence) {
-						prSpawner->spawnProjectiles(Vector3(-10, 0, 0), Vector3(0, 0, 1), 100, 1, 10);
+						prSpawner->spawnProjectiles(Vector3(-20, 0, 15), Vector3(0, 0, 1), 100, 1, 10);
 
-						prSpawner->spawnProjectiles(Vector3(10, 0, 0), Vector3(0, 0, 1), 100, 1, 10);
+						prSpawner->spawnProjectiles(Vector3(20, 0, 15), Vector3(0, 0, 1), 100, 1, 10);
 
 						shotsFired++;
 						timeSinceLastShot = 0;
@@ -94,15 +94,12 @@ void HermenegildoBehaviour::OnCollision(Entity* other)
 				AudioManager::getInstance()->playMusic("assets/sound/movie_1.mp3", 4);
 	}
 }
-bool HermenegildoBehaviour::ReceiveEvent(Event& event)
+void HermenegildoBehaviour::OnDeath()
 {
-	if (event.type == "DEATH") {
-		AudioManager::getInstance()->playMusic(deathSound.c_str(), 4);
-		AudioManager::getInstance()->setVolume(0.7, 4);
-		dyingTime = 0;
-		return true;
-	}
-
-	return false;
+	EnemyBehaviour::OnDeath();
+	AudioManager::getInstance()->playMusic(deathSound.c_str(), 4);
+	AudioManager::getInstance()->setVolume(0.7, 4);
+	dyingTime = 0;
 }
+
 

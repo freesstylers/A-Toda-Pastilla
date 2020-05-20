@@ -182,6 +182,8 @@
     <ClCompile Include="..\src\Components\Danio.cpp" />
     <ClCompile Include="..\src\Components\DisparoTeodegonda.cpp" />
     <ClCompile Include="..\src\Components\DisparoWiterico.cpp" />
+    <ClCompile Include="..\src\Components\EnemyBehaviour.cpp" />
+    <ClCompile Include="..\src\Components\EnemySpawner.cpp" />
     <ClCompile Include="..\src\Components\EntitySpawner.cpp" />
     <ClCompile Include="..\src\Components\ExitButtonComponent.cpp" />
     <ClCompile Include="..\src\Components\FormatResolutionChangeComponent.cpp" />
@@ -207,6 +209,8 @@
     <ClCompile Include="..\src\Components\ShadowsChangeComponent.cpp" />
     <ClCompile Include="..\src\Components\SpawnerMejora.cpp" />
     <ClCompile Include="..\src\Components\Vida.cpp" />
+    <ClCompile Include="..\src\Components\VidaEnemigos.cpp" />
+    <ClCompile Include="..\src\Components\VidaPlayer.cpp" />
     <ClCompile Include="ATodaPastilla.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -225,8 +229,11 @@
     <ClInclude Include="..\include\Components\Danio.h" />
     <ClInclude Include="..\include\Components\DisparoTeodegonda.h" />
     <ClInclude Include="..\include\Components\DisparoWiterico.h" />
+    <ClInclude Include="..\include\Components\EnemyBehaviour.h" />
+    <ClInclude Include="..\include\Components\EnemySpawner.h" />
     <ClInclude Include="..\include\Components\EntitySpawner.h" />
     <ClInclude Include="..\include\Components\EventsATodaPastilla.h" />
+    <ClInclude Include="..\include\Components\EventsGame.h" />
     <ClInclude Include="..\include\Components\ExitButtonComponent.h" />
     <ClInclude Include="..\include\Components\FormatResolutionChangeComponent.h" />
     <ClInclude Include="..\include\Components\FSAAChangeComponent.h" />
@@ -251,6 +258,8 @@
     <ClInclude Include="..\include\Components\ShadowsChangeComponent.h" />
     <ClInclude Include="..\include\Components\SpawnerMejora.h" />
     <ClInclude Include="..\include\Components\Vida.h" />
+    <ClInclude Include="..\include\Components\VidaEnemigos.h" />
+    <ClInclude Include="..\include\Components\VidaPlayer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

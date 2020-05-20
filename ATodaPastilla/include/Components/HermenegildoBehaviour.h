@@ -1,9 +1,9 @@
 #pragma once
-#include "Entity\Component.h"
+#include "EnemyBehaviour.h"
 
 class ProjectileSpawner;
 
-class HermenegildoBehaviour :public Component
+class HermenegildoBehaviour :public EnemyBehaviour
 {
 public:
 	HermenegildoBehaviour(json& args);
@@ -11,8 +11,8 @@ public:
 	void init(json& j) override;
 	void start() override;
 	void update() override;
-	bool ReceiveEvent(Event& event) override;
 	void OnCollision(Entity* other) override;
+	void OnDeath() override;
 
 private:
 	std::string deathSound;

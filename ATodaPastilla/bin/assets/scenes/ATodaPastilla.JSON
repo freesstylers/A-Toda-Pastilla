@@ -20,12 +20,8 @@
 			"prefab" : "Teodegonda"
 		},
 		{
-			"name" : "Riciberga",
-			"prefab" : "Riciberga"
-		},
-		{
-			"name" : "Hermenegildo",
-			"prefab" : "Hermenegildo"
+			"name" : "EnemySpawner",
+			"prefab" : "EnemySpawner"
 		},
 		{
 			"name": "floor",

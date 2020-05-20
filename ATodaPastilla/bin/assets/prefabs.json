@@ -189,7 +189,8 @@
 				"dispersionAngle": [ 15, 15, 15 ]
 			},
 			{
-				"type": "Vida",
+				"type": "VidaPlayer",
+				"invulnerabilityTime": 2,
 				"vidaMax": 1
 			}
 		]
@@ -264,8 +265,9 @@
 				]
 			},
 			{
-				"type": "Vida",
-				"vidaMax": 1
+				"type": "VidaPlayer",
+				"invulnerabilityTime" : 2,
+				"vidaMax": 3
 			}
 
 		]
@@ -292,8 +294,9 @@
 				"disableDeactivation": true
 			},
 			{
-				"type": "Vida",
-				"vidaMax": 100,
+				"type": "VidaEnemigos",
+				"puntos": 500,
+				"vidaMax": 50,
 				"customDeath": true
 			},
 			{
@@ -334,8 +337,9 @@
 				"disableDeactivation": true
 			},
 			{
-				"type": "Vida",
-				"vidaMax": 500,
+				"type": "VidaEnemigos",
+				"puntos": 500,
+				"vidaMax": 100,
 				"customDeath": true
 			},
 			{
@@ -349,9 +353,25 @@
 				"timeToDie" : 1,
 				"cadence": 0.2,
 				"shotsPerAttack": 3,
-				"timeBetweenAttacks": 2 
+				"timeBetweenAttacks": 2
 			}
-			
+
+		]
+
+	},
+
+	"EnemySpawner":{
+		"position": [ 0, 0, 0 ],
+		"rotation": [ 0, 0, 0 ],
+		"scale": [ 0, 0, 0 ],
+		"tag": "EnemySpawner",
+		"components": [
+			{
+				"type": "EnemySpawner",
+				"enemies": ["Riciberga", "Hermenegildo"],
+				"spawnPositions": [[0, 25, -150], [-90, 25, -150], [90, 25, -150]],
+				"spawnRate" : 2
+			}
 		]
 
 	},
@@ -434,6 +454,7 @@
 
 	"gameManager": {
 		"position": [ 0, 0, 0 ],
+		"dontDestroyOnLoad": true,
 		"components": [
 			{
 				"type": "GameManager"

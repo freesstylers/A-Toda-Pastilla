@@ -1,5 +1,6 @@
 #include "Components\ProjectileBehaviour.h"
-#include"Components/Vida.h"
+#include"Components/VidaEnemigos.h"
+#include"Components/VidaPlayer.h"
 #include "Entity/Transform.h"
 #include "Entity/Entity.h"
 #include "MotorCasaPaco.h"
@@ -70,15 +71,17 @@ void ProjectileBehaviour::setDamage(float dmg)
 
 void ProjectileBehaviour::OnCollision(Entity* other)
 {
-	if(source=="Player" && other->getTag()=="Enemy" || source == "Enemy" && other->getTag() == "Player"){
+	if(source=="Player" && other->getTag()=="Enemy"){
 
-		other->getComponent<Vida>("Vida")->sumaVida(-damage);
+		other->getComponent<VidaEnemigos>("VidaEnemigos")->sumaVida(-damage);
 		e_->getComponent<Vida>("Vida")->sumaVida(-e_->getComponent<Vida>("Vida")->GetVida());
 
 	}
-
+	else if (source == "Enemy" && other->getTag() == "Player") {
+		other->getComponent<VidaPlayer>("VidaPlayer")->sumaVida(-damage);
+		e_->getComponent<Vida>("Vida")->sumaVida(-e_->getComponent<Vida>("Vida")->GetVida());
+	}
 	else if (source == "Player" && other->getTag() == "Projectile" && other->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->getSource()=="Enemy") {
-
 		other->getComponent<Vida>("Vida")->sumaVida(-other->getComponent<Vida>("Vida")->GetVida());
 		e_->getComponent<Vida>("Vida")->sumaVida(-e_->getComponent<Vida>("Vida")->GetVida());
 	}
