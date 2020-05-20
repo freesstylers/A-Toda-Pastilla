@@ -19,6 +19,8 @@ public:
 	void unpause();
 	bool isPaused();
 
+	int getRecordScore();
+
 	virtual bool ReceiveEvent(Event& event) override;
 
 private:
@@ -26,6 +28,8 @@ private:
 	GameManager();
 	static GameManager* instance;
 
+	std::string nameFile = "Score";
+	int recordScore_ = 0;
 	int score_ = 0;
 	bool paused_ = false;
 };

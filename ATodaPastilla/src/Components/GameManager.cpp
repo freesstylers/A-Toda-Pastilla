@@ -2,11 +2,21 @@
 #include "MotorCasaPaco.h"
 #include "Components/EventsGame.h"
 #include "Entity/Entity.h"
+#include "Scene/SceneManager.h"
+
+#include <iostream>
+#include <fstream>
 
 GameManager* GameManager::instance = 0;
 
 GameManager::~GameManager()
 {
+	//Guardado del mejor score
+	std::ofstream file(nameFile);
+
+	file << recordScore_;
+
+	file.close();
 }
 
 //Registro del gameManager de todo lo que tenga que escuchar
@@ -17,8 +27,13 @@ void GameManager::registrarListeners()
 }
 
 GameManager::GameManager(): Component("GameManager") {
-	
-
+	std::ifstream file(nameFile);
+	//Comprueba que si existe el archivo
+	if (file.good())
+		file >> recordScore_;
+	else //si no existe lo pone a 0
+		recordScore_ = 0;
+	file.close();
 }
 
 GameManager* GameManager::getInstance()
@@ -29,7 +44,6 @@ GameManager* GameManager::getInstance()
 
 	return instance;
 }
-
 
 void GameManager::clean()
 {
@@ -65,12 +79,20 @@ bool GameManager::isPaused()
 	return paused_;
 }
 
+int GameManager::getRecordScore()
+{
+	return recordScore_;
+}
+
 bool GameManager::ReceiveEvent(Event& event)
 {
+	//Mensaje de muerte del jugador
 	if (event.type == "PlayerDeath") {
-		//Tiene que cambiarse aqui la escena al menu
-		//EventManager::getInstance()->EmitEvent("finNivel");
+		if (recordScore_ < score_)
+			recordScore_ = score_;
+		SceneManager::getInstance()->changeScene("Menu");
 	}
+	//Mensaje de muerte de un enemigo, da igual que sea un boss o no
 	else if (event.type == "EnemyDeath") {
 		score_ += static_cast<EventPuntuacion&>(event).puntuacion_;
 	}

@@ -2,6 +2,8 @@
 
 #include "Events/Event.h"
 
+//Los nuevos eventos que se creen, heredan de Event y luego se hace un casteo
+//para acceder a los datos --> static_cast<EventPuntuacion&>(event).puntuacion_
 
 struct EventPuntuacion : public Event {
 public:

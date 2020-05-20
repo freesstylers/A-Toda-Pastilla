@@ -449,6 +449,7 @@ WinMain(HINSTANCE hinstance, HINSTANCE prevInstance, LPSTR lpCmdLine, int nCmdSh
 
 	motorCasaPaco->start("Menu");
 
+	GameManager::getInstance()->clean();
 	delete motorCasaPaco;
 
 	return 0;
