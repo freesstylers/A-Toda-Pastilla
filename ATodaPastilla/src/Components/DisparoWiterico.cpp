@@ -177,7 +177,7 @@ void DisparoWiterico::update()
 		spawnProjectiles(shotModes[currMode].shotPos,
 			shotModes[currMode].shotDir, shotModes[currMode].bulletSpeed, shotModes[currMode].nBullets, shotModes[currMode].damagePerBullet,
 			shotModes[currMode].dispersionAngle, shotModes[currMode].inaccuracy, shotModes[currMode].inacDispersion);
-		AudioManager::getInstance()->playMusic(shotModes[currMode].shotSound.c_str(), 3);
+		AudioManager::getInstance()->playMusic(shotModes[currMode].shotSound.c_str(), 3, false);
 		AudioManager::getInstance()->setVolume(0.1, 3);
 	}
 	timeSinceLastShot += MotorCasaPaco::getInstance()->DeltaTime();

@@ -118,10 +118,10 @@ void RicibergaBehaviour::OnCollision(Entity* other)
 		else if (other->getTag() == "Projectile" && other->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->getSource()=="Player") {
 			float x = rand() % 100;
 			if (x < 95) {
-				AudioManager::getInstance()->playMusic(hitSound.c_str(), 4);
+				AudioManager::getInstance()->playMusic(hitSound.c_str(), 4, false);
 			}
 			else
-				AudioManager::getInstance()->playMusic("assets/sound/movie_1.mp3", 4);
+				AudioManager::getInstance()->playMusic("assets/sound/movie_1.mp3", 4, false);
 		}
 	}
 }
@@ -129,7 +129,7 @@ void RicibergaBehaviour::OnCollision(Entity* other)
 void RicibergaBehaviour::OnDeath()
 {
 	EnemyBehaviour::OnDeath();
-	AudioManager::getInstance()->playMusic(deathSound.c_str(), 3);
+	AudioManager::getInstance()->playMusic(deathSound.c_str(), 3, false);
 	AudioManager::getInstance()->setVolume(0.7, 3);
 	dyingTime = 0;
 }

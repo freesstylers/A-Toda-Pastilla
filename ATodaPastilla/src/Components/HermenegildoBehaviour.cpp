@@ -88,16 +88,16 @@ void HermenegildoBehaviour::OnCollision(Entity* other)
 	if (other->getTag() == "Projectile" && other->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->getSource() == "Player") {
 			float x = rand() % 100;
 			if (x < 95) {
-				AudioManager::getInstance()->playMusic(hitSound.c_str(), 4);
+				AudioManager::getInstance()->playMusic(hitSound.c_str(), 4, false);
 			}
 			else
-				AudioManager::getInstance()->playMusic("assets/sound/movie_1.mp3", 4);
+				AudioManager::getInstance()->playMusic("assets/sound/movie_1.mp3", 4, false);
 	}
 }
 void HermenegildoBehaviour::OnDeath()
 {
 	EnemyBehaviour::OnDeath();
-	AudioManager::getInstance()->playMusic(deathSound.c_str(), 4);
+	AudioManager::getInstance()->playMusic(deathSound.c_str(), 4, false);
 	AudioManager::getInstance()->setVolume(0.7, 4);
 	dyingTime = 0;
 }
