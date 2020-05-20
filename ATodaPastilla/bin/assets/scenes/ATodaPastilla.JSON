@@ -4,10 +4,14 @@
 
 		{
 			"name": "bg",
+			"rotation": [ 0, 0, 0 ],
+			"position": [ 0, 0, 0 ],
+			"scale": [ 1, 1, 1 ],
 			"components": [
 				{
 					"type": "Skybox",
-					"material": "blankSky"
+					"material": "FondoEspacio",
+					"skyType": "plane"
 				}
 			]
 		},
