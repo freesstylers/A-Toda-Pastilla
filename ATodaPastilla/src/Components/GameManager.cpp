@@ -24,6 +24,8 @@ void GameManager::registrarListeners()
 {
 	EventManager::getInstance()->RegisterListener(e_, "PlayerDeath");
 	EventManager::getInstance()->RegisterListener(e_, "EnemyDeath");
+	EventManager::getInstance()->RegisterListener(e_, "BombaUp");
+	EventManager::getInstance()->RegisterListener(e_, "BombaDown");
 }
 
 GameManager::GameManager(): Component("GameManager") {
@@ -54,6 +56,7 @@ void GameManager::init(json& j)
 {
 	EventManager::getInstance()->UnregisterListenerForAll(e_);
 	registrarListeners();
+	bombaEutanasica_ = false;
 }
 
 void GameManager::update()
@@ -84,6 +87,11 @@ bool GameManager::isPaused()
 	return paused_;
 }
 
+bool GameManager::isBombActive()
+{
+	return bombaEutanasica_;
+}
+
 int GameManager::getRecordScore()
 {
 	return recordScore_;
@@ -100,6 +108,13 @@ bool GameManager::ReceiveEvent(Event& event)
 	//Mensaje de muerte de un enemigo, da igual que sea un boss o no
 	else if (event.type == "EnemyDeath") {
 		score_ += static_cast<EventPuntuacion&>(event).puntuacion_;
+	}
+	//Activa a desactiva en funcion de si tiene o no la bomba
+	else if (event.type == "BombaUp") {
+		bombaEutanasica_ = true;
+	}
+	else if (event.type == "BombaDown") {
+		bombaEutanasica_ = false;
 	}
 	return false;
 }

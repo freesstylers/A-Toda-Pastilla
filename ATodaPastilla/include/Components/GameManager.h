@@ -21,6 +21,8 @@ public:
 	void unpause();
 	bool isPaused();
 
+	bool isBombActive();
+
 	int getRecordScore();
 
 	virtual bool ReceiveEvent(Event& event) override;
@@ -34,6 +36,7 @@ private:
 	int recordScore_ = 0;
 	int score_ = 0;
 	bool paused_ = false;
+	bool bombaEutanasica_ = false;
 	//hacer un isActive apra la bomba eutanasica
 };
 
