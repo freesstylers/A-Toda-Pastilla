@@ -58,6 +58,7 @@ void GameManager::init(json& j)
 	EventManager::getInstance()->UnregisterListenerForAll(e_);
 	registrarListeners();
 	bombaEutanasica_ = false;
+	score_ = 0;
 }
 
 void GameManager::update()
