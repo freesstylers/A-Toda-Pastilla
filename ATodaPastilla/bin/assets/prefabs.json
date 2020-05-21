@@ -72,7 +72,7 @@
 			},
 			{
 				"type": "Vida",
-				"vidaMax": 50,
+				"vidaMax": 2,
 				"time": 3
 			},
 			{
@@ -103,7 +103,7 @@
 			},
 			{
 				"type": "Vida",
-				"vidaMax": 50,
+				"vidaMax": 1,
 				"time": 3
 			},
 			{
@@ -134,7 +134,7 @@
 			},
 			{
 				"type": "Vida",
-				"vidaMax": 50,
+				"vidaMax": 2,
 				"time": 3
 			},
 			{
@@ -184,7 +184,7 @@
 				"shotPos": [ 0, 0, -50 ],
 				"shotDir": [ 0, 0, -1 ],
 				"nBullets": [ 1, 2, 3 ],
-				"damagePerBullet": 10,
+				"damagePerBullet": 1,
 				"bulletSpeed": [ 600, 600, 800 ],
 				"dispersionAngle": [ 15, 15, 15 ]
 			},
@@ -246,7 +246,7 @@
 					[ 3, 3, 3 ],
 					[ 4, 4, 4 ]
 				],
-				"damagePerBullet": 10,
+				"damagePerBullet": 1,
 				"bulletSpeed": [
 					[ 300, 350, 400 ],
 					[ 300, 350, 400 ],
@@ -296,19 +296,19 @@
 			{
 				"type": "VidaEnemigos",
 				"puntos": 500,
-				"vidaMax": 50,
+				"vidaMax": 3,
 				"customDeath": true
 			},
 			{
 				"type": "RicibergaBehaviour",
-				"damage": 100,
+				"damage": 1,
 				"speed": 20,
 				"bottom": 170,
 				"timeToDie": 1,
 				"hitSound": "assets/sound/RicibergaHit.mp3",
 				"deathSound": "assets/sound/RicibergaDeath.mp3",
 				"seeksPlayer": false,
-				"sinusoidalMovement": true,
+				"sinusoidalMovement": false,
 				"sinusoidalMagnitude": 50.0,
 				"sinusoidalFrequency": 2.0
 			}
@@ -339,7 +339,7 @@
 			{
 				"type": "VidaEnemigos",
 				"puntos": 500,
-				"vidaMax": 100,
+				"vidaMax": 5,
 				"customDeath": true
 			},
 			{
@@ -352,6 +352,7 @@
 				"hitSound" : "assets/sound/HermenegildoHit.mp3",
 				"timeToDie" : 1,
 				"cadence": 0.2,
+				"damage": 1,
 				"shotsPerAttack": 3,
 				"timeBetweenAttacks": 2
 			}
@@ -369,7 +370,7 @@
 			{
 				"type": "EnemySpawner",
 				"enemies": ["Riciberga", "Hermenegildo"],
-				"spawnPositions": [[0, 25, -150], [-90, 25, -150], [90, 25, -150]],
+				"spawnPositions": [[-90, 25, -150], [0, 25, -150],  [90, 25, -150]],
 				"spawnRate" : 2
 			}
 		]

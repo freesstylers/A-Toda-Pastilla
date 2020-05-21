@@ -5,6 +5,9 @@
 #include "Components/VidaEnemigos.h"
 #include "Components/ProjectileBehaviour.h"
 #include "MotorCasaPaco.h"
+#include "Scene/SceneManager.h"
+#include "Components/EnemySpawner.h"
+
 
 HermenegildoBehaviour::HermenegildoBehaviour(json& args):EnemyBehaviour(args)
 {
@@ -36,6 +39,9 @@ void HermenegildoBehaviour::init(json& j)
 	if (!j["timeToDie"].is_null()) {
 		timeToDie = j["timeToDie"];
 	}
+	if (!j["damage"].is_null()) {
+		damage = j["damage"];
+	}
 }
 
 void HermenegildoBehaviour::start()
@@ -46,6 +52,7 @@ void HermenegildoBehaviour::start()
 	timeSinceLastAttack = timeBetweenAttacks;
 	timeSinceLastShot = cadence;
 	dyingTime = 0;
+	damage = 1;
 }
 
 void HermenegildoBehaviour::update()
@@ -55,9 +62,9 @@ void HermenegildoBehaviour::update()
 			if (timeSinceLastAttack >= timeBetweenAttacks) {
 				if (shotsFired < shotsPerAttack) {
 					if (timeSinceLastShot >= cadence) {
-						prSpawner->spawnProjectiles(Vector3(-20, 0, 15), Vector3(0, 0, 1), 100, 1, 10);
+						prSpawner->spawnProjectiles(Vector3(-20, 0, 15), Vector3(0, 0, 1), 100, 1, damage);
 
-						prSpawner->spawnProjectiles(Vector3(20, 0, 15), Vector3(0, 0, 1), 100, 1, 10);
+						prSpawner->spawnProjectiles(Vector3(20, 0, 15), Vector3(0, 0, 1), 100, 1, damage);
 
 						shotsFired++;
 						timeSinceLastShot = 0;
@@ -73,12 +80,20 @@ void HermenegildoBehaviour::update()
 				timeSinceLastAttack += MotorCasaPaco::getInstance()->DeltaTime();
 			}
 		}
+		std::list<Entity*> l = MotorCasaPaco::getInstance()->getSceneManager()->getCurrentScene()->getEntitiesByTag("EnemySpawner");
+		if (!l.empty()) {
+			Entity* spawner = (*l.begin());
+			if (spawner != nullptr && spawner->getComponent<EnemySpawner>("EnemySpawner") != nullptr) {
+				spawner->getComponent<EnemySpawner>("EnemySpawner")->setPosUsed(spawnIndx, true);
+			}
+		}
 	}
 	else {
 		dyingTime += MotorCasaPaco::getInstance()->DeltaTime();
 		if (dyingTime >= timeToDie) {
+			EnemyBehaviour::OnDeath();
 			EventManager::getInstance()->UnregisterListenerForAll(e_);
-			e_->setEnabled(false);
+			MotorCasaPaco::getInstance()->getSceneManager()->getCurrentScene()->deleteEntity(e_->getName());
 		}
 	}
 }
@@ -96,7 +111,6 @@ void HermenegildoBehaviour::OnCollision(Entity* other)
 }
 void HermenegildoBehaviour::OnDeath()
 {
-	EnemyBehaviour::OnDeath();
 	AudioManager::getInstance()->playMusic(deathSound.c_str(), 4, false);
 	AudioManager::getInstance()->setVolume(0.7, 4);
 	dyingTime = 0;

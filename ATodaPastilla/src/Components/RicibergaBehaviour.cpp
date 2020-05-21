@@ -10,6 +10,7 @@
 #include "Events/EventManager.h"
 #include "Events/Event.h"
 #include "Events/EventListener.h"
+#include "Components/EnemySpawner.h"
 #include <list>
 
 RicibergaBehaviour::RicibergaBehaviour(json& j): EnemyBehaviour(j)
@@ -90,17 +91,30 @@ void RicibergaBehaviour::update()
 			e_->getComponent<Transform>("Transform")->setPosition(e_->getComponent<Transform>("Transform")->getPosition() + 
 				Vector3(sin(MotorCasaPaco::getInstance()->getTime() * sinusoidalFrequency) * sinusoidalMagnitude, 0, 0) * MotorCasaPaco::getInstance()->DeltaTime());
 		}
+		if (Vector3::Magnitude((e_->getComponent<Transform>("Transform")->getPosition() - spawnPosition)) >= 80)
+			EnemyBehaviour::OnDeath();
+		else {
+			std::list<Entity*> l = MotorCasaPaco::getInstance()->getSceneManager()->getCurrentScene()->getEntitiesByTag("EnemySpawner");
+			if (!l.empty()) {
+				Entity* spawner = (*l.begin());
+				if (spawner != nullptr && spawner->getComponent<EnemySpawner>("EnemySpawner") != nullptr) {
+					spawner->getComponent<EnemySpawner>("EnemySpawner")->setPosUsed(spawnIndx, true);
+				}
+			}
+		}
 
 		if (e_->getComponent<Transform>("Transform")->getPosition().Z >= bottom) {
+			EnemyBehaviour::OnDeath();
 			EventManager::getInstance()->UnregisterListenerForAll(e_);
-			e_->setEnabled(false);
+			MotorCasaPaco::getInstance()->getSceneManager()->getCurrentScene()->deleteEntity(e_->getName());
 		}
 	}
 	else {
 		dyingTime += MotorCasaPaco::getInstance()->DeltaTime();
 		if (dyingTime>=timeToDie) {
+			EnemyBehaviour::OnDeath();
 			EventManager::getInstance()->UnregisterListenerForAll(e_);
-			e_->setEnabled(false);
+			MotorCasaPaco::getInstance()->getSceneManager()->getCurrentScene()->deleteEntity(e_->getName());
 		}
 	}
 }
@@ -128,7 +142,6 @@ void RicibergaBehaviour::OnCollision(Entity* other)
 
 void RicibergaBehaviour::OnDeath()
 {
-	EnemyBehaviour::OnDeath();
 	AudioManager::getInstance()->playMusic(deathSound.c_str(), 3, false);
 	AudioManager::getInstance()->setVolume(0.7, 3);
 	dyingTime = 0;

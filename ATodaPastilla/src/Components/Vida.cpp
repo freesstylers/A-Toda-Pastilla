@@ -52,7 +52,7 @@ void Vida::sumaVida(int valor)
 	else if (vida_ <= 0&& !death_) {
 		if (!customDeath_) {
 			EventManager::getInstance()->UnregisterListenerForAll(e_);
-			e_->setEnabled(false);
+			MotorCasaPaco::getInstance()->getSceneManager()->getCurrentScene()->deleteEntity(e_->getName());
 		}
 		else {
 			EventManager::getInstance()->UnregisterListenerForAll(e_);

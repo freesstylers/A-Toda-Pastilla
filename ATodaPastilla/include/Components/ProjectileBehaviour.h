@@ -26,4 +26,6 @@ private:
 	float bordeInf;
 	float bordeDer;
 	float bordeIzq;
+	float timeSinceLastCol;
+	float timeBetwCol;
 };

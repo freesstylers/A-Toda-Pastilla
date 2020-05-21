@@ -25,6 +25,8 @@ void ProjectileBehaviour::start()
 	bordeInf = -500;
 	bordeDer = 500;
 	bordeIzq = -500;
+	timeBetwCol = 0.1;
+	timeSinceLastCol = timeBetwCol;
 
 	EventManager::getInstance()->RegisterListener(this, "PAUSE");
 }
@@ -34,7 +36,7 @@ void ProjectileBehaviour::update()
 	Transform* t = getEntity()->getComponent<Transform>("Transform");
 	if (t->getPosition().X > bordeDer || t->getPosition().X < bordeIzq ||
 		t->getPosition().Z > bordeSup || t->getPosition().Z < bordeInf) {
-		getEntity()->setEnabled(false);
+		e_->getComponent<Vida>("Vida")->sumaVida(-e_->getComponent<Vida>("Vida")->GetVida());
 	}
 	Vector3 pos = t->getPosition();
 
@@ -71,20 +73,27 @@ void ProjectileBehaviour::setDamage(float dmg)
 
 void ProjectileBehaviour::OnCollision(Entity* other)
 {
-	if(source=="Player" && other->getTag()=="Enemy"){
+	if (timeSinceLastCol >= timeBetwCol) {
+		if (source == "Player" && other->getTag() == "Enemy") {
 
-		other->getComponent<VidaEnemigos>("VidaEnemigos")->sumaVida(-damage);
-		e_->getComponent<Vida>("Vida")->sumaVida(-e_->getComponent<Vida>("Vida")->GetVida());
+			other->getComponent<VidaEnemigos>("VidaEnemigos")->sumaVida(-damage);
+			e_->getComponent<Vida>("Vida")->sumaVida(-e_->getComponent<Vida>("Vida")->GetVida());
+			timeSinceLastCol=0;
 
+		}
+		else if (source == "Enemy" && other->getTag() == "Player") {
+			other->getComponent<VidaPlayer>("VidaPlayer")->sumaVida(-damage);
+			e_->getComponent<Vida>("Vida")->sumaVida(-e_->getComponent<Vida>("Vida")->GetVida());
+			timeSinceLastCol = 0;
+
+		}
+		else if (source == "Player" && other->getTag() == "Projectile" && other->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->getSource() == "Enemy") {
+			other->getComponent<Vida>("Vida")->sumaVida(-e_->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->damage);
+			e_->getComponent<Vida>("Vida")->sumaVida(-other->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->damage);
+			timeSinceLastCol = 0;
+		}
 	}
-	else if (source == "Enemy" && other->getTag() == "Player") {
-		other->getComponent<VidaPlayer>("VidaPlayer")->sumaVida(-damage);
-		e_->getComponent<Vida>("Vida")->sumaVida(-e_->getComponent<Vida>("Vida")->GetVida());
-	}
-	else if (source == "Player" && other->getTag() == "Projectile" && other->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->getSource()=="Enemy") {
-		other->getComponent<Vida>("Vida")->sumaVida(-other->getComponent<Vida>("Vida")->GetVida());
-		e_->getComponent<Vida>("Vida")->sumaVida(-e_->getComponent<Vida>("Vida")->GetVida());
-	}
+	timeSinceLastCol += MotorCasaPaco::getInstance()->DeltaTime();
 }
 
 bool ProjectileBehaviour::ReceiveEvent(Event& event)
