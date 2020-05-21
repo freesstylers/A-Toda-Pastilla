@@ -4,6 +4,7 @@
     <Window type="DefaultWindow" name="MainMenu" >
         <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
         <Property name="MaxSize" value="{{1,0},{1,0}}" />
+        <Property name="RiseOnClickEnabled" value="false" />
         <Window type="A_Toda_Pastilla/Play" name="Play" >
             <Property name="Area" value="{{0.449219,0},{0.768056,0},{0.584375,0},{0.9375,0}}" />
         </Window>

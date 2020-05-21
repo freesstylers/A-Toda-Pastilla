@@ -64,11 +64,6 @@
 			"components" : 
 			[
 				{
-					"type": "ChangeSceneButtonComponent",
-					"buttonName" : "MainMenu/Play",
-					"sceneName" : "ATodaPastilla"
-				},
-				{
 					"type": "ExitButtonComponent",
 					"buttonName" : "MainMenu/Close"
 				},
@@ -88,15 +83,9 @@
 					 "MainMenu/RightArrow",
 					 "MainMenu/Close"
 					],
+					"playButton": "MainMenu/Play",
 					"delay" : 0.2
-				}
-			]
-		},
-		{
-			"type" : "entity",
-			"name" : "UI_2",
-			"components" : 
-			[
+				},
 				{
 					"type": "ChangeSceneButtonComponent",
 					"buttonName" : "MainMenu/Settings",
