@@ -2,7 +2,7 @@
 #include "MotorCasaPaco.h"
 #include "Audio/AudioManager.h"
 #include "Input/InputManager.h"
-
+#include "Components/GameManager.h"
 MainMenuInputComponent::MainMenuInputComponent(json& args): Component(args)
 {
 
@@ -14,8 +14,14 @@ MainMenuInputComponent::~MainMenuInputComponent()
 	//Component::~Component();
 }
 
-bool MainMenuInputComponent::function(const CEGUI::EventArgs& e)
+bool MainMenuInputComponent::functionPlay(const CEGUI::EventArgs& e)
 {
+	Event evt = Event("Ingame");
+	EventManager::getInstance()->EmitEvent(evt);
+
+	MotorCasaPaco::getInstance()->changeScene("ATodaPastilla");
+	AudioManager::getInstance()->playMusic("assets/sound/buttonSound.mp3", 0, false);
+
 	return true;
 }
 
@@ -64,7 +70,7 @@ void MainMenuInputComponent::update()
 
 void MainMenuInputComponent::init(json& j)
 {
-	if (!j["buttons"].is_null() && j["buttons"].is_array() && !j["delay"].is_null())
+	if (!j["buttons"].is_null() && j["buttons"].is_array() && !j["delay"].is_null() && !j["playButton"].is_null())
 	{
 		std::vector<std::string> vec = j["buttons"];
 		
@@ -84,12 +90,16 @@ void MainMenuInputComponent::init(json& j)
 		delay = j["delay"];
 		currentTime = MotorCasaPaco::getInstance()->getTime();
 
+		auto helperFunction = std::bind(&MainMenuInputComponent::functionPlay, this, std::placeholders::_1);
+		GUI_Manager::getInstance()->setEvents(GUI_Manager::getInstance()->getPushButton(j["playButton"]), helperFunction);
+
 		tam = count;
 		currenPos = tam / 2;
 		
 		std::cout << tam << "\n";
 		//posX = MotorCasaPaco::getInstance()->getScreenWidth() / 2;
 		//posY = MotorCasaPaco::getInstance()->getScreenHeight() / 2;
+		GUI_Manager::getInstance()->changeText(GUI_Manager::getInstance()->getStaticText("MainMenu/Score"), std::to_string(GameManager::getInstance()->getRecordScore()));
 
 		MotorCasaPaco::getInstance()->getGUI_Manager()->injectPosition(positionsX[currenPos], positionsY[currenPos]);
 	}

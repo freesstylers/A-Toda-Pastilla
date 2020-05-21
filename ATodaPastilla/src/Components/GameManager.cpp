@@ -3,7 +3,7 @@
 #include "Components/EventsGame.h"
 #include "Entity/Entity.h"
 #include "Scene/SceneManager.h"
-
+#include "GUI/GUI_Manager.h"
 #include <iostream>
 #include <fstream>
 
@@ -26,6 +26,7 @@ void GameManager::registrarListeners()
 	EventManager::getInstance()->RegisterListener(e_, "EnemyDeath");
 	EventManager::getInstance()->RegisterListener(e_, "BombaUp");
 	EventManager::getInstance()->RegisterListener(e_, "BombaDown");
+	EventManager::getInstance()->RegisterListener(e_, "Ingame");
 }
 
 GameManager::GameManager(): Component("GameManager") {
@@ -57,11 +58,17 @@ void GameManager::init(json& j)
 	EventManager::getInstance()->UnregisterListenerForAll(e_);
 	registrarListeners();
 	bombaEutanasica_ = false;
+	score_ = 0;
 }
 
 void GameManager::update()
 {
-
+	//Update Score
+	if (ingame_ && !paused_)
+	{
+		GUI_Manager::getInstance()->changeText(GUI_Manager::getInstance()->getStaticText("Ingame/CurrentScore"), std::to_string(score_));
+		GUI_Manager::getInstance()->changeText(GUI_Manager::getInstance()->getStaticText("Ingame/Record"), std::to_string(recordScore_));
+	}
 }
 
 int GameManager::getScore()
@@ -104,6 +111,7 @@ bool GameManager::ReceiveEvent(Event& event)
 		if (recordScore_ < score_)
 			recordScore_ = score_;
 		SceneManager::getInstance()->changeScene("Menu");
+		ingame_ = false;
 	}
 	//Mensaje de muerte de un enemigo, da igual que sea un boss o no
 	else if (event.type == "EnemyDeath") {
@@ -115,6 +123,10 @@ bool GameManager::ReceiveEvent(Event& event)
 	}
 	else if (event.type == "BombaDown") {
 		bombaEutanasica_ = false;
+	}
+	else if (event.type == "Ingame")
+	{
+		ingame_ = true;
 	}
 	return false;
 }

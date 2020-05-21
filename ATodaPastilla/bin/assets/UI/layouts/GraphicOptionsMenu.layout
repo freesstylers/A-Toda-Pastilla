@@ -4,6 +4,7 @@
     <Window type="DefaultWindow" name="GraphicOptions" >
         <Property name="Area" value="{{0,0},{0,0},{1,2},{1,0}}" />
         <Property name="MaxSize" value="{{1,0},{1,0}}" />
+        <Property name="RiseOnClickEnabled" value="false" />
         <Window type="GWEN/StaticImage" name="Fondo" >
             <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
             <Property name="Image" value="A_Toda_Pastilla/Fondo" />

@@ -11,7 +11,7 @@ public:
 	MainMenuInputComponent(json& args);
 	~MainMenuInputComponent();
 	void init(json& j) override;
-	bool function(const CEGUI::EventArgs& e);
+	bool functionPlay(const CEGUI::EventArgs& e);
 	bool ReceiveEvent(Event& event) override;
 	void update();
 private:

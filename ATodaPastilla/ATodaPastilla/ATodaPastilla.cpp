@@ -25,21 +25,6 @@
 #include "Components/GiroContinuo.h"
 #include "Components/MenuMuestraPersonaje.h"
 
-/*
-#include "Components/ApplyGraphicChangesComponent.h"
-#include "Components/ChangeFullScreenComponent.h"
-#include "Components/ChangeVyncComponent.h"
-#include "Components/FormatResolutionChangeComponent.h"
-#include "Components/RevertGraphicChangesComponent.h"
-#include "Components/RevertAdvancedGraphicChangesComponent.h"
-#include "Components/ChangeGammaComponent.h"
-#include "Components/ChangeGraphicSceneComponent.h"
-#include "Components/ApplyAdvancedGraphicChangesComponent.h"
-#include "Components/FSAAChangeComponent.h"
-#include "Components/ShadowsChangeComponent.h"
-*/
-
-
 #include "Components/MainMenuInputComponent.h"
 #include "Components/PauseMenuComponent.h"
 #include "Components/OptionsMenuComponent.h"
@@ -171,107 +156,6 @@ public:
 	};
 };
 
-/*
-class ChangeFullScreenComponentFactory : public BaseFactory
-{
-public:
-	Component* createComponent(json& args) override
-	{
-		return new ChangeFullScreenComponent(args);
-	};
-};
-
-class FormatResolutionChangeComponentFactory : public BaseFactory
-{
-public:
-	Component* createComponent(json& args) override
-	{
-		return new FormatResolutionChangeComponent(args);
-	};
-};
-
-class ApplyGraphicChangesComponentFactory : public BaseFactory
-{
-public:
-	Component* createComponent(json& args) override
-	{
-		return new ApplyGraphicChangesComponent(args);
-	};
-};
-
-class ChangeVSyncComponentFactory : public BaseFactory
-{
-public:
-	Component* createComponent(json& args) override
-	{
-		return new ChangeVSyncComponent(args);
-	};
-};
-
-class FSAAChangeComponentFactory : public BaseFactory
-{
-public:
-	Component* createComponent(json& args) override
-	{
-		return new FSAAChangeComponent(args);
-	};
-};
-
-class ShadowsChangeComponentFactory : public BaseFactory
-{
-public:
-	Component* createComponent(json& args) override
-	{
-		return new ShadowsChangeComponent(args);
-	};
-};
-
-class ApplyAdvancedGraphicChangesComponentFactory : public BaseFactory
-{
-public:
-	Component* createComponent(json& args) override
-	{
-		return new ApplyAdvancedGraphicChangesComponent(args);
-	};
-};
-
-class RevertGraphicChangesComponentFactory : public BaseFactory
-{
-public:
-	Component* createComponent(json& args) override
-	{
-		return new RevertGraphicChangesComponent(args);
-	};
-};
-
-class RevertAdvancedGraphicChangesComponentFactory : public BaseFactory
-{
-public:
-	Component* createComponent(json& args) override
-	{
-		return new RevertAdvancedGraphicChangesComponent(args);
-	};
-};
-
-class ChangeGammaComponentFactory : public BaseFactory
-{
-public:
-	Component* createComponent(json& args) override
-	{
-		return new ChangeGammaComponent(args);
-	};
-};
-
-class ChangeGraphicSceneComponentFactory : public BaseFactory
-{
-public:
-	Component* createComponent(json& args) override
-	{
-		return new ChangeGraphicSceneComponent(args);
-	};
-};
-*/
-
 class MainMenuInputComponentFactory : public BaseFactory
 {
 public:
@@ -390,18 +274,6 @@ void setupFactories()
 	j->addFactory("GiroContinuo", new GiroContinuoFactory());
 	j->addFactory("MenuMuestraPersonaje", new MenuMuestraPersonajeFactory());
 	j->addFactory("ProjectileBehaviour", new ProjectileBehaviourFactory());
-	/*
-	j->addFactory("ChangeFullScreenComponent", new ChangeFullScreenComponentFactory());
-	j->addFactory("FormatResolutionChangeComponent", new FormatResolutionChangeComponentFactory());
-	j->addFactory("ApplyGraphicChangesComponent", new ApplyGraphicChangesComponentFactory());
-	j->addFactory("ChangeVSyncComponent", new ChangeVSyncComponentFactory());
-	j->addFactory("FSAAChangeComponent", new FSAAChangeComponentFactory());
-	j->addFactory("ShadowsChangeComponent", new ShadowsChangeComponentFactory());
-	j->addFactory("ApplyAdvancedGraphicChangesComponent", new ApplyAdvancedGraphicChangesComponentFactory());
-	j->addFactory("RevertGraphicChangesComponent", new RevertGraphicChangesComponentFactory());
-	j->addFactory("RevertAdvancedGraphicChangesComponent", new RevertAdvancedGraphicChangesComponentFactory());
-	j->addFactory("ChangeGammaComponent", new ChangeGammaComponentFactory());
-	j->addFactory("ChangeGraphicSceneComponent", new ChangeGraphicSceneComponentFactory());*/
 	j->addFactory("MainMenuInputComponent", new MainMenuInputComponentFactory());
 	j->addFactory("PauseMenuComponent", new PauseMenuComponentFactory());
 	j->addFactory("OptionsMenuComponent", new OptionsMenuComponentFactory());
