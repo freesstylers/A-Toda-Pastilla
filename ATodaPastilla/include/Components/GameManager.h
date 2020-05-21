@@ -13,6 +13,8 @@ public:
 	static void clean();
 
 	void init(json& j) override;
+	void update() override;
+
 	int getScore();
 	void addScore(int s);
 	void pause();
@@ -32,6 +34,7 @@ private:
 	int recordScore_ = 0;
 	int score_ = 0;
 	bool paused_ = false;
+	//hacer un isActive apra la bomba eutanasica
 };
 
 #endif // !GAMEMANAGER_H

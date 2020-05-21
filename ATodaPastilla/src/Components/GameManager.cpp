@@ -56,6 +56,11 @@ void GameManager::init(json& j)
 	registrarListeners();
 }
 
+void GameManager::update()
+{
+
+}
+
 int GameManager::getScore()
 {
 	return score_;
