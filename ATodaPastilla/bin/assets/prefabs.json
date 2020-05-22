@@ -104,7 +104,7 @@
 			{
 				"type": "Vida",
 				"vidaMax": 1,
-				"time": 3
+				"time": 8
 			},
 			{
 				"type": "ProjectileBehaviour"
@@ -351,10 +351,11 @@
 				"deathSound" : "assets/sound/HermenegildoDeath.mp3",
 				"hitSound" : "assets/sound/HermenegildoHit.mp3",
 				"timeToDie" : 1,
-				"cadence": 0.2,
+				"cadence": 0.5,
 				"damage": 1,
+				"speed": 50,
 				"shotsPerAttack": 3,
-				"timeBetweenAttacks": 2
+				"timeBetweenAttacks": 4
 			}
 
 		]
@@ -369,9 +370,23 @@
 		"components": [
 			{
 				"type": "EnemySpawner",
-				"enemies": ["Riciberga", "Hermenegildo"],
-				"spawnPositions": [[-90, 25, -150], [0, 25, -150],  [90, 25, -150]],
-				"spawnRate" : 2
+				"nWaves": 4,
+				"waveStart": [2, 15, 30, 60],
+				"maxSpawns": [1, 2, 2, 3], 
+				"spawnRate": [3, 2, 1.5, 1],
+				"multRate": 10,
+				"statMultiplier": 1.25,
+				"enemies":[
+					{
+						"enemy": "Riciberga",
+						"spawnProbability": [100, 70, 40, 20]
+					},
+					{
+						"enemy": "Hermenegildo",
+						"spawnProbability": [0, 30, 60, 80]
+					}
+				],
+				"spawnPositions": [[-90, 25, -150], [0, 25, -150],  [90, 25, -150]]
 			}
 		]
 

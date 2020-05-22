@@ -86,7 +86,7 @@ void RicibergaBehaviour::update()
 		orientation = orientation * 180.0 / M_PI;
 		if (direction.X < 0) orientation = -orientation;
 		e_->getComponent<Transform>("Transform")->setRotation(Vector3(0, orientation, 0));
-		e_->getComponent<Transform>("Transform")->setPosition(e_->getComponent<Transform>("Transform")->getPosition() + direction * speed * MotorCasaPaco::getInstance()->DeltaTime());
+		e_->getComponent<Transform>("Transform")->setPosition(e_->getComponent<Transform>("Transform")->getPosition() + direction * speed *statMult* MotorCasaPaco::getInstance()->DeltaTime());
 		if (sinusoidalMovement) {
 			e_->getComponent<Transform>("Transform")->setPosition(e_->getComponent<Transform>("Transform")->getPosition() + 
 				Vector3(sin(MotorCasaPaco::getInstance()->getTime() * sinusoidalFrequency) * sinusoidalMagnitude, 0, 0) * MotorCasaPaco::getInstance()->DeltaTime());

@@ -10,6 +10,7 @@ VidaPlayer::~VidaPlayer()
 {
 }
 
+
 void VidaPlayer::init(json& j)
 {
 	if (!j["invulnerabilityTime"].is_null())

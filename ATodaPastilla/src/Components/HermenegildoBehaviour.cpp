@@ -42,6 +42,9 @@ void HermenegildoBehaviour::init(json& j)
 	if (!j["damage"].is_null()) {
 		damage = j["damage"];
 	}
+	if (!j["speed"].is_null()) {
+		speed = j["speed"];
+	}
 }
 
 void HermenegildoBehaviour::start()
@@ -59,12 +62,12 @@ void HermenegildoBehaviour::update()
 {
 	if (!e_->getComponent<VidaEnemigos>("VidaEnemigos")->isDead()) {
 		if (prSpawner != nullptr) {
-			if (timeSinceLastAttack >= timeBetweenAttacks) {
+			if (timeSinceLastAttack >= timeBetweenAttacks/statMult) {
 				if (shotsFired < shotsPerAttack) {
-					if (timeSinceLastShot >= cadence) {
-						prSpawner->spawnProjectiles(Vector3(-20, 0, 15), Vector3(0, 0, 1), 100, 1, damage);
+					if (timeSinceLastShot >= cadence/statMult) {
+						prSpawner->spawnProjectiles(Vector3(-20, 0, 15), Vector3(0, 0, 1), speed, 1, damage);
 
-						prSpawner->spawnProjectiles(Vector3(20, 0, 15), Vector3(0, 0, 1), 100, 1, damage);
+						prSpawner->spawnProjectiles(Vector3(20, 0, 15), Vector3(0, 0, 1), speed, 1, damage);
 
 						shotsFired++;
 						timeSinceLastShot = 0;
