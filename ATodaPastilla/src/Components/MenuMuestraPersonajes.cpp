@@ -22,15 +22,36 @@ void MenuMuestraPersonaje::update()
 void MenuMuestraPersonaje::nextCharacter()
 {
 	SceneManager::getInstance()->getCurrentScene()->deleteEntity(entidades_[n_]);
-	n_++;
-	n_ = n_ % 4;
+	if (n_ == 0)
+	{
+		n_++;
+		Event e = Event("Teodegonda");
+		EventManager::getInstance()->EmitEvent(e);
+	}
+	else
+	{
+		n_ = 0;
+		Event e = Event("Witerico");
+		EventManager::getInstance()->EmitEvent(e);
+	}
 	spawnEntity(pos_, entidades_[n_]);
 }
 
 void MenuMuestraPersonaje::prevCharacter()
 {
 	SceneManager::getInstance()->getCurrentScene()->deleteEntity(entidades_[n_]);
-	if (n_ != 0)n_--; else n_ = 3;
+	if (n_ == 0)
+	{
+		n_++;
+		Event e = Event("Teodegonda");
+		EventManager::getInstance()->EmitEvent(e);
+	}
+	else
+	{
+		n_ = 0;
+		Event e = Event("Witerico");
+		EventManager::getInstance()->EmitEvent(e);
+	}
 	spawnEntity(pos_, entidades_[n_]);
 }
 
@@ -56,8 +77,6 @@ void MenuMuestraPersonaje::init(json& j)
 	if (!j["entidades"].is_null()) {
 		entidades_.push_back(j["entidades"][0]);
 		entidades_.push_back(j["entidades"][1]);
-		entidades_.push_back(j["entidades"][2]);
-		entidades_.push_back(j["entidades"][3]);
 	}
 	spawnEntity(pos_, entidades_[0]);
 

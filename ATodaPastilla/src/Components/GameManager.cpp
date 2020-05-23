@@ -27,6 +27,7 @@ void GameManager::registrarListeners()
 	EventManager::getInstance()->RegisterListener(e_, "BombaUp");
 	EventManager::getInstance()->RegisterListener(e_, "BombaDown");
 	EventManager::getInstance()->RegisterListener(e_, "Ingame");
+	EventManager::getInstance()->RegisterListener(e_, "Menu");
 }
 
 GameManager::GameManager(): Component("GameManager") {
@@ -127,6 +128,10 @@ bool GameManager::ReceiveEvent(Event& event)
 	else if (event.type == "Ingame")
 	{
 		ingame_ = true;
+	}
+	else if (event.type == "Menu")
+	{
+		ingame_ = false;
 	}
 	return false;
 }

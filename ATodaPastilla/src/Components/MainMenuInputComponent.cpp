@@ -19,7 +19,7 @@ bool MainMenuInputComponent::functionPlay(const CEGUI::EventArgs& e)
 	Event evt = Event("Ingame");
 	EventManager::getInstance()->EmitEvent(evt);
 
-	MotorCasaPaco::getInstance()->changeScene("ATodaPastilla");
+	MotorCasaPaco::getInstance()->changeScene(sceneToLoad);
 	AudioManager::getInstance()->playMusic("assets/sound/buttonSound.mp3", 0, false);
 
 	return true;
@@ -27,6 +27,16 @@ bool MainMenuInputComponent::functionPlay(const CEGUI::EventArgs& e)
 
 bool MainMenuInputComponent::ReceiveEvent(Event& event)
 {
+	if (event.type == "Witerico")
+	{
+		sceneToLoad = "ATodaPastilla_Witerico";
+	}
+
+	else if (event.type == "Teodegonda")
+	{
+		sceneToLoad = "ATodaPastilla_Teodegonda";
+	}
+
 	return false;
 }
 
@@ -102,5 +112,8 @@ void MainMenuInputComponent::init(json& j)
 		GUI_Manager::getInstance()->changeText(GUI_Manager::getInstance()->getStaticText("MainMenu/Score"), std::to_string(GameManager::getInstance()->getRecordScore()));
 
 		MotorCasaPaco::getInstance()->getGUI_Manager()->injectPosition(positionsX[currenPos], positionsY[currenPos]);
+
+		EventManager::getInstance()->RegisterListener(this, "Witerico");
+		EventManager::getInstance()->RegisterListener(this, "Teodegonda");
 	}
 }

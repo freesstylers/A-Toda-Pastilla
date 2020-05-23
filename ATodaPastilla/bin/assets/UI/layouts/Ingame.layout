@@ -39,13 +39,6 @@
             <Property name="FrameEnabled" value="true" />
             <Property name="BackgroundEnabled" value="true" />
         </Window>
-        <Window type="GWEN/StaticImage" name="Back_Mejora_3" >
-            <Property name="Area" value="{{0.1875,0},{0.814815,0},{0.254167,0},{0.933333,0}}" />
-            <Property name="Image" value="GWEN/Input.Button.Normal.Middle.Middle" />
-            <Property name="MaxSize" value="{{1,0},{1,0}}" />
-            <Property name="FrameEnabled" value="true" />
-            <Property name="BackgroundEnabled" value="true" />
-        </Window>
         <Window type="GWEN/StaticImage" name="Back_Bomba" >
             <Property name="Area" value="{{0.911458,0},{0.814815,0},{0.978125,0},{0.933333,0}}" />
             <Property name="Image" value="GWEN/Input.Button.Normal.Middle.Middle" />
@@ -74,23 +67,23 @@
                 </AutoWindow>
             </AutoWindow>
         </Window>
-        <Window type="GWEN/StaticImage" name="Mejora_3" >
-            <Property name="Area" value="{{0.1875,0},{0.814815,0},{0.254167,0},{0.933333,0}}" />
-            <Property name="Image" value="A_Toda_Pastilla/Blank" />
-            <Property name="MaxSize" value="{{1,0},{1,0}}" />
-            <Property name="FrameEnabled" value="true" />
-            <Property name="BackgroundEnabled" value="true" />
-        </Window>
         <Window type="GWEN/StaticImage" name="Mejora_2" >
             <Property name="Area" value="{{0.104167,0},{0.814815,0},{0.170833,0},{0.933333,0}}" />
-            <Property name="Image" value="A_Toda_Pastilla/Blank" />
+            <Property name="Image" value="A_Toda_Pastilla/Pastilla_Basica" />
             <Property name="MaxSize" value="{{1,0},{1,0}}" />
             <Property name="FrameEnabled" value="true" />
             <Property name="BackgroundEnabled" value="true" />
         </Window>
-        <Window type="GWEN/StaticImage" name="Mejora_1" >
+        <Window type="GWEN/StaticImage" name="Mejora_Escudo" >
             <Property name="Area" value="{{0.0208333,0},{0.814815,0},{0.0875,0},{0.933333,0}}" />
-            <Property name="Image" value="A_Toda_Pastilla/Blank" />
+            <Property name="Image" value="A_Toda_Pastilla/Escudo_No" />
+            <Property name="MaxSize" value="{{1,0},{1,0}}" />
+            <Property name="FrameEnabled" value="true" />
+            <Property name="BackgroundEnabled" value="true" />
+        </Window>
+        <Window type="GWEN/StaticImage" name="Bomba" >
+            <Property name="Area" value="{{0.911458,0},{0.814815,0},{0.978125,0},{0.933333,0}}" />
+            <Property name="Image" value="A_Toda_Pastilla/Bomba_No" />
             <Property name="MaxSize" value="{{1,0},{1,0}}" />
             <Property name="FrameEnabled" value="true" />
             <Property name="BackgroundEnabled" value="true" />

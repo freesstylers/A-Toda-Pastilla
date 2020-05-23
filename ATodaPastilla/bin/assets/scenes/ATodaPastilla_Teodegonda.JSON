@@ -13,8 +13,22 @@
 		},
 		{
 			"name": "floor",
-			"prefab": "floor",
-			"scale": [ 4, 0.1, 4 ]
+			"position": [ 0, -30, 0 ],
+			"rotation": [ 0, 0, 0 ],
+			"scale": [ 4, 0.1, 4 ],
+			"tag": "suelo",
+			"components": [
+				{
+					"type": "Mesh",
+					"mesh": "cube.mesh",
+					"material": "FondoEspacio"
+				},
+				{
+					"type": "RigidBody",
+					"shape": "cube",
+					"isKinematic": true
+				}
+			]
 		},
 		{
 			"name": "light",

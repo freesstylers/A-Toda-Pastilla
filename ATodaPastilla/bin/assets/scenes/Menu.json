@@ -69,7 +69,7 @@
 				},
 				{
 					"type" : "MenuMuestraPersonaje",
-					"entidades" : ["witericoMenu", "teodegondaMenu", "hermenegildoMenu", "ricibergaMenu"],
+					"entidades" : ["witericoMenu", "teodegondaMenu"],
 					"buttonName1" : "MainMenu/LeftArrow",
 					"buttonName2" : "MainMenu/RightArrow"
 				},

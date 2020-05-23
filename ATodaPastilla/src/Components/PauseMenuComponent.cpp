@@ -123,7 +123,7 @@ bool PauseMenuComponent::functionPauseMainMenu(const CEGUI::EventArgs& e)
 	GameManager::getInstance()->pause();
 	//MotorCasaPaco::getInstance()->pause();
 	
-	EventManager::getInstance()->EmitEvent("finNivel");
+	EventManager::getInstance()->EmitEvent("Menu");
 	return true;
 }
 

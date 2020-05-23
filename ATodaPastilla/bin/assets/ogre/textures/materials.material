@@ -523,7 +523,8 @@ material FondoEspacio {
             transparent_sorting on 
 
             texture_unit  {
-                  texture FondoEspacio.png
+                texture FondoEspacioTest.jpg
+                scroll_anim 0.0 0.05
                 tex_address_mode wrap 
                 scale 1.0 1.0 
                 colour_op alpha_blend 
