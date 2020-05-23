@@ -32,7 +32,8 @@ void MejoraDisparo::init(json& j)
 void MejoraDisparo::OnCollision(Entity* ent)
 {
 	if (ent->getTag() == "Player")
-	{	
+	{
+		EventManager::getInstance()->EmitEvent("MejoraDisparo");
 		if (ent->getComponent<DisparoWiterico>("DisparoWiterico") == nullptr) {
 			if (ent->getComponent<DisparoTeodegonda>("DisparoTeodegonda")->getNmodes() >=
 				ent->getComponent<DisparoTeodegonda>("DisparoTeodegonda")->getShotMode()) {

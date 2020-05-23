@@ -15,6 +15,7 @@ public:
 	virtual void sumaVida(int valor);
 
 private:
+	bool muerte_ = false;
 	int puntos_ = 0;
 };
 
