@@ -122,6 +122,18 @@ private:
 	//Datos de escenas
 	std::string mainMenu;
 	std::string level;
+
+	//Para actualizar posiciones de botones al reescalar la pantalla
+	void updateButtonsPosition();
+	std::vector<std::string> buttonsPause;
+	std::vector<std::string> buttonsBasic;
+	std::string basicExtraButton;
+	std::vector<std::string> buttonsBasicDown;
+	std::vector<std::string> buttonsGraphic;
+	std::string graphicExtraButton;
+	std::vector<std::string> buttonsGraphicDown;
+	std::vector<std::string> buttonsAdvanced;
+	std::vector<std::string> buttonsAdvancedDown;
 };
 
 
