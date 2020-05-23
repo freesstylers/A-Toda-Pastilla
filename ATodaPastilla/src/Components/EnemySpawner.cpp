@@ -75,6 +75,7 @@ void EnemySpawner::start()
 	timeSinceStart = 0;
 	timeSinceMult = 0;
 	currMult = 1;
+	lastWave = false;
 	posUsed = std::vector<bool>(spawnPositions.size(), false);
 }
 
@@ -104,6 +105,7 @@ void EnemySpawner::update()
 		timeSinceMult += MotorCasaPaco::getInstance()->DeltaTime();
 	}
 	timeSinceSpawn += MotorCasaPaco::getInstance()->DeltaTime();
+	timeSinceStart += MotorCasaPaco::getInstance()->DeltaTime();
 	
 }
 
@@ -132,10 +134,13 @@ void EnemySpawner::spawn()
 			aux += enemies[i].spawnProb[currWave];
 			i++;
 		}
+		if (i >= enemies.size()) i=enemies.size()-1;
 		Entity* e = spawnEntity(spawnPositions[s], enemies[i].enemyPrefab);
-		e->getComponent<EnemyBehaviour>(enemies[i].enemyPrefab + "Behaviour")->setStatMult(currMult);
-		e->getComponent<EnemyBehaviour>(enemies[i].enemyPrefab + "Behaviour")->setSpawnPos(spawnPositions[s]);
-		e->getComponent<EnemyBehaviour>(enemies[i].enemyPrefab + "Behaviour")->setEnemyIndx(s);
+		std::string str = enemies[i].enemyPrefab;
+		std::string enemyName = str.substr(0, str.find("_"));
+		e->getComponent<EnemyBehaviour>(enemyName + "Behaviour")->setStatMult(currMult);
+		e->getComponent<EnemyBehaviour>(enemyName + "Behaviour")->setSpawnPos(spawnPositions[s]);
+		e->getComponent<EnemyBehaviour>(enemyName + "Behaviour")->setEnemyIndx(s);
 		posUsed[s] = true;
 	}
 	timeSinceSpawn = 0;

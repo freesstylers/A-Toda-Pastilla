@@ -273,7 +273,7 @@
 		]
 
 	},
-	"Riciberga": {
+	"Riciberga_L": {
 		"position": [ 0, 25, -125 ],
 		"rotation": [ 0, 0, 0 ],
 		"scale": [ 25, 25, 25 ],
@@ -302,7 +302,7 @@
 			{
 				"type": "RicibergaBehaviour",
 				"damage": 1,
-				"speed": 20,
+				"speed": 50,
 				"bottom": 170,
 				"timeToDie": 1,
 				"hitSound": "assets/sound/RicibergaHit.mp3",
@@ -315,8 +315,50 @@
 		]
 
 	},
+	"Riciberga_S": {
+		"position": [ 0, 25, -125 ],
+		"rotation": [ 0, 0, 0 ],
+		"scale": [ 25, 25, 25 ],
+		"tag": "Enemy",
+		"components": [
+			{
+				"type": "Mesh",
+				"mesh": "Riciberga.mesh",
+				"material": "Riciberga"
+			},
+			{
+				"type": "RigidBody",
+				"shape": "mesh",
+				"mass": 10,
+				"gravity": [ 0, 0, 0 ],
+				"angularFactor" : [0, 1, 0],
+				"linearFactor" : [1, 0, 1],
+				"disableDeactivation": true
+			},
+			{
+				"type": "VidaEnemigos",
+				"puntos": 500,
+				"vidaMax": 3,
+				"customDeath": true
+			},
+			{
+				"type": "RicibergaBehaviour",
+				"damage": 1,
+				"speed": 50,
+				"bottom": 170,
+				"timeToDie": 1,
+				"hitSound": "assets/sound/RicibergaHit.mp3",
+				"deathSound": "assets/sound/RicibergaDeath.mp3",
+				"seeksPlayer": false,
+				"sinusoidalMovement": true,
+				"sinusoidalMagnitude": 50.0,
+				"sinusoidalFrequency": 2.0
+			}
+		]
+
+	},
 	
-	"Hermenegildo": {
+	"Hermenegildo_Def": {
 		"position": [ 70, 25, -125 ],
 		"rotation": [ 0, 0, 0 ],
 		"scale": [ 15, 15, 15 ],
@@ -371,19 +413,23 @@
 			{
 				"type": "EnemySpawner",
 				"nWaves": 4,
-				"waveStart": [2, 15, 30, 60],
+				"waveStart": [10, 25, 45, 60],
 				"maxSpawns": [1, 2, 2, 3], 
 				"spawnRate": [3, 2, 1.5, 1],
 				"multRate": 10,
 				"statMultiplier": 1.25,
 				"enemies":[
 					{
-						"enemy": "Riciberga",
-						"spawnProbability": [100, 70, 40, 20]
+						"enemy": "Riciberga_L",
+						"spawnProbability": [100, 80, 45, 20]
 					},
 					{
-						"enemy": "Hermenegildo",
-						"spawnProbability": [0, 30, 60, 80]
+						"enemy": "Hermenegildo_Def",
+						"spawnProbability": [0, 20, 35, 35]
+					},
+					{
+						"enemy": "Riciberga_S",
+						"spawnProbability": [0, 0, 20, 45]
 					}
 				],
 				"spawnPositions": [[-90, 25, -150], [0, 25, -150],  [90, 25, -150]]
@@ -479,7 +525,7 @@
 	},
 
 	"MejoraDisparo": {
-		"position": [ 0, 50, 0 ],
+		"position": [ 0, 25, 0 ],
 		"rotation": [ 0, 0, 180 ],
 		"scale": [ 5, 5, 5 ],
 		"components": [
@@ -505,7 +551,7 @@
 	},
 
 	"MejoraVida": {
-		"position": [ 0, 50, 0 ],
+		"position": [ 0, 25, 0 ],
 		"rotation": [ 0, 0, 180 ],
 		"scale": [ 12, 12, 12 ],
 		"components": [
@@ -517,7 +563,8 @@
 			{
 				"type": "RigidBody",
 				"shape": "cube",
-				"isKinematic": true
+				"isKinematic": true,
+				"isTrigger": true
 			},
 			{
 				"type": "MejoraVida"
@@ -529,7 +576,7 @@
 		]
 	},
 	"MejoraEutanasia": {
-		"position": [ 0, 50, 0 ],
+		"position": [ 0, 25, 0 ],
 		"rotation": [ 0, 0, 180 ],
 		"scale": [ 8, 8, 8 ],
 		"components": [
@@ -541,7 +588,9 @@
 			{
 				"type": "RigidBody",
 				"shape": "cube",
-				"isKinematic": true
+				"isKinematic": true,
+				"isTrigger": true
+
 			},
 			{
 				"type": "MejoraEutanasia"
