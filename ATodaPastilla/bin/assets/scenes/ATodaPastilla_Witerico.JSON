@@ -1,5 +1,5 @@
 {
-	"name" : "verticalSlice",
+	"name" : "ATodaPastilla_Witerico",
 	"entities": [
 
 	
@@ -100,6 +100,11 @@
 		{
 			"type" : "layout", 
 			"name" : "AdvancedOptionsMenu.layout",
+			"visible": false
+		},
+		{
+			"type" : "layout", 
+			"name" : "endGame.layout",
 			"visible": false
 		},
 		{

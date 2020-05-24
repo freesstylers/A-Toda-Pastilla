@@ -3,6 +3,7 @@
 #include "Input/InputManager.h"
 #include "Audio/AudioManager.h"
 #include "Components/GameManager.h"
+#include "Scene/SceneManager.h"
 
 PauseMenuComponent::PauseMenuComponent(json& args): Component(args)
 {
@@ -81,6 +82,12 @@ bool PauseMenuComponent::ReceiveEvent(Event& event)
 		GUI_Manager::getInstance()->changeText(advancedTexts[0], "X " + MotorCasaPaco::getInstance()->getFSAA());
 		getFSAAPosition(MotorCasaPaco::getInstance()->getFSAA());
 	}
+
+	else if (event.type == "Death")
+	{
+		disabled_ = true;
+	}
+
 	return false;
 }
 
@@ -91,18 +98,6 @@ bool PauseMenuComponent::functionPauseReturn(const CEGUI::EventArgs& e)
 	MotorCasaPaco::getInstance()->getGUI_Manager()->setLayoutVisible(1, false); //El orden de la UI es Ingame/Menu de Pausa/Opciones/Opciones Graficas/Opciones Avanzadas...
 	MotorCasaPaco::getInstance()->getGUI_Manager()->getInstance()->hideMouseCursor();
 
-	return true;
-}
-
-bool PauseMenuComponent::functionPauseReset(const CEGUI::EventArgs& e)
-{
-	MotorCasaPaco::getInstance()->changeScene(level);
-	
-	//MotorCasaPaco::getInstance()->pause();
-	GameManager::getInstance()->pause();
-
-	MotorCasaPaco::getInstance()->getGUI_Manager()->setLayoutVisible(1, false); //El orden de la UI es Ingame/Menu de Pausa/Opciones/Opciones Graficas/Opciones Avanzadas...
-	EventManager::getInstance()->EmitEvent("inicioNivel");
 	return true;
 }
 
@@ -559,7 +554,7 @@ bool PauseMenuComponent::functionAdvancedFSAAMore(const CEGUI::EventArgs& e)
 
 void PauseMenuComponent::update()
 {
-	if (MotorCasaPaco::getInstance()->getTimeDifference(currentTime) > delayPause)
+	if (MotorCasaPaco::getInstance()->getTimeDifference(currentTime) > delayPause && !disabled_)
 	{
 		if (InputManager::getInstance()->GameControllerIsButtonDown(GameControllerButton::CONTROLLER_BUTTON_START) || InputManager::getInstance()->IsKeyDown(Scancode::SCANCODE_ESCAPE))
 		{
@@ -576,7 +571,7 @@ void PauseMenuComponent::update()
 
 void PauseMenuComponent::pausedUpdate()
 {
-	if (MotorCasaPaco::getInstance()->getTimeDifference(currentTime) > delay)
+	if (MotorCasaPaco::getInstance()->getTimeDifference(currentTime) > delay && !disabled_)
 	{
 		switch (layoutLayer)
 		{
