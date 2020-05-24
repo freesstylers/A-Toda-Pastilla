@@ -4,6 +4,7 @@
 #include "Entity/Transform.h"
 #include "Entity/Entity.h"
 #include "MotorCasaPaco.h"
+#include "Scene/SceneManager.h"
 
 ProjectileBehaviour::ProjectileBehaviour(json& args):Component(args)
 {
@@ -91,6 +92,15 @@ void ProjectileBehaviour::OnCollision(Entity* other)
 			other->getComponent<Vida>("Vida")->sumaVida(-e_->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->damage);
 			e_->getComponent<Vida>("Vida")->sumaVida(-other->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->damage);
 			timeSinceLastCol = 0;
+		}
+
+		if (e_->getTag() == "Bomba" && other->getTag() == "Enemy")
+		{
+			std::list<Entity*> enemies = SceneManager::getInstance()->getCurrentScene()->getEntitiesByTag("Enemy");
+			for (auto it : enemies)
+			{
+				it->getComponent<VidaEnemigos>("VidaEnemigos")->sumaVida(-damage);
+			}
 		}
 	}
 	timeSinceLastCol += MotorCasaPaco::getInstance()->DeltaTime();

@@ -53,6 +53,19 @@ void ProjectileSpawner::spawnProjectiles(Vector3 pos, Vector3 dir, float speed, 
 	}
 }
 
+void ProjectileSpawner::spawnEutanasia()
+{
+	Vector3 dir = Vector3(0, 0, -1);
+	Vector3 pos = Vector3(0, 0, -50);
+	rotateVector(dir, 0);
+	Entity* bomba = spawnEntity(e_->getComponent<Transform>("Transform")->getPosition() + pos, "Eutanasia");
+
+	bomba->setTag("Bomba");
+	bomba->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->setDir(dir);
+	bomba->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->setSpeed(50);
+	bomba->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->setDamage(100);
+	bomba->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->setSource(getEntity()->getTag());
+}
 void ProjectileSpawner::setShotMode(int mode)
 {
 	if (mode >= 0 && mode < nModes) {

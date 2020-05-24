@@ -142,7 +142,38 @@
 			}
 		]
 	},
-
+	
+	"Eutanasia": {
+		"position": [ 0, 0, 0 ],
+		"rotation": [ 0, 0, 0 ],
+		"scale": [ 10, 10, 10 ],
+		"tag": "Projectile",
+		"components": [
+			{
+				"type": "Mesh",
+				"mesh": "BombaEutanasica.mesh",
+				"material": "BombaEutanasica"
+			},
+			{
+				"type": "RigidBody",
+				"shape": "cube",
+				"mass" : 10,
+				"isTrigger": true,
+				"angularFactor" : [0, 0, 1],
+				"linearFactor" : [1, 0, 1],
+				"disableDeactivation": true
+			},
+			{
+				"type": "Vida",
+				"vidaMax": 1,
+				"time": 8
+			},
+			{
+				"type": "ProjectileBehaviour"
+			}
+		]
+	},
+	
 	"Witerico": {
 		"position": [ 0, 25, 125 ],
 		"rotation": [ 0, 180, 0 ],
