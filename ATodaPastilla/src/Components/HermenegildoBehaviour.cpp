@@ -25,8 +25,11 @@ void HermenegildoBehaviour::init(json& j)
 	if (!j["shotsPerAttack"].is_null()) {
 		shotsPerAttack = j["shotsPerAttack"];
 	}
-	if (!j["timeBetweenAttacks"].is_null()) {
-		timeBetweenAttacks = j["timeBetweenAttacks"];
+	if (!j["minTimeBtwAtk"].is_null()) {
+		minTimeBtwAtk = j["minTimeBtwAtk"];
+	}
+	if (!j["maxTimeBtwAtk"].is_null()) {
+		maxTimeBtwAtk = j["maxTimeBtwAtk"];
 	}
 	if (!j["deathSound"].is_null()) {
 		std::string inter = j["deathSound"];
@@ -52,10 +55,12 @@ void HermenegildoBehaviour::start()
 	prSpawner = e_->getComponent<ProjectileSpawner>("ProjectileSpawner");
 
 	shotsFired = 0;
-	timeSinceLastAttack = timeBetweenAttacks;
 	timeSinceLastShot = cadence;
 	dyingTime = 0;
 	damage = 1;
+	float x = (rand() % 101)/100.0;
+	timeBetweenAttacks= minTimeBtwAtk + (maxTimeBtwAtk - minTimeBtwAtk) * x;
+	timeSinceLastAttack = timeBetweenAttacks * 0.9;
 }
 
 void HermenegildoBehaviour::update()
@@ -77,6 +82,8 @@ void HermenegildoBehaviour::update()
 				else {
 					timeSinceLastAttack = 0;
 					shotsFired = 0;
+					float x = (rand() % 101) / 100.0;
+					timeBetweenAttacks = minTimeBtwAtk + (maxTimeBtwAtk - minTimeBtwAtk) * x;
 				}
 			}
 			else {
@@ -112,6 +119,11 @@ void HermenegildoBehaviour::OnCollision(Entity* other)
 			else
 				AudioManager::getInstance()->playMusic("assets/sound/movie_1.mp3", 4, false);
 		}
+	}
+	if (other->getComponent<HermenegildoBehaviour>("HermenegildoBehaviour") != nullptr) {
+		other->getComponent<EnemyBehaviour>("HermenegildoBehaviour")->OnDeath();
+		EventManager::getInstance()->UnregisterListenerForAll(other);
+		MotorCasaPaco::getInstance()->getSceneManager()->getCurrentScene()->deleteEntity(other->getName());
 	}
 }
 void HermenegildoBehaviour::OnDeath()

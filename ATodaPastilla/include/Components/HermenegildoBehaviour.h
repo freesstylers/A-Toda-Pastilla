@@ -26,6 +26,8 @@ private:
 	int shotsPerAttack;
 	int shotsFired;
 	float timeBetweenAttacks;
+	float minTimeBtwAtk;
+	float maxTimeBtwAtk;
 	float dyingTime;
 	float timeToDie;
 	

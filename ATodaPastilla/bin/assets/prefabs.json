@@ -459,7 +459,8 @@
 				"damage": 1,
 				"speed": 50,
 				"shotsPerAttack": 3,
-				"timeBetweenAttacks": 4
+				"minTimeBtwAtk": 2.5,
+				"maxTimeBtwAtk": 3.5
 			}
 
 		]
@@ -501,11 +502,12 @@
 				"deathSound" : "assets/sound/HermenegildoDeath.mp3",
 				"hitSound" : "assets/sound/HermenegildoHit.mp3",
 				"timeToDie" : 1,
-				"cadence": 0.5,
+				"cadence": 0.8,
 				"damage": 1,
-				"speed": 50,
-				"shotsPerAttack": 3,
-				"timeBetweenAttacks": 4
+				"speed": 35,
+				"shotsPerAttack": 2,
+				"minTimeBtwAtk": 4,
+				"minTimeBtwAtk": 5
 			}
 
 		]

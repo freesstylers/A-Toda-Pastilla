@@ -124,7 +124,7 @@ void EnemySpawner::spawn()
 		i++;
 	}
 	if (!posUsed[s]) {
-		int r = rand() % 100;
+		int r = rand() % 100 + 1;
 		int i = 0;
 		float aux = 0;
 		while (i < enemies.size()) {
