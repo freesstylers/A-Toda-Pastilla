@@ -28,6 +28,8 @@ private:
 
 	std::string hitSound;
 	std::string deathSound;
+
+	bool awayFromSpawn;
 };
 	
 

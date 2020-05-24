@@ -66,6 +66,7 @@ void RicibergaBehaviour::start()
 		auto p = ent.begin();
 		player = (*p);
 	}
+	awayFromSpawn = false;
 }
 
 void RicibergaBehaviour::update()
@@ -91,8 +92,12 @@ void RicibergaBehaviour::update()
 			e_->getComponent<Transform>("Transform")->setPosition(e_->getComponent<Transform>("Transform")->getPosition() + 
 				Vector3(sin(MotorCasaPaco::getInstance()->getTime() * sinusoidalFrequency) * sinusoidalMagnitude, 0, 0) * MotorCasaPaco::getInstance()->DeltaTime());
 		}
-		if (Vector3::Magnitude((e_->getComponent<Transform>("Transform")->getPosition() - spawnPosition)) >= 80)
-			EnemyBehaviour::OnDeath();
+		if (Vector3::Magnitude((e_->getComponent<Transform>("Transform")->getPosition() - spawnPosition)) >= 80) {
+			if (!awayFromSpawn) {
+				EnemyBehaviour::OnDeath();
+				awayFromSpawn = true;
+			}
+		}
 		else {
 			std::list<Entity*> l = MotorCasaPaco::getInstance()->getSceneManager()->getCurrentScene()->getEntitiesByTag("EnemySpawner");
 			if (!l.empty()) {
@@ -104,7 +109,6 @@ void RicibergaBehaviour::update()
 		}
 
 		if (e_->getComponent<Transform>("Transform")->getPosition().Z >= bottom) {
-			EnemyBehaviour::OnDeath();
 			EventManager::getInstance()->UnregisterListenerForAll(e_);
 			MotorCasaPaco::getInstance()->getSceneManager()->getCurrentScene()->deleteEntity(e_->getName());
 		}
