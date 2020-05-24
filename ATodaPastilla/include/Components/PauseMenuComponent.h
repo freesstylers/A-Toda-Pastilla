@@ -15,7 +15,6 @@ public:
 
 	//Pause Menu
 	bool functionPauseReturn(const CEGUI::EventArgs& e);
-	bool functionPauseReset(const CEGUI::EventArgs& e);
 	bool functionPauseSettings(const CEGUI::EventArgs& e);
 	bool functionPauseMainMenu(const CEGUI::EventArgs& e);
 	bool functionPauseExit(const CEGUI::EventArgs& e);
@@ -66,6 +65,7 @@ private:
 	float currentXTopButtons;
 	float currentYTopButtons;
 	float currentPosDownButtons;
+	bool disabled_ = false;
 	//float currentYButtons;
 
 	//Pause
@@ -121,7 +121,6 @@ private:
 
 	//Datos de escenas
 	std::string mainMenu;
-	std::string level;
 
 	//Para actualizar posiciones de botones al reescalar la pantalla
 	void updateButtonsPosition();

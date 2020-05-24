@@ -1,5 +1,5 @@
 {
-	"name" : "verticalSlice",
+	"name" : "ATodaPastilla_Witerico",
 	"entities": [
 
 	
@@ -106,9 +106,15 @@
 			"visible": false
 		},
 		{
-			"type": "entity",
-			"name": "UI",
-			"components": [
+			"type" : "layout", 
+			"name" : "endGame.layout",
+			"visible": false
+		},
+		{
+			"type" : "entity",
+			"name" : "UI",
+			"components" : 
+			[
 				{
 					"type": "PauseMenuComponent",
 					"buttons": [
