@@ -112,6 +112,37 @@
 		]
 	},
 
+	"Bala_Ind": {
+		"position": [ 0, 0, 0 ],
+		"rotation": [ 0, 0, 0 ],
+		"scale": [ 10, 10, 10 ],
+		"tag": "Projectile",
+		"components": [
+			{
+				"type": "Mesh",
+				"mesh": "Bala_Ind.mesh",
+				"material": "Bala_Ind"
+			},
+			{
+				"type": "RigidBody",
+				"shape": "cube",
+				"mass" : 10,
+				"isTrigger": true,
+				"angularFactor" : [0, 0, 1],
+				"linearFactor" : [1, 0, 1],
+				"disableDeactivation": true
+			},
+			{
+				"type": "Vida",
+				"vidaMax": 100,
+				"time": 8
+			},
+			{
+				"type": "ProjectileBehaviour"
+			}
+		]
+	},
+
 	"capsula": {
 		"position": [ 0, 0, 0 ],
 		"rotation": [ 0, 90, 0 ],
@@ -354,8 +385,8 @@
 		"components": [
 			{
 				"type": "Mesh",
-				"mesh": "Riciberga.mesh",
-				"material": "Riciberga"
+				"mesh": "Riciberga_S.mesh",
+				"material": "Riciberga_S"
 			},
 			{
 				"type": "RigidBody",
@@ -435,6 +466,52 @@
 
 	},
 
+	"Hermenegildo_Ind": {
+		"position": [ 70, 25, -125 ],
+		"rotation": [ 0, 0, 0 ],
+		"scale": [ 15, 15, 15 ],
+		"tag": "Enemy",
+		"components": [
+			{
+				"type": "Mesh",
+				"mesh": "Hermenegildo_Ind.mesh",
+				"material": "Hermenegildo_Ind"
+			},
+			{
+				"type": "RigidBody",
+				"shape": "mesh",
+				"mass": 10,
+				"gravity": [ 0, 0, 0 ],
+				"angularFactor" : [0, 1, 0],
+				"linearFactor" : [1, 0, 1],
+				"disableDeactivation": true
+			},
+			{
+				"type": "VidaEnemigos",
+				"puntos": 500,
+				"vidaMax": 5,
+				"customDeath": true
+			},
+			{
+				"type": "ProjectileSpawner",
+				"prefab": "Bala_Ind"
+			},
+			{
+				"type": "HermenegildoBehaviour",
+				"deathSound" : "assets/sound/HermenegildoDeath.mp3",
+				"hitSound" : "assets/sound/HermenegildoHit.mp3",
+				"timeToDie" : 1,
+				"cadence": 0.5,
+				"damage": 1,
+				"speed": 50,
+				"shotsPerAttack": 3,
+				"timeBetweenAttacks": 4
+			}
+
+		]
+
+	},
+
 	"EnemySpawner":{
 		"position": [ 0, 0, 0 ],
 		"rotation": [ 0, 0, 0 ],
@@ -456,11 +533,15 @@
 					},
 					{
 						"enemy": "Hermenegildo_Def",
-						"spawnProbability": [0, 20, 35, 35]
+						"spawnProbability": [0, 20, 35, 25]
 					},
 					{
 						"enemy": "Riciberga_S",
 						"spawnProbability": [0, 0, 20, 45]
+					},
+					{
+						"enemy": "Hermenegildo_Ind",
+						"spawnProbability": [0, 0, 0, 10]
 					}
 				],
 				"spawnPositions": [[-90, 25, -150], [0, 25, -150],  [90, 25, -150]]
