@@ -106,10 +106,6 @@ void EnemySpawner::update()
 	}
 	timeSinceSpawn += MotorCasaPaco::getInstance()->DeltaTime();
 	timeSinceStart += MotorCasaPaco::getInstance()->DeltaTime();
-	for (int i = 0; i < posUsed.size(); i++) {
-		std::cout << posUsed[i] << " ";
-	}
-	std::cout << "\n";
 }
 
 
