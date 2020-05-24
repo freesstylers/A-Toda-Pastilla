@@ -631,6 +631,14 @@
 				"rotation": 0.85
 			}
 		]
+	},
+
+	"MusicManager": {
+		"components": [
+			{
+				"type": "MusicManager"
+			}
+		]
 	}
 
 }

@@ -190,6 +190,7 @@
     <ClCompile Include="..\src\Components\MejoraVida.cpp" />
     <ClCompile Include="..\src\Components\MenuMuestraPersonajes.cpp" />
     <ClCompile Include="..\src\Components\MovimientoMando.cpp" />
+    <ClCompile Include="..\src\Components\musicManager.cpp" />
     <ClCompile Include="..\src\Components\OptionsMenuComponent.cpp" />
     <ClCompile Include="..\src\Components\PauseMenuComponent.cpp" />
     <ClCompile Include="..\src\Components\PlayerInput.cpp" />
@@ -228,6 +229,7 @@
     <ClInclude Include="..\include\Components\MejoraVida.h" />
     <ClInclude Include="..\include\Components\MenuMuestraPersonaje.h" />
     <ClInclude Include="..\include\Components\MovimientoMando.h" />
+    <ClInclude Include="..\include\Components\musicManager.h" />
     <ClInclude Include="..\include\Components\OptionsMenuComponent.h" />
     <ClInclude Include="..\include\Components\PauseMenuComponent.h" />
     <ClInclude Include="..\include\Components\PlayerInput.h" />
