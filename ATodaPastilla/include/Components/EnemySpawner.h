@@ -15,6 +15,7 @@ public:
 	void update() override;
 	void setPosUsed(int indx, bool value);
 	void spawn();
+	int getCurrWave() { return currWave; };
 private:
 	bool lastWave = false;
 	float timeSinceSpawn;

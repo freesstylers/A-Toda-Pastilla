@@ -30,6 +30,7 @@
     <ClCompile Include="..\src\Components\EnemyBehaviour.cpp" />
     <ClCompile Include="..\src\Components\VidaPlayer.cpp" />
     <ClCompile Include="..\src\Components\VidaEnemigos.cpp" />
+    <ClCompile Include="..\src\Components\musicManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Components\ChangeSceneButtonComponent.h" />
@@ -62,5 +63,6 @@
     <ClInclude Include="..\include\Components\VidaPlayer.h" />
     <ClInclude Include="..\include\Components\EventsGame.h" />
     <ClInclude Include="..\include\Components\VidaEnemigos.h" />
+    <ClInclude Include="..\include\Components\musicManager.h" />
   </ItemGroup>
 </Project>
