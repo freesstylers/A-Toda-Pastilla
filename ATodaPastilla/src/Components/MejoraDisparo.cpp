@@ -33,17 +33,41 @@ void MejoraDisparo::OnCollision(Entity* ent)
 {
 	if (ent->getTag() == "Player")
 	{
-		EventManager::getInstance()->EmitEvent("MejoraDisparo");
 		if (ent->getComponent<DisparoWiterico>("DisparoWiterico") == nullptr) {
 			if (ent->getComponent<DisparoTeodegonda>("DisparoTeodegonda")->getNmodes() >=
 				ent->getComponent<DisparoTeodegonda>("DisparoTeodegonda")->getShotMode()) {
+
 				ent->getComponent<DisparoTeodegonda>("DisparoTeodegonda")->setShotMode(ent->getComponent<DisparoTeodegonda>("DisparoTeodegonda")->getShotMode() + 1);
+
+				int n = ent->getComponent<DisparoTeodegonda>("DisparoTeodegonda")->getShotMode();
+
+				switch (n)
+				{
+				case 1:
+					EventManager::getInstance()->EmitEvent("MejoraDisparo1");
+					break;
+				case 2:
+					EventManager::getInstance()->EmitEvent("MejoraDisparo2");
+					break;
+				}
 			}
 		}
 		else {
 			if (ent->getComponent<DisparoWiterico>("DisparoWiterico")->getNmodes() >=
 				ent->getComponent<DisparoWiterico>("DisparoWiterico")->getShotMode()) {
 				ent->getComponent<DisparoWiterico>("DisparoWiterico")->setShotMode(ent->getComponent<DisparoWiterico>("DisparoWiterico")->getShotMode() + 1);
+
+				int n = ent->getComponent<DisparoWiterico>("DisparoWiterico")->getShotMode();
+
+				switch (n)
+				{
+				case 1:
+					EventManager::getInstance()->EmitEvent("MejoraDisparo1");
+					break;
+				case 2:
+					EventManager::getInstance()->EmitEvent("MejoraDisparo2");
+					break;
+				}
 			}
 		}
 			getEntity()->setEnabled(false);

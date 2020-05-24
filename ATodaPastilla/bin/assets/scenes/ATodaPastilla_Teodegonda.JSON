@@ -105,6 +105,11 @@
 			"visible": false
 		},
 		{
+			"type" : "layout", 
+			"name" : "endGame.layout",
+			"visible": false
+		},
+		{
 			"type": "entity",
 			"name": "UI",
 			"components": [

@@ -29,6 +29,8 @@ void GameManager::registrarListeners()
 	EventManager::getInstance()->RegisterListener(e_, "BombaDown");
 	EventManager::getInstance()->RegisterListener(e_, "Ingame");
 	EventManager::getInstance()->RegisterListener(e_, "Menu");
+	EventManager::getInstance()->RegisterListener(e_, "MejoraDisparo1");
+	EventManager::getInstance()->RegisterListener(e_, "MejoraDisparo2");
 }
 
 GameManager::GameManager(): Component("GameManager") 
@@ -215,18 +217,24 @@ bool GameManager::ReceiveEvent(Event& event)
 	}
 	//Activa a desactiva en funcion de si tiene o no la bomba
 	else if (event.type == "BombaUp") {
+		GUI_Manager::getInstance()->changeImage("Ingame/Bomba", "A_Toda_Pastilla/Bomba");
 		bombaEutanasica_ = true;
 	}
 	else if (event.type == "BombaDown") {
+		GUI_Manager::getInstance()->changeImage("Ingame/Bomba", "A_Toda_Pastilla/Bomba_No");
 		bombaEutanasica_ = false;
 	}
 	else if (event.type == "Ingame")
 	{
 		ingame_ = true;
 	}
-	else if (event.type == "Menu")
+	else if (event.type == "MejoraDisparo1")
 	{
-		ingame_ = false;
+		GUI_Manager::getInstance()->changeImage("Ingame/Mejora_2", "A_Toda_Pastilla/Pastilla_Mejora");
+	}
+	else if (event.type == "MejoraDisparo2")
+	{
+		GUI_Manager::getInstance()->changeImage("Ingame/Mejora_2", "A_Toda_Pastilla/Pastilla_Mejora_2");
 	}
 	return false;
 }
