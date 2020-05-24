@@ -31,6 +31,7 @@ void GameManager::registrarListeners()
 	EventManager::getInstance()->RegisterListener(e_, "Menu");
 	EventManager::getInstance()->RegisterListener(e_, "MejoraDisparo1");
 	EventManager::getInstance()->RegisterListener(e_, "MejoraDisparo2");
+	EventManager::getInstance()->RegisterListener(e_, "MejoraEscudoUp");
 }
 
 GameManager::GameManager(): Component("GameManager") 
@@ -235,6 +236,10 @@ bool GameManager::ReceiveEvent(Event& event)
 	else if (event.type == "MejoraDisparo2")
 	{
 		GUI_Manager::getInstance()->changeImage("Ingame/Mejora_2", "A_Toda_Pastilla/Pastilla_Mejora_2");
+	}
+	else if (event.type == "MejoraEscudoUp")
+	{
+		GUI_Manager::getInstance()->changeImage("Ingame/Mejora_Escudo", "A_Toda_Pastilla/Escudo");
 	}
 	return false;
 }
