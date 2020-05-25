@@ -20,6 +20,52 @@ GameManager::~GameManager()
 	file.close();
 }
 
+void GameManager::controlMuerteMando()
+{
+	if (MotorCasaPaco::getInstance()->getTimeDifference(currentTime) > delay)
+	{
+		//Mando y tal
+
+		if (InputManager::getInstance()->GameControllerGetAxisMovement(GameControllerAxis::CONTROLLER_AXIS_LEFTX, true) < -0.7 || InputManager::getInstance()->GameControllerIsButtonDown(GameControllerButton::CONTROLLER_BUTTON_DPAD_LEFT) || InputManager::getInstance()->IsKeyDown(Scancode::SCANCODE_A) || InputManager::getInstance()->IsKeyDown(Scancode::SCANCODE_LEFT))
+		{
+			if (menuPos == 0)
+			{
+				menuPos = 1;
+			}
+			else
+			{
+				menuPos = 0;
+			}
+
+			MotorCasaPaco::getInstance()->getGUI_Manager()->injectPosition(xPos[menuPos], yPos);
+			currentTime = MotorCasaPaco::getInstance()->getTime();
+		}
+		else if (InputManager::getInstance()->GameControllerGetAxisMovement(GameControllerAxis::CONTROLLER_AXIS_LEFTX, true) > 0.7 || InputManager::getInstance()->GameControllerIsButtonDown(GameControllerButton::CONTROLLER_BUTTON_DPAD_RIGHT) || InputManager::getInstance()->IsKeyDown(Scancode::SCANCODE_D) || InputManager::getInstance()->IsKeyDown(Scancode::SCANCODE_RIGHT))
+		{
+			if (menuPos == 0)
+			{
+				menuPos = 1;
+			}
+			else
+			{
+				menuPos = 0;
+			}
+
+			MotorCasaPaco::getInstance()->getGUI_Manager()->injectPosition(xPos[menuPos], yPos);
+			currentTime = MotorCasaPaco::getInstance()->getTime();
+		}
+	}
+
+	if (MotorCasaPaco::getInstance()->getInputManager()->GameControllerIsButtonDown(GameControllerButton::CONTROLLER_BUTTON_A) || InputManager::getInstance()->IsKeyDown(Scancode::SCANCODE_SPACE))
+	{
+		MotorCasaPaco::getInstance()->getInputManager()->injectLeftMouseButtonDown();
+	}
+	else
+	{
+		MotorCasaPaco::getInstance()->getInputManager()->injectLeftMouseButtonUp();
+	}
+}
+
 //Registro del gameManager de todo lo que tenga que escuchar
 void GameManager::registrarListeners()
 {
@@ -60,16 +106,20 @@ void GameManager::setEndGameLayout()
 	xPos[0] = MotorCasaPaco::getInstance()->getGUI_Manager()->getRoot()->getChild("endGame/Replay").getCenterPointXAbsolute();
 	yPos = MotorCasaPaco::getInstance()->getGUI_Manager()->getRoot()->getChild("endGame/Replay").getCenterPointYAbsolute();
 	xPos[1] = MotorCasaPaco::getInstance()->getGUI_Manager()->getRoot()->getChild("endGame/Menu").getCenterPointXAbsolute();
+	MotorCasaPaco::getInstance()->getGUI_Manager()->injectPosition(xPos[menuPos], yPos);
 }
 
 bool GameManager::functionReplay(const CEGUI::EventArgs& e)
 {
+	pause();
 	SceneManager::getInstance()->changeScene(SceneManager::getInstance()->getCurrentScene()->getName());
+	EventManager::getInstance()->EmitEvent("Ingame");
 	return true;
 }
 
 bool GameManager::functionMenu(const CEGUI::EventArgs& e)
 {
+	pause();
 	SceneManager::getInstance()->changeScene("Menu");
 	return true;
 }
@@ -104,56 +154,14 @@ void GameManager::update()
 		GUI_Manager::getInstance()->changeText(GUI_Manager::getInstance()->getStaticText("Ingame/CurrentScore"), std::to_string(score_));
 		GUI_Manager::getInstance()->changeText(GUI_Manager::getInstance()->getStaticText("Ingame/Record"), std::to_string(recordScore_));
 	}
-
-	else if (dead && paused_)
-	{
-			if (MotorCasaPaco::getInstance()->getTimeDifference(currentTime) > delay)
-			{
-				//Mando y tal
-
-				if (InputManager::getInstance()->GameControllerGetAxisMovement(GameControllerAxis::CONTROLLER_AXIS_LEFTX, true) < -0.7 || InputManager::getInstance()->GameControllerIsButtonDown(GameControllerButton::CONTROLLER_BUTTON_DPAD_LEFT) || InputManager::getInstance()->IsKeyDown(Scancode::SCANCODE_A) || InputManager::getInstance()->IsKeyDown(Scancode::SCANCODE_LEFT))
-				{
-					if (menuPos == 0)
-					{
-						menuPos = 1;
-					}
-					else
-					{
-						menuPos = 0;
-					}
-
-					MotorCasaPaco::getInstance()->getGUI_Manager()->injectPosition(xPos[menuPos], yPos);
-					currentTime = MotorCasaPaco::getInstance()->getTime();
-				}
-				else if (InputManager::getInstance()->GameControllerGetAxisMovement(GameControllerAxis::CONTROLLER_AXIS_LEFTX, true) > 0.7 || InputManager::getInstance()->GameControllerIsButtonDown(GameControllerButton::CONTROLLER_BUTTON_DPAD_RIGHT) || InputManager::getInstance()->IsKeyDown(Scancode::SCANCODE_D) || InputManager::getInstance()->IsKeyDown(Scancode::SCANCODE_RIGHT))
-				{
-					if (menuPos == 0)
-					{
-						menuPos = 1;
-					}
-					else
-					{
-						menuPos = 0;
-					}
-
-					MotorCasaPaco::getInstance()->getGUI_Manager()->injectPosition(xPos[menuPos], yPos);
-					currentTime = MotorCasaPaco::getInstance()->getTime();
-				}
-			}
-
-			if (MotorCasaPaco::getInstance()->getInputManager()->GameControllerIsButtonDown(GameControllerButton::CONTROLLER_BUTTON_A) || InputManager::getInstance()->IsKeyDown(Scancode::SCANCODE_SPACE))
-			{
-				MotorCasaPaco::getInstance()->getInputManager()->injectLeftMouseButtonDown();
-			}
-			else
-			{
-				MotorCasaPaco::getInstance()->getInputManager()->injectLeftMouseButtonUp();
-			}
-	}
 }
 
 void GameManager::pausedUpdate()
 {
+	if (dead)
+	{
+		controlMuerteMando();
+	}
 }
 
 int GameManager::getScore()

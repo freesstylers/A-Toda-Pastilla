@@ -10,7 +10,7 @@ VidaEnemigos::VidaEnemigos(json& args): Vida(args)
 void VidaEnemigos::init(json& j)
 {
 	if (!j["puntos"].is_null())
-		puntos_ = j["puntos"]/2;
+		puntos_ = j["puntos"];
 	Vida::init(j);
 
 }

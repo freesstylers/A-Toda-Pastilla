@@ -30,6 +30,7 @@ public:
 	virtual bool ReceiveEvent(Event& event) override;
 
 private:
+	void controlMuerteMando();
 	void registrarListeners();
 	GameManager();
 	static GameManager* instance;
