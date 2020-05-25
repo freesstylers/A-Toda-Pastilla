@@ -32,6 +32,7 @@
     <ClCompile Include="..\src\Components\VidaEnemigos.cpp" />
     <ClCompile Include="..\src\Components\musicManager.cpp" />
     <ClCompile Include="..\src\Components\EutanasiaTexto.cpp" />
+    <ClCompile Include="..\src\Components\Shield.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Components\ChangeSceneButtonComponent.h" />
@@ -66,5 +67,6 @@
     <ClInclude Include="..\include\Components\VidaEnemigos.h" />
     <ClInclude Include="..\include\Components\musicManager.h" />
     <ClInclude Include="..\include\Components\EutanasiaTexto.h" />
+    <ClInclude Include="..\include\Components\Shield.h" />
   </ItemGroup>
 </Project>

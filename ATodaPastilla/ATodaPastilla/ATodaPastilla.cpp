@@ -36,6 +36,7 @@
 #include "Components/MejoraEutanasia.h"
 #include "Components/musicManager.h"
 #include "Components/EutanasiaTexto.h"
+#include "Components/Shield.h"
 
 MotorCasaPaco* motorCasaPaco;
 
@@ -266,6 +267,17 @@ public:
 	};
 };
 
+
+
+class ShieldFactory : public BaseFactory
+{
+public:
+	Component* createComponent(json& args) override
+	{
+		return new Shield(args);
+	}
+};
+
 class EutanasiaTextoFactory : public BaseFactory
 {
 public:
@@ -307,6 +319,7 @@ void setupFactories()
 	j->addFactory("VidaEnemigos", new VidaEnemigosFactory());
 	j->addFactory("MusicManager", new MusicManagerFactory());
 	j->addFactory("EutanasiaTexto", new EutanasiaTextoFactory());
+	j->addFactory("Shield", new ShieldFactory());
 }
 
 #ifdef  _DEBUG

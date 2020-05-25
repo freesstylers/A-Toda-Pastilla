@@ -2,14 +2,14 @@
 	"name" : "ATodaPastilla_Teodegonda",
 	"entities": [
 
-	
+
 		{
-			"name" : "Player",
-			"prefab" : "Teodegonda"
+			"name": "Player",
+			"prefab": "Teodegonda"
 		},
 		{
-			"name" : "EnemySpawner",
-			"prefab" : "EnemySpawner"
+			"name": "EnemySpawner",
+			"prefab": "EnemySpawner"
 		},
 		{
 			"name": "floor",
@@ -82,6 +82,21 @@
 			"rotation": [0,0,0],
 			"scale": [6,6,6],
 			"prefab": "EutanasiaTexto"
+		},
+			"name": "Shield",
+			"position": [ 70, 25, -125 ],
+			"rotation": [ 0, 90, 0 ],
+			"scale": [ 20, 20, 20 ],
+			"components": [
+				{
+					"type": "Mesh",
+					"mesh": "Shield.mesh",
+					"material": "Shield"
+				},
+				{
+					"type": "Shield"
+				}
+			]
 		}
 	],
 
@@ -129,8 +144,6 @@
 						"PauseMenu/Exit"
 					],
 					"basicOptionButtons": [
-						"BasicOptions/LeftArrow_5",
-						"BasicOptions/RightArrow_5",
 						"BasicOptions/LeftArrow_4",
 						"BasicOptions/RightArrow_4",
 						"BasicOptions/LeftArrow_3",
@@ -139,6 +152,13 @@
 						"BasicOptions/RightArrow_2",
 						"BasicOptions/LeftArrow_1",
 						"BasicOptions/RightArrow_1"
+					],
+					"basicOptionTexts":
+					[
+					 "BasicOptions/Text_Selector_1",
+					 "BasicOptions/Text_Selector_2",
+					 "BasicOptions/Text_Selector_3",
+					 "BasicOptions/Text_Selector_4"
 					],
 					"basicExtraButton": "BasicOptions/GraphicOptions",
 					"basicOptionBotButtons": [

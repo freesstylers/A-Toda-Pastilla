@@ -12,6 +12,7 @@ void VidaEnemigos::init(json& j)
 	if (!j["puntos"].is_null())
 		puntos_ = j["puntos"]/2;
 	Vida::init(j);
+
 }
 
 VidaEnemigos::~VidaEnemigos()

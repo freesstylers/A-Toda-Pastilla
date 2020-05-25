@@ -198,6 +198,7 @@
     <ClCompile Include="..\src\Components\ProjectileBehaviour.cpp" />
     <ClCompile Include="..\src\Components\ProjectileSpawner.cpp" />
     <ClCompile Include="..\src\Components\RicibergaBehaviour.cpp" />
+    <ClCompile Include="..\src\Components\Shield.cpp" />
     <ClCompile Include="..\src\Components\SpawnerMejora.cpp" />
     <ClCompile Include="..\src\Components\Vida.cpp" />
     <ClCompile Include="..\src\Components\VidaEnemigos.cpp" />
@@ -238,6 +239,7 @@
     <ClInclude Include="..\include\Components\ProjectileBehaviour.h" />
     <ClInclude Include="..\include\Components\ProjectileSpawner.h" />
     <ClInclude Include="..\include\Components\RicibergaBehaviour.h" />
+    <ClInclude Include="..\include\Components\Shield.h" />
     <ClInclude Include="..\include\Components\SpawnerMejora.h" />
     <ClInclude Include="..\include\Components\Vida.h" />
     <ClInclude Include="..\include\Components\VidaEnemigos.h" />

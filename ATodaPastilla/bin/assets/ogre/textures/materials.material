@@ -677,7 +677,7 @@ material BombaEutanasica {
     }
 }
 
-material shield {
+material Shield {
     receive_shadows on
     technique {
         pass {

@@ -10,7 +10,7 @@ public:
 	VidaPlayer(json& args);
 	~VidaPlayer();
 	void init(json& j) override;
-
+	void start() override;
 	void update() override;
 
 	virtual void sumaVida(int valor);

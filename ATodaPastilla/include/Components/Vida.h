@@ -20,7 +20,8 @@ public:
 	virtual void sumaVida(int valor);
 protected:
 	bool customDeath_;
-	int vidaMax_ = 1;
+	int vidaMax_ = 2;
+	//int vidaInicial = 1;
 	int vida_ = 1;
 	int timeToLive_;
 	float time_ = 0;

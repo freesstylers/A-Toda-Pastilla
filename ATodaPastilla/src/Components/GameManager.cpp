@@ -32,6 +32,7 @@ void GameManager::registrarListeners()
 	EventManager::getInstance()->RegisterListener(e_, "MejoraDisparo1");
 	EventManager::getInstance()->RegisterListener(e_, "MejoraDisparo2");
 	EventManager::getInstance()->RegisterListener(e_, "MejoraEscudoUp");
+	EventManager::getInstance()->RegisterListener(e_, "EscudoDown");
 }
 
 GameManager::GameManager(): Component("GameManager") 
@@ -208,9 +209,6 @@ bool GameManager::ReceiveEvent(Event& event)
 		ingame_ = false;
 		dead = true;
 		currentTime = MotorCasaPaco::getInstance()->getTime();
-
-		//Event evt = Event("Death");
-		//EventManager::getInstance()->EmitEvent(evt);
 	}
 	//Mensaje de muerte de un enemigo, da igual que sea un boss o no
 	else if (event.type == "EnemyDeath") {
@@ -229,6 +227,10 @@ bool GameManager::ReceiveEvent(Event& event)
 	{
 		ingame_ = true;
 	}
+	else if (event.type == "Menu")
+	{
+		ingame_ = false;
+	}
 	else if (event.type == "MejoraDisparo1")
 	{
 		GUI_Manager::getInstance()->changeImage("Ingame/Mejora_2", "A_Toda_Pastilla/Pastilla_Mejora");
@@ -240,6 +242,10 @@ bool GameManager::ReceiveEvent(Event& event)
 	else if (event.type == "MejoraEscudoUp")
 	{
 		GUI_Manager::getInstance()->changeImage("Ingame/Mejora_Escudo", "A_Toda_Pastilla/Escudo");
+	}
+	else if (event.type == "EscudoDown")
+	{
+		GUI_Manager::getInstance()->changeImage("Ingame/Mejora_Escudo", "A_Toda_Pastilla/Escudo_No");
 	}
 	return false;
 }
