@@ -227,10 +227,10 @@
 			},
 			{
 				"type": "MovimientoMando",
-				"xRIGHT": 200,
-				"xLEFT": -200,
-				"zUP": -200,
-				"zDOWN": 200,
+				"xRIGHT": 275,
+				"xLEFT": -275,
+				"zUP": -350,
+				"zDOWN": 350,
 				"speed": 500
 			},
 			{
@@ -281,10 +281,10 @@
 			},
 			{
 				"type": "MovimientoMando",
-				"xRIGHT": 200,
-				"xLEFT": -200,
-				"zUP": -200,
-				"zDOWN": 200,
+				"xRIGHT": 275,
+				"xLEFT": -275,
+				"zUP": -350,
+				"zDOWN": 350,
 				"speed": 500
 			},
 			{
