@@ -2,14 +2,14 @@
 	"name" : "ATodaPastilla_Teodegonda",
 	"entities": [
 
-	
+
 		{
-			"name" : "Player",
-			"prefab" : "Teodegonda"
+			"name": "Player",
+			"prefab": "Teodegonda"
 		},
 		{
-			"name" : "EnemySpawner",
-			"prefab" : "EnemySpawner"
+			"name": "EnemySpawner",
+			"prefab": "EnemySpawner"
 		},
 		{
 			"name": "floor",
@@ -73,6 +73,22 @@
 				},
 				{
 					"type": "MusicManager"
+				}
+			]
+		},
+		{
+			"name": "Shield",
+			"position": [ 70, 25, -125 ],
+			"rotation": [ 0, 90, 0 ],
+			"scale": [ 20, 20, 20 ],
+			"components": [
+				{
+					"type": "Mesh",
+					"mesh": "Shield.mesh",
+					"material": "Shield"
+				},
+				{
+					"type": "Shield"
 				}
 			]
 		}

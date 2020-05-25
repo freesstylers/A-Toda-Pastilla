@@ -24,6 +24,7 @@ MejoraVida::~MejoraVida()
 
 void MejoraVida::init(json& j)
 {
+
 	Mejora::init(j);
 	
 }
@@ -35,6 +36,7 @@ void MejoraVida::OnCollision(Entity* ent)
 		if (ent->getComponent<VidaPlayer>("VidaPlayer")->GetVida() <2) 
 		{
 			EventManager::getInstance()->EmitEvent("MejoraEscudoUp");
+			
 			ent->getComponent<VidaPlayer>("VidaPlayer")->sumaVida(1);
 		}
 			getEntity()->setEnabled(false);

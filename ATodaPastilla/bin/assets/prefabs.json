@@ -64,10 +64,10 @@
 			{
 				"type": "RigidBody",
 				"shape": "cube",
-				"mass" : 10,
+				"mass": 10,
 				"isTrigger": true,
-				"angularFactor" : [0, 0, 1],
-				"linearFactor" : [1, 0, 1],
+				"angularFactor": [ 0, 0, 1 ],
+				"linearFactor": [ 1, 0, 1 ],
 				"disableDeactivation": true
 			},
 			{
@@ -80,7 +80,7 @@
 			}
 		]
 	},
-	
+
 	"Bala": {
 		"position": [ 0, 0, 0 ],
 		"rotation": [ 0, 0, 0 ],
@@ -95,10 +95,10 @@
 			{
 				"type": "RigidBody",
 				"shape": "cube",
-				"mass" : 10,
+				"mass": 10,
 				"isTrigger": true,
-				"angularFactor" : [0, 0, 1],
-				"linearFactor" : [1, 0, 1],
+				"angularFactor": [ 0, 0, 1 ],
+				"linearFactor": [ 1, 0, 1 ],
 				"disableDeactivation": true
 			},
 			{
@@ -126,10 +126,10 @@
 			{
 				"type": "RigidBody",
 				"shape": "cube",
-				"mass" : 10,
+				"mass": 10,
 				"isTrigger": true,
-				"angularFactor" : [0, 0, 1],
-				"linearFactor" : [1, 0, 1],
+				"angularFactor": [ 0, 0, 1 ],
+				"linearFactor": [ 1, 0, 1 ],
 				"disableDeactivation": true
 			},
 			{
@@ -157,10 +157,10 @@
 			{
 				"type": "RigidBody",
 				"shape": "cube",
-				"mass" : 10,
+				"mass": 10,
 				"isTrigger": true,
-				"angularFactor" : [0, 0, 1],
-				"linearFactor" : [1, 0, 1],
+				"angularFactor": [ 0, 0, 1 ],
+				"linearFactor": [ 1, 0, 1 ],
 				"disableDeactivation": true
 			},
 			{
@@ -173,7 +173,7 @@
 			}
 		]
 	},
-	
+
 	"Eutanasia": {
 		"position": [ 0, 0, 0 ],
 		"rotation": [ 0, 0, 0 ],
@@ -188,10 +188,10 @@
 			{
 				"type": "RigidBody",
 				"shape": "cube",
-				"mass" : 10,
+				"mass": 10,
 				"isTrigger": true,
-				"angularFactor" : [0, 0, 1],
-				"linearFactor" : [1, 0, 1],
+				"angularFactor": [ 0, 0, 1 ],
+				"linearFactor": [ 1, 0, 1 ],
 				"disableDeactivation": true
 			},
 			{
@@ -204,7 +204,7 @@
 			}
 		]
 	},
-	
+
 	"Witerico": {
 		"position": [ 0, 25, 125 ],
 		"rotation": [ 0, 180, 0 ],
@@ -221,8 +221,8 @@
 				"shape": "mesh",
 				"mass": 10,
 				"gravity": [ 0, 0, 0 ],
-				"angularFactor" : [0, 0, 1],
-				"linearFactor" : [1, 0, 1],
+				"angularFactor": [ 0, 0, 1 ],
+				"linearFactor": [ 1, 0, 1 ],
 				"disableDeactivation": true
 			},
 			{
@@ -253,7 +253,7 @@
 			{
 				"type": "VidaPlayer",
 				"invulnerabilityTime": 2,
-				"vidaMax": 1
+				"vidaMax": 2
 			}
 		]
 
@@ -274,8 +274,8 @@
 				"shape": "mesh",
 				"mass": 10,
 				"gravity": [ 0, 0, 0 ],
-				"angularFactor" : [0, 0, 1],
-				"linearFactor" : [1, 0, 1],
+				"angularFactor": [ 0, 0, 1 ],
+				"linearFactor": [ 1, 0, 1 ],
 				"disableDeactivation": true
 			},
 			{
@@ -328,8 +328,8 @@
 			},
 			{
 				"type": "VidaPlayer",
-				"invulnerabilityTime" : 2,
-				"vidaMax": 3
+				"invulnerabilityTime": 2,
+				"vidaMax": 2
 			}
 
 		]
@@ -351,8 +351,8 @@
 				"shape": "mesh",
 				"mass": 10,
 				"gravity": [ 0, 0, 0 ],
-				"angularFactor" : [0, 1, 0],
-				"linearFactor" : [1, 0, 1],
+				"angularFactor": [ 0, 1, 0 ],
+				"linearFactor": [ 1, 0, 1 ],
 				"disableDeactivation": true
 			},
 			{
@@ -393,8 +393,8 @@
 				"shape": "mesh",
 				"mass": 10,
 				"gravity": [ 0, 0, 0 ],
-				"angularFactor" : [0, 1, 0],
-				"linearFactor" : [1, 0, 1],
+				"angularFactor": [ 0, 1, 0 ],
+				"linearFactor": [ 1, 0, 1 ],
 				"disableDeactivation": true
 			},
 			{
@@ -419,7 +419,7 @@
 		]
 
 	},
-	
+
 	"Hermenegildo_Def": {
 		"position": [ 70, 25, -125 ],
 		"rotation": [ 0, 0, 0 ],
@@ -436,8 +436,8 @@
 				"shape": "mesh",
 				"mass": 10,
 				"gravity": [ 0, 0, 0 ],
-				"angularFactor" : [0, 1, 0],
-				"linearFactor" : [1, 0, 1],
+				"angularFactor": [ 0, 1, 0 ],
+				"linearFactor": [ 1, 0, 1 ],
 				"disableDeactivation": true
 			},
 			{
@@ -452,9 +452,9 @@
 			},
 			{
 				"type": "HermenegildoBehaviour",
-				"deathSound" : "assets/sound/HermenegildoDeath.mp3",
-				"hitSound" : "assets/sound/HermenegildoHit.mp3",
-				"timeToDie" : 1,
+				"deathSound": "assets/sound/HermenegildoDeath.mp3",
+				"hitSound": "assets/sound/HermenegildoHit.mp3",
+				"timeToDie": 1,
 				"cadence": 0.5,
 				"damage": 1,
 				"speed": 50,
@@ -483,8 +483,8 @@
 				"shape": "mesh",
 				"mass": 10,
 				"gravity": [ 0, 0, 0 ],
-				"angularFactor" : [0, 1, 0],
-				"linearFactor" : [1, 0, 1],
+				"angularFactor": [ 0, 1, 0 ],
+				"linearFactor": [ 1, 0, 1 ],
 				"disableDeactivation": true
 			},
 			{
@@ -499,9 +499,9 @@
 			},
 			{
 				"type": "HermenegildoBehaviour",
-				"deathSound" : "assets/sound/HermenegildoDeath.mp3",
-				"hitSound" : "assets/sound/HermenegildoHit.mp3",
-				"timeToDie" : 1,
+				"deathSound": "assets/sound/HermenegildoDeath.mp3",
+				"hitSound": "assets/sound/HermenegildoHit.mp3",
+				"timeToDie": 1,
 				"cadence": 0.8,
 				"damage": 1,
 				"speed": 35,
@@ -514,7 +514,7 @@
 
 	},
 
-	"EnemySpawner":{
+	"EnemySpawner": {
 		"position": [ 0, 0, 0 ],
 		"rotation": [ 0, 0, 0 ],
 		"scale": [ 0, 0, 0 ],
@@ -523,30 +523,34 @@
 			{
 				"type": "EnemySpawner",
 				"nWaves": 4,
-				"waveStart": [10, 25, 45, 60],
-				"maxSpawns": [1, 2, 2, 3], 
-				"spawnRate": [3, 2, 1.5, 1],
+				"waveStart": [ 10, 25, 45, 60 ],
+				"maxSpawns": [ 1, 2, 2, 3 ],
+				"spawnRate": [ 3, 2, 1.5, 1 ],
 				"multRate": 10,
 				"statMultiplier": 1.25,
-				"enemies":[
+				"enemies": [
 					{
 						"enemy": "Riciberga_L",
-						"spawnProbability": [100, 80, 45, 20]
+						"spawnProbability": [ 100, 80, 45, 20 ]
 					},
 					{
 						"enemy": "Hermenegildo_Def",
-						"spawnProbability": [0, 20, 35, 25]
+						"spawnProbability": [ 0, 20, 35, 25 ]
 					},
 					{
 						"enemy": "Riciberga_S",
-						"spawnProbability": [0, 0, 20, 45]
+						"spawnProbability": [ 0, 0, 20, 45 ]
 					},
 					{
 						"enemy": "Hermenegildo_Ind",
-						"spawnProbability": [0, 0, 0, 10]
+						"spawnProbability": [ 0, 0, 0, 10 ]
 					}
 				],
-				"spawnPositions": [[-90, 25, -150], [0, 25, -150],  [90, 25, -150]]
+				"spawnPositions": [
+					[ -90, 25, -150 ],
+					[ 0, 25, -150 ],
+					[ 90, 25, -150 ]
+				]
 			}
 		]
 
@@ -720,6 +724,19 @@
 		"components": [
 			{
 				"type": "MusicManager"
+			}
+		]
+	},
+
+	"Shield": {
+		"components": [
+			{
+				"type": "Mesh",
+				"mesh": "Shield.mesh",
+				"material": "Shield"
+			},
+			{
+				"type": "Shield"
 			}
 		]
 	}

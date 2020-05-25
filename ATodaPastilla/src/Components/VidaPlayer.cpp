@@ -16,8 +16,12 @@ void VidaPlayer::init(json& j)
 	if (!j["invulnerabilityTime"].is_null())
 		invulnerabilityTime_ = j["invulnerabilityTime"];
 	Vida::init(j);
+	vida_ = 1;
 }
-
+void VidaPlayer::start()
+{
+	vida_ = 1;
+}
 void VidaPlayer::update()
 {
 	t_ += MotorCasaPaco::getInstance()->DeltaTime();

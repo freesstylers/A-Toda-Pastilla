@@ -52,7 +52,9 @@ void MusicManager::update()
 
 void MusicManager::init(json& j)
 {
-	playMusic("assets/sound/CancionPastillaPart1.mp3",6);
+	if (!MotorCasaPaco::getInstance()->getAudioManager()->isPlayingChannel(1)) {
+		playMusic("assets/sound/CancionPastillaPart1.mp3", 1);
+	}
 	intro = true;
 	es = SceneManager::getInstance()->getCurrentScene()->getEntity("EnemySpawner")->getComponent<EnemySpawner>("EnemySpawner");
 	std::cout << "res pas do" << std::endl;

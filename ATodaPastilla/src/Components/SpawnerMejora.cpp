@@ -23,7 +23,7 @@ SpawnerMejora::~SpawnerMejora()
 void SpawnerMejora::update()
 {
 	if (timeSinceLastSpawn >= timeToSpawn) {
-		randomMejora = (rand() % 3);
+		randomMejora = 1; //(rand() % 3);
 		switch (randomMejora)
 		{
 		case 0:

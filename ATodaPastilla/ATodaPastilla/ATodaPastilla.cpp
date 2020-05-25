@@ -35,6 +35,7 @@
 #include "Components/MejoraVida.h"
 #include "Components/MejoraEutanasia.h"
 #include "Components/musicManager.h"
+#include "Components/Shield.h"
 
 MotorCasaPaco* motorCasaPaco;
 
@@ -265,6 +266,15 @@ public:
 	};
 };
 
+class ShieldFactory : public BaseFactory
+{
+public:
+	Component* createComponent(json& args) override
+	{
+		return new Shield(args);
+	};
+};
+
 void setupFactories()
 {
 	JsonFactoryParser* j = JsonFactoryParser::getInstance();
@@ -296,6 +306,7 @@ void setupFactories()
 	j->addFactory("VidaPlayer", new VidaPlayerFactory());
 	j->addFactory("VidaEnemigos", new VidaEnemigosFactory());
 	j->addFactory("MusicManager", new MusicManagerFactory());
+	j->addFactory("Shield", new ShieldFactory());
 }
 
 #ifdef  _DEBUG

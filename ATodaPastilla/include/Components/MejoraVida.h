@@ -1,5 +1,6 @@
 #pragma once
 #include "Mejora.h"
+#include "Components/VidaPlayer.h"
 
 class MejoraVida : public Mejora
 {
@@ -12,5 +13,5 @@ public:
 	void init(json& j) override;
 
 private:
-
+	VidaPlayer* playerVida;
 }; 
