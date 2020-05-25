@@ -184,7 +184,7 @@ void DisparoWiterico::update()
 	{
 		timeSinceLastShot = 0;
 		spawnEutanasia();
-		AudioManager::getInstance()->playMusic(shotModes[currMode].shotSound.c_str(), 3, false);
+		MotorCasaPaco::getInstance()->getAudioManager()->playMusic("assets/sound/SalidaBomba.wav", 3, false);
 		AudioManager::getInstance()->setVolume(0.1, 3);
 		EventManager::getInstance()->EmitEvent("BombaDown");
 	}

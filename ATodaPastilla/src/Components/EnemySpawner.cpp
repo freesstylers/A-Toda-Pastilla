@@ -77,6 +77,14 @@ void EnemySpawner::start()
 	currMult = 1;
 	lastWave = false;
 	posUsed = std::vector<bool>(spawnPositions.size(), false);
+	EventManager::getInstance()->RegisterListener(this->getEntity(), "BombaImpacto");
+}
+
+bool EnemySpawner::ReceiveEvent(Event& event)
+{
+	if (event.type == "BombaImpacto")
+		timeSinceSpawn = -2;
+	return false;
 }
 
 void EnemySpawner::update()
