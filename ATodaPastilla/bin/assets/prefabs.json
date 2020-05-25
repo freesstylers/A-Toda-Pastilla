@@ -53,7 +53,7 @@
 	"ibuprofeno": {
 		"position": [ 0, 0, 0 ],
 		"rotation": [ 0, 0, 0 ],
-		"scale": [ 10, 10, 10 ],
+		"scale": [ 7, 7, 7 ],
 		"tag": "Projectile",
 		"components": [
 			{
@@ -146,7 +146,7 @@
 	"capsula": {
 		"position": [ 0, 0, 0 ],
 		"rotation": [ 0, 90, 0 ],
-		"scale": [ 10, 10, 10 ],
+		"scale": [ 12, 12, 12 ],
 		"tag": "Projectile",
 		"components": [
 			{
@@ -245,10 +245,11 @@
 				"cadence": [ 0.1, 0.07, 0.05 ],
 				"shotPos": [ 0, 0, -50 ],
 				"shotDir": [ 0, 0, -1 ],
-				"nBullets": [ 1, 2, 3 ],
+				"nBullets": 1,
 				"damagePerBullet": 1,
-				"bulletSpeed": [ 600, 600, 800 ],
-				"dispersionAngle": [ 15, 15, 15 ]
+				"bulletSpeed": [ 250, 500, 650 ],
+				"inaccuracy": [40, 60, 100],
+				"inacDispersion": [10, 15, 15]
 			},
 			{
 				"type": "VidaPlayer",
@@ -304,9 +305,9 @@
 				"shotPos": [ 0, 0, -50 ],
 				"shotDir": [ 0, 0, -1 ],
 				"nBullets": [
-					[ 1, 1, 1 ],
-					[ 3, 3, 3 ],
-					[ 4, 4, 4 ]
+					[ 1, 3, 5 ],
+					[ 3, 5, 7 ],
+					[ 7, 9, 11 ]
 				],
 				"damagePerBullet": 1,
 				"bulletSpeed": [
@@ -319,11 +320,11 @@
 				"inacDispersion": 0,
 				"chargeLevels": 3,
 				"chargeTime": 0.35,
-				"burstCadence": 0.05,
+				"burstCadence": 0.10,
 				"burstShots": [
-					[ 1, 2, 4 ],
-					[ 1, 2, 4 ],
-					[ 1, 2, 4 ]
+					[ 1, 2, 3 ],
+					[ 3, 3, 4],
+					[ 4, 5, 6]
 				]
 			},
 			{
