@@ -209,9 +209,6 @@ bool GameManager::ReceiveEvent(Event& event)
 		ingame_ = false;
 		dead = true;
 		currentTime = MotorCasaPaco::getInstance()->getTime();
-
-		//Event evt = Event("Death");
-		//EventManager::getInstance()->EmitEvent(evt);
 	}
 	//Mensaje de muerte de un enemigo, da igual que sea un boss o no
 	else if (event.type == "EnemyDeath") {
@@ -229,6 +226,10 @@ bool GameManager::ReceiveEvent(Event& event)
 	else if (event.type == "Ingame")
 	{
 		ingame_ = true;
+	}
+	else if (event.type == "Menu")
+	{
+		ingame_ = false;
 	}
 	else if (event.type == "MejoraDisparo1")
 	{

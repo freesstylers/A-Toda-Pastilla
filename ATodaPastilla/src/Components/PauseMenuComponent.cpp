@@ -80,7 +80,7 @@ bool PauseMenuComponent::ReceiveEvent(Event& event)
 		getFSAAPosition(MotorCasaPaco::getInstance()->getFSAA());
 	}
 
-	else if (event.type == "Death")
+	else if (event.type == "PlayerDeath")
 	{
 		disabled_ = true;
 	}
@@ -1848,6 +1848,7 @@ void PauseMenuComponent::init(json& j)
 	EventManager::getInstance()->RegisterListener(this, "RESET_GRAPHIC_INFO");
 	EventManager::getInstance()->RegisterListener(this, "RESET_ADVANCED_GRAPHIC_INFO");
 	EventManager::getInstance()->RegisterListener(this, "RESET_BASIC_INFO");
+	EventManager::getInstance()->RegisterListener(this, "PlayerDeath");
 
 	//Cosas del motor
 
