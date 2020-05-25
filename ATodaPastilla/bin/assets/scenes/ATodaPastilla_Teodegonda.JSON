@@ -83,6 +83,7 @@
 			"scale": [6,6,6],
 			"prefab": "EutanasiaTexto"
 		},
+		{
 			"name": "Shield",
 			"position": [ 70, 25, -125 ],
 			"rotation": [ 0, 90, 0 ],
