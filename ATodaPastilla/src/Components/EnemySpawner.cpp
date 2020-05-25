@@ -19,9 +19,15 @@ void EnemySpawner::init(json& j)
 			waveStart.push_back(j["waveStart"][i]);
 		}
 	}
+	
 	if (!j["maxSpawns"].is_null() && j["maxSpawns"].is_array()) {
 		for (int i = 0; i < j["maxSpawns"].size(); i++) {
 			maxSpawns.push_back(j["maxSpawns"][i]);
+		}
+	}
+	else {
+		for (int i = 0; i < nWaves; i++) {
+			maxSpawns[i] = 1;
 		}
 	}
 	if (!j["spawnRate"].is_null() && j["spawnRate"].is_array()) {
@@ -117,31 +123,36 @@ void EnemySpawner::setPosUsed(int indx, bool value)
 
 void EnemySpawner::spawn()
 {
-	int s = rand() % spawnPositions.size();
-	int i = 0;
-	while (i < posUsed.size() && posUsed[s]) {
-		s = (s + 1) % posUsed.size();
-		i++;
-	}
-	if (!posUsed[s]) {
-		int r = rand() % 100 + 1;
+	int nSp = rand() % maxSpawns[currWave] + 1;
+	int sp = 0;
+	while (sp<nSp) {
+		int s = rand() % spawnPositions.size();
 		int i = 0;
-		float aux = 0;
-		while (i < enemies.size()) {
-			if (r > aux&& r <= enemies[i].spawnProb[currWave]+aux)
-				break;
-			aux += enemies[i].spawnProb[currWave];
+		while (i < posUsed.size() && posUsed[s]) {
+			s = (s + 1) % posUsed.size();
 			i++;
 		}
-		if (i >= enemies.size()) i=enemies.size()-1;
-		Entity* e = spawnEntity(spawnPositions[s], enemies[i].enemyPrefab);
-		std::string str = enemies[i].enemyPrefab;
-		std::string enemyName = str.substr(0, str.find("_"));
-		e->getComponent<EnemyBehaviour>(enemyName + "Behaviour")->setStatMult(currMult);
-		e->getComponent<EnemyBehaviour>(enemyName + "Behaviour")->setSpawnPos(spawnPositions[s]);
-		e->getComponent<EnemyBehaviour>(enemyName + "Behaviour")->setEnemyIndx(s);
-		posUsed[s] = true;
+		if (!posUsed[s]) {
+			int r = rand() % 100 + 1;
+			int i = 0;
+			float aux = 0;
+			while (i < enemies.size()) {
+				if (r > aux&& r <= enemies[i].spawnProb[currWave] + aux)
+					break;
+				aux += enemies[i].spawnProb[currWave];
+				i++;
+			}
+			if (i >= enemies.size()) i = enemies.size() - 1;
+			Entity* e = spawnEntity(spawnPositions[s], enemies[i].enemyPrefab);
+			std::string str = enemies[i].enemyPrefab;
+			std::string enemyName = str.substr(0, str.find("_"));
+			e->getComponent<EnemyBehaviour>(enemyName + "Behaviour")->setStatMult(currMult);
+			e->getComponent<EnemyBehaviour>(enemyName + "Behaviour")->setSpawnPos(spawnPositions[s]);
+			e->getComponent<EnemyBehaviour>(enemyName + "Behaviour")->setEnemyIndx(s);
+			posUsed[s] = true;
+		}
+		timeSinceSpawn = 0;
+		sp++;
 	}
-	timeSinceSpawn = 0;
 
 }
