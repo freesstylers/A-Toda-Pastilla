@@ -728,6 +728,23 @@
 			}
 		]
 	},
+	
+	"EutanasiaTexto": {
+	"position": [ 0, 50, 0 ],
+	"rotation": [ 0, 0, 0 ],
+	"scale": [ 6, 6, 6 ],
+	"components": 
+	[  
+		{
+		"type": "Mesh",
+		"mesh": "EutanasiaTexto.mesh",
+		"material": "EutanasiaTexto"
+		},
+		{
+		"type": "EutanasiaTexto"
+		}
+	]
+	},
 
 	"Shield": {
 		"components": [

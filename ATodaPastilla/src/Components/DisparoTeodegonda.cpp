@@ -3,7 +3,7 @@
 #include "Input/InputManager.h"
 #include "Entity/Transform.h"
 #include "Audio/AudioManager.h"
-
+#include "Components/GameManager.h"
 
 DisparoTeodegonda::DisparoTeodegonda(json& args):ProjectileSpawner(args)
 {
@@ -527,6 +527,14 @@ void DisparoTeodegonda::update()
 	else {
 		fireBurst();
 		timeCharged = 0;
+	}
+	if (MotorCasaPaco::getInstance()->getInputManager()->GameControllerIsButtonDown(CONTROLLER_BUTTON_RIGHTSHOULDER) && GameManager::getInstance()->isBombActive())
+	{
+		timeSinceLastShot = 0;
+		spawnEutanasia();
+		MotorCasaPaco::getInstance()->getAudioManager()->playMusic("assets/sound/SalidaBomba.wav", 3, false);
+		AudioManager::getInstance()->setVolume(0.1, 3);
+		EventManager::getInstance()->EmitEvent("BombaDown");
 	}
 }
 

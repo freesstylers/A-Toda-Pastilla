@@ -96,6 +96,7 @@ void ProjectileBehaviour::OnCollision(Entity* other)
 
 		if (e_->getTag() == "Bomba" && other->getTag() == "Enemy")
 		{
+			EventManager::getInstance()->EmitEvent("BombaImpacto");
 			std::list<Entity*> enemies = SceneManager::getInstance()->getCurrentScene()->getEntitiesByTag("Enemy");
 			for (auto it : enemies)
 			{
