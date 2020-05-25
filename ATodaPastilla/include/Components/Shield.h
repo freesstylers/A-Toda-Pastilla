@@ -11,6 +11,7 @@ public:
 	~Shield();
 	void update() override;
 	void init(json& j) override;
+	bool getActivo() { return activo; };
 
 private:
 	bool activo = false;
