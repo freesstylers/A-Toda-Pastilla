@@ -3,7 +3,7 @@
 #include "Audio/AudioManager.h"
 #include "Input/InputManager.h"
 #include "Entity/Transform.h"
-
+#include "Components/GameManager.h"
 DisparoWiterico::DisparoWiterico(json& args):ProjectileSpawner(args)
 {
 }
@@ -177,8 +177,16 @@ void DisparoWiterico::update()
 		spawnProjectiles(shotModes[currMode].shotPos,
 			shotModes[currMode].shotDir, shotModes[currMode].bulletSpeed, shotModes[currMode].nBullets, shotModes[currMode].damagePerBullet,
 			shotModes[currMode].dispersionAngle, shotModes[currMode].inaccuracy, shotModes[currMode].inacDispersion);
-		AudioManager::getInstance()->playMusic(shotModes[currMode].shotSound.c_str(), 3);
+		AudioManager::getInstance()->playMusic(shotModes[currMode].shotSound.c_str(), 3, false);
 		AudioManager::getInstance()->setVolume(0.1, 3);
+	}
+	else if (timeSinceLastShot >= shotModes[currMode].cadence && MotorCasaPaco::getInstance()->getInputManager()->GameControllerIsButtonDown(CONTROLLER_BUTTON_RIGHTSHOULDER) /*&& GameManager::getInstance()->isBombActive()*/)
+	{
+		timeSinceLastShot = 0;
+		spawnEutanasia();
+		MotorCasaPaco::getInstance()->getAudioManager()->playMusic("assets/sound/SalidaBomba.wav", 3, false);
+		AudioManager::getInstance()->setVolume(0.1, 3);
+		EventManager::getInstance()->EmitEvent("BombaDown");
 	}
 	timeSinceLastShot += MotorCasaPaco::getInstance()->DeltaTime();
 }

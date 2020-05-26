@@ -64,17 +64,12 @@
 			"components" : 
 			[
 				{
-					"type": "ChangeSceneButtonComponent",
-					"buttonName" : "MainMenu/Play",
-					"sceneName" : "ATodaPastilla"
-				},
-				{
 					"type": "ExitButtonComponent",
 					"buttonName" : "MainMenu/Close"
 				},
 				{
 					"type" : "MenuMuestraPersonaje",
-					"entidades" : ["witericoMenu", "teodegondaMenu", "hermenegildoMenu", "ricibergaMenu"],
+					"entidades" : ["witericoMenu", "teodegondaMenu"],
 					"buttonName1" : "MainMenu/LeftArrow",
 					"buttonName2" : "MainMenu/RightArrow"
 				},
@@ -88,15 +83,9 @@
 					 "MainMenu/RightArrow",
 					 "MainMenu/Close"
 					],
+					"playButton": "MainMenu/Play",
 					"delay" : 0.2
-				}
-			]
-		},
-		{
-			"type" : "entity",
-			"name" : "UI_2",
-			"components" : 
-			[
+				},
 				{
 					"type": "ChangeSceneButtonComponent",
 					"buttonName" : "MainMenu/Settings",

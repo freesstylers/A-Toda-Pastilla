@@ -27,16 +27,16 @@ void SpawnerMejora::update()
 		switch (randomMejora)
 		{
 		case 0:
-			spawnEntity(Vector3(150, 0, -250), 0.0, "MejoraDisparo");
+			spawnEntity(Vector3(150, e_->getComponent<Transform>("Transform")->getPosition().Y, -250), 0.0, "MejoraDisparo");
 			break;
 		case 1:
-			spawnEntity(Vector3(-150, 0, -250), 0.0, "MejoraVida");
+			spawnEntity(Vector3(-150, e_->getComponent<Transform>("Transform")->getPosition().Y, -250), 0.0, "MejoraVida");
 			break;
 		case 2:
-			spawnEntity(Vector3(-0, 0, -250), 0.0, "MejoraEutanasia");
+			spawnEntity(Vector3(-0, e_->getComponent<Transform>("Transform")->getPosition().Y, -250), 0.0, "MejoraEutanasia");
 			break;
 		default:
-			std::cout << "Nunca debería salir este mensaje" << std::endl;
+			std::cout << "Nunca deberï¿½a salir este mensaje" << std::endl;
 			break;
 		}
 		timeToSpawn = (rand() % (int)(maxSpawnTime)) + minSpawnTime;

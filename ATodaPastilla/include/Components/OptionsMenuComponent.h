@@ -26,7 +26,12 @@ public:
 	bool functionBasicBack(const CEGUI::EventArgs& e);
 	bool functionBasicApply(const CEGUI::EventArgs& e);
 	bool functionBasicRevert(const CEGUI::EventArgs& e);
-
+	bool functionInvertAxisX(const CEGUI::EventArgs& e);
+	bool functionInvertAxisY(const CEGUI::EventArgs& e);
+	bool functionVolumeMusicDown(const CEGUI::EventArgs& e);
+	bool functionVolumeMusicUp(const CEGUI::EventArgs& e);
+	bool functionVolumeSFXDown(const CEGUI::EventArgs& e);
+	bool functionVolumeSFXUp(const CEGUI::EventArgs& e);
 
 	//Graphic Options
 	bool functionGraphicAdvancedOptions(const CEGUI::EventArgs& e);
@@ -44,8 +49,6 @@ public:
 	bool functionAdvancedApply(const CEGUI::EventArgs& e);
 	bool functionAdvancedRevert(const CEGUI::EventArgs& e);
 	bool functionAdvancedBack(const CEGUI::EventArgs& e);
-	bool functionAdvancedShadowsLess(const CEGUI::EventArgs& e);
-	bool functionAdvancedShadowsMore(const CEGUI::EventArgs& e);
 	bool functionAdvancedGamma(const CEGUI::EventArgs& e);
 	bool functionAdvancedFSAALess(const CEGUI::EventArgs& e);
 	bool functionAdvancedFSAAMore(const CEGUI::EventArgs& e);
@@ -78,6 +81,7 @@ private:
 	std::vector<float> positionsYBasic;
 	std::vector<float> positionsXBotButtonsBasic;
 	std::vector<float> positionsXTopButtonsBasic;
+	std::vector<CEGUI::Window*> basicTexts;
 	float yBasicExtra;
 	float xBasicExtra;	
 	float yBasicBot;
@@ -85,6 +89,8 @@ private:
 	int tamBasicTop;
 	int tamBasicBot;
 	int basicTopDown = 2;
+	float volumeMusic;
+	float volumeSFX;
 
 	//Graphic
 	std::vector<float> positionsYGraphic;
@@ -118,6 +124,17 @@ private:
 	std::string fsaaValues[4] = { "0" , "2", "4", "8" };
 	int getFSAAPosition(std::string fsaa);
 	int fsaaPos;
+
+	//Para actualizar posiciones de botones al reescalar la pantalla
+	void updateButtonsPosition();
+	std::vector<std::string> buttonsBasic;
+	std::string basicExtraButton;
+	std::vector<std::string> buttonsBasicDown;
+	std::vector<std::string> buttonsGraphic;
+	std::string graphicExtraButton;
+	std::vector<std::string> buttonsGraphicDown;
+	std::vector<std::string> buttonsAdvanced;
+	std::vector<std::string> buttonsAdvancedDown;
 };
 
 

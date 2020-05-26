@@ -15,7 +15,6 @@ public:
 
 	//Pause Menu
 	bool functionPauseReturn(const CEGUI::EventArgs& e);
-	bool functionPauseReset(const CEGUI::EventArgs& e);
 	bool functionPauseSettings(const CEGUI::EventArgs& e);
 	bool functionPauseMainMenu(const CEGUI::EventArgs& e);
 	bool functionPauseExit(const CEGUI::EventArgs& e);
@@ -25,7 +24,12 @@ public:
 	bool functionBasicBack(const CEGUI::EventArgs& e);
 	bool functionBasicApply(const CEGUI::EventArgs& e);
 	bool functionBasicRevert(const CEGUI::EventArgs& e);
-
+	bool functionInvertAxisX(const CEGUI::EventArgs& e);
+	bool functionInvertAxisY(const CEGUI::EventArgs& e);
+	bool functionVolumeMusicDown(const CEGUI::EventArgs& e);
+	bool functionVolumeMusicUp(const CEGUI::EventArgs& e);
+	bool functionVolumeSFXDown(const CEGUI::EventArgs& e);
+	bool functionVolumeSFXUp(const CEGUI::EventArgs& e);
 
 	//Graphic Options
 	bool functionGraphicAdvancedOptions(const CEGUI::EventArgs& e);
@@ -43,8 +47,6 @@ public:
 	bool functionAdvancedApply(const CEGUI::EventArgs& e);
 	bool functionAdvancedRevert(const CEGUI::EventArgs& e);
 	bool functionAdvancedBack(const CEGUI::EventArgs& e);
-	bool functionAdvancedShadowsLess(const CEGUI::EventArgs& e);
-	bool functionAdvancedShadowsMore(const CEGUI::EventArgs& e);
 	bool functionAdvancedGamma(const CEGUI::EventArgs& e);
 	bool functionAdvancedFSAALess(const CEGUI::EventArgs& e);
 	bool functionAdvancedFSAAMore(const CEGUI::EventArgs& e);
@@ -66,6 +68,7 @@ private:
 	float currentXTopButtons;
 	float currentYTopButtons;
 	float currentPosDownButtons;
+	bool disabled_ = false;
 	//float currentYButtons;
 
 	//Pause
@@ -78,6 +81,7 @@ private:
 	std::vector<float> positionsYBasic;
 	std::vector<float> positionsXBotButtonsBasic;
 	std::vector<float> positionsXTopButtonsBasic;
+	std::vector<CEGUI::Window*> basicTexts;
 	float yBasicExtra;
 	float xBasicExtra;	
 	float yBasicBot;
@@ -85,6 +89,8 @@ private:
 	int tamBasicTop;
 	int tamBasicBot;
 	int basicTopDown = 2;
+	float volumeMusic;
+	float volumeSFX;
 
 	//Graphic
 	std::vector<float> positionsYGraphic;
@@ -121,7 +127,18 @@ private:
 
 	//Datos de escenas
 	std::string mainMenu;
-	std::string level;
+
+	//Para actualizar posiciones de botones al reescalar la pantalla
+	void updateButtonsPosition();
+	std::vector<std::string> buttonsPause;
+	std::vector<std::string> buttonsBasic;
+	std::string basicExtraButton;
+	std::vector<std::string> buttonsBasicDown;
+	std::vector<std::string> buttonsGraphic;
+	std::string graphicExtraButton;
+	std::vector<std::string> buttonsGraphicDown;
+	std::vector<std::string> buttonsAdvanced;
+	std::vector<std::string> buttonsAdvancedDown;
 };
 
 

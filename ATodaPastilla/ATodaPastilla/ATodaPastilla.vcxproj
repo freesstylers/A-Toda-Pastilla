@@ -172,22 +172,15 @@
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\Components\ApplyAdvancedGraphicChangesComponent.cpp" />
-    <ClCompile Include="..\src\Components\ApplyGraphicChangesComponent.cpp" />
-    <ClCompile Include="..\src\Components\ChangeFullScreenComponent.cpp" />
-    <ClCompile Include="..\src\Components\ChangeGammaComponent.cpp" />
-    <ClCompile Include="..\src\Components\ChangeGraphicSceneComponent.cpp" />
     <ClCompile Include="..\src\Components\ChangeSceneButtonComponent.cpp" />
-    <ClCompile Include="..\src\Components\ChangeVyncComponent.cpp" />
     <ClCompile Include="..\src\Components\Danio.cpp" />
     <ClCompile Include="..\src\Components\DisparoTeodegonda.cpp" />
     <ClCompile Include="..\src\Components\DisparoWiterico.cpp" />
     <ClCompile Include="..\src\Components\EnemyBehaviour.cpp" />
     <ClCompile Include="..\src\Components\EnemySpawner.cpp" />
     <ClCompile Include="..\src\Components\EntitySpawner.cpp" />
+    <ClCompile Include="..\src\Components\EutanasiaTexto.cpp" />
     <ClCompile Include="..\src\Components\ExitButtonComponent.cpp" />
-    <ClCompile Include="..\src\Components\FormatResolutionChangeComponent.cpp" />
-    <ClCompile Include="..\src\Components\FSAAChangeComponent.cpp" />
     <ClCompile Include="..\src\Components\GameManager.cpp" />
     <ClCompile Include="..\src\Components\GiroContinuo.cpp" />
     <ClCompile Include="..\src\Components\HermenegildoBehaviour.cpp" />
@@ -198,17 +191,18 @@
     <ClCompile Include="..\src\Components\MejoraVida.cpp" />
     <ClCompile Include="..\src\Components\MenuMuestraPersonajes.cpp" />
     <ClCompile Include="..\src\Components\MovimientoMando.cpp" />
+    <ClCompile Include="..\src\Components\musicManager.cpp" />
     <ClCompile Include="..\src\Components\OptionsMenuComponent.cpp" />
     <ClCompile Include="..\src\Components\PauseMenuComponent.cpp" />
     <ClCompile Include="..\src\Components\PlayerInput.cpp" />
     <ClCompile Include="..\src\Components\ProjectileBehaviour.cpp" />
     <ClCompile Include="..\src\Components\ProjectileSpawner.cpp" />
-    <ClCompile Include="..\src\Components\RevertAdvancedGraphicChangesComponent.cpp" />
-    <ClCompile Include="..\src\Components\RevertGraphicChangesComponent.cpp" />
     <ClCompile Include="..\src\Components\RicibergaBehaviour.cpp" />
-    <ClCompile Include="..\src\Components\ShadowsChangeComponent.cpp" />
+    <ClCompile Include="..\src\Components\Shield.cpp" />
     <ClCompile Include="..\src\Components\SpawnerMejora.cpp" />
     <ClCompile Include="..\src\Components\Vida.cpp" />
+    <ClCompile Include="..\src\Components\VidaEnemigos.cpp" />
+    <ClCompile Include="..\src\Components\VidaPlayer.cpp" />
     <ClCompile Include="ATodaPastilla.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -217,23 +211,17 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\include\Components\ApplyAdvancedGraphicChangesComponent.h" />
-    <ClInclude Include="..\include\Components\ApplyGraphicChangesComponent.h" />
-    <ClInclude Include="..\include\Components\ChangeFullScreenComponent.h" />
-    <ClInclude Include="..\include\Components\ChangeGammaComponent.h" />
-    <ClInclude Include="..\include\Components\ChangeGraphicSceneComponent.h" />
     <ClInclude Include="..\include\Components\ChangeSceneButtonComponent.h" />
-    <ClInclude Include="..\include\Components\ChangeVyncComponent.h" />
     <ClInclude Include="..\include\Components\Danio.h" />
     <ClInclude Include="..\include\Components\DisparoTeodegonda.h" />
     <ClInclude Include="..\include\Components\DisparoWiterico.h" />
     <ClInclude Include="..\include\Components\EnemyBehaviour.h" />
     <ClInclude Include="..\include\Components\EnemySpawner.h" />
     <ClInclude Include="..\include\Components\EntitySpawner.h" />
+    <ClInclude Include="..\include\Components\EutanasiaTexto.h" />
     <ClInclude Include="..\include\Components\EventsATodaPastilla.h" />
+    <ClInclude Include="..\include\Components\EventsGame.h" />
     <ClInclude Include="..\include\Components\ExitButtonComponent.h" />
-    <ClInclude Include="..\include\Components\FormatResolutionChangeComponent.h" />
-    <ClInclude Include="..\include\Components\FSAAChangeComponent.h" />
     <ClInclude Include="..\include\Components\GameManager.h" />
     <ClInclude Include="..\include\Components\GiroContinuo.h" />
     <ClInclude Include="..\include\Components\HermenegildoBehaviour.h" />
@@ -244,17 +232,18 @@
     <ClInclude Include="..\include\Components\MejoraVida.h" />
     <ClInclude Include="..\include\Components\MenuMuestraPersonaje.h" />
     <ClInclude Include="..\include\Components\MovimientoMando.h" />
+    <ClInclude Include="..\include\Components\musicManager.h" />
     <ClInclude Include="..\include\Components\OptionsMenuComponent.h" />
     <ClInclude Include="..\include\Components\PauseMenuComponent.h" />
     <ClInclude Include="..\include\Components\PlayerInput.h" />
     <ClInclude Include="..\include\Components\ProjectileBehaviour.h" />
     <ClInclude Include="..\include\Components\ProjectileSpawner.h" />
-    <ClInclude Include="..\include\Components\RevertAdvancedGraphicChangesComponent.h" />
-    <ClInclude Include="..\include\Components\RevertGraphicChangesComponent.h" />
     <ClInclude Include="..\include\Components\RicibergaBehaviour.h" />
-    <ClInclude Include="..\include\Components\ShadowsChangeComponent.h" />
+    <ClInclude Include="..\include\Components\Shield.h" />
     <ClInclude Include="..\include\Components\SpawnerMejora.h" />
     <ClInclude Include="..\include\Components\Vida.h" />
+    <ClInclude Include="..\include\Components\VidaEnemigos.h" />
+    <ClInclude Include="..\include\Components\VidaPlayer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

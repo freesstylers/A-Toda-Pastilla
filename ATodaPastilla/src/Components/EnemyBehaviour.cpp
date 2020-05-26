@@ -19,6 +19,16 @@ void EnemyBehaviour::setEnemyIndx(int indx)
 	spawnIndx = indx;
 }
 
+void EnemyBehaviour::setStatMult(float mult)
+{
+	statMult = mult;
+}
+
+void EnemyBehaviour::start()
+{
+	statMult = 1;
+}
+
 void EnemyBehaviour::OnDeath()
 {
 	std::list<Entity*> l=MotorCasaPaco::getInstance()->getSceneManager()->getCurrentScene()->getEntitiesByTag("EnemySpawner");

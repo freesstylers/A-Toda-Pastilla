@@ -1,5 +1,6 @@
 #include "Components/RicibergaBehaviour.h"
-#include "Components/Vida.h"
+#include "Components/VidaEnemigos.h"
+#include "Components/VidaPlayer.h"
 #include "Entity/Entity.h"
 #include "Audio/AudioManager.h"
 #include "Entity/Transform.h"
@@ -9,6 +10,7 @@
 #include "Events/EventManager.h"
 #include "Events/Event.h"
 #include "Events/EventListener.h"
+#include "Components/EnemySpawner.h"
 #include <list>
 
 RicibergaBehaviour::RicibergaBehaviour(json& j): EnemyBehaviour(j)
@@ -64,11 +66,12 @@ void RicibergaBehaviour::start()
 		auto p = ent.begin();
 		player = (*p);
 	}
+	awayFromSpawn = false;
 }
 
 void RicibergaBehaviour::update()
 {
-	if (e_->getComponent<Vida>("Vida") != nullptr && !e_->getComponent<Vida>("Vida")->isDead()) {
+	if (e_->getComponent<VidaEnemigos>("VidaEnemigos") != nullptr && !e_->getComponent<VidaEnemigos>("VidaEnemigos")->isDead()) {
 		Vector3 pos = getEntity()->getComponent<Transform>("Transform")->getPosition();
 		Vector3 direction;
 		if (player != nullptr) {
@@ -84,51 +87,66 @@ void RicibergaBehaviour::update()
 		orientation = orientation * 180.0 / M_PI;
 		if (direction.X < 0) orientation = -orientation;
 		e_->getComponent<Transform>("Transform")->setRotation(Vector3(0, orientation, 0));
-		e_->getComponent<Transform>("Transform")->setPosition(e_->getComponent<Transform>("Transform")->getPosition() + direction * speed * MotorCasaPaco::getInstance()->DeltaTime());
+		e_->getComponent<Transform>("Transform")->setPosition(e_->getComponent<Transform>("Transform")->getPosition() + direction * speed *statMult* MotorCasaPaco::getInstance()->DeltaTime());
 		if (sinusoidalMovement) {
 			e_->getComponent<Transform>("Transform")->setPosition(e_->getComponent<Transform>("Transform")->getPosition() + 
 				Vector3(sin(MotorCasaPaco::getInstance()->getTime() * sinusoidalFrequency) * sinusoidalMagnitude, 0, 0) * MotorCasaPaco::getInstance()->DeltaTime());
 		}
+		if (Vector3::Magnitude((e_->getComponent<Transform>("Transform")->getPosition() - spawnPosition)) >= 80) {
+			if (!awayFromSpawn) {
+				EnemyBehaviour::OnDeath();
+				awayFromSpawn = true;
+			}
+		}
+		else {
+			std::list<Entity*> l = MotorCasaPaco::getInstance()->getSceneManager()->getCurrentScene()->getEntitiesByTag("EnemySpawner");
+			if (!l.empty()) {
+				Entity* spawner = (*l.begin());
+				if (spawner != nullptr && spawner->getComponent<EnemySpawner>("EnemySpawner") != nullptr) {
+					spawner->getComponent<EnemySpawner>("EnemySpawner")->setPosUsed(spawnIndx, true);
+				}
+			}
+		}
 
 		if (e_->getComponent<Transform>("Transform")->getPosition().Z >= bottom) {
 			EventManager::getInstance()->UnregisterListenerForAll(e_);
-			e_->setEnabled(false);
+			MotorCasaPaco::getInstance()->getSceneManager()->getCurrentScene()->deleteEntity(e_->getName());
 		}
 	}
 	else {
 		dyingTime += MotorCasaPaco::getInstance()->DeltaTime();
 		if (dyingTime>=timeToDie) {
+			EnemyBehaviour::OnDeath();
 			EventManager::getInstance()->UnregisterListenerForAll(e_);
-			e_->setEnabled(false);
+			MotorCasaPaco::getInstance()->getSceneManager()->getCurrentScene()->deleteEntity(e_->getName());
 		}
 	}
 }
 
 void RicibergaBehaviour::OnCollision(Entity* other)
 {
-	if (e_->getComponent<Vida>("Vida")!=nullptr && !e_->getComponent<Vida>("Vida")->isDead()) {
+	if (e_->getComponent<VidaEnemigos>("VidaEnemigos")!=nullptr && !e_->getComponent<VidaEnemigos>("VidaEnemigos")->isDead()) {
 		if (other->getTag() == "Player") {
-			if (other->getComponent<Vida>("Vida") != nullptr) {
+			if (other->getComponent<VidaPlayer>("VidaPlayer") != nullptr) {
 				std::cout << "ColisionPlayer" << std::endl;
-				other->getComponent<Vida>("Vida")->sumaVida(-damage);
-				e_->getComponent<Vida>("Vida")->sumaVida(e_->getComponent<Vida>("Vida")->GetVida());
+				other->getComponent<VidaPlayer>("VidaPlayer")->sumaVida(-damage);
+				e_->getComponent<VidaEnemigos>("VidaEnemigos")->sumaVida(e_->getComponent<VidaEnemigos>("VidaEnemigos")->GetVida());
 			}
 		}
 		else if (other->getTag() == "Projectile" && other->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->getSource()=="Player") {
 			float x = rand() % 100;
 			if (x < 95) {
-				AudioManager::getInstance()->playMusic(hitSound.c_str(), 4);
+				AudioManager::getInstance()->playMusic(hitSound.c_str(), 4, false);
 			}
 			else
-				AudioManager::getInstance()->playMusic("assets/sound/movie_1.mp3", 4);
+				AudioManager::getInstance()->playMusic("assets/sound/RicibergaHit.mp3", 4, false);
 		}
 	}
 }
 
 void RicibergaBehaviour::OnDeath()
 {
-	EnemyBehaviour::OnDeath();
-	AudioManager::getInstance()->playMusic(deathSound.c_str(), 3);
+	AudioManager::getInstance()->playMusic(deathSound.c_str(), 3, false);
 	AudioManager::getInstance()->setVolume(0.7, 3);
 	dyingTime = 0;
 }

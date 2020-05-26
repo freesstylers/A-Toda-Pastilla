@@ -51,8 +51,6 @@
 					"type": "OptionsMenuComponent",
 					"basicOptionButtons" :
 					[
-					 "BasicOptions/LeftArrow_5",
-					 "BasicOptions/RightArrow_5",
 					 "BasicOptions/LeftArrow_4",
 					 "BasicOptions/RightArrow_4",
 					 "BasicOptions/LeftArrow_3",
@@ -61,6 +59,13 @@
 					 "BasicOptions/RightArrow_2",
 					 "BasicOptions/LeftArrow_1",
 					 "BasicOptions/RightArrow_1"
+					],
+					"basicOptionTexts":
+					[
+					 "BasicOptions/Text_Selector_1",
+					 "BasicOptions/Text_Selector_2",
+					 "BasicOptions/Text_Selector_3",
+					 "BasicOptions/Text_Selector_4"
 					],
 					"basicExtraButton" : "BasicOptions/GraphicOptions",
 					"basicOptionBotButtons" :
@@ -108,19 +113,10 @@
 					 "AdvancedGraphicOptions/Text_Selector_1",
 					 "AdvancedGraphicOptions/Text_Selector_2",
 					 "AdvancedGraphicOptions/Text_Selector_3",
-					 "AdvancedGraphicOptions/Text_Selector_4",
-					 "AdvancedGraphicOptions/Text_Selector_5",
-					 "AdvancedGraphicOptions/Text_Selector_6",
-					 "AdvancedGraphicOptions/Text_Selector_7"
+					 "AdvancedGraphicOptions/Text_Selector_4"
 					],
 					"advancedGraphicOptionTopButtons" :
 					[
-					 "AdvancedGraphicOptions/LeftArrow_7",
-					 "AdvancedGraphicOptions/RightArrow_7",
-					 "AdvancedGraphicOptions/LeftArrow_6",
-					 "AdvancedGraphicOptions/RightArrow_6",
-					 "AdvancedGraphicOptions/LeftArrow_5",
-					 "AdvancedGraphicOptions/RightArrow_5",
 					 "AdvancedGraphicOptions/LeftArrow_4",
 					 "AdvancedGraphicOptions/RightArrow_4",
 					 "AdvancedGraphicOptions/LeftArrow_3",

@@ -3,7 +3,7 @@
 #include "Input/InputManager.h"
 #include "Entity/Transform.h"
 #include "Audio/AudioManager.h"
-
+#include "Components/GameManager.h"
 
 DisparoTeodegonda::DisparoTeodegonda(json& args):ProjectileSpawner(args)
 {
@@ -528,6 +528,14 @@ void DisparoTeodegonda::update()
 		fireBurst();
 		timeCharged = 0;
 	}
+	if (MotorCasaPaco::getInstance()->getInputManager()->GameControllerIsButtonDown(CONTROLLER_BUTTON_RIGHTSHOULDER) && GameManager::getInstance()->isBombActive())
+	{
+		timeSinceLastShot = 0;
+		spawnEutanasia();
+		MotorCasaPaco::getInstance()->getAudioManager()->playMusic("assets/sound/SalidaBomba.wav", 3, false);
+		AudioManager::getInstance()->setVolume(0.1, 3);
+		EventManager::getInstance()->EmitEvent("BombaDown");
+	}
 }
 
 bool DisparoTeodegonda::ReceiveEvent(Event& event)
@@ -547,9 +555,9 @@ void DisparoTeodegonda::chargeShot()
 		if (currChargeLevel < shotModes[currMode].chargeLevels - 1) {
 			currChargeLevel++;
 			if (currChargeLevel == shotModes[currMode].chargeLevels - 1)
-				AudioManager::getInstance()->playMusic(shotModes[currMode].maximumChargeSound.c_str(), 3);
+				AudioManager::getInstance()->playMusic(shotModes[currMode].maximumChargeSound.c_str(), 3, false);
 			else
-				AudioManager::getInstance()->playMusic(shotModes[currMode].chargeSound[currChargeLevel].c_str(), 3);
+				AudioManager::getInstance()->playMusic(shotModes[currMode].chargeSound[currChargeLevel].c_str(), 3, false);
 			AudioManager::getInstance()->setVolume(0.05 * (currChargeLevel + 1.0), 3);
 		}
 		timeCharged = 0;
@@ -569,7 +577,7 @@ void DisparoTeodegonda::fireBurst()
 			shotModes[currMode].inaccuracy[currChargeLevel], shotModes[currMode].inacDispersion[currChargeLevel]);
 		burstShotsFired++;
 		timeSinceLastShot = 0;
-		MotorCasaPaco::getInstance()->getAudioManager()->playMusic(shotModes[currMode].shotSound[currChargeLevel].c_str(), 3);
+		MotorCasaPaco::getInstance()->getAudioManager()->playMusic(shotModes[currMode].shotSound[currChargeLevel].c_str(), 3, false);
 		MotorCasaPaco::getInstance()->getAudioManager()->setVolume(0.05 * (currChargeLevel+1.0), 3);
 
 	}

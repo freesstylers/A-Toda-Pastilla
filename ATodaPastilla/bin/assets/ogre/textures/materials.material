@@ -134,6 +134,42 @@ material Riciberga {
     }
 }
 
+material Riciberga_S {
+    receive_shadows on
+    technique {
+        pass {
+            lighting on
+            ambient 0.0 0.0 0.0 1.0
+            diffuse 1.0 1.0 1.0 1.0
+            specular 0.0 0.0 0.0 1.0 12.5
+            emissive 0.0 0.0 0.0 1.0
+            
+            alpha_to_coverage off 
+            colour_write on 
+            cull_hardware clockwise 
+            depth_check on 
+            depth_func less_equal 
+            depth_write on 
+            illumination_stage  
+            light_clip_planes off 
+            light_scissor off 
+            normalise_normals off 
+            polygon_mode solid 
+            scene_blend one zero 
+            scene_blend_op add 
+            shading gouraud 
+            transparent_sorting on 
+
+            texture_unit  {
+                texture Riciberga_S.png 
+                tex_address_mode wrap 
+                scale 1.0 1.0 
+                colour_op alpha_blend 
+            }
+        }
+    }
+}
+
 material Teodegonda {
     receive_shadows on
     technique {
@@ -236,6 +272,42 @@ material Hermenegildo {
 
             texture_unit  {
                 texture Hermenegildo.png 
+                tex_address_mode wrap 
+                scale 1.0 1.0 
+                colour_op alpha_blend 
+            }
+        }
+    }
+}
+
+material Hermenegildo_Ind {
+    receive_shadows on
+    technique {
+        pass {
+            lighting on
+            ambient 0.0 0.0 0.0 1.0
+            diffuse 1.0 1.0 1.0 1.0
+            specular 0.0 0.0 0.0 1.0 12.5
+            emissive 0.0 0.0 0.0 1.0
+            
+            alpha_to_coverage off 
+            colour_write on 
+            cull_hardware clockwise 
+            depth_check on 
+            depth_func less_equal 
+            depth_write on 
+            illumination_stage  
+            light_clip_planes off 
+            light_scissor off 
+            normalise_normals off 
+            polygon_mode solid 
+            scene_blend one zero 
+            scene_blend_op add 
+            shading gouraud 
+            transparent_sorting on 
+
+            texture_unit  {
+                texture Hermenegildo_Ind.png 
                 tex_address_mode wrap 
                 scale 1.0 1.0 
                 colour_op alpha_blend 
@@ -488,6 +560,187 @@ material Bala{
 
             texture_unit  {
                 texture Bala.png 
+                tex_address_mode wrap 
+                scale 1.0 1.0 
+                colour_op alpha_blend 
+            }
+        }
+    }
+}
+
+material Bala_Ind {
+    receive_shadows on
+    technique {
+        pass {
+            lighting on
+            ambient 0.0 0.0 0.0 1.0
+            diffuse 1.0 1.0 1.0 1.0
+            specular 0.0 0.0 0.0 1.0 12.5
+            emissive 0.0 0.0 0.0 1.0
+            
+            alpha_to_coverage off 
+            colour_write on 
+            cull_hardware clockwise 
+            depth_check on 
+            depth_func less_equal 
+            depth_write on 
+            illumination_stage  
+            light_clip_planes off 
+            light_scissor off 
+            normalise_normals off 
+            polygon_mode solid 
+            scene_blend one zero 
+            scene_blend_op add 
+            shading gouraud 
+            transparent_sorting on 
+
+            texture_unit  {
+                texture Bala_Ind.png 
+                tex_address_mode wrap 
+                scale 1.0 1.0 
+                colour_op alpha_blend 
+            }
+        }
+    }
+}
+
+material FondoEspacio {
+    receive_shadows on
+    technique {
+        pass {
+            lighting on
+            ambient 0.0 0.0 0.0 1.0
+            diffuse 1.0 1.0 1.0 1.0
+            specular 0.0 0.0 0.0 1.0 12.5
+            emissive 0.0 0.0 0.0 1.0
+            
+            alpha_to_coverage off 
+            colour_write on 
+            cull_hardware clockwise 
+            depth_check on 
+            depth_func less_equal 
+            depth_write on 
+            illumination_stage  
+            light_clip_planes off 
+            light_scissor off 
+            normalise_normals off 
+            polygon_mode solid 
+            scene_blend one zero 
+            scene_blend_op add 
+            shading gouraud 
+            transparent_sorting on 
+
+            texture_unit  {
+                texture FondoEspacioTest.jpg
+                scroll_anim 0.0 0.05
+                tex_address_mode wrap 
+                scale 1.0 1.0 
+                colour_op alpha_blend 
+            }
+        }
+    }
+}
+
+material BombaEutanasica {
+    receive_shadows on
+    technique {
+        pass {
+            lighting on
+            ambient 0.0 0.0 0.0 1.0
+            diffuse 1.0 1.0 1.0 1.0
+            specular 0.0 0.0 0.0 1.0 12.5
+            emissive 0.0 0.0 0.0 1.0
+            
+            alpha_to_coverage off 
+            colour_write on 
+            cull_hardware clockwise 
+            depth_check on 
+            depth_func less_equal 
+            depth_write on 
+            illumination_stage  
+            light_clip_planes off 
+            light_scissor off 
+            normalise_normals off 
+            polygon_mode solid 
+            scene_blend one zero 
+            scene_blend_op add 
+            shading gouraud 
+            transparent_sorting on 
+
+            texture_unit  {
+                texture BombaEutanasica.png 
+                tex_address_mode wrap 
+                scale 1.0 1.0 
+                colour_op alpha_blend 
+            }
+        }
+    }
+}
+
+material Shield {
+    receive_shadows on
+    technique {
+        pass {
+            lighting on
+            ambient 0.0 0.0 0.0 1.0
+            diffuse 1.0 1.0 1.0 1.0
+            specular 0.0 0.0 0.0 1.0 12.5
+            emissive 0.0 0.0 0.0 1.0
+            
+            alpha_to_coverage off 
+            colour_write on 
+            cull_hardware clockwise 
+            depth_check on 
+            depth_func less_equal 
+            depth_write on 
+            illumination_stage  
+            light_clip_planes off 
+            light_scissor off 
+            normalise_normals off 
+            polygon_mode solid 
+            scene_blend one zero 
+            scene_blend_op add 
+            shading gouraud 
+            transparent_sorting on 
+
+            texture_unit  {
+                texture Shield.png 
+                tex_address_mode wrap 
+                scale 1.0 1.0 
+                colour_op alpha_blend 
+            }
+        }
+    }
+}
+
+material EutanasiaTexto {
+    receive_shadows on
+    technique {
+        pass {
+            lighting on
+            ambient 0.0 0.0 0.0 1.0
+            diffuse 1.0 1.0 1.0 1.0
+            specular 0.0 0.0 0.0 1.0 12.5
+            emissive 0.0 0.0 0.0 1.0
+            
+            alpha_to_coverage off 
+            colour_write on 
+            cull_hardware clockwise 
+            depth_check on 
+            depth_func less_equal 
+            depth_write on 
+            illumination_stage  
+            light_clip_planes off 
+            light_scissor off 
+            normalise_normals off 
+            polygon_mode solid 
+            scene_blend one zero 
+            scene_blend_op add 
+            shading gouraud 
+            transparent_sorting on 
+
+            texture_unit  {
+                texture EutanasiaTexto.png 
                 tex_address_mode wrap 
                 scale 1.0 1.0 
                 colour_op alpha_blend 

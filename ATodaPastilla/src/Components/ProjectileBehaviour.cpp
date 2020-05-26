@@ -1,8 +1,10 @@
 #include "Components\ProjectileBehaviour.h"
-#include"Components/Vida.h"
+#include"Components/VidaEnemigos.h"
+#include"Components/VidaPlayer.h"
 #include "Entity/Transform.h"
 #include "Entity/Entity.h"
 #include "MotorCasaPaco.h"
+#include "Scene/SceneManager.h"
 
 ProjectileBehaviour::ProjectileBehaviour(json& args):Component(args)
 {
@@ -24,6 +26,8 @@ void ProjectileBehaviour::start()
 	bordeInf = -500;
 	bordeDer = 500;
 	bordeIzq = -500;
+	timeBetwCol = 0.1;
+	timeSinceLastCol = timeBetwCol;
 
 	EventManager::getInstance()->RegisterListener(this, "PAUSE");
 }
@@ -33,7 +37,7 @@ void ProjectileBehaviour::update()
 	Transform* t = getEntity()->getComponent<Transform>("Transform");
 	if (t->getPosition().X > bordeDer || t->getPosition().X < bordeIzq ||
 		t->getPosition().Z > bordeSup || t->getPosition().Z < bordeInf) {
-		getEntity()->setEnabled(false);
+		e_->getComponent<Vida>("Vida")->sumaVida(-e_->getComponent<Vida>("Vida")->GetVida());
 	}
 	Vector3 pos = t->getPosition();
 
@@ -70,17 +74,46 @@ void ProjectileBehaviour::setDamage(float dmg)
 
 void ProjectileBehaviour::OnCollision(Entity* other)
 {
-	if(source=="Player" && other->getTag()=="Enemy" || source == "Enemy" && other->getTag() == "Player"){
+	if (timeSinceLastCol >= timeBetwCol) {
+		if (source == "Player" && other->getTag() == "Enemy") {
 
-		other->getComponent<Vida>("Vida")->sumaVida(-damage);
-		e_->getComponent<Vida>("Vida")->sumaVida(-e_->getComponent<Vida>("Vida")->GetVida());
+			other->getComponent<VidaEnemigos>("VidaEnemigos")->sumaVida(-damage);
+				e_->getComponent<Vida>("Vida")->sumaVida(-e_->getComponent<Vida>("Vida")->GetVida());
+			timeSinceLastCol=0;
 
+		}
+		else if (source == "Enemy" && other->getTag() == "Player") {
+			other->getComponent<VidaPlayer>("VidaPlayer")->sumaVida(-damage);
+			e_->getComponent<Vida>("Vida")->sumaVida(-e_->getComponent<Vida>("Vida")->GetVida());
+			timeSinceLastCol = 0;
+
+		}
+		else if (source == "Player" && other->getTag() == "Projectile" && other->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->getSource() == "Enemy") {
+			other->getComponent<Vida>("Vida")->sumaVida(-e_->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->damage);
+			if(e_->getTag() != "Bomba")
+				e_->getComponent<Vida>("Vida")->sumaVida(-other->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->damage);
+			timeSinceLastCol = 0;
+		}
+
+		if (e_->getTag() == "Bomba" && other->getTag() == "Enemy")
+		{
+			EventManager::getInstance()->EmitEvent("BombaImpacto");
+			std::list<Entity*> enemies = SceneManager::getInstance()->getCurrentScene()->getEntitiesByTag("Enemy");
+			std::list<Entity*> bullets = SceneManager::getInstance()->getCurrentScene()->getEntitiesByTag("Projectile");
+			for (auto it : enemies)
+			{
+				it->getComponent<VidaEnemigos>("VidaEnemigos")->sumaVida(-damage);
+			}
+			for (auto it : bullets)
+			{
+				if (it->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->getSource() == "Enemy")
+				{
+					it->getComponent<Vida>("Vida")->sumaVida(-e_->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->damage);
+				}
+			}
+		}
 	}
-
-	else if (source == "Player" && other->getTag() == "Projectile" && other->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->getSource()=="Enemy") {
-		other->getComponent<Vida>("Vida")->sumaVida(-other->getComponent<Vida>("Vida")->GetVida());
-		e_->getComponent<Vida>("Vida")->sumaVida(-e_->getComponent<Vida>("Vida")->GetVida());
-	}
+	timeSinceLastCol += MotorCasaPaco::getInstance()->DeltaTime();
 }
 
 bool ProjectileBehaviour::ReceiveEvent(Event& event)

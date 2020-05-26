@@ -18,26 +18,12 @@
 #include "Scene/JsonFactoryParser.h"
 #include "Components/ProjectileBehaviour.h"
 #include "Components/Danio.h"
-#include "Components/Vida.h"
+#include "Components/VidaPlayer.h"
+#include "Components/VidaEnemigos.h"
 #include "Components/ChangeSceneButtonComponent.h"
 #include "Components/ExitButtonComponent.h"
 #include "Components/GiroContinuo.h"
 #include "Components/MenuMuestraPersonaje.h"
-
-/*
-#include "Components/ApplyGraphicChangesComponent.h"
-#include "Components/ChangeFullScreenComponent.h"
-#include "Components/ChangeVyncComponent.h"
-#include "Components/FormatResolutionChangeComponent.h"
-#include "Components/RevertGraphicChangesComponent.h"
-#include "Components/RevertAdvancedGraphicChangesComponent.h"
-#include "Components/ChangeGammaComponent.h"
-#include "Components/ChangeGraphicSceneComponent.h"
-#include "Components/ApplyAdvancedGraphicChangesComponent.h"
-#include "Components/FSAAChangeComponent.h"
-#include "Components/ShadowsChangeComponent.h"
-*/
-
 
 #include "Components/MainMenuInputComponent.h"
 #include "Components/PauseMenuComponent.h"
@@ -48,6 +34,9 @@
 #include "Components/MejoraDisparo.h"
 #include "Components/MejoraVida.h"
 #include "Components/MejoraEutanasia.h"
+#include "Components/musicManager.h"
+#include "Components/EutanasiaTexto.h"
+#include "Components/Shield.h"
 
 MotorCasaPaco* motorCasaPaco;
 
@@ -170,107 +159,6 @@ public:
 	};
 };
 
-/*
-class ChangeFullScreenComponentFactory : public BaseFactory
-{
-public:
-	Component* createComponent(json& args) override
-	{
-		return new ChangeFullScreenComponent(args);
-	};
-};
-
-class FormatResolutionChangeComponentFactory : public BaseFactory
-{
-public:
-	Component* createComponent(json& args) override
-	{
-		return new FormatResolutionChangeComponent(args);
-	};
-};
-
-class ApplyGraphicChangesComponentFactory : public BaseFactory
-{
-public:
-	Component* createComponent(json& args) override
-	{
-		return new ApplyGraphicChangesComponent(args);
-	};
-};
-
-class ChangeVSyncComponentFactory : public BaseFactory
-{
-public:
-	Component* createComponent(json& args) override
-	{
-		return new ChangeVSyncComponent(args);
-	};
-};
-
-class FSAAChangeComponentFactory : public BaseFactory
-{
-public:
-	Component* createComponent(json& args) override
-	{
-		return new FSAAChangeComponent(args);
-	};
-};
-
-class ShadowsChangeComponentFactory : public BaseFactory
-{
-public:
-	Component* createComponent(json& args) override
-	{
-		return new ShadowsChangeComponent(args);
-	};
-};
-
-class ApplyAdvancedGraphicChangesComponentFactory : public BaseFactory
-{
-public:
-	Component* createComponent(json& args) override
-	{
-		return new ApplyAdvancedGraphicChangesComponent(args);
-	};
-};
-
-class RevertGraphicChangesComponentFactory : public BaseFactory
-{
-public:
-	Component* createComponent(json& args) override
-	{
-		return new RevertGraphicChangesComponent(args);
-	};
-};
-
-class RevertAdvancedGraphicChangesComponentFactory : public BaseFactory
-{
-public:
-	Component* createComponent(json& args) override
-	{
-		return new RevertAdvancedGraphicChangesComponent(args);
-	};
-};
-
-class ChangeGammaComponentFactory : public BaseFactory
-{
-public:
-	Component* createComponent(json& args) override
-	{
-		return new ChangeGammaComponent(args);
-	};
-};
-
-class ChangeGraphicSceneComponentFactory : public BaseFactory
-{
-public:
-	Component* createComponent(json& args) override
-	{
-		return new ChangeGraphicSceneComponent(args);
-	};
-};
-*/
-
 class MainMenuInputComponentFactory : public BaseFactory
 {
 public:
@@ -352,6 +240,53 @@ public:
 	};
 };
 
+class VidaPlayerFactory : public BaseFactory
+{
+public:
+	Component* createComponent(json& args) override
+	{
+		return new VidaPlayer(args);
+	};
+};
+
+class VidaEnemigosFactory : public BaseFactory
+{
+public:
+	Component* createComponent(json& args) override
+	{
+		return new VidaEnemigos(args);
+	};
+};
+
+class MusicManagerFactory : public BaseFactory
+{
+public:
+	Component* createComponent(json& args) override
+	{
+		return new MusicManager(args);
+	};
+};
+
+
+
+class ShieldFactory : public BaseFactory
+{
+public:
+	Component* createComponent(json& args) override
+	{
+		return new Shield(args);
+	}
+};
+
+class EutanasiaTextoFactory : public BaseFactory
+{
+public:
+	Component* createComponent(json& args) override
+	{
+		return new EutanasiaTexto(args);
+	}
+};
+
 void setupFactories()
 {
 	JsonFactoryParser* j = JsonFactoryParser::getInstance();
@@ -371,18 +306,6 @@ void setupFactories()
 	j->addFactory("GiroContinuo", new GiroContinuoFactory());
 	j->addFactory("MenuMuestraPersonaje", new MenuMuestraPersonajeFactory());
 	j->addFactory("ProjectileBehaviour", new ProjectileBehaviourFactory());
-	/*
-	j->addFactory("ChangeFullScreenComponent", new ChangeFullScreenComponentFactory());
-	j->addFactory("FormatResolutionChangeComponent", new FormatResolutionChangeComponentFactory());
-	j->addFactory("ApplyGraphicChangesComponent", new ApplyGraphicChangesComponentFactory());
-	j->addFactory("ChangeVSyncComponent", new ChangeVSyncComponentFactory());
-	j->addFactory("FSAAChangeComponent", new FSAAChangeComponentFactory());
-	j->addFactory("ShadowsChangeComponent", new ShadowsChangeComponentFactory());
-	j->addFactory("ApplyAdvancedGraphicChangesComponent", new ApplyAdvancedGraphicChangesComponentFactory());
-	j->addFactory("RevertGraphicChangesComponent", new RevertGraphicChangesComponentFactory());
-	j->addFactory("RevertAdvancedGraphicChangesComponent", new RevertAdvancedGraphicChangesComponentFactory());
-	j->addFactory("ChangeGammaComponent", new ChangeGammaComponentFactory());
-	j->addFactory("ChangeGraphicSceneComponent", new ChangeGraphicSceneComponentFactory());*/
 	j->addFactory("MainMenuInputComponent", new MainMenuInputComponentFactory());
 	j->addFactory("PauseMenuComponent", new PauseMenuComponentFactory());
 	j->addFactory("OptionsMenuComponent", new OptionsMenuComponentFactory());
@@ -392,6 +315,11 @@ void setupFactories()
 	j->addFactory("MejoraDisparo", new MejoraDisparoFactory());
 	j->addFactory("MejoraVida", new MejoraVidaFactory());
 	j->addFactory("MejoraEutanasia", new MejoraEutanasiaFactory());
+	j->addFactory("VidaPlayer", new VidaPlayerFactory());
+	j->addFactory("VidaEnemigos", new VidaEnemigosFactory());
+	j->addFactory("MusicManager", new MusicManagerFactory());
+	j->addFactory("EutanasiaTexto", new EutanasiaTextoFactory());
+	j->addFactory("Shield", new ShieldFactory());
 }
 
 #ifdef  _DEBUG
@@ -428,6 +356,7 @@ WinMain(HINSTANCE hinstance, HINSTANCE prevInstance, LPSTR lpCmdLine, int nCmdSh
 
 	motorCasaPaco->start("Menu");
 
+	GameManager::getInstance()->clean();
 	delete motorCasaPaco;
 
 	return 0;

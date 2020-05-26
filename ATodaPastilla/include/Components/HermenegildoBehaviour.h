@@ -21,9 +21,13 @@ private:
 	float timeSinceLastShot;
 	float timeSinceLastAttack;
 	float cadence;
+	float damage;
+	float speed;
 	int shotsPerAttack;
 	int shotsFired;
 	float timeBetweenAttacks;
+	float minTimeBtwAtk;
+	float maxTimeBtwAtk;
 	float dyingTime;
 	float timeToDie;
 	

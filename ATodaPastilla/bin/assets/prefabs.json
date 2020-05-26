@@ -53,7 +53,7 @@
 	"ibuprofeno": {
 		"position": [ 0, 0, 0 ],
 		"rotation": [ 0, 0, 0 ],
-		"scale": [ 10, 10, 10 ],
+		"scale": [ 7, 7, 7 ],
 		"tag": "Projectile",
 		"components": [
 			{
@@ -64,15 +64,15 @@
 			{
 				"type": "RigidBody",
 				"shape": "cube",
-				"mass" : 10,
+				"mass": 10,
 				"isTrigger": true,
-				"angularFactor" : [0, 0, 1],
-				"linearFactor" : [1, 0, 1],
+				"angularFactor": [ 0, 0, 1 ],
+				"linearFactor": [ 1, 0, 1 ],
 				"disableDeactivation": true
 			},
 			{
 				"type": "Vida",
-				"vidaMax": 50,
+				"vidaMax": 2,
 				"time": 3
 			},
 			{
@@ -80,7 +80,7 @@
 			}
 		]
 	},
-	
+
 	"Bala": {
 		"position": [ 0, 0, 0 ],
 		"rotation": [ 0, 0, 0 ],
@@ -95,16 +95,47 @@
 			{
 				"type": "RigidBody",
 				"shape": "cube",
-				"mass" : 10,
+				"mass": 10,
 				"isTrigger": true,
-				"angularFactor" : [0, 0, 1],
-				"linearFactor" : [1, 0, 1],
+				"angularFactor": [ 0, 0, 1 ],
+				"linearFactor": [ 1, 0, 1 ],
 				"disableDeactivation": true
 			},
 			{
 				"type": "Vida",
-				"vidaMax": 50,
-				"time": 3
+				"vidaMax": 1,
+				"time": 8
+			},
+			{
+				"type": "ProjectileBehaviour"
+			}
+		]
+	},
+
+	"Bala_Ind": {
+		"position": [ 0, 0, 0 ],
+		"rotation": [ 0, 0, 0 ],
+		"scale": [ 10, 10, 10 ],
+		"tag": "Projectile",
+		"components": [
+			{
+				"type": "Mesh",
+				"mesh": "Bala_Ind.mesh",
+				"material": "Bala_Ind"
+			},
+			{
+				"type": "RigidBody",
+				"shape": "cube",
+				"mass": 10,
+				"isTrigger": true,
+				"angularFactor": [ 0, 0, 1 ],
+				"linearFactor": [ 1, 0, 1 ],
+				"disableDeactivation": true
+			},
+			{
+				"type": "Vida",
+				"vidaMax": 100,
+				"time": 8
 			},
 			{
 				"type": "ProjectileBehaviour"
@@ -115,7 +146,7 @@
 	"capsula": {
 		"position": [ 0, 0, 0 ],
 		"rotation": [ 0, 90, 0 ],
-		"scale": [ 10, 10, 10 ],
+		"scale": [ 12, 12, 12 ],
 		"tag": "Projectile",
 		"components": [
 			{
@@ -126,16 +157,47 @@
 			{
 				"type": "RigidBody",
 				"shape": "cube",
-				"mass" : 10,
+				"mass": 10,
 				"isTrigger": true,
-				"angularFactor" : [0, 0, 1],
-				"linearFactor" : [1, 0, 1],
+				"angularFactor": [ 0, 0, 1 ],
+				"linearFactor": [ 1, 0, 1 ],
 				"disableDeactivation": true
 			},
 			{
 				"type": "Vida",
-				"vidaMax": 50,
+				"vidaMax": 2,
 				"time": 3
+			},
+			{
+				"type": "ProjectileBehaviour"
+			}
+		]
+	},
+
+	"Eutanasia": {
+		"position": [ 0, 0, 0 ],
+		"rotation": [ 0, 0, 0 ],
+		"scale": [ 10, 10, 10 ],
+		"tag": "Projectile",
+		"components": [
+			{
+				"type": "Mesh",
+				"mesh": "BombaEutanasica.mesh",
+				"material": "BombaEutanasica"
+			},
+			{
+				"type": "RigidBody",
+				"shape": "cube",
+				"mass": 10,
+				"isTrigger": true,
+				"angularFactor": [ 0, 0, 1 ],
+				"linearFactor": [ 1, 0, 1 ],
+				"disableDeactivation": true
+			},
+			{
+				"type": "Vida",
+				"vidaMax": 1,
+				"time": 8
 			},
 			{
 				"type": "ProjectileBehaviour"
@@ -159,21 +221,21 @@
 				"shape": "mesh",
 				"mass": 10,
 				"gravity": [ 0, 0, 0 ],
-				"angularFactor" : [0, 0, 1],
-				"linearFactor" : [1, 0, 1],
+				"angularFactor": [ 0, 0, 1 ],
+				"linearFactor": [ 1, 0, 1 ],
 				"disableDeactivation": true
 			},
 			{
 				"type": "MovimientoMando",
-				"xRIGHT": 200,
-				"xLEFT": -200,
-				"zUP": -200,
-				"zDOWN": 200,
+				"xRIGHT": 275,
+				"xLEFT": -275,
+				"zUP": -310,
+				"zDOWN": 310,
 				"speed": 500
 			},
 			{
 				"type": "Danio",
-				"danio": 1
+				"danio": 1000
 			},
 			{
 				"type": "DisparoWiterico",
@@ -183,14 +245,16 @@
 				"cadence": [ 0.1, 0.07, 0.05 ],
 				"shotPos": [ 0, 0, -50 ],
 				"shotDir": [ 0, 0, -1 ],
-				"nBullets": [ 1, 2, 3 ],
-				"damagePerBullet": 10,
-				"bulletSpeed": [ 600, 600, 800 ],
-				"dispersionAngle": [ 15, 15, 15 ]
+				"nBullets": 1,
+				"damagePerBullet": 1,
+				"bulletSpeed": [ 250, 500, 650 ],
+				"inaccuracy": [40, 60, 100],
+				"inacDispersion": [10, 15, 15]
 			},
 			{
-				"type": "Vida",
-				"vidaMax": 1
+				"type": "VidaPlayer",
+				"invulnerabilityTime": 2,
+				"vidaMax": 2
 			}
 		]
 
@@ -211,21 +275,21 @@
 				"shape": "mesh",
 				"mass": 10,
 				"gravity": [ 0, 0, 0 ],
-				"angularFactor" : [0, 0, 1],
-				"linearFactor" : [1, 0, 1],
+				"angularFactor": [ 0, 0, 1 ],
+				"linearFactor": [ 1, 0, 1 ],
 				"disableDeactivation": true
 			},
 			{
 				"type": "MovimientoMando",
-				"xRIGHT": 200,
-				"xLEFT": -200,
-				"zUP": -200,
-				"zDOWN": 200,
+				"xRIGHT": 275,
+				"xLEFT": -275,
+				"zUP": -310,
+				"zDOWN": 310,
 				"speed": 500
 			},
 			{
 				"type": "Danio",
-				"danio": 1
+				"danio": 1000
 			},
 			{
 				"type": "DisparoTeodegonda",
@@ -235,17 +299,17 @@
 					[ "assets/sound/LVL1.wav", "assets/sound/LVL2.wav", "assets/sound/LVL3.wav" ],
 					[ "assets/sound/LVL1.wav", "assets/sound/LVL2.wav", "assets/sound/LVL3.wav" ]
 				],
-				"maximumChargeSound": "assets/sound/MaximumCharge.wav",
+				"maximumChargeSound": "assets/sound/LVL3.wav",
 				"shotSound": [ "assets/sound/shotGunShot.wav", "assets/sound/shotGunShot.wav", "assets/sound/shotGunShot.wav" ],
 				"nModes": 3,
 				"shotPos": [ 0, 0, -50 ],
 				"shotDir": [ 0, 0, -1 ],
 				"nBullets": [
-					[ 1, 1, 1 ],
-					[ 3, 3, 3 ],
-					[ 4, 4, 4 ]
+					[ 1, 3, 5 ],
+					[ 3, 5, 7 ],
+					[ 7, 9, 11 ]
 				],
-				"damagePerBullet": 10,
+				"damagePerBullet": 1,
 				"bulletSpeed": [
 					[ 300, 350, 400 ],
 					[ 300, 350, 400 ],
@@ -256,22 +320,23 @@
 				"inacDispersion": 0,
 				"chargeLevels": 3,
 				"chargeTime": 0.35,
-				"burstCadence": 0.05,
+				"burstCadence": 0.10,
 				"burstShots": [
-					[ 1, 2, 4 ],
-					[ 1, 2, 4 ],
-					[ 1, 2, 4 ]
+					[ 1, 2, 3 ],
+					[ 3, 3, 4 ],
+					[ 4, 5, 6 ]
 				]
 			},
 			{
-				"type": "Vida",
-				"vidaMax": 1
+				"type": "VidaPlayer",
+				"invulnerabilityTime": 2,
+				"vidaMax": 2
 			}
 
 		]
 
 	},
-	"Riciberga": {
+	"Riciberga_L": {
 		"position": [ 0, 25, -125 ],
 		"rotation": [ 0, 0, 0 ],
 		"scale": [ 25, 25, 25 ],
@@ -287,19 +352,62 @@
 				"shape": "mesh",
 				"mass": 10,
 				"gravity": [ 0, 0, 0 ],
-				"angularFactor" : [0, 1, 0],
-				"linearFactor" : [1, 0, 1],
+				"angularFactor": [ 0, 1, 0 ],
+				"linearFactor": [ 1, 0, 1 ],
 				"disableDeactivation": true
 			},
 			{
-				"type": "Vida",
-				"vidaMax": 50,
+				"type": "VidaEnemigos",
+				"puntos": 500,
+				"vidaMax": 3,
 				"customDeath": true
 			},
 			{
 				"type": "RicibergaBehaviour",
-				"damage": 100,
-				"speed": 20,
+				"damage": 1,
+				"speed": 50,
+				"bottom": 170,
+				"timeToDie": 1,
+				"hitSound": "assets/sound/RicibergaHit.mp3",
+				"deathSound": "assets/sound/RicibergaDeath.mp3",
+				"seeksPlayer": false,
+				"sinusoidalMovement": false,
+				"sinusoidalMagnitude": 50.0,
+				"sinusoidalFrequency": 2.0
+			}
+		]
+
+	},
+	"Riciberga_S": {
+		"position": [ 0, 25, -125 ],
+		"rotation": [ 0, 0, 0 ],
+		"scale": [ 25, 25, 25 ],
+		"tag": "Enemy",
+		"components": [
+			{
+				"type": "Mesh",
+				"mesh": "Riciberga_S.mesh",
+				"material": "Riciberga_S"
+			},
+			{
+				"type": "RigidBody",
+				"shape": "mesh",
+				"mass": 10,
+				"gravity": [ 0, 0, 0 ],
+				"angularFactor": [ 0, 1, 0 ],
+				"linearFactor": [ 1, 0, 1 ],
+				"disableDeactivation": true
+			},
+			{
+				"type": "VidaEnemigos",
+				"puntos": 500,
+				"vidaMax": 3,
+				"customDeath": true
+			},
+			{
+				"type": "RicibergaBehaviour",
+				"damage": 1,
+				"speed": 50,
 				"bottom": 170,
 				"timeToDie": 1,
 				"hitSound": "assets/sound/RicibergaHit.mp3",
@@ -312,8 +420,8 @@
 		]
 
 	},
-	
-	"Hermenegildo": {
+
+	"Hermenegildo_Def": {
 		"position": [ 70, 25, -125 ],
 		"rotation": [ 0, 0, 0 ],
 		"scale": [ 15, 15, 15 ],
@@ -329,13 +437,14 @@
 				"shape": "mesh",
 				"mass": 10,
 				"gravity": [ 0, 0, 0 ],
-				"angularFactor" : [0, 1, 0],
-				"linearFactor" : [1, 0, 1],
+				"angularFactor": [ 0, 1, 0 ],
+				"linearFactor": [ 1, 0, 1 ],
 				"disableDeactivation": true
 			},
 			{
-				"type": "Vida",
-				"vidaMax": 100,
+				"type": "VidaEnemigos",
+				"puntos": 500,
+				"vidaMax": 5,
 				"customDeath": true
 			},
 			{
@@ -344,19 +453,69 @@
 			},
 			{
 				"type": "HermenegildoBehaviour",
-				"deathSound" : "assets/sound/HermenegildoDeath.mp3",
-				"hitSound" : "assets/sound/HermenegildoHit.mp3",
-				"timeToDie" : 1,
-				"cadence": 0.2,
+				"deathSound": "assets/sound/HermenegildoDeath.mp3",
+				"hitSound": "assets/sound/HermenegildoHit.mp3",
+				"timeToDie": 1,
+				"cadence": 0.5,
+				"damage": 1,
+				"speed": 50,
 				"shotsPerAttack": 3,
-				"timeBetweenAttacks": 2
+				"minTimeBtwAtk": 2.5,
+				"maxTimeBtwAtk": 3.5
 			}
 
 		]
 
 	},
 
-	"EnemySpawner":{
+	"Hermenegildo_Ind": {
+		"position": [ 70, 25, -125 ],
+		"rotation": [ 0, 0, 0 ],
+		"scale": [ 15, 15, 15 ],
+		"tag": "Enemy",
+		"components": [
+			{
+				"type": "Mesh",
+				"mesh": "Hermenegildo_Ind.mesh",
+				"material": "Hermenegildo_Ind"
+			},
+			{
+				"type": "RigidBody",
+				"shape": "mesh",
+				"mass": 10,
+				"gravity": [ 0, 0, 0 ],
+				"angularFactor": [ 0, 1, 0 ],
+				"linearFactor": [ 1, 0, 1 ],
+				"disableDeactivation": true
+			},
+			{
+				"type": "VidaEnemigos",
+				"puntos": 500,
+				"vidaMax": 5,
+				"customDeath": true
+			},
+			{
+				"type": "ProjectileSpawner",
+				"prefab": "Bala_Ind"
+			},
+			{
+				"type": "HermenegildoBehaviour",
+				"deathSound": "assets/sound/HermenegildoDeath.mp3",
+				"hitSound": "assets/sound/HermenegildoHit.mp3",
+				"timeToDie": 1,
+				"cadence": 0.8,
+				"damage": 1,
+				"speed": 35,
+				"shotsPerAttack": 2,
+				"minTimeBtwAtk": 4,
+				"minTimeBtwAtk": 5
+			}
+
+		]
+
+	},
+
+	"EnemySpawner": {
 		"position": [ 0, 0, 0 ],
 		"rotation": [ 0, 0, 0 ],
 		"scale": [ 0, 0, 0 ],
@@ -364,9 +523,35 @@
 		"components": [
 			{
 				"type": "EnemySpawner",
-				"enemies": ["Riciberga", "Hermenegildo"],
-				"spawnPositions": [[0, 25, -150], [-90, 25, -150], [90, 25, -150]],
-				"spawnRate" : 2
+				"nWaves": 4,
+				"waveStart": [ 10, 25, 45, 60 ],
+				"maxSpawns": [ 1, 2, 2, 3 ],
+				"spawnRate": [ 3, 2, 1.5, 1 ],
+				"multRate": 10,
+				"statMultiplier": 1.25,
+				"enemies": [
+					{
+						"enemy": "Riciberga_L",
+						"spawnProbability": [ 100, 80, 45, 20 ]
+					},
+					{
+						"enemy": "Hermenegildo_Def",
+						"spawnProbability": [ 0, 20, 35, 25 ]
+					},
+					{
+						"enemy": "Riciberga_S",
+						"spawnProbability": [ 0, 0, 20, 45 ]
+					},
+					{
+						"enemy": "Hermenegildo_Ind",
+						"spawnProbability": [ 0, 0, 0, 10 ]
+					}
+				],
+				"spawnPositions": [
+					[ -90, 25, -150 ],
+					[ 0, 25, -150 ],
+					[ 90, 25, -150 ]
+				]
 			}
 		]
 
@@ -459,7 +644,7 @@
 	},
 
 	"MejoraDisparo": {
-		"position": [ 0, 50, 0 ],
+		"position": [ 0, 25, 0 ],
 		"rotation": [ 0, 0, 180 ],
 		"scale": [ 5, 5, 5 ],
 		"components": [
@@ -485,7 +670,7 @@
 	},
 
 	"MejoraVida": {
-		"position": [ 0, 50, 0 ],
+		"position": [ 0, 25, 0 ],
 		"rotation": [ 0, 0, 180 ],
 		"scale": [ 12, 12, 12 ],
 		"components": [
@@ -497,7 +682,8 @@
 			{
 				"type": "RigidBody",
 				"shape": "cube",
-				"isKinematic": true
+				"isKinematic": true,
+				"isTrigger": true
 			},
 			{
 				"type": "MejoraVida"
@@ -509,7 +695,7 @@
 		]
 	},
 	"MejoraEutanasia": {
-		"position": [ 0, 50, 0 ],
+		"position": [ 0, 25, 0 ],
 		"rotation": [ 0, 0, 180 ],
 		"scale": [ 8, 8, 8 ],
 		"components": [
@@ -521,7 +707,9 @@
 			{
 				"type": "RigidBody",
 				"shape": "cube",
-				"isKinematic": true
+				"isKinematic": true,
+				"isTrigger": true
+
 			},
 			{
 				"type": "MejoraEutanasia"
@@ -529,6 +717,44 @@
 			{
 				"type": "GiroContinuo",
 				"rotation": 0.85
+			}
+		]
+	},
+
+	"MusicManager": {
+		"components": [
+			{
+				"type": "MusicManager"
+			}
+		]
+	},
+	
+	"EutanasiaTexto": {
+	"position": [ 0, 50, 0 ],
+	"rotation": [ 0, 0, 0 ],
+	"scale": [ 6, 6, 6 ],
+	"components": 
+	[  
+		{
+		"type": "Mesh",
+		"mesh": "EutanasiaTexto.mesh",
+		"material": "EutanasiaTexto"
+		},
+		{
+		"type": "EutanasiaTexto"
+		}
+	]
+	},
+
+	"Shield": {
+		"components": [
+			{
+				"type": "Mesh",
+				"mesh": "Shield.mesh",
+				"material": "Shield"
+			},
+			{
+				"type": "Shield"
 			}
 		]
 	}

@@ -11,17 +11,18 @@ public:
 	MainMenuInputComponent(json& args);
 	~MainMenuInputComponent();
 	void init(json& j) override;
-	bool function(const CEGUI::EventArgs& e);
+	bool functionPlay(const CEGUI::EventArgs& e);
 	bool ReceiveEvent(Event& event) override;
 	void update();
 private:
-	
+
 	std::vector<float> positionsX;
 	std::vector<float> positionsY;
 	int tam;
 	int currenPos;
 	float delay;
 	float currentTime;
+	std::string sceneToLoad = "ATodaPastilla_Witerico";
 };
 
 #endif

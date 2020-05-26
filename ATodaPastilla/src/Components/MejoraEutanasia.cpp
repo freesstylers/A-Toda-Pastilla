@@ -32,6 +32,7 @@ void MejoraEutanasia::OnCollision(Entity* ent)
 {
 	if (ent->getTag() == "Player")
 	{	
+		EventManager::getInstance()->EmitEvent("BombaUp");
 		std::cout << "Bomba eutanásica goes brrruummm" << std::endl;
 		getEntity()->setEnabled(false);
 	}
