@@ -117,7 +117,7 @@ void HermenegildoBehaviour::OnCollision(Entity* other)
 				AudioManager::getInstance()->playMusic(hitSound.c_str(), 4, false);
 			}
 			else
-				AudioManager::getInstance()->playMusic("assets/sound/movie_1.mp3", 4, false);
+				AudioManager::getInstance()->playMusic("assets/sound/HermenegildoDeath.mp3", 4, false);
 		}
 	}
 	if (other->getComponent<HermenegildoBehaviour>("HermenegildoBehaviour") != nullptr) {

@@ -139,7 +139,7 @@ void RicibergaBehaviour::OnCollision(Entity* other)
 				AudioManager::getInstance()->playMusic(hitSound.c_str(), 4, false);
 			}
 			else
-				AudioManager::getInstance()->playMusic("assets/sound/movie_1.mp3", 4, false);
+				AudioManager::getInstance()->playMusic("assets/sound/RicibergaHit.mp3", 4, false);
 		}
 	}
 }

@@ -299,7 +299,7 @@
 					[ "assets/sound/LVL1.wav", "assets/sound/LVL2.wav", "assets/sound/LVL3.wav" ],
 					[ "assets/sound/LVL1.wav", "assets/sound/LVL2.wav", "assets/sound/LVL3.wav" ]
 				],
-				"maximumChargeSound": "assets/sound/MaximumCharge.wav",
+				"maximumChargeSound": "assets/sound/LVL3.wav",
 				"shotSound": [ "assets/sound/shotGunShot.wav", "assets/sound/shotGunShot.wav", "assets/sound/shotGunShot.wav" ],
 				"nModes": 3,
 				"shotPos": [ 0, 0, -50 ],
@@ -323,8 +323,8 @@
 				"burstCadence": 0.10,
 				"burstShots": [
 					[ 1, 2, 3 ],
-					[ 3, 3, 4],
-					[ 4, 5, 6]
+					[ 3, 3, 4 ],
+					[ 4, 5, 6 ]
 				]
 			},
 			{
