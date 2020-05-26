@@ -11,10 +11,10 @@ public:
 	~Danio ();
 	void update() override;
 	void init(json& j) override;
-	bool ReceiveEvent(Event& event) override;
+
+	void OnCollision(Entity* other) override;
 
 private:
-	void doDamage(Entity* e1, Entity* e2);
 	int danio_;
 };
 
