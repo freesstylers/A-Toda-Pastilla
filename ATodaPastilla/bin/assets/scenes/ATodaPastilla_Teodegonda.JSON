@@ -15,7 +15,7 @@
 			"name": "floor",
 			"position": [ 0, -30, 0 ],
 			"rotation": [ 0, 0, 0 ],
-			"scale": [ 4, 0.1, 4 ],
+			"scale": [ 6.25 , 0.1, 7.15 ],
 			"tag": "suelo",
 			"components": [
 				{
