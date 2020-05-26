@@ -43,7 +43,7 @@ void EutanasiaTexto::update()
 	{
 		cooldown += MotorCasaPaco::getInstance()->DeltaTime();
 		Vector3 size = e_->getComponent<Transform>("Transform")->getScale();
-		size = Vector3(size.X + 0.1f,size.Y + 0.1f, size.Z +0.1f);
+		size = Vector3(size.X + 20 * MotorCasaPaco::getInstance()->DeltaTime(),size.Y + 20 * MotorCasaPaco::getInstance()->DeltaTime(), size.Z + 20 * MotorCasaPaco::getInstance()->DeltaTime());
 		e_->getComponent<Transform>("Transform")->setScale(size);
 		if (cooldown >= 3.0f)
 		{

@@ -78,7 +78,7 @@ void ProjectileBehaviour::OnCollision(Entity* other)
 		if (source == "Player" && other->getTag() == "Enemy") {
 
 			other->getComponent<VidaEnemigos>("VidaEnemigos")->sumaVida(-damage);
-			e_->getComponent<Vida>("Vida")->sumaVida(-e_->getComponent<Vida>("Vida")->GetVida());
+				e_->getComponent<Vida>("Vida")->sumaVida(-e_->getComponent<Vida>("Vida")->GetVida());
 			timeSinceLastCol=0;
 
 		}
@@ -90,7 +90,8 @@ void ProjectileBehaviour::OnCollision(Entity* other)
 		}
 		else if (source == "Player" && other->getTag() == "Projectile" && other->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->getSource() == "Enemy") {
 			other->getComponent<Vida>("Vida")->sumaVida(-e_->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->damage);
-			e_->getComponent<Vida>("Vida")->sumaVida(-other->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->damage);
+			if(e_->getTag() != "Bomba")
+				e_->getComponent<Vida>("Vida")->sumaVida(-other->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->damage);
 			timeSinceLastCol = 0;
 		}
 
@@ -98,9 +99,17 @@ void ProjectileBehaviour::OnCollision(Entity* other)
 		{
 			EventManager::getInstance()->EmitEvent("BombaImpacto");
 			std::list<Entity*> enemies = SceneManager::getInstance()->getCurrentScene()->getEntitiesByTag("Enemy");
+			std::list<Entity*> bullets = SceneManager::getInstance()->getCurrentScene()->getEntitiesByTag("Projectile");
 			for (auto it : enemies)
 			{
 				it->getComponent<VidaEnemigos>("VidaEnemigos")->sumaVida(-damage);
+			}
+			for (auto it : bullets)
+			{
+				if (it->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->getSource() == "Enemy")
+				{
+					it->getComponent<Vida>("Vida")->sumaVida(-e_->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->damage);
+				}
 			}
 		}
 	}
