@@ -229,13 +229,13 @@
 				"type": "MovimientoMando",
 				"xRIGHT": 275,
 				"xLEFT": -275,
-				"zUP": -350,
-				"zDOWN": 350,
+				"zUP": -310,
+				"zDOWN": 310,
 				"speed": 500
 			},
 			{
 				"type": "Danio",
-				"danio": 1
+				"danio": 1000
 			},
 			{
 				"type": "DisparoWiterico",
@@ -283,13 +283,13 @@
 				"type": "MovimientoMando",
 				"xRIGHT": 275,
 				"xLEFT": -275,
-				"zUP": -350,
-				"zDOWN": 350,
+				"zUP": -310,
+				"zDOWN": 310,
 				"speed": 500
 			},
 			{
 				"type": "Danio",
-				"danio": 1
+				"danio": 1000
 			},
 			{
 				"type": "DisparoTeodegonda",
