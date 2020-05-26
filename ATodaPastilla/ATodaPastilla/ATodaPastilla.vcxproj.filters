@@ -33,6 +33,7 @@
     <ClCompile Include="..\src\Components\musicManager.cpp" />
     <ClCompile Include="..\src\Components\EutanasiaTexto.cpp" />
     <ClCompile Include="..\src\Components\Shield.cpp" />
+    <ClCompile Include="..\src\Components\CanutoBehaviour.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Components\ChangeSceneButtonComponent.h" />
@@ -68,5 +69,6 @@
     <ClInclude Include="..\include\Components\musicManager.h" />
     <ClInclude Include="..\include\Components\EutanasiaTexto.h" />
     <ClInclude Include="..\include\Components\Shield.h" />
+    <ClInclude Include="..\include\Components\CanutoBehaviour.h" />
   </ItemGroup>
 </Project>

@@ -14,6 +14,7 @@
 #include "Components/DisparoTeodegonda.h"
 #include "Components/RicibergaBehaviour.h"
 #include "Components/HermenegildoBehaviour.h"
+#include "Components/CanutoBehaviour.h"
 
 #include "Scene/JsonFactoryParser.h"
 #include "Components/ProjectileBehaviour.h"
@@ -95,6 +96,13 @@ class HermenegildoBehaviourFactory : public BaseFactory {
 public:
 	Component* createComponent(json& args) override {
 		return new HermenegildoBehaviour(args);
+	}
+};
+
+class CanutoBehaviourFactory : public BaseFactory {
+public:
+	Component* createComponent(json& args) override {
+		return new CanutoBehaviour(args);
 	}
 };
 
@@ -301,6 +309,7 @@ void setupFactories()
 	j->addFactory("DisparoTeodegonda", new DisparoTeodegondaFactory());
 	j->addFactory("RicibergaBehaviour", new RicibergaBehaviourFactory());
 	j->addFactory("HermenegildoBehaviour", new HermenegildoBehaviourFactory());
+	j->addFactory("CanutoBehaviour", new CanutoBehaviourFactory());
 	j->addFactory("ChangeSceneButtonComponent", new ChangeSceneButtonComponentFactory());
 	j->addFactory("ExitButtonComponent", new ExitButtonComponentFactory());
 	j->addFactory("GiroContinuo", new GiroContinuoFactory());

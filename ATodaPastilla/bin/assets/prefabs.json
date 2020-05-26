@@ -112,10 +112,41 @@
 		]
 	},
 
+	"BalaTocha": {
+		"position": [ 0, 0, 0 ],
+		"rotation": [ 0, 0, 0 ],
+		"scale": [ 7, 7, 7 ],
+		"tag": "Projectile",
+		"components": [
+			{
+				"type": "Mesh",
+				"mesh": "BalaTocha.mesh",
+				"material": "BalaTocha"
+			},
+			{
+				"type": "RigidBody",
+				"shape": "cube",
+				"mass": 10,
+				"isTrigger": true,
+				"angularFactor": [ 0, 0, 1 ],
+				"linearFactor": [ 1, 0, 1 ],
+				"disableDeactivation": true
+			},
+			{
+				"type": "Vida",
+				"vidaMax": 1,
+				"time": 8
+			},
+			{
+				"type": "ProjectileBehaviour"
+			}
+		]
+	},
+
 	"Bala_Ind": {
 		"position": [ 0, 0, 0 ],
 		"rotation": [ 0, 0, 0 ],
-		"scale": [ 10, 10, 10 ],
+		"scale": [ 7, 7, 7 ],
 		"tag": "Projectile",
 		"components": [
 			{
@@ -135,6 +166,36 @@
 			{
 				"type": "Vida",
 				"vidaMax": 100,
+				"time": 8
+			},
+			{
+				"type": "ProjectileBehaviour"
+			}
+		]
+	},
+	"BalaTocha_Ind": {
+		"position": [ 0, 0, 0 ],
+		"rotation": [ 0, 0, 0 ],
+		"scale": [ 7, 7, 7 ],
+		"tag": "Projectile",
+		"components": [
+			{
+				"type": "Mesh",
+				"mesh": "BalaTocha_Ind.mesh",
+				"material": "BalaTocha_Ind"
+			},
+			{
+				"type": "RigidBody",
+				"shape": "cube",
+				"mass": 10,
+				"isTrigger": true,
+				"angularFactor": [ 0, 0, 1 ],
+				"linearFactor": [ 1, 0, 1 ],
+				"disableDeactivation": true
+			},
+			{
+				"type": "Vida",
+				"vidaMax": 6,
 				"time": 8
 			},
 			{
@@ -508,7 +569,97 @@
 				"speed": 35,
 				"shotsPerAttack": 2,
 				"minTimeBtwAtk": 4,
-				"minTimeBtwAtk": 5
+				"maxTimeBtwAtk": 5
+			}
+
+		]
+
+	},
+
+	"Canuto": {
+		"position": [ 70, 25, -125 ],
+		"rotation": [ 0, 0, 0 ],
+		"scale": [ 25, 25, 25 ],
+		"tag": "Enemy",
+		"components": [
+			{
+				"type": "Mesh",
+				"mesh": "Canuto.mesh",
+				"material": "Canuto"
+			},
+			{
+				"type": "RigidBody",
+				"shape": "mesh",
+				"mass": 10,
+				"gravity": [ 0, 0, 0 ],
+				"angularFactor": [ 0, 1, 0 ],
+				"linearFactor": [ 1, 0, 1 ],
+				"disableDeactivation": true
+			},
+			{
+				"type": "VidaEnemigos",
+				"puntos": 500,
+				"vidaMax": 5,
+				"customDeath": true
+			},
+			{
+				"type": "ProjectileSpawner",
+				"prefab": "BalaTocha"
+			},
+			{
+				"type": "CanutoBehaviour",
+				"deathSound": "assets/sound/HermenegildoDeath.mp3",
+				"hitSound": "assets/sound/HermenegildoHit.mp3",
+				"timeToDie": 1,
+				"damage": 1,
+				"speed": 35,
+				"minTimeBtwAtk": 3,
+				"maxTimeBtwAtk": 6
+			}
+
+		]
+
+	},
+
+	"Canuto_Ind": {
+		"position": [ 70, 25, -125 ],
+		"rotation": [ 0, 0, 0 ],
+		"scale": [ 25, 25, 25 ],
+		"tag": "Enemy",
+		"components": [
+			{
+				"type": "Mesh",
+				"mesh": "Canuto_Ind.mesh",
+				"material": "Canuto_Ind"
+			},
+			{
+				"type": "RigidBody",
+				"shape": "mesh",
+				"mass": 10,
+				"gravity": [ 0, 0, 0 ],
+				"angularFactor": [ 0, 1, 0 ],
+				"linearFactor": [ 1, 0, 1 ],
+				"disableDeactivation": true
+			},
+			{
+				"type": "VidaEnemigos",
+				"puntos": 500,
+				"vidaMax": 5,
+				"customDeath": true
+			},
+			{
+				"type": "ProjectileSpawner",
+				"prefab": "BalaTocha_Ind"
+			},
+			{
+				"type": "CanutoBehaviour",
+				"deathSound": "assets/sound/HermenegildoDeath.mp3",
+				"hitSound": "assets/sound/HermenegildoHit.mp3",
+				"timeToDie": 1,
+				"damage": 1,
+				"speed": 35,
+				"minTimeBtwAtk": 4,
+				"maxTimeBtwAtk": 8
 			}
 
 		]
@@ -523,28 +674,36 @@
 		"components": [
 			{
 				"type": "EnemySpawner",
-				"nWaves": 4,
-				"waveStart": [ 10, 25, 45, 60 ],
-				"maxSpawns": [ 1, 2, 2, 3 ],
-				"spawnRate": [ 3, 2, 1.5, 1 ],
+				"nWaves": 6,
+				"waveStart": [ 10, 25, 45, 60, 80,120],
+				"maxSpawns": [  1,  2,  2,  3,  3,  3],
+				"spawnRate": [  3,  2,1.5,  1,  1,  1],
 				"multRate": 10,
 				"statMultiplier": 1.25,
 				"enemies": [
 					{
 						"enemy": "Riciberga_L",
-						"spawnProbability": [ 100, 80, 45, 20 ]
+						"spawnProbability": [100, 80, 40, 20,  5,  5]
 					},
 					{
 						"enemy": "Hermenegildo_Def",
-						"spawnProbability": [ 0, 20, 35, 25 ]
+						"spawnProbability": [  0,  0, 20, 20, 10, 20]
 					},
 					{
 						"enemy": "Riciberga_S",
-						"spawnProbability": [ 0, 0, 20, 45 ]
+						"spawnProbability": [  0,  0, 20, 30, 20, 15]
 					},
 					{
 						"enemy": "Hermenegildo_Ind",
-						"spawnProbability": [ 0, 0, 0, 10 ]
+						"spawnProbability": [  0,  0,  0,  0,  0, 15]
+					},
+					{
+						"enemy": "Canuto",
+						"spawnProbability": [  0, 20, 20, 30, 35, 25]
+					},
+					{
+						"enemy": "Canuto_Ind",
+						"spawnProbability": [  0,  0,  0,  0, 30, 20]
 					}
 				],
 				"spawnPositions": [

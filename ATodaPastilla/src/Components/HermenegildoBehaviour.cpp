@@ -125,6 +125,7 @@ void HermenegildoBehaviour::OnCollision(Entity* other)
 		EventManager::getInstance()->UnregisterListenerForAll(other);
 		MotorCasaPaco::getInstance()->getSceneManager()->getCurrentScene()->deleteEntity(other->getName());
 	}
+
 }
 void HermenegildoBehaviour::OnDeath()
 {
