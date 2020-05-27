@@ -25,23 +25,26 @@ void MusicManager::update()
 {
 	if (intro) {
 		if (!MotorCasaPaco::getInstance()->getAudioManager()->isPlayingChannel(1)) {
-			playMusic("assets/sound/CancionPastillaPart2.mp3", 1);
+			MotorCasaPaco::getInstance()->getAudioManager()->playMusic("assets/sound/CancionPastillaPart2.mp3", 1, false);
 			intro = false;
 		}
 	}
 	else {
 		if (!MotorCasaPaco::getInstance()->getAudioManager()->isPlayingChannel(1)) {
 			if (es->getCurrWave() == 0) {
-				playMusic("assets/sound/CancionPastillaPart3.mp3", 1);
+				MotorCasaPaco::getInstance()->getAudioManager()->playMusic("assets/sound/CancionPastillaPart2.mp3", 1, false);
 			}
 			else if (es->getCurrWave() == 1) {
-				playMusic("assets/sound/CancionPastillaPart4.mp3", 1);
+				MotorCasaPaco::getInstance()->getAudioManager()->playMusic("assets/sound/CancionPastillaPart3.mp3", 1, false);
 			}
-			else if (es->getCurrWave() == 2) {
-				playMusic("assets/sound/CancionPastillaPart5.mp3", 1);
+			else if (es->getCurrWave() == 2 ) {
+				MotorCasaPaco::getInstance()->getAudioManager()->playMusic("assets/sound/CancionPastillaPart4.mp3", 1, false);
 			}
-			else if (es->getCurrWave() >= 3) {
-				playMusic("assets/sound/CancionPastillaPart6.mp3", 1);
+			else if (es->getCurrWave() == 3) {
+				MotorCasaPaco::getInstance()->getAudioManager()->playMusic("assets/sound/CancionPastillaPart5.mp3", 1, false);
+			}
+			else if (es->getCurrWave() >= 4) {
+				MotorCasaPaco::getInstance()->getAudioManager()->playMusic("assets/sound/CancionPastillaPart6.mp3", 1, false);
 			}
 		}
 	}
@@ -53,7 +56,7 @@ void MusicManager::update()
 void MusicManager::init(json& j)
 {
 	if (!MotorCasaPaco::getInstance()->getAudioManager()->isPlayingChannel(1)) {
-		playMusic("assets/sound/CancionPastillaPart1.mp3", 1);
+		MotorCasaPaco::getInstance()->getAudioManager()->playMusic("assets/sound/CancionPastillaPart1.mp3", 1, false);
 	}
 	intro = true;
 	es = SceneManager::getInstance()->getCurrentScene()->getEntity("EnemySpawner")->getComponent<EnemySpawner>("EnemySpawner");
