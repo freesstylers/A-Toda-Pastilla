@@ -20,6 +20,7 @@ private:
 	Vector3 pos;
 	Vector3 vel;
 	std::string audioRoute;
+	int song1 = 0;
 	bool intro = false;
 
 	EnemySpawner* es = nullptr;
