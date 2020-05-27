@@ -180,7 +180,7 @@ void DisparoWiterico::update()
 		AudioManager::getInstance()->playMusic(shotModes[currMode].shotSound.c_str(), 3, false);
 		AudioManager::getInstance()->setVolume(0.1, 3);
 	}
-	else if (timeSinceLastShot >= shotModes[currMode].cadence && MotorCasaPaco::getInstance()->getInputManager()->GameControllerIsButtonDown(CONTROLLER_BUTTON_RIGHTSHOULDER) /*&& GameManager::getInstance()->isBombActive()*/)
+	else if (timeSinceLastShot >= shotModes[currMode].cadence && MotorCasaPaco::getInstance()->getInputManager()->GameControllerIsButtonDown(CONTROLLER_BUTTON_RIGHTSHOULDER) && GameManager::getInstance()->isBombActive())
 	{
 		timeSinceLastShot = 0;
 		spawnEutanasia();
