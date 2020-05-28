@@ -31,8 +31,8 @@ void CameraBehavior::init(json& j)
 	EventManager::getInstance()->RegisterListener(e_, "MejoraDisparo1");
 	EventManager::getInstance()->RegisterListener(e_, "MejoraDisparo2");
 
-	iniX_ = e_->getTransform()->getPosition().Z;
-	iniZ_ = e_->getTransform()->getPosition().X;
+	iniX_ = e_->getTransform()->getPosition().X;
+	iniZ_ = e_->getTransform()->getPosition().Z;
 }
 
 void CameraBehavior::update()

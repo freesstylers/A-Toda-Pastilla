@@ -748,7 +748,7 @@ material BalaTocha_Ind {
     }
 }
 
-material FondoEspacio {
+material FondoHospital {
     receive_shadows on
     technique {
         pass {
@@ -775,7 +775,7 @@ material FondoEspacio {
             transparent_sorting on 
 
             texture_unit  {
-                texture FondoEspacioTest.jpg
+                texture FondoHospital.png
                 scroll_anim 0.0 0.05
                 tex_address_mode wrap 
                 scale 1.0 1.0 

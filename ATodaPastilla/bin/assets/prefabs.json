@@ -49,6 +49,17 @@
 			}
 		]
 	},
+	
+	"lightGame": {
+		"position": [ 100, 100, 0 ],
+		"components": [
+			{
+				"type": "Light",
+				"lightType": "directional",
+				"lightDir": [ 0, -1, 0 ]
+			}
+		]
+	},
 
 	"ibuprofeno": {
 		"position": [ 0, 0, 0 ],
@@ -104,7 +115,7 @@
 			{
 				"type": "Vida",
 				"vidaMax": 1,
-				"time": 8
+				"time": 12
 			},
 			{
 				"type": "ProjectileBehaviour"
@@ -937,6 +948,14 @@
 			},
 			{
 				"type": "Shield"
+			},
+			{
+				"type": "ParticleSystem",
+				"name": "shield",
+				"template": "Spiral",
+				"timeLimit" : 0.5,
+				"destroyOnTimeLimit": false,
+				"enabled" : "false"
 			}
 		]
 	},
