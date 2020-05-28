@@ -430,7 +430,7 @@
 				"bottom": 170,
 				"timeToDie": 1,
 				"hitSound": "assets/sound/RicibergaHit.mp3",
-				"deathSound": "assets/sound/RicibergaDeath.mp3",
+				"deathSound": "assets/sound/RicibergaDeath.wav",
 				"seeksPlayer": false,
 				"sinusoidalMovement": false,
 				"sinusoidalMagnitude": 50.0,
@@ -472,7 +472,7 @@
 				"bottom": 170,
 				"timeToDie": 1,
 				"hitSound": "assets/sound/RicibergaHit.mp3",
-				"deathSound": "assets/sound/RicibergaDeath.mp3",
+				"deathSound": "assets/sound/RicibergaDeath.wav",
 				"seeksPlayer": false,
 				"sinusoidalMovement": true,
 				"sinusoidalMagnitude": 50.0,
@@ -514,7 +514,7 @@
 			},
 			{
 				"type": "HermenegildoBehaviour",
-				"deathSound": "assets/sound/HermenegildoDeath.mp3",
+				"deathSound": "assets/sound/HermenegildoDeath.wav",
 				"hitSound": "assets/sound/HermenegildoHit.mp3",
 				"timeToDie": 1,
 				"cadence": 0.5,
@@ -561,7 +561,7 @@
 			},
 			{
 				"type": "HermenegildoBehaviour",
-				"deathSound": "assets/sound/HermenegildoDeath.mp3",
+				"deathSound": "assets/sound/HermenegildoDeath.wav",
 				"hitSound": "assets/sound/HermenegildoHit.mp3",
 				"timeToDie": 1,
 				"cadence": 0.8,
@@ -608,7 +608,7 @@
 			},
 			{
 				"type": "CanutoBehaviour",
-				"deathSound": "assets/sound/HermenegildoDeath.mp3",
+				"deathSound": "assets/sound/HermenegildoDeath.wav",
 				"hitSound": "assets/sound/HermenegildoHit.mp3",
 				"timeToDie": 1,
 				"bottom" : 170,
@@ -655,7 +655,7 @@
 			},
 			{
 				"type": "CanutoBehaviour",
-				"deathSound": "assets/sound/HermenegildoDeath.mp3",
+				"deathSound": "assets/sound/HermenegildoDeath.wav",
 				"hitSound": "assets/sound/HermenegildoHit.mp3",
 				"timeToDie": 1,
 				"bottom" : 170,
