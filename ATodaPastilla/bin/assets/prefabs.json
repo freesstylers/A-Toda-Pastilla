@@ -104,7 +104,7 @@
 			{
 				"type": "Vida",
 				"vidaMax": 1,
-				"time": 8
+				"time": 12
 			},
 			{
 				"type": "ProjectileBehaviour"
