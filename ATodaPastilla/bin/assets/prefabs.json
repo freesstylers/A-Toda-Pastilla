@@ -316,6 +316,14 @@
 				"type": "VidaPlayer",
 				"invulnerabilityTime": 2,
 				"vidaMax": 2
+			},
+			{
+				"type": "ParticleSystem",
+				"name": "eutanasia",
+				"template": "Fairy",
+				"timeLimit" : 1,
+				"destroyOnTimeLimit": false,
+				"enabled" : "false"
 			}
 		]
 
@@ -392,8 +400,15 @@
 				"type": "VidaPlayer",
 				"invulnerabilityTime": 2,
 				"vidaMax": 2
+			},
+			{
+				"type": "ParticleSystem",
+				"name": "eutanasia",
+				"template": "Fairy",
+				"timeLimit" : 1,
+				"destroyOnTimeLImit": false,
+				"enabled" : "false"
 			}
-
 		]
 
 	},
@@ -427,10 +442,10 @@
 				"type": "RicibergaBehaviour",
 				"damage": 1,
 				"speed": 50,
-				"bottom": 170,
+				"bottom": 300,
 				"timeToDie": 1,
 				"hitSound": "assets/sound/RicibergaHit.mp3",
-				"deathSound": "assets/sound/RicibergaDeath.mp3",
+				"deathSound": "assets/sound/RicibergaDeath.wav",
 				"seeksPlayer": false,
 				"sinusoidalMovement": false,
 				"sinusoidalMagnitude": 50.0,
@@ -469,10 +484,10 @@
 				"type": "RicibergaBehaviour",
 				"damage": 1,
 				"speed": 50,
-				"bottom": 170,
+				"bottom": 300,
 				"timeToDie": 1,
 				"hitSound": "assets/sound/RicibergaHit.mp3",
-				"deathSound": "assets/sound/RicibergaDeath.mp3",
+				"deathSound": "assets/sound/RicibergaDeath.wav",
 				"seeksPlayer": false,
 				"sinusoidalMovement": true,
 				"sinusoidalMagnitude": 50.0,
@@ -514,7 +529,7 @@
 			},
 			{
 				"type": "HermenegildoBehaviour",
-				"deathSound": "assets/sound/HermenegildoDeath.mp3",
+				"deathSound": "assets/sound/HermenegildoDeath.wav",
 				"hitSound": "assets/sound/HermenegildoHit.mp3",
 				"timeToDie": 1,
 				"cadence": 0.5,
@@ -561,7 +576,7 @@
 			},
 			{
 				"type": "HermenegildoBehaviour",
-				"deathSound": "assets/sound/HermenegildoDeath.mp3",
+				"deathSound": "assets/sound/HermenegildoDeath.wav",
 				"hitSound": "assets/sound/HermenegildoHit.mp3",
 				"timeToDie": 1,
 				"cadence": 0.8,
@@ -608,15 +623,14 @@
 			},
 			{
 				"type": "CanutoBehaviour",
-				"deathSound": "assets/sound/HermenegildoDeath.mp3",
+				"deathSound": "assets/sound/HermenegildoDeath.wav",
 				"hitSound": "assets/sound/HermenegildoHit.mp3",
 				"timeToDie": 1,
-				"bottom" : 170,
+				"bottom" : 300,
 				"damage": 1,
-				"speed": 50,
-				"bulletSpeed": 60,
-				"minTimeBtwAtk": 6,
-				"maxTimeBtwAtk": 10
+				"speed": 35,
+				"minTimeBtwAtk": 3,
+				"maxTimeBtwAtk": 6
 			}
 
 		]
@@ -655,15 +669,14 @@
 			},
 			{
 				"type": "CanutoBehaviour",
-				"deathSound": "assets/sound/HermenegildoDeath.mp3",
+				"deathSound": "assets/sound/HermenegildoDeath.wav",
 				"hitSound": "assets/sound/HermenegildoHit.mp3",
 				"timeToDie": 1,
-				"bottom" : 170,
+				"bottom" : 300,
 				"damage": 1,
-				"speed": 50,
-				"bulletSpeed": 60,
-				"minTimeBtwAtk": 10,
-				"maxTimeBtwAtk": 14
+				"speed": 35,
+				"minTimeBtwAtk": 4,
+				"maxTimeBtwAtk": 8
 			}
 
 		]
@@ -934,7 +947,7 @@
 				"name": "Explosion",
 				"template": "Explosion",
 				"timeLimit" : 1.5,
-				"destroyOnTimeLImit": true
+				"destroyOnTimeLimit": true
 			}
 		]
 	}

@@ -70,7 +70,8 @@ void MejoraDisparo::OnCollision(Entity* ent)
 				}
 			}
 		}
-			getEntity()->setEnabled(false);
+
+		getEntity()->getScene()->deleteEntity(getEntity()->getName());
 	}
 }
 

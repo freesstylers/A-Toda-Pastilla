@@ -88,13 +88,15 @@ void ProjectileSpawner::calculateInaccuracy(Vector3& shot, float inaccuracy, flo
 {
 	float p = rand() % 100;
 	if (p < inaccuracy) {
+		float ang = rand() % 101 + 1;
+		ang = ang / 100.0 * inacDispersion;
 		float s = rand() % 100;
 		float side = 1;
 
 		if (s < 50)
 			side = -1;
 
-		rotateVector(shot, inacDispersion * side);
+		rotateVector(shot, ang * side);
 	}
 }
 
