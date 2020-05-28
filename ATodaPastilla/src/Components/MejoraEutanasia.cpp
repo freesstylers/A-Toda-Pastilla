@@ -32,7 +32,7 @@ void MejoraEutanasia::OnCollision(Entity* ent)
 {
 	if (ent->getTag() == "Player")
 	{	
-		ent->getComponent<ParticleSystem>("ParticleSystem")->setEnabled(true);
+		ent->getComponent<ParticleSystem>("ParticleSystem")->emit();
 		EventManager::getInstance()->EmitEvent("BombaUp");
 		std::cout << "Bomba eutanásica goes brrruummm" << std::endl;
 		getEntity()->getScene()->deleteEntity(getEntity()->getName());
