@@ -935,6 +935,14 @@
 			},
 			{
 				"type": "Shield"
+			},
+			{
+				"type": "ParticleSystem",
+				"name": "shield",
+				"template": "Spiral",
+				"timeLimit" : 0.5,
+				"destroyOnTimeLimit": false,
+				"enabled" : "false"
 			}
 		]
 	},

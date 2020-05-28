@@ -1,7 +1,7 @@
 #include "Components\Shield.h"
 #include "Entity/Entity.h"
 #include "Events/Event.h"
-
+#include "Graphics/ParticleSystem.h"
 
 #include "MotorCasaPaco.h"
 #include "Graphics/Mesh.h"
@@ -23,6 +23,7 @@ void Shield::update()
 		if (playerVida->GetVida() < 2) {
 			activo = false;
 			e_->getComponent<Mesh>("Mesh")->setEnabled(false);
+			e_->getComponent<ParticleSystem>("ParticleSystem")->emit();
 			EventManager::getInstance()->EmitEvent("EscudoDown");
 		}
 		else {
