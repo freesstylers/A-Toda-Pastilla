@@ -172,6 +172,7 @@
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\Components\CameraBehavior.cpp" />
     <ClCompile Include="..\src\Components\CanutoBehaviour.cpp" />
     <ClCompile Include="..\src\Components\ChangeSceneButtonComponent.cpp" />
     <ClCompile Include="..\src\Components\Danio.cpp" />
@@ -212,6 +213,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\include\Components\CameraBehavior.h" />
     <ClInclude Include="..\include\Components\CanutoBehaviour.h" />
     <ClInclude Include="..\include\Components\ChangeSceneButtonComponent.h" />
     <ClInclude Include="..\include\Components\Danio.h" />

@@ -34,6 +34,7 @@
     <ClCompile Include="..\src\Components\EutanasiaTexto.cpp" />
     <ClCompile Include="..\src\Components\Shield.cpp" />
     <ClCompile Include="..\src\Components\CanutoBehaviour.cpp" />
+    <ClCompile Include="..\src\Components\CameraBehavior.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Components\ChangeSceneButtonComponent.h" />
@@ -70,5 +71,6 @@
     <ClInclude Include="..\include\Components\EutanasiaTexto.h" />
     <ClInclude Include="..\include\Components\Shield.h" />
     <ClInclude Include="..\include\Components\CanutoBehaviour.h" />
+    <ClInclude Include="..\include\Components\CameraBehavior.h" />
   </ItemGroup>
 </Project>

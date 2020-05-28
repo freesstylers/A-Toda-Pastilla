@@ -38,6 +38,7 @@
 #include "Components/musicManager.h"
 #include "Components/EutanasiaTexto.h"
 #include "Components/Shield.h"
+#include "Components/CameraBehavior.h"
 
 MotorCasaPaco* motorCasaPaco;
 
@@ -295,6 +296,15 @@ public:
 	}
 };
 
+class CameraBehaviorFactory : public BaseFactory
+{
+public:
+	Component* createComponent(json& args) override
+	{
+		return new CameraBehavior(args);
+	}
+};
+
 void setupFactories()
 {
 	JsonFactoryParser* j = JsonFactoryParser::getInstance();
@@ -329,6 +339,7 @@ void setupFactories()
 	j->addFactory("MusicManager", new MusicManagerFactory());
 	j->addFactory("EutanasiaTexto", new EutanasiaTextoFactory());
 	j->addFactory("Shield", new ShieldFactory());
+	j->addFactory("CameraBehavior", new CameraBehaviorFactory());
 }
 
 #ifdef  _DEBUG
