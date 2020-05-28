@@ -90,19 +90,10 @@
 		},
 		{
 			"name": "Shield",
+			"prefab" : "Shield",
 			"position": [ 70, 25, -125 ],
 			"rotation": [ 0, 90, 0 ],
-			"scale": [ 20, 20, 20 ],
-			"components": [
-				{
-					"type": "Mesh",
-					"mesh": "Shield.mesh",
-					"material": "Shield"
-				},
-				{
-					"type": "Shield"
-				}
-			]
+			"scale": [ 20, 20, 20 ]
 		}
 	],
 
