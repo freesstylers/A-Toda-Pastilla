@@ -30,7 +30,7 @@ void Mejora::OnCollision(Entity* ent)
 {
 	if (ent->getTag() == "Player")
 	{
-		getEntity()->setEnabled(false);
+		getEntity()->getScene()->deleteEntity(getEntity()->getName());
 	}
 }
 
@@ -40,7 +40,7 @@ void Mejora::update()
 		Vector3(sin(MotorCasaPaco::getInstance()->getTime() * sinusoidalFrequency) * sinusoidalMagnitude, 0, movVertical) * MotorCasaPaco::getInstance()->DeltaTime());
 
 	if (e_->getComponent<Transform>("Transform")->getPosition().Z > 300) {
-		getEntity()->setEnabled(false);
+		getEntity()->getScene()->deleteEntity(getEntity()->getName());
 	}
 
 }
