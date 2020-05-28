@@ -626,10 +626,12 @@
 				"deathSound": "assets/sound/HermenegildoDeath.mp3",
 				"hitSound": "assets/sound/HermenegildoHit.mp3",
 				"timeToDie": 1,
+				"bottom" : 170,
 				"damage": 1,
-				"speed": 35,
-				"minTimeBtwAtk": 3,
-				"maxTimeBtwAtk": 6
+				"speed": 50,
+				"bulletSpeed": 60,
+				"minTimeBtwAtk": 6,
+				"maxTimeBtwAtk": 10
 			}
 
 		]
@@ -671,10 +673,12 @@
 				"deathSound": "assets/sound/HermenegildoDeath.mp3",
 				"hitSound": "assets/sound/HermenegildoHit.mp3",
 				"timeToDie": 1,
+				"bottom" : 170,
 				"damage": 1,
-				"speed": 35,
-				"minTimeBtwAtk": 4,
-				"maxTimeBtwAtk": 8
+				"speed": 50,
+				"bulletSpeed": 60,
+				"minTimeBtwAtk": 10,
+				"maxTimeBtwAtk": 14
 			}
 
 		]

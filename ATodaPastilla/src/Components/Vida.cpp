@@ -49,7 +49,7 @@ void Vida::sumaVida(int valor)
 	vida_ += valor;
 	if (vida_ >= vidaMax_)
 		vida_ = vidaMax_;
-	else if (vida_ <= 0&& !death_) {
+	else if (vida_ <= 0 && !death_) {
 		if (!customDeath_) {
 			EventManager::getInstance()->UnregisterListenerForAll(e_);
 			MotorCasaPaco::getInstance()->getSceneManager()->getCurrentScene()->deleteEntity(e_->getName());
