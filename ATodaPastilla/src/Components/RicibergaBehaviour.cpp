@@ -79,7 +79,7 @@ void RicibergaBehaviour::update()
 			direction = playerPos - pos;
 		}
 		else {
-			direction = Vector3(0, 0, bottom - pos.Z);
+			direction = Vector3(0, 0, 1);
 		}
 
 		direction = Vector3::Normalized(direction);
@@ -107,7 +107,6 @@ void RicibergaBehaviour::update()
 				}
 			}
 		}
-
 		if (e_->getComponent<Transform>("Transform")->getPosition().Z >= bottom) {
 			EventManager::getInstance()->UnregisterListenerForAll(e_);
 			MotorCasaPaco::getInstance()->getSceneManager()->getCurrentScene()->deleteEntity(e_->getName());

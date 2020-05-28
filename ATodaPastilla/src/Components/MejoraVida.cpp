@@ -39,7 +39,7 @@ void MejoraVida::OnCollision(Entity* ent)
 			
 			ent->getComponent<VidaPlayer>("VidaPlayer")->sumaVida(1);
 		}
-			getEntity()->setEnabled(false);
+		getEntity()->getScene()->deleteEntity(getEntity()->getName());
 	}
 }
 

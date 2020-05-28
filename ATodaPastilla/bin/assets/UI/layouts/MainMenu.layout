@@ -12,7 +12,7 @@
             <Property name="Area" value="{{0.939844,0},{0.0138889,0},{0.989844,0},{0.102778,0}}" />
         </Window>
         <Window type="A_Toda_Pastilla/Settings" name="Settings" >
-            <Property name="Area" value="{{0.180469,0},{0.716667,0},{0.250781,0},{0.841667,0}}" />
+            <Property name="Area" value="{{0.180469,0},{0.716667,0},{0.250782,0},{0.841667,0}}" />
         </Window>
         <Window type="GWEN/StaticText" name="Score" >
             <Property name="Area" value="{{0.105469,0},{0.0694444,0},{0.269531,0},{0.122222,0}}" />
@@ -21,17 +21,6 @@
             <Property name="FrameEnabled" value="false" />
             <Property name="HorzFormatting" value="CentreAligned" />
             <Property name="BackgroundEnabled" value="false" />
-            <AutoWindow namePath="__auto_hscrollbar__" >
-                <AutoWindow namePath="__auto_thumb__" >
-                    <Property name="MouseInputPropagationEnabled" value="true" />
-                </AutoWindow>
-            </AutoWindow>
-            <AutoWindow namePath="__auto_vscrollbar__" >
-                <Property name="VerticalScrollbar" value="true" />
-                <AutoWindow namePath="__auto_thumb__" >
-                    <Property name="MouseInputPropagationEnabled" value="true" />
-                </AutoWindow>
-            </AutoWindow>
         </Window>
         <Window type="GWEN/StaticImage" name="Cup" >
             <Property name="Area" value="{{0.0148437,0},{0.0152778,0},{0.0960937,0},{0.173611,0}}" />

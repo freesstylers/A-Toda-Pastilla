@@ -115,7 +115,7 @@
 			{
 				"type": "Vida",
 				"vidaMax": 1,
-				"time": 8
+				"time": 12
 			},
 			{
 				"type": "ProjectileBehaviour"
@@ -327,6 +327,14 @@
 				"type": "VidaPlayer",
 				"invulnerabilityTime": 2,
 				"vidaMax": 2
+			},
+			{
+				"type": "ParticleSystem",
+				"name": "eutanasia",
+				"template": "Fairy",
+				"timeLimit" : 1,
+				"destroyOnTimeLimit": false,
+				"enabled" : "false"
 			}
 		]
 
@@ -403,8 +411,15 @@
 				"type": "VidaPlayer",
 				"invulnerabilityTime": 2,
 				"vidaMax": 2
+			},
+			{
+				"type": "ParticleSystem",
+				"name": "eutanasia",
+				"template": "Fairy",
+				"timeLimit" : 1,
+				"destroyOnTimeLImit": false,
+				"enabled" : "false"
 			}
-
 		]
 
 	},
@@ -438,10 +453,10 @@
 				"type": "RicibergaBehaviour",
 				"damage": 1,
 				"speed": 50,
-				"bottom": 170,
+				"bottom": 300,
 				"timeToDie": 1,
 				"hitSound": "assets/sound/RicibergaHit.mp3",
-				"deathSound": "assets/sound/RicibergaDeath.mp3",
+				"deathSound": "assets/sound/RicibergaDeath.wav",
 				"seeksPlayer": false,
 				"sinusoidalMovement": false,
 				"sinusoidalMagnitude": 50.0,
@@ -472,7 +487,7 @@
 			},
 			{
 				"type": "VidaEnemigos",
-				"puntos": 500,
+				"puntos": 750,
 				"vidaMax": 3,
 				"customDeath": true
 			},
@@ -480,10 +495,10 @@
 				"type": "RicibergaBehaviour",
 				"damage": 1,
 				"speed": 50,
-				"bottom": 170,
+				"bottom": 300,
 				"timeToDie": 1,
 				"hitSound": "assets/sound/RicibergaHit.mp3",
-				"deathSound": "assets/sound/RicibergaDeath.mp3",
+				"deathSound": "assets/sound/RicibergaDeath.wav",
 				"seeksPlayer": false,
 				"sinusoidalMovement": true,
 				"sinusoidalMagnitude": 50.0,
@@ -515,7 +530,7 @@
 			},
 			{
 				"type": "VidaEnemigos",
-				"puntos": 500,
+				"puntos": 2000,
 				"vidaMax": 5,
 				"customDeath": true
 			},
@@ -525,7 +540,7 @@
 			},
 			{
 				"type": "HermenegildoBehaviour",
-				"deathSound": "assets/sound/HermenegildoDeath.mp3",
+				"deathSound": "assets/sound/HermenegildoDeath.wav",
 				"hitSound": "assets/sound/HermenegildoHit.mp3",
 				"timeToDie": 1,
 				"cadence": 0.5,
@@ -562,7 +577,7 @@
 			},
 			{
 				"type": "VidaEnemigos",
-				"puntos": 500,
+				"puntos": 3000,
 				"vidaMax": 5,
 				"customDeath": true
 			},
@@ -572,7 +587,7 @@
 			},
 			{
 				"type": "HermenegildoBehaviour",
-				"deathSound": "assets/sound/HermenegildoDeath.mp3",
+				"deathSound": "assets/sound/HermenegildoDeath.wav",
 				"hitSound": "assets/sound/HermenegildoHit.mp3",
 				"timeToDie": 1,
 				"cadence": 0.8,
@@ -609,7 +624,7 @@
 			},
 			{
 				"type": "VidaEnemigos",
-				"puntos": 500,
+				"puntos": 1000,
 				"vidaMax": 5,
 				"customDeath": true
 			},
@@ -619,9 +634,10 @@
 			},
 			{
 				"type": "CanutoBehaviour",
-				"deathSound": "assets/sound/HermenegildoDeath.mp3",
+				"deathSound": "assets/sound/HermenegildoDeath.wav",
 				"hitSound": "assets/sound/HermenegildoHit.mp3",
 				"timeToDie": 1,
+				"bottom" : 300,
 				"damage": 1,
 				"speed": 35,
 				"minTimeBtwAtk": 3,
@@ -654,7 +670,7 @@
 			},
 			{
 				"type": "VidaEnemigos",
-				"puntos": 500,
+				"puntos": 1500,
 				"vidaMax": 5,
 				"customDeath": true
 			},
@@ -664,9 +680,10 @@
 			},
 			{
 				"type": "CanutoBehaviour",
-				"deathSound": "assets/sound/HermenegildoDeath.mp3",
+				"deathSound": "assets/sound/HermenegildoDeath.wav",
 				"hitSound": "assets/sound/HermenegildoHit.mp3",
 				"timeToDie": 1,
+				"bottom" : 300,
 				"damage": 1,
 				"speed": 35,
 				"minTimeBtwAtk": 4,
@@ -929,6 +946,14 @@
 			},
 			{
 				"type": "Shield"
+			},
+			{
+				"type": "ParticleSystem",
+				"name": "shield",
+				"template": "Spiral",
+				"timeLimit" : 0.5,
+				"destroyOnTimeLimit": false,
+				"enabled" : "false"
 			}
 		]
 	},
@@ -941,7 +966,7 @@
 				"name": "Explosion",
 				"template": "Explosion",
 				"timeLimit" : 1.5,
-				"destroyOnTimeLImit": true
+				"destroyOnTimeLimit": true
 			}
 		]
 	}

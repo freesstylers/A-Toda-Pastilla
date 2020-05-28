@@ -32,7 +32,8 @@ bool EutanasiaTexto::ReceiveEvent(Event& event)
 	{
 		bombazo = true;
 		e_->getComponent<Mesh>("Mesh")->setEnabled(true);
-		MotorCasaPaco::getInstance()->getAudioManager()->playMusic("assets/sound/ExplosionEutanasica.wav", 3, false);
+		MotorCasaPaco::getInstance()->getAudioManager()->playMusic("assets/sound/AvisoEutanasia.wav", 3, false);
+		MotorCasaPaco::getInstance()->getAudioManager()->setVolume(0.2,3);
 	}
 	return false;
 }

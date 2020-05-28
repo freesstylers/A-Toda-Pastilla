@@ -20,9 +20,12 @@ private:
 	float ticks = 0;
 
 	float iniX_ = 0;
+	float iniZ_ = 0;
 	bool start_ = false;
 
-	float x_ = 0;
+	int n = 0;
+
+	std::vector<float> x_;
 	float t_ = 0;
 };
 

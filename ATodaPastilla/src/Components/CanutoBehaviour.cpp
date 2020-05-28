@@ -6,6 +6,8 @@
 #include "Components/ProjectileBehaviour.h"
 #include "MotorCasaPaco.h"
 #include "Scene/SceneManager.h"
+#include "Entity/Entity.h"
+#include "Entity/Transform.h"
 #include "Components/EnemySpawner.h"
 
 CanutoBehaviour::CanutoBehaviour(json& args) :EnemyBehaviour(args)
@@ -17,7 +19,12 @@ void CanutoBehaviour::init(json& j)
 {
 	deathSound = "";
 	hitSound = "";
-
+	if (!j["bottom"].is_null()) {
+		bottom = j["bottom"];
+	}
+	if (!j["bulletSpeed"].is_null()) {
+		bulletSpeed = j["bulletSpeed"];
+	}
 	if (!j["minTimeBtwAtk"].is_null()) {
 		minTimeBtwAtk = j["minTimeBtwAtk"];
 	}
@@ -52,6 +59,7 @@ void CanutoBehaviour::start()
 	float x = (rand() % 101) / 100.0;
 	timeBetweenAttacks = minTimeBtwAtk + (maxTimeBtwAtk - minTimeBtwAtk) * x;
 	timeSinceLastAttack = timeBetweenAttacks * 0.9;
+	awayFromSpawn = false;
 }
 
 void CanutoBehaviour::update()
@@ -59,12 +67,26 @@ void CanutoBehaviour::update()
 	if (!e_->getComponent<VidaEnemigos>("VidaEnemigos")->isDead()) {
 		if (prSpawner != nullptr) {
 			if (timeSinceLastAttack >= timeBetweenAttacks / statMult) {
-				prSpawner->spawnProjectiles(Vector3(0, 0, 15), Vector3(0, 0, 1), speed * statMult, 1, damage);
+				prSpawner->spawnProjectiles(Vector3(0, 0, 25), Vector3(0, 0, 1), bulletSpeed * statMult, 1, damage);
 				float x = (rand() % 101) / 100.0;
 				timeBetweenAttacks = minTimeBtwAtk + (maxTimeBtwAtk - minTimeBtwAtk) * x;
 				timeSinceLastAttack = 0;
 			}
 			timeSinceLastAttack += MotorCasaPaco::getInstance()->DeltaTime();
+			
+		}
+		Vector3 direction;
+		Vector3 position = getEntity()->getComponent<Transform>("Transform")->getPosition();
+		direction = Vector3(0, 0, 1);
+		e_->getComponent<Transform>("Transform")->setPosition(e_->getComponent<Transform>("Transform")->getPosition() + direction * speed * statMult * MotorCasaPaco::getInstance()->DeltaTime());
+		
+		if(Vector3::Magnitude((e_->getComponent<Transform>("Transform")->getPosition() - spawnPosition)) >= 80) {
+			if (!awayFromSpawn) {
+				EnemyBehaviour::OnDeath();
+				awayFromSpawn = true;
+			}
+		}
+		else {
 			std::list<Entity*> l = MotorCasaPaco::getInstance()->getSceneManager()->getCurrentScene()->getEntitiesByTag("EnemySpawner");
 			if (!l.empty()) {
 				Entity* spawner = (*l.begin());
@@ -72,6 +94,10 @@ void CanutoBehaviour::update()
 					spawner->getComponent<EnemySpawner>("EnemySpawner")->setPosUsed(spawnIndx, true);
 				}
 			}
+		}
+		if (position.Z >= bottom) {
+			EventManager::getInstance()->UnregisterListenerForAll(e_);
+			MotorCasaPaco::getInstance()->getSceneManager()->getCurrentScene()->deleteEntity(e_->getName());
 		}
 	}
 	else {
