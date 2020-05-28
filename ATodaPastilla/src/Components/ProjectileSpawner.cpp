@@ -62,7 +62,7 @@ void ProjectileSpawner::spawnEutanasia()
 
 	bomba->setTag("Bomba");
 	bomba->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->setDir(dir);
-	bomba->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->setSpeed(50);
+	bomba->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->setSpeed(100);
 	bomba->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->setDamage(100);
 	bomba->getComponent<ProjectileBehaviour>("ProjectileBehaviour")->setSource(getEntity()->getTag());
 }
