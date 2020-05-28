@@ -320,9 +320,9 @@
 			{
 				"type": "ParticleSystem",
 				"name": "eutanasia",
-				"template": "Cross",
-				"timeLimit" : 2.5,
-				"destroyOnTimeLImit": false,
+				"template": "Fairy",
+				"timeLimit" : 1,
+				"destroyOnTimeLimit": false,
 				"enabled" : "false"
 			}
 		]
@@ -404,8 +404,8 @@
 			{
 				"type": "ParticleSystem",
 				"name": "eutanasia",
-				"template": "Cross",
-				"timeLimit" : 2.5,
+				"template": "Fairy",
+				"timeLimit" : 1,
 				"destroyOnTimeLImit": false,
 				"enabled" : "false"
 			}
@@ -626,12 +626,10 @@
 				"deathSound": "assets/sound/HermenegildoDeath.mp3",
 				"hitSound": "assets/sound/HermenegildoHit.mp3",
 				"timeToDie": 1,
-				"bottom" : 170,
 				"damage": 1,
-				"speed": 50,
-				"bulletSpeed": 60,
-				"minTimeBtwAtk": 6,
-				"maxTimeBtwAtk": 10
+				"speed": 35,
+				"minTimeBtwAtk": 3,
+				"maxTimeBtwAtk": 6
 			}
 
 		]
@@ -673,12 +671,10 @@
 				"deathSound": "assets/sound/HermenegildoDeath.mp3",
 				"hitSound": "assets/sound/HermenegildoHit.mp3",
 				"timeToDie": 1,
-				"bottom" : 170,
 				"damage": 1,
-				"speed": 50,
-				"bulletSpeed": 60,
-				"minTimeBtwAtk": 10,
-				"maxTimeBtwAtk": 14
+				"speed": 35,
+				"minTimeBtwAtk": 4,
+				"maxTimeBtwAtk": 8
 			}
 
 		]
@@ -949,7 +945,7 @@
 				"name": "Explosion",
 				"template": "Explosion",
 				"timeLimit" : 1.5,
-				"destroyOnTimeLImit": true
+				"destroyOnTimeLimit": true
 			}
 		]
 	}
