@@ -21,6 +21,17 @@
             <Property name="FrameEnabled" value="false" />
             <Property name="HorzFormatting" value="CentreAligned" />
             <Property name="BackgroundEnabled" value="false" />
+            <AutoWindow namePath="__auto_hscrollbar__" >
+                <AutoWindow namePath="__auto_thumb__" >
+                    <Property name="MouseInputPropagationEnabled" value="true" />
+                </AutoWindow>
+            </AutoWindow>
+            <AutoWindow namePath="__auto_vscrollbar__" >
+                <Property name="VerticalScrollbar" value="true" />
+                <AutoWindow namePath="__auto_thumb__" >
+                    <Property name="MouseInputPropagationEnabled" value="true" />
+                </AutoWindow>
+            </AutoWindow>
         </Window>
         <Window type="GWEN/StaticImage" name="Cup" >
             <Property name="Area" value="{{0.0148437,0},{0.0152778,0},{0.0960937,0},{0.173611,0}}" />
@@ -38,6 +49,13 @@
         <Window type="GWEN/StaticImage" name="Logo" >
             <Property name="Area" value="{{0.40625,0},{0.0208333,0},{0.626562,0},{0.188889,0}}" />
             <Property name="Image" value="A_Toda_Pastilla/Logo" />
+            <Property name="MaxSize" value="{{1,0},{1,0}}" />
+            <Property name="FrameEnabled" value="false" />
+            <Property name="BackgroundEnabled" value="false" />
+        </Window>
+        <Window type="GWEN/StaticImage" name="Logo2" >
+            <Property name="Area" value="{{0.40625,431},{0.0208333,461},{0.626562,431},{0.188889,549}}" />
+            <Property name="Image" value="A_Toda_Pastilla/Tutorial" />
             <Property name="MaxSize" value="{{1,0},{1,0}}" />
             <Property name="FrameEnabled" value="false" />
             <Property name="BackgroundEnabled" value="false" />
