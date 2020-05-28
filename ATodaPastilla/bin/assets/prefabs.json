@@ -461,7 +461,7 @@
 			},
 			{
 				"type": "VidaEnemigos",
-				"puntos": 500,
+				"puntos": 750,
 				"vidaMax": 3,
 				"customDeath": true
 			},
@@ -504,7 +504,7 @@
 			},
 			{
 				"type": "VidaEnemigos",
-				"puntos": 500,
+				"puntos": 2000,
 				"vidaMax": 5,
 				"customDeath": true
 			},
@@ -551,7 +551,7 @@
 			},
 			{
 				"type": "VidaEnemigos",
-				"puntos": 500,
+				"puntos": 3000,
 				"vidaMax": 5,
 				"customDeath": true
 			},
@@ -598,7 +598,7 @@
 			},
 			{
 				"type": "VidaEnemigos",
-				"puntos": 500,
+				"puntos": 1000,
 				"vidaMax": 5,
 				"customDeath": true
 			},
@@ -645,7 +645,7 @@
 			},
 			{
 				"type": "VidaEnemigos",
-				"puntos": 500,
+				"puntos": 1500,
 				"vidaMax": 5,
 				"customDeath": true
 			},

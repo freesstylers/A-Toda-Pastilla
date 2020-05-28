@@ -19,11 +19,17 @@ void CameraBehavior::init(json& j)
 	if (!j["time"].is_null()) {
 		t_ = j["time"];
 	}
-	if (!j["intensity"].is_null()) {
-		x_ = j["intensity"];
+	if (!j["intensity"].is_null() && j["intensity"].is_array()) {
+		for (int i = 0; i < j["intensity"].size(); i++) {
+			x_.push_back(j["intensity"][i]);
+		}
+		//x_ = j["intensity"];
 	}
 
-	EventManager::getInstance()->RegisterListener(e_, "EnemyDeath");
+	//EventManager::getInstance()->RegisterListener(e_, "EnemyDeath");
+	EventManager::getInstance()->RegisterListener(e_, "Hit");
+	EventManager::getInstance()->RegisterListener(e_, "MejoraDisparo1");
+	EventManager::getInstance()->RegisterListener(e_, "MejoraDisparo2");
 }
 
 void CameraBehavior::update()
@@ -36,8 +42,16 @@ void CameraBehavior::update()
 
 bool CameraBehavior::ReceiveEvent(Event& event)
 {
-	if (event.type == "EnemyDeath") {
+	/*if (event.type == "EnemyDeath") {
 		start_ = true;
+	} else*/ if (event.type == "Hit") {
+		start_ = true;
+	}
+	else if (event.type == "MejoraDisparo1") {
+		n = 1;
+	}
+	else if (event.type == "MejoraDisparo2") {
+		n = 2;
 	}
 
 	return false;
@@ -46,22 +60,24 @@ bool CameraBehavior::ReceiveEvent(Event& event)
 void CameraBehavior::vibrar()
 {
 	float aux;
-	//Parece que no hay vibracion
+	float aux1;
 	if (ticks < t_/4.0) {
-		aux = (x_ * ticks) / (t_ / 4.0);
+		aux = (x_[n] * ticks) / (t_ / 4.0);
 		e_->getTransform()->setPosition(Vector3(aux, e_->getTransform()->getPosition().Y, 0.0));
 	}
 	else if (ticks < t_ / 2.0) {
-		aux = x_ - (x_ * ticks) / (t_ / 2.0);
-		e_->getTransform()->setPosition(Vector3(aux, e_->getTransform()->getPosition().Y, 0.0));
+		aux = x_[n] - (x_[n] * ticks) / (t_ / 2.0);
+		aux1 = (-x_[n] * ticks) / (t_ / 4.0);
+		e_->getTransform()->setPosition(Vector3(aux, e_->getTransform()->getPosition().Y, aux1));
 	}
 	else if (ticks < 3.0*t_ / 4.0) {
-		aux = (-x_ * ticks) / (t_ / 4.0);
-		e_->getTransform()->setPosition(Vector3(aux, e_->getTransform()->getPosition().Y, 0.0));
+		aux = (-x_[n] * ticks) / (t_ / 4.0);
+		aux1 = x_[n] - (x_[n] * ticks) / (t_ / 2.0);
+		e_->getTransform()->setPosition(Vector3(aux, e_->getTransform()->getPosition().Y, aux1));
 	}
 	else if (ticks < t_ ) {
-		aux = -x_ + (x_ * ticks) / (t_ / 4.0);
-		e_->getTransform()->setPosition(Vector3(aux, e_->getTransform()->getPosition().Y, 0.0));		
+		aux = -x_[n] + (x_[n] * ticks) / (t_ / 4.0);
+		e_->getTransform()->setPosition(Vector3(aux, e_->getTransform()->getPosition().Y, aux));
 	}
 	else {
 		e_->getTransform()->setPosition(Vector3(iniX_, e_->getTransform()->getPosition().Y, 0.0));
