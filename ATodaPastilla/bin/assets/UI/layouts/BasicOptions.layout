@@ -13,24 +13,6 @@
             <Property name="BackgroundEnabled" value="false" />
             <Property name="RiseOnClickEnabled" value="false" />
         </Window>
-        <Window type="GWEN/StaticImage" name="Image_Selector_4" >
-            <Property name="Area" value="{{0.659375,0},{0.577778,0},{0.901563,0},{0.647222,0}}" />
-            <Property name="Text" value="Sincronizacion vertical" />
-            <Property name="Image" value="GWEN/Input.Button.Normal.Middle.Middle" />
-            <Property name="MaxSize" value="{{1,0},{1,0}}" />
-            <Property name="FrameEnabled" value="false" />
-            <Property name="BackgroundEnabled" value="false" />
-            <Property name="RiseOnClickEnabled" value="false" />
-        </Window>
-        <Window type="GWEN/StaticImage" name="Image_Selector_3" >
-            <Property name="Area" value="{{0.659375,0},{0.438889,0},{0.901563,0},{0.508333,0}}" />
-            <Property name="Text" value="Sincronizacion vertical" />
-            <Property name="Image" value="GWEN/Input.Button.Normal.Middle.Middle" />
-            <Property name="MaxSize" value="{{1,0},{1,0}}" />
-            <Property name="FrameEnabled" value="false" />
-            <Property name="BackgroundEnabled" value="false" />
-            <Property name="RiseOnClickEnabled" value="false" />
-        </Window>
         <Window type="GWEN/StaticImage" name="Image_Selector_2" >
             <Property name="Area" value="{{0.659375,0},{0.306944,0},{0.901563,0},{0.376388,0}}" />
             <Property name="Text" value="Sincronizacion vertical" />
@@ -43,22 +25,6 @@
         <Window type="GWEN/StaticImage" name="Image_Selector_1" >
             <Property name="Area" value="{{0.659375,0},{0.181945,0},{0.901563,0},{0.251389,0}}" />
             <Property name="Text" value="Sincronizacion vertical" />
-            <Property name="Image" value="GWEN/Input.Button.Normal.Middle.Middle" />
-            <Property name="MaxSize" value="{{1,0},{1,0}}" />
-            <Property name="FrameEnabled" value="false" />
-            <Property name="BackgroundEnabled" value="false" />
-            <Property name="RiseOnClickEnabled" value="false" />
-        </Window>
-        <Window type="GWEN/StaticImage" name="Image_Option_4" >
-            <Property name="Area" value="{{0.0539063,0},{0.577778,0},{0.546094,0},{0.647222,0}}" />
-            <Property name="Image" value="GWEN/Input.Button.Normal.Middle.Middle" />
-            <Property name="MaxSize" value="{{1,0},{1,0}}" />
-            <Property name="FrameEnabled" value="false" />
-            <Property name="BackgroundEnabled" value="false" />
-            <Property name="RiseOnClickEnabled" value="false" />
-        </Window>
-        <Window type="GWEN/StaticImage" name="Image_Option_3" >
-            <Property name="Area" value="{{0.0539063,0},{0.438889,0},{0.546094,0},{0.508333,0}}" />
             <Property name="Image" value="GWEN/Input.Button.Normal.Middle.Middle" />
             <Property name="MaxSize" value="{{1,0},{1,0}}" />
             <Property name="FrameEnabled" value="false" />
@@ -99,24 +65,17 @@
             <Property name="HorzFormatting" value="CentreAligned" />
             <Property name="BackgroundEnabled" value="false" />
             <Property name="RiseOnClickEnabled" value="false" />
-        </Window>
-        <Window type="GWEN/StaticText" name="Text_Selector_4" >
-            <Property name="Area" value="{{0.659375,0},{0.577778,0},{0.901563,0},{0.645834,0}}" />
-            <Property name="Text" value="si" />
-            <Property name="MaxSize" value="{{1,0},{1,0}}" />
-            <Property name="FrameEnabled" value="false" />
-            <Property name="HorzFormatting" value="CentreAligned" />
-            <Property name="BackgroundEnabled" value="false" />
-            <Property name="RiseOnClickEnabled" value="false" />
-        </Window>
-        <Window type="GWEN/StaticText" name="Text_Selector_3" >
-            <Property name="Area" value="{{0.659375,0},{0.438889,0},{0.901563,0},{0.506944,0}}" />
-            <Property name="Text" value="SI" />
-            <Property name="MaxSize" value="{{1,0},{1,0}}" />
-            <Property name="FrameEnabled" value="false" />
-            <Property name="HorzFormatting" value="CentreAligned" />
-            <Property name="BackgroundEnabled" value="false" />
-            <Property name="RiseOnClickEnabled" value="false" />
+            <AutoWindow namePath="__auto_hscrollbar__" >
+                <AutoWindow namePath="__auto_thumb__" >
+                    <Property name="MouseInputPropagationEnabled" value="true" />
+                </AutoWindow>
+            </AutoWindow>
+            <AutoWindow namePath="__auto_vscrollbar__" >
+                <Property name="VerticalScrollbar" value="true" />
+                <AutoWindow namePath="__auto_thumb__" >
+                    <Property name="MouseInputPropagationEnabled" value="true" />
+                </AutoWindow>
+            </AutoWindow>
         </Window>
         <Window type="GWEN/StaticText" name="Text_Selector_2" >
             <Property name="Area" value="{{0.659375,0},{0.306944,0},{0.901563,0},{0.375,0}}" />
@@ -126,6 +85,17 @@
             <Property name="HorzFormatting" value="CentreAligned" />
             <Property name="BackgroundEnabled" value="false" />
             <Property name="RiseOnClickEnabled" value="false" />
+            <AutoWindow namePath="__auto_hscrollbar__" >
+                <AutoWindow namePath="__auto_thumb__" >
+                    <Property name="MouseInputPropagationEnabled" value="true" />
+                </AutoWindow>
+            </AutoWindow>
+            <AutoWindow namePath="__auto_vscrollbar__" >
+                <Property name="VerticalScrollbar" value="true" />
+                <AutoWindow namePath="__auto_thumb__" >
+                    <Property name="MouseInputPropagationEnabled" value="true" />
+                </AutoWindow>
+            </AutoWindow>
         </Window>
         <Window type="GWEN/StaticText" name="Text_Selector_1" >
             <Property name="Area" value="{{0.659375,0},{0.181945,0},{0.901563,0},{0.25,0}}" />
@@ -135,24 +105,17 @@
             <Property name="HorzFormatting" value="CentreAligned" />
             <Property name="BackgroundEnabled" value="false" />
             <Property name="RiseOnClickEnabled" value="false" />
-        </Window>
-        <Window type="GWEN/StaticText" name="Text_Option_4" >
-            <Property name="Area" value="{{0.0539063,0},{0.577778,0},{0.545313,0},{0.645834,0}}" />
-            <Property name="Text" value="invertir eje y" />
-            <Property name="MaxSize" value="{{1,0},{1,0}}" />
-            <Property name="FrameEnabled" value="false" />
-            <Property name="HorzFormatting" value="CentreAligned" />
-            <Property name="BackgroundEnabled" value="false" />
-            <Property name="RiseOnClickEnabled" value="false" />
-        </Window>
-        <Window type="GWEN/StaticText" name="Text_Option_3" >
-            <Property name="Area" value="{{0.0546875,0},{0.438889,0},{0.544531,0},{0.508333,0}}" />
-            <Property name="Text" value="invertir eje x" />
-            <Property name="MaxSize" value="{{1,0},{1,0}}" />
-            <Property name="FrameEnabled" value="false" />
-            <Property name="HorzFormatting" value="CentreAligned" />
-            <Property name="BackgroundEnabled" value="false" />
-            <Property name="RiseOnClickEnabled" value="false" />
+            <AutoWindow namePath="__auto_hscrollbar__" >
+                <AutoWindow namePath="__auto_thumb__" >
+                    <Property name="MouseInputPropagationEnabled" value="true" />
+                </AutoWindow>
+            </AutoWindow>
+            <AutoWindow namePath="__auto_vscrollbar__" >
+                <Property name="VerticalScrollbar" value="true" />
+                <AutoWindow namePath="__auto_thumb__" >
+                    <Property name="MouseInputPropagationEnabled" value="true" />
+                </AutoWindow>
+            </AutoWindow>
         </Window>
         <Window type="GWEN/StaticText" name="Text_Option_2" >
             <Property name="Area" value="{{0.053125,0},{0.306945,0},{0.545313,0},{0.376389,0}}" />
@@ -162,6 +125,17 @@
             <Property name="HorzFormatting" value="CentreAligned" />
             <Property name="BackgroundEnabled" value="false" />
             <Property name="RiseOnClickEnabled" value="false" />
+            <AutoWindow namePath="__auto_hscrollbar__" >
+                <AutoWindow namePath="__auto_thumb__" >
+                    <Property name="MouseInputPropagationEnabled" value="true" />
+                </AutoWindow>
+            </AutoWindow>
+            <AutoWindow namePath="__auto_vscrollbar__" >
+                <Property name="VerticalScrollbar" value="true" />
+                <AutoWindow namePath="__auto_thumb__" >
+                    <Property name="MouseInputPropagationEnabled" value="true" />
+                </AutoWindow>
+            </AutoWindow>
         </Window>
         <Window type="GWEN/StaticText" name="Text_Option_1" >
             <Property name="Area" value="{{0.053125,0},{0.181945,0},{0.546094,0},{0.248611,0}}" />
@@ -171,6 +145,17 @@
             <Property name="HorzFormatting" value="CentreAligned" />
             <Property name="BackgroundEnabled" value="false" />
             <Property name="RiseOnClickEnabled" value="false" />
+            <AutoWindow namePath="__auto_hscrollbar__" >
+                <AutoWindow namePath="__auto_thumb__" >
+                    <Property name="MouseInputPropagationEnabled" value="true" />
+                </AutoWindow>
+            </AutoWindow>
+            <AutoWindow namePath="__auto_vscrollbar__" >
+                <Property name="VerticalScrollbar" value="true" />
+                <AutoWindow namePath="__auto_thumb__" >
+                    <Property name="MouseInputPropagationEnabled" value="true" />
+                </AutoWindow>
+            </AutoWindow>
         </Window>
         <Window type="GWEN/Button" name="GraphicOptions" >
             <Property name="Area" value="{{0.296876,0},{0.730556,0},{0.702345,0},{0.825,0}}" />
@@ -191,12 +176,6 @@
         <Window type="A_Toda_Pastilla/RightArrow" name="RightArrow_1" >
             <Property name="Area" value="{{0.913281,0},{0.181945,0},{0.952344,0},{0.251389,0}}" />
         </Window>
-        <Window type="A_Toda_Pastilla/RightArrow" name="RightArrow_4" >
-            <Property name="Area" value="{{0.913281,0},{0.577778,0},{0.952344,0},{0.647222,0}}" />
-        </Window>
-        <Window type="A_Toda_Pastilla/RightArrow" name="RightArrow_3" >
-            <Property name="Area" value="{{0.913281,0},{0.438889,0},{0.952344,0},{0.508333,0}}" />
-        </Window>
         <Window type="A_Toda_Pastilla/RightArrow" name="RightArrow_2" >
             <Property name="Area" value="{{0.913281,0},{0.306944,0},{0.952344,0},{0.376388,0}}" />
         </Window>
@@ -205,12 +184,6 @@
         </Window>
         <Window type="A_Toda_Pastilla/LeftArrow" name="LeftArrow_2" >
             <Property name="Area" value="{{0.604688,0},{0.306944,0},{0.64375,0},{0.376388,0}}" />
-        </Window>
-        <Window type="A_Toda_Pastilla/LeftArrow" name="LeftArrow_3" >
-            <Property name="Area" value="{{0.604688,0},{0.438889,0},{0.64375,0},{0.508333,0}}" />
-        </Window>
-        <Window type="A_Toda_Pastilla/LeftArrow" name="LeftArrow_4" >
-            <Property name="Area" value="{{0.604688,0},{0.577778,0},{0.64375,0},{0.647222,0}}" />
         </Window>
     </Window>
 </GUILayout>
