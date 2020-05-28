@@ -23,16 +23,22 @@ SpawnerMejora::~SpawnerMejora()
 void SpawnerMejora::update()
 {
 	if (timeSinceLastSpawn >= timeToSpawn) {
-		randomMejora = (rand() % 3);
+		randomMejora = (rand() % 5);
 		switch (randomMejora)
 		{
 		case 0:
 			spawnEntity(Vector3(150, e_->getComponent<Transform>("Transform")->getPosition().Y, -250), 0.0, "MejoraDisparo");
 			break;
-		case 1:
+		case 1 :
 			spawnEntity(Vector3(-150, e_->getComponent<Transform>("Transform")->getPosition().Y, -250), 0.0, "MejoraVida");
 			break;
 		case 2:
+			spawnEntity(Vector3(-150, e_->getComponent<Transform>("Transform")->getPosition().Y, -250), 0.0, "MejoraVida");
+			break;
+		case 3:
+			spawnEntity(Vector3(-0, e_->getComponent<Transform>("Transform")->getPosition().Y, -250), 0.0, "MejoraEutanasia");
+			break;
+		case 4:
 			spawnEntity(Vector3(-0, e_->getComponent<Transform>("Transform")->getPosition().Y, -250), 0.0, "MejoraEutanasia");
 			break;
 		default:
