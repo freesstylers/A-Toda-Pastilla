@@ -30,6 +30,9 @@ void CameraBehavior::init(json& j)
 	EventManager::getInstance()->RegisterListener(e_, "Hit");
 	EventManager::getInstance()->RegisterListener(e_, "MejoraDisparo1");
 	EventManager::getInstance()->RegisterListener(e_, "MejoraDisparo2");
+
+	iniX_ = e_->getTransform()->getPosition().Z;
+	iniZ_ = e_->getTransform()->getPosition().X;
 }
 
 void CameraBehavior::update()
@@ -80,7 +83,7 @@ void CameraBehavior::vibrar()
 		e_->getTransform()->setPosition(Vector3(aux, e_->getTransform()->getPosition().Y, aux));
 	}
 	else {
-		e_->getTransform()->setPosition(Vector3(iniX_, e_->getTransform()->getPosition().Y, 0.0));
+		e_->getTransform()->setPosition(Vector3(iniX_, e_->getTransform()->getPosition().Y, iniZ_));
 		ticks = 0;
 		start_ = false;
 	}
