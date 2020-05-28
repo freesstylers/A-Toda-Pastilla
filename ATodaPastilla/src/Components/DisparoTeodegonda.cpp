@@ -528,7 +528,7 @@ void DisparoTeodegonda::update()
 		fireBurst();
 		timeCharged = 0;
 	}
-	if (MotorCasaPaco::getInstance()->getInputManager()->GameControllerIsButtonDown(CONTROLLER_BUTTON_RIGHTSHOULDER) && GameManager::getInstance()->isBombActive())
+	if (MotorCasaPaco::getInstance()->getInputManager()->GameControllerIsButtonDown(CONTROLLER_BUTTON_B) && GameManager::getInstance()->isBombActive())
 	{
 		timeSinceLastShot = 0;
 		spawnEutanasia();
