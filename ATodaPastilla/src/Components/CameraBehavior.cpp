@@ -37,7 +37,6 @@ void CameraBehavior::update()
 bool CameraBehavior::ReceiveEvent(Event& event)
 {
 	if (event.type == "EnemyDeath") {
-		//e_->getTransform()->setPosition(Vector3(400, e_->getTransform()->getPosition().Y, 0.0));
 		start_ = true;
 	}
 
@@ -69,5 +68,4 @@ void CameraBehavior::vibrar()
 		ticks = 0;
 		start_ = false;
 	}
-	//std::cout << aux << " " << ticks << "\n";
 }
