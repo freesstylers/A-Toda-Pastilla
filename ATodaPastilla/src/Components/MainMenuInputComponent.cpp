@@ -20,7 +20,7 @@ bool MainMenuInputComponent::functionPlay(const CEGUI::EventArgs& e)
 	EventManager::getInstance()->EmitEvent(evt);
 
 	MotorCasaPaco::getInstance()->changeScene(sceneToLoad);
-	AudioManager::getInstance()->playMusic("assets/sound/buttonSound.mp3", 0, false);
+	AudioManager::getInstance()->playMusic("assets/sound/buttonSound.mp3", 2, false);
 	MotorCasaPaco::getInstance()->getGUI_Manager()->getInstance()->hideMouseCursor();
 	return true;
 }
