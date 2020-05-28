@@ -7,6 +7,7 @@
 #include "Input/InputManager.h"
 #include "Input/PacoKeys.h"
 #include <string>
+#include "checkML.h"
 
 EntitySpawner::EntitySpawner(json& args):Component(args)
 {

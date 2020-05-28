@@ -3,6 +3,8 @@
 #include "Audio/AudioManager.h"
 #include "Input/InputManager.h"
 #include "Components/GameManager.h"
+#include "checkML.h"
+
 MainMenuInputComponent::MainMenuInputComponent(json& args): Component(args)
 {
 

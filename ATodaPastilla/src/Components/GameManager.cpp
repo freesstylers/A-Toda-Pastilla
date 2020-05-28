@@ -7,6 +7,7 @@
 #include <iostream>
 #include <fstream>
 #include "Input/InputManager.h"
+#include "checkML.h"
 
 GameManager* GameManager::instance = 0;
 

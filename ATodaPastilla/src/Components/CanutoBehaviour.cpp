@@ -9,6 +9,7 @@
 #include "Entity/Entity.h"
 #include "Entity/Transform.h"
 #include "Components/EnemySpawner.h"
+#include "checkML.h"
 
 CanutoBehaviour::CanutoBehaviour(json& args) :EnemyBehaviour(args)
 {

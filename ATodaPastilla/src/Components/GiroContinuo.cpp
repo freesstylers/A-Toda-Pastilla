@@ -2,6 +2,7 @@
 #include "Entity/Entity.h"
 #include "Entity/Transform.h"
 #include "MotorCasaPaco.h"
+#include "checkML.h"
 
 GiroContinuo::GiroContinuo(json& args) : Component(args)
 {

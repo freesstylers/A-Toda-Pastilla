@@ -5,6 +5,8 @@
 #include "Physics/RigidBody.h"
 #include "Entity/Transform.h"
 #include "Audio/AudioManager.h"
+#include "checkML.h"
+
 EutanasiaTexto::EutanasiaTexto(json& args) : Component(args)
 {
 

@@ -9,6 +9,7 @@
 #include "Components/SpawnerMejora.h"
 
 #include "Entity/Transform.h"
+#include "checkML.h"
 
 SpawnerMejora::SpawnerMejora(json& args):EntitySpawner(args)
 {

@@ -3,6 +3,7 @@
 #include "Entity/Entity.h"
 #include "Entity/Transform.h"
 #include "MotorCasaPaco.h"
+#include "checkML.h"
 
 CameraBehavior::CameraBehavior(json& args): Component(args)
 {
@@ -23,10 +24,8 @@ void CameraBehavior::init(json& j)
 		for (int i = 0; i < j["intensity"].size(); i++) {
 			x_.push_back(j["intensity"][i]);
 		}
-		//x_ = j["intensity"];
 	}
 
-	//EventManager::getInstance()->RegisterListener(e_, "EnemyDeath");
 	EventManager::getInstance()->RegisterListener(e_, "Hit");
 	EventManager::getInstance()->RegisterListener(e_, "MejoraDisparo1");
 	EventManager::getInstance()->RegisterListener(e_, "MejoraDisparo2");
@@ -45,9 +44,7 @@ void CameraBehavior::update()
 
 bool CameraBehavior::ReceiveEvent(Event& event)
 {
-	/*if (event.type == "EnemyDeath") {
-		start_ = true;
-	} else*/ if (event.type == "Hit") {
+	if (event.type == "Hit") {
 		start_ = true;
 	}
 	else if (event.type == "MejoraDisparo1") {

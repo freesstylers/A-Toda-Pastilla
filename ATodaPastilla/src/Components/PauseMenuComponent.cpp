@@ -4,6 +4,7 @@
 #include "Audio/AudioManager.h"
 #include "Components/GameManager.h"
 #include "Scene/SceneManager.h"
+#include "checkML.h"
 
 PauseMenuComponent::PauseMenuComponent(json& args): Component(args)
 {

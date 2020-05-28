@@ -72,5 +72,6 @@
     <ClInclude Include="..\include\Components\Shield.h" />
     <ClInclude Include="..\include\Components\CanutoBehaviour.h" />
     <ClInclude Include="..\include\Components\CameraBehavior.h" />
+    <ClInclude Include="..\src\Components\checkML.h" />
   </ItemGroup>
 </Project>

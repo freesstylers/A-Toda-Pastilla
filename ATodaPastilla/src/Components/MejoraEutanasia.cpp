@@ -11,6 +11,7 @@
 #include "Components/Vida.h"
 #include <math.h>
 #include "Graphics/ParticleSystem.h"
+#include "checkML.h"
 
 MejoraEutanasia::MejoraEutanasia(json& args) : Mejora(args)
 {

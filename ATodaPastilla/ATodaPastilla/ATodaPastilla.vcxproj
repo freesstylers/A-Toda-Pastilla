@@ -248,6 +248,7 @@
     <ClInclude Include="..\include\Components\Vida.h" />
     <ClInclude Include="..\include\Components\VidaEnemigos.h" />
     <ClInclude Include="..\include\Components\VidaPlayer.h" />
+    <ClInclude Include="..\src\Components\checkML.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

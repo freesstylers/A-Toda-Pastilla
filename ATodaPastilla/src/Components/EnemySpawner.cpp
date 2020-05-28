@@ -3,6 +3,7 @@
 #include "Components/EnemyBehaviour.h"
 #include "Entity/Transform.h"
 #include "Components/EventsGame.h"
+#include "checkML.h"
 
 EnemySpawner::EnemySpawner(json& args):EntitySpawner(args)
 {
