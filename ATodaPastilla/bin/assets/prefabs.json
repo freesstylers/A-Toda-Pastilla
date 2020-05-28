@@ -49,6 +49,17 @@
 			}
 		]
 	},
+	
+	"lightGame": {
+		"position": [ 100, 100, 0 ],
+		"components": [
+			{
+				"type": "Light",
+				"lightType": "directional",
+				"lightDir": [ 0, -1, 0 ]
+			}
+		]
+	},
 
 	"ibuprofeno": {
 		"position": [ 0, 0, 0 ],

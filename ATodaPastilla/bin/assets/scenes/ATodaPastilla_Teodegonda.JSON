@@ -21,7 +21,7 @@
 				{
 					"type": "Mesh",
 					"mesh": "cube.mesh",
-					"material": "FondoEspacio"
+					"material": "FondoHospital"
 				},
 				{
 					"type": "RigidBody",
@@ -32,7 +32,7 @@
 		},
 		{
 			"name": "light",
-			"prefab": "pointLight"
+			"prefab": "lightGame"
 		},
 		{
 			"name": "camera",
