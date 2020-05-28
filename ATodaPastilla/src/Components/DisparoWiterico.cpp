@@ -163,15 +163,6 @@ void DisparoWiterico::start()
 
 void DisparoWiterico::update()
 {
-	if (MotorCasaPaco::getInstance()->getInputManager()->GameControllerIsButtonDown(CONTROLLER_BUTTON_B)) {
-		setShotMode(2);
-	}
-	if (MotorCasaPaco::getInstance()->getInputManager()->GameControllerIsButtonDown(CONTROLLER_BUTTON_Y)) {
-		setShotMode(1);
-	}
-	if (MotorCasaPaco::getInstance()->getInputManager()->GameControllerIsButtonDown(CONTROLLER_BUTTON_X)) {
-		setShotMode(0);
-	}
 	if (timeSinceLastShot >= shotModes[currMode].cadence && MotorCasaPaco::getInstance()->getInputManager()->GameControllerIsButtonDown(CONTROLLER_BUTTON_A)) {
 		timeSinceLastShot = 0;
 		spawnProjectiles(shotModes[currMode].shotPos,
@@ -180,7 +171,7 @@ void DisparoWiterico::update()
 		AudioManager::getInstance()->playMusic(shotModes[currMode].shotSound.c_str(), 3, false);
 		AudioManager::getInstance()->setVolume(0.1, 3);
 	}
-	else if (timeSinceLastShot >= shotModes[currMode].cadence && MotorCasaPaco::getInstance()->getInputManager()->GameControllerIsButtonDown(CONTROLLER_BUTTON_RIGHTSHOULDER) && GameManager::getInstance()->isBombActive())
+	else if (timeSinceLastShot >= shotModes[currMode].cadence && MotorCasaPaco::getInstance()->getInputManager()->GameControllerIsButtonDown(CONTROLLER_BUTTON_B) && GameManager::getInstance()->isBombActive())
 	{
 		timeSinceLastShot = 0;
 		spawnEutanasia();
