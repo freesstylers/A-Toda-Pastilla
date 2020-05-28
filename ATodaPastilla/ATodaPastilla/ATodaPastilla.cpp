@@ -373,7 +373,8 @@ WinMain(HINSTANCE hinstance, HINSTANCE prevInstance, LPSTR lpCmdLine, int nCmdSh
 
 	MotorCasaPaco::getInstance()->getGUI_Manager()->loadScheme("A_Toda_Pastilla.scheme");
 	MotorCasaPaco::getInstance()->getGUI_Manager()->setMouseCursor("A_Toda_Pastilla/Mouse_Arrow");
-
+	MotorCasaPaco::getInstance()->getAudioManager()->playMusic("assets/sound/menuMus.mp3", 0, true);
+	MotorCasaPaco::getInstance()->getAudioManager()->setVolume(0.3, 0);
 	motorCasaPaco->start("Menu");
 
 	GameManager::getInstance()->clean();

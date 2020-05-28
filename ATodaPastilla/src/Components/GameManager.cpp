@@ -8,6 +8,7 @@
 #include <fstream>
 #include "Input/InputManager.h"
 #include "checkML.h"
+#include "Audio/AudioManager.h"
 
 GameManager* GameManager::instance = 0;
 
@@ -121,6 +122,8 @@ bool GameManager::functionReplay(const CEGUI::EventArgs& e)
 bool GameManager::functionMenu(const CEGUI::EventArgs& e)
 {
 	pause();
+	MotorCasaPaco::getInstance()->getAudioManager()->playMusic("assets/sound/menuMus.mp3", 0, true);
+	MotorCasaPaco::getInstance()->getAudioManager()->setVolume(0.3, 0);
 	SceneManager::getInstance()->changeScene("Menu");
 	return true;
 }

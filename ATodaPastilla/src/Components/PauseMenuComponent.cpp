@@ -138,6 +138,8 @@ bool PauseMenuComponent::functionPauseMainMenu(const CEGUI::EventArgs& e)
 	AudioManager::getInstance()->playMusic("assets/sound/buttonSound.mp3", 2, false);
 
 	EventManager::getInstance()->EmitEvent("Menu");
+	MotorCasaPaco::getInstance()->getAudioManager()->playMusic("assets/sound/menuMus.mp3", 0, true);
+	MotorCasaPaco::getInstance()->getAudioManager()->setVolume(0.3, 0);
 	return true;
 }
 
