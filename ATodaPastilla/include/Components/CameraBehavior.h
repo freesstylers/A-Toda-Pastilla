@@ -20,6 +20,7 @@ private:
 	float ticks = 0;
 
 	float iniX_ = 0;
+	float iniZ_ = 0;
 	bool start_ = false;
 
 	int n = 0;

@@ -20,13 +20,13 @@ particle_system Spiral
 		position 0.0 0.0 0.0
 		direction 0.0 1.0 0.0
 		angle 154.8
-		emission_rate 200.0
-		velocity_min -0.7
-		velocity_max -1.6
+		emission_rate 150.0
+		velocity_min 0.3
+		velocity_max 0.5
 		time_to_live_min 0.0
-		time_to_live_max 1.5
-		duration_min 0.7
-		duration_max 0.9
+		time_to_live_max 0.8
+		duration_min 1.0
+		duration_max 1.0
 		repeat_delay_min 0.11
 		repeat_delay_max 2.81
 		colour_range_start 1 1 1 1
@@ -35,7 +35,7 @@ particle_system Spiral
 
 	affector LinearForce
 	{
-		force_vector 0.0 12.32 0.0
+		force_vector 0.0 1.32 0.0
 		force_application add
 	}
 
