@@ -316,6 +316,14 @@
 				"type": "VidaPlayer",
 				"invulnerabilityTime": 2,
 				"vidaMax": 2
+			},
+			{
+				"type": "ParticleSystem",
+				"name": "eutanasia",
+				"template": "Cross",
+				"timeLimit" : 2.5,
+				"destroyOnTimeLImit": false,
+				"enabled" : "false"
 			}
 		]
 
@@ -392,8 +400,15 @@
 				"type": "VidaPlayer",
 				"invulnerabilityTime": 2,
 				"vidaMax": 2
+			},
+			{
+				"type": "ParticleSystem",
+				"name": "eutanasia",
+				"template": "Cross",
+				"timeLimit" : 2.5,
+				"destroyOnTimeLImit": false,
+				"enabled" : "false"
 			}
-
 		]
 
 	},
