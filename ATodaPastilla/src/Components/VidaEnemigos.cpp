@@ -25,8 +25,8 @@ VidaEnemigos::~VidaEnemigos()
 void VidaEnemigos::sumaVida(int valor)
 {
 	Vida::sumaVida(valor);
+	EventManager::getInstance()->EmitEvent("Hit");
 	if (vida_ <= 0 && !muerte_) {
-		//EventManager::getInstance()->RegisterListener(e_, "PlayerDeath");
 		EventPuntuacion e(puntos_, e_->getTransform()->getWorldPosition());
 		EventManager::getInstance()->EmitEvent(e);
 		muerte_ = true;
