@@ -31,8 +31,8 @@ void CameraBehavior::init(json& j)
 	EventManager::getInstance()->RegisterListener(e_, "MejoraDisparo1");
 	EventManager::getInstance()->RegisterListener(e_, "MejoraDisparo2");
 
-	iniX_ = e_->getTransform()->getPosition().Z;
-	iniZ_ = e_->getTransform()->getPosition().X;
+	iniX_ = e_->getTransform()->getPosition().X;
+	iniZ_ = e_->getTransform()->getPosition().Z;
 }
 
 void CameraBehavior::update()
@@ -66,21 +66,21 @@ void CameraBehavior::vibrar()
 	float aux1;
 	if (ticks < t_/4.0) {
 		aux = (x_[n] * ticks) / (t_ / 4.0);
-		e_->getTransform()->setPosition(Vector3(aux, e_->getTransform()->getPosition().Y, 0.0));
+		e_->getTransform()->setPosition(Vector3(iniX_+aux, e_->getTransform()->getPosition().Y, iniZ_));
 	}
 	else if (ticks < t_ / 2.0) {
 		aux = x_[n] - (x_[n] * ticks) / (t_ / 2.0);
 		aux1 = (-x_[n] * ticks) / (t_ / 4.0);
-		e_->getTransform()->setPosition(Vector3(aux, e_->getTransform()->getPosition().Y, aux1));
+		e_->getTransform()->setPosition(Vector3(aux+iniX_, e_->getTransform()->getPosition().Y, aux1+iniZ_));
 	}
 	else if (ticks < 3.0*t_ / 4.0) {
 		aux = (-x_[n] * ticks) / (t_ / 4.0);
 		aux1 = x_[n] - (x_[n] * ticks) / (t_ / 2.0);
-		e_->getTransform()->setPosition(Vector3(aux, e_->getTransform()->getPosition().Y, aux1));
+		e_->getTransform()->setPosition(Vector3(aux+iniX_, e_->getTransform()->getPosition().Y, aux1+iniZ_));
 	}
 	else if (ticks < t_ ) {
 		aux = -x_[n] + (x_[n] * ticks) / (t_ / 4.0);
-		e_->getTransform()->setPosition(Vector3(aux, e_->getTransform()->getPosition().Y, aux));
+		e_->getTransform()->setPosition(Vector3(aux+iniX_, e_->getTransform()->getPosition().Y, aux+iniZ_));
 	}
 	else {
 		e_->getTransform()->setPosition(Vector3(iniX_, e_->getTransform()->getPosition().Y, iniZ_));
