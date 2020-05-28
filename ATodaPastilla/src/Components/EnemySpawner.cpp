@@ -1,6 +1,8 @@
 #include "Components/EnemySpawner.h"
 #include "MotorCasaPaco.h"
 #include "Components/EnemyBehaviour.h"
+#include "Entity/Transform.h"
+#include "Components/EventsGame.h"
 
 EnemySpawner::EnemySpawner(json& args):EntitySpawner(args)
 {
@@ -84,12 +86,15 @@ void EnemySpawner::start()
 	lastWave = false;
 	posUsed = std::vector<bool>(spawnPositions.size(), false);
 	EventManager::getInstance()->RegisterListener(this->getEntity(), "BombaImpacto");
+	EventManager::getInstance()->RegisterListener(this->getEntity(), "EnemyDeath");
 }
 
 bool EnemySpawner::ReceiveEvent(Event& event)
 {
 	if (event.type == "BombaImpacto")
 		timeSinceSpawn = -2;
+	if (event.type == "EnemyDeath")
+		spawnEntity(static_cast<EventPuntuacion&>(event).pos_, "Explosion");
 	return false;
 }
 

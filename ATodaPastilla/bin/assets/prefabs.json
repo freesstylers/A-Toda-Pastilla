@@ -891,13 +891,13 @@
 			}
 		]
 	},
-	
+
 	"EutanasiaTexto": {
 	"position": [ 0, 50, 0 ],
 	"rotation": [ 0, 0, 0 ],
 	"scale": [ 6, 6, 6 ],
-	"components": 
-	[  
+	"components":
+	[
 		{
 		"type": "Mesh",
 		"mesh": "EutanasiaTexto.mesh",
@@ -920,7 +920,18 @@
 				"type": "Shield"
 			}
 		]
+	},
+
+	"Explosion": {
+		"scale" : [0.35, 0.35, 0.35],
+		"components": [
+			{
+				"type": "ParticleSystem",
+				"name": "Explosion",
+				"template": "Explosion",
+				"timeLimit" : 1.5,
+				"destroyOnTimeLImit": true
+			}
+		]
 	}
-
 }
-

@@ -7,9 +7,11 @@
 
 struct EventPuntuacion : public Event {
 public:
-	inline EventPuntuacion(int puntuacion) : Event("EnemyDeath") {
-		this->puntuacion_ = puntuacion;
+	inline EventPuntuacion(int puntuacion, Vector3 pos) : Event("EnemyDeath") {
+		puntuacion_ = puntuacion;
+		pos_ = pos;
 	};
 
 	int puntuacion_ = 0;
+	Vector3 pos_;
 };

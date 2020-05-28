@@ -1,8 +1,6 @@
 {
 	"name" : "ATodaPastilla_Witerico",
 	"entities": [
-
-	
 		{
 			"name" : "Player",
 			"prefab" : "Witerico"

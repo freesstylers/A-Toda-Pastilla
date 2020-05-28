@@ -1,6 +1,8 @@
 
 #include "Components/VidaEnemigos.h"
 #include "Components/EventsGame.h"
+#include "Entity/Entity.h"
+#include "Entity/Transform.h"
 
 VidaEnemigos::VidaEnemigos(json& args): Vida(args)
 {
@@ -25,7 +27,7 @@ void VidaEnemigos::sumaVida(int valor)
 	Vida::sumaVida(valor);
 	if (vida_ <= 0 && !muerte_) {
 		//EventManager::getInstance()->RegisterListener(e_, "PlayerDeath");
-		EventPuntuacion e(puntos_);
+		EventPuntuacion e(puntos_, e_->getTransform()->getWorldPosition());
 		EventManager::getInstance()->EmitEvent(e);
 		muerte_ = true;
 	}
